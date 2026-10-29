@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/magosouljah/MarketingBeatGaler/blob/main/shared/research/reference.schema.json",
+  "title": "BeatGaler Marketing Reference",
+  "description": "Análisis de una referencia real, con métricas opcionales y verificables. Los enlaces sin investigar van primero a INBOX.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "account_target",
+    "platform",
+    "url",
+    "classification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "account_target": {
+      "enum": [
+        "account-1",
+        "account-2"
+      ]
+    },
+    "platform": {
+      "enum": [
+        "youtube",
+        "tiktok",
+        "instagram",
+        "other"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "creator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fecha de publicación si se pudo verificar."
+    },
+    "captured_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fecha de captura de métricas."
+    },
+    "classification": {
+      "enum": [
+        "reference",
+        "outlier"
+      ],
+      "description": "outlier requiere baseline verificable."
+    },
+    "video_views": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "creator_baseline_views": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "baseline_sample_size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "baseline_method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outlier_ratio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "metrics_source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fuente y fecha de la comprobación."
+    },
+    "transcript": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "hook": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "why_it_works": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visual_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
