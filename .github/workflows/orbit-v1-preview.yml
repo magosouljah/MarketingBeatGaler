@@ -1,0 +1,56 @@
+name: BeatGaler orbit V1 preview (no deploy)
+on:
+  push:
+    branches:
+      - marketing/first-video-3d-orbit-v1
+    paths:
+      - 'account-1/creative-assets/orbit-v1/**'
+      - '.github/workflows/orbit-v1-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HYPERFRAMES_NO_UPDATE_CHECK: '1'
+      HYPERFRAMES_SKIP_SKILLS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Render via approved HyperFrames first
+        id: hyperframes
+        continue-on-error: true
+        working-directory: account-1/creative-assets/orbit-v1
+        run: |
+          npx --yes hyperframes@latest lint
+          npx --yes hyperframes@latest check --json
+          npx --yes hyperframes@latest render --quality draft -o "$GITHUB_WORKSPACE/orbit-preview.mp4"
+      - name: Fallback CPU diagnostic if HyperFrames did not produce a video
+        if: always()
+        working-directory: account-1/creative-assets/orbit-v1
+        run: |
+          if test -s "$GITHUB_WORKSPACE/orbit-preview.mp4"; then
+            echo 'Render source: HyperFrames'
+          else
+            echo 'Render source: Playwright/FFmpeg (CPU fallback, NOT HyperFrames)'
+            python -m pip install --user pillow playwright
+            python -m playwright install --with-deps chromium
+            python tools/preview_capture.py --frames 144 --fps 24 --output "$GITHUB_WORKSPACE/orbit-preview.mp4"
+          fi
+      - name: Validate playable iPhone MP4
+        run: |
+          test -s orbit-preview.mp4
+          ffprobe -v error -show_entries format=duration -of default=nokey=1:noprint_wrappers=1 orbit-preview.mp4
+          ffprobe -v error -show_entries stream=codec_name,pix_fmt,width,height -of json orbit-preview.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beatgaler-orbit-v1-iphone-preview
+          path: orbit-preview.mp4
+          if-no-files-found: error
+          retention-days: 14
