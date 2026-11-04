@@ -94,35 +94,44 @@ const cards=Array.from({length:N},(_,i)=>({i,tex:null}));
 function loadImg(i){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{cards[i].image=im;cards[i].tex=texUpload(im);resolve()};im.onerror=()=>reject(new Error('Missing artwork '+(i+1)));im.src=(window.__embeddedCovers?.[i]||'assets/covers/cover-'+String(i+1).padStart(2,'0')+'.'+exts[i])})}
 // World coordinates, not CSS translations. Independent asymmetric splines create parallax/occlusion.
 function coverPose(i,t){
- const golden=2.399963229728653;const k=i+1;const phi=i*golden+.18;
- const rate=(.14+hash(i*3)*.17);const turn=phi+rate*(t+.22*Math.sin(t*.85+i));
- const ring=1.35+hash(i*7)*1.20;
- const lift=Math.sin(i*1.72)*.21;
- let x=Math.cos(turn)*ring*1.07 + .14*Math.sin(t*.69+i*1.1);
- let y=Math.sin(turn)*ring*1.59 + lift +.20*Math.cos(t*.55+i*.73);
- let depth=-3.2+hash(i*19)*6.6+.32*Math.cos(t*.7+i*1.63)+t*(hash(i*13)-.38)*.24;
- const local=(t+.5)*.7;
- // Art-directed near-camera protagonists: independent passes at different speeds and depths.
- if(i===0){x=mix(-2.5,2.5,smoother((t+.2)/5.6));y=.15+.65*Math.sin(t*.72+.4);depth=3.2+.45*Math.sin(t*.45);}
- if(i===1){x=.2+1.95*smoother(t/5.1);y=1.04-.45*Math.sin(t*.69+.4);depth=3.5-.4*t; }
- if(i===6){x=mix(2.45,-2.10,smoother((t+.6)/6.5));y=-1.03+.65*Math.sin(t*.5+.6);depth=1.6+.39*t;}
- if(i===13){x=-1.2+1.12*Math.sin(t*.49+.6);y=-2.15+t*.13;depth=2.2+.18*Math.sin(t*.7);}
- if(i===19){x=1.62-1.12*smoother(t/5.8);y=2.27-.57*Math.sin(t*.67);depth=2.45+.5*Math.cos(t*.5);}
- // Camera-facing with modest independent axis tilt; sleeves never turn paper-thin.
- const yaw=clamp(-x*.075,-.32,.32)+.11*Math.sin(i*1.72+t*.57);
- const pitch=clamp(-y*.04,-.25,.25)+.07*Math.sin(t*.74+i);
- const roll=(hash(i*11)-.5)*.28 + .08*Math.sin(local+i*.81);
- let size=mix(.82,1.57,hash(i*23));if(i===0)size=1.75;if(i===1)size=1.78;if(i===6)size=1.80;if(i===13||i===19)size=1.46;
- return {pos:[x,y,depth],yaw,pitch,roll,size,bright:clamp(.84+(depth+2.6)*.035,.74,1.13)};
+ const group=i%4,phase=i*2.399963229728653 + .38;
+ const variation=hash(i*3),drift=.46+.21*hash(i*37);
+ // Real helices in X/Y/Z, with four deliberately separated depth strata.
+ // Individual speeds, elliptical radii, wobbles and axial drift prevent a rigid carousel.
+ const u=phase + drift*t + .10*Math.sin(t*.71+i*.91);
+ const rx0=[1.63,1.89,2.15,2.45][group],ry0=[2.50,3.10,3.75,4.25][group];
+ const rx=rx0+hash(i*23)*.43,ry=ry0+hash(i*13)*.43;
+ let x=Math.cos(u)*rx + .16*Math.sin(t*.8+i*2.1);
+ let y=Math.sin(u)*ry + .13*Math.cos(t*.68+i*1.8);
+ const zbase=[3.1,.55,-2.0,-4.5][group];
+ let z=zbase + .68*Math.sin(u*1.37+i*.7) + .35*Math.sin(.66*t+i*1.3);
+ let size=[1.60,1.47,1.27,1.13][group]*(.88+.25*variation);
+ // Visible thickness, front-face parallax and independent three-axis angular response.
+ // Four art-directed cinematic flybys create a shifting focal point through the tunnel.
+ const hero=[0,5,11,18].indexOf(i);
+ if(hero>=0){
+   const center=[.68,2.16,3.60,5.04][hero],dt=t-center;
+   const intensity=Math.exp(-.45*dt*dt);
+   x=mix(x,2.12*dt+.15*Math.sin(t*1.3+hero),intensity);
+   y=mix(y,.34*Math.sin(t*.83+hero*1.62),intensity);
+   z=mix(z,4.7+.12*Math.sin(t*.55+hero),intensity);
+   size=mix(size,1.98+.22*Math.sin(t*.53+hero*.7),intensity);
+ }
+ const yaw=clamp(-x*.185 + .18*Math.sin(.69*t+i*1.71),-.65,.65);
+ const pitch=clamp(-y*.09 + .10*Math.cos(.52*t+i*.84),-.37,.37);
+ const roll=.12*Math.sin(u+i*.31)+.09*Math.sin(.83*t+i*1.4);
+ const bright=[1.07,1.0,.91,.83][group];
+ return {pos:[x,y,z],yaw,pitch,roll,size,bright};
 }
 function cameraAt(t){
- const push=Math.sin(Math.PI*clamp(t/DURATION,0,1))**2;
- const eye=[-.24+1.95*Math.sin(.16+t*.36),.30+.67*Math.sin(t*.48-.8),12.5-1.65*push+.45*Math.cos(t*.45)];
- const target=[.05+.54*Math.sin(t*.39-1.1),-.08+.53*Math.sin(t*.48+.3),-.35];
- const bank=.020*Math.sin(t*.84-.5);
+ const tempo=smoother(t/DURATION);
+ // Camera move is not locked to card phase: lateral truck + slight tilt + progressive push.
+ const eye=[-.48+1.15*Math.sin(t*.43-.10),.10+.53*Math.sin(t*.41-.38),11.50-1.62*tempo];
+ const target=[.16+.24*Math.sin(t*.47+.34),-.02+.36*Math.sin(t*.61+.33),-1.2];
+ const bank=.035*Math.sin(t*.54+.1);
  return {eye,view:lookAt(eye,target,[Math.sin(bank),Math.cos(bank),0])}
 }
-const projection=perspective(43*Math.PI/180,W/H,.1,50);
+const projection=perspective(44*Math.PI/180,W/H,.1,50);
 // Progressive fallback: same 3D camera and object poses projected on CPU for browsers
 // where WebGL is unavailable (such as the current headless QA sandbox).
 function projectPoint(p,m){
@@ -163,11 +172,12 @@ window.__orbit={duration:DURATION,renderAt,ready:false,coverCount:N};
 window.__hf=window.__hf||{};window.__hf.buildReady=window.__hf.buildReady||{};
 const built=Promise.all(cards.map((_,i)=>loadImg(i))).then(()=>{window.__orbit.ready=true;renderAt(0);return true}).catch(e=>{status.textContent='ARTWORK LOAD FAILED: '+e.message;status.classList.add('show');window.__orbit.error=String(e);throw e});
 window.__hf.buildReady['bg-orbit-images']=built;
-window.addEventListener('hf-seek',e=>{renderAt(e.detail?.time??window.__hfThreeTime??0)});
+let deterministicSeek=false;
+window.addEventListener('hf-seek',e=>{deterministicSeek=true;renderAt(e.detail?.time??0)});
 window.addEventListener('message',e=>{if(e.data?.type==='ORBIT_SEEK')renderAt(e.data.time)});
 // Human preview uses wall-clock only; renders use explicit deterministic seeking above.
 let start=null,play=true;
-function tick(ms){if(start===null)start=ms;if(play&&window.__orbit.ready)renderAt((ms-start)/1000%DURATION);requestAnimationFrame(tick)}
+function tick(ms){if(start===null)start=ms;if(play&&!deterministicSeek&&window.__orbit.ready)renderAt((ms-start)/1000%DURATION);requestAnimationFrame(tick)}
 if(!new URLSearchParams(location.search).has('capture'))requestAnimationFrame(tick);
 })();
 </script>
