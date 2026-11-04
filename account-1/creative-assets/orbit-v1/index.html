@@ -13,12 +13,12 @@ body{display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,s
 #art{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
 #finish{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 77% 73% at 50% 47%,transparent 38%,rgba(0,0,0,.13) 69%,rgba(0,0,0,.57) 100%),linear-gradient(180deg,rgba(0,0,0,.23),transparent 26%,transparent 76%,rgba(0,0,0,.24));}
 #grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.065;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 160 160%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.82%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.38%22/%3E%3C/svg%3E')}
-#status{position:absolute;z-index:4;bottom:28px;left:0;right:0;color:#9c9ca4;text-align:center;letter-spacing:.19em;font-size:10px;opacity:0;transition:opacity 180ms}
+#status{position:absolute;z-index:4;bottom:28px;left:0;right:0;color:#9c9ca4;text-align:center;letter-spacing:.19em;font-size:10px;opacity:0}
 #status.show{opacity:1}
 </style>
 </head>
 <body>
-<div id="stage" data-composition-id="bg-cover-orbit-v1" data-width="720" data-height="1280" data-duration="5.8" data-fps="24">
+<div id="stage" data-composition-id="bg-cover-orbit-v1" data-no-timeline data-width="720" data-height="1280" data-duration="5.8" data-fps="24">
   <canvas id="art" width="720" height="1280" aria-label="An animated cinematic three-dimensional orbit of BeatGaler beat cover art"></canvas>
   <div id="finish"></div><div id="grain"></div><div id="status"></div>
 </div>
@@ -173,12 +173,18 @@ window.__hf=window.__hf||{};window.__hf.buildReady=window.__hf.buildReady||{};
 const built=Promise.all(cards.map((_,i)=>loadImg(i))).then(()=>{window.__orbit.ready=true;renderAt(0);return true}).catch(e=>{status.textContent='ARTWORK LOAD FAILED: '+e.message;status.classList.add('show');window.__orbit.error=String(e);throw e});
 window.__hf.buildReady['bg-orbit-images']=built;
 let deterministicSeek=false;
-window.addEventListener('hf-seek',e=>{deterministicSeek=true;renderAt(e.detail?.time??0)});
+window.addEventListener('hf-seek',e=>{deterministicSeek=true;if(previewHandle!==null)clearInterval(previewHandle);renderAt(e.detail?.time??0)});
 window.addEventListener('message',e=>{if(e.data?.type==='ORBIT_SEEK')renderAt(e.data.time)});
 // Human preview uses wall-clock only; renders use explicit deterministic seeking above.
-let start=null,play=true;
-function tick(ms){if(start===null)start=ms;if(play&&!deterministicSeek&&window.__orbit.ready)renderAt((ms-start)/1000%DURATION);requestAnimationFrame(tick)}
-if(!new URLSearchParams(location.search).has('capture'))requestAnimationFrame(tick);
+// A browser-only clock for interactive preview. Renderers drive every frame via hf-seek.
+let previewHandle=null;
+const humanStart=performance.now();
+if(!new URLSearchParams(location.search).has('capture')){
+ previewHandle=setInterval(()=>{
+   if(!deterministicSeek&&window.__orbit.ready)
+     renderAt((performance.now()-humanStart)/1000%DURATION);
+ },32);
+}
 })();
 </script>
 </body></html>
