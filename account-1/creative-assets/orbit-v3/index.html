@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>BeatGaler — Reference-driven orbit study 03</title>
+<style>
+:root{color-scheme:dark} *{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:#f4f4f4;overflow:hidden}
+body{display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,sans-serif}
+#stage{position:relative;width:min(100vw,calc(100vh * .5625));height:min(100vh,calc(100vw * 1.77778));overflow:hidden;isolation:isolate;background:#f4f4f4}
+#stage::before{content:"";position:absolute;inset:0;background:#f4f4f4}
+#art{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
+#finish{position:absolute;inset:0;z-index:2;pointer-events:none}
+#grain{display:none}
+#status{position:absolute;z-index:4;bottom:28px;left:0;right:0;color:#9c9ca4;text-align:center;letter-spacing:.19em;font-size:10px;opacity:0}
+#status.show{opacity:1}
+#center-copy{position:absolute;z-index:4;top:47%;left:0;width:100%;text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:62px;letter-spacing:-.055em;color:#111;transform:translateY(-50%);pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage" data-composition-id="bg-cover-orbit-v3" data-no-timeline data-width="720" data-height="1280" data-duration="3.333333" data-fps="30">
+  <canvas id="art" width="720" height="1280" aria-label="An animated cinematic three-dimensional orbit of BeatGaler beat cover art"></canvas>
+  <div id="finish"></div><div id="grain"></div><div id="status"></div>
+</div>
+<script>
+(() => {
+'use strict';
+const DURATION=3.333333, W=720,H=1280,N=24;
+const canvas=document.getElementById('art');
+const gl=canvas.getContext('webgl2',{alpha:true,antialias:true,depth:true,premultipliedAlpha:false,preserveDrawingBuffer:true,powerPreference:'high-performance'});
+const status=document.getElementById('status');
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const smooth=(x)=>{x=clamp(x,0,1);return x*x*(3-2*x)};
+const smoother=(x)=>{x=clamp(x,0,1);return x*x*x*(x*(x*6-15)+10)};
+const mix=(a,b,s)=>a*(1-s)+b*s;
+const hash=(i)=>{let x=Math.sin((i+1)*127.1+55.61)*43758.5453;return x-Math.floor(x)};
+const V=(x,y,z)=>[x,y,z];
+const add=(a,b)=>a.map((q,i)=>q+b[i]);
+const sub=(a,b)=>a.map((q,i)=>q-b[i]);
+const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const norm=(a)=>{const d=Math.hypot(...a)||1;return a.map(v=>v/d)};
+const mul=(a,b)=>{const o=Array(16).fill(0);for(let c=0;c<4;c++)for(let r=0;r<4;r++)for(let k=0;k<4;k++)o[c*4+r]+=a[k*4+r]*b[c*4+k];return o};
+const id=()=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+const translate=(x,y,z)=>[1,0,0,0,0,1,0,0,0,0,1,0,x,y,z,1];
+const scale=(x,y,z)=>[x,0,0,0,0,y,0,0,0,0,z,0,0,0,0,1];
+const ry=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[c,0,-s,0,0,1,0,0,s,0,c,0,0,0,0,1]};
+const rx=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[1,0,0,0,0,c,s,0,0,-s,c,0,0,0,0,1]};
+const rz=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[c,s,0,0,-s,c,0,0,0,0,1,0,0,0,0,1]};
+const perspective=(fov,aspect,near,far)=>{const f=1/Math.tan(fov/2),d=near-far;return[f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/d,-1,0,0,far*near*2/d,0]};
+const lookAt=(eye,target,up)=>{const z=norm(sub(eye,target)),x=norm(cross(up,z)),y=cross(z,x);return[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1]};
+const vert=`#version 300 es
+precision highp float;
+in vec3 a_pos;in vec3 a_normal;in vec2 a_uv;
+uniform mat4 u_mvp;uniform mat4 u_model;uniform mat4 u_view;
+out vec2 v_uv;out vec3 v_n;out vec3 v_p;out float v_depth;
+void main(){vec4 p=u_model*vec4(a_pos,1.0);gl_Position=u_mvp*vec4(a_pos,1.0);v_uv=a_uv;v_p=p.xyz;v_n=normalize(mat3(u_model)*a_normal);v_depth=-(u_view*p).z;}`;
+const frag=`#version 300 es
+precision highp float;
+in vec2 v_uv;in vec3 v_n;in vec3 v_p;in float v_depth;
+uniform sampler2D u_tex;uniform float u_face;uniform float u_bright;uniform float u_alpha;
+uniform vec3 u_eye;uniform float u_dof;out vec4 outColor;
+void main(){vec3 n=normalize(v_n);vec3 light=normalize(vec3(-.56,.84,1.75));vec3 eye=normalize(u_eye-v_p);vec3 halfv=normalize(light+eye);
+float diffuse=max(dot(n,light),0.0);float spec=pow(max(dot(n,halfv),0.0),46.0);
+vec3 color=u_face<.5 ? textureLod(u_tex,v_uv,u_dof).rgb : (u_face<1.5?vec3(.135,.137,.146):vec3(.055,.056,.063));
+float lighting=u_face<.5?(0.94+0.06*diffuse):(0.33+0.50*diffuse);
+color*=lighting*u_bright; color+=spec*(u_face<.5?.012:.08);
+if(u_face<.5){float rim=smoothstep(.975,1.0,max(abs(v_uv.x-.5),abs(v_uv.y-.5))*2.0);color+=rim*vec3(.10,.10,.11);}
+float haze=1.0;
+float alpha=u_alpha*clamp(haze,.2,1.0);
+outColor=vec4(color*mix(.64,1.0,haze),alpha);
+}`;
+function compile(type,src){const sh=gl.createShader(type);gl.shaderSource(sh,src);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(sh));return sh}
+let shader,geometry,uvBuffer,normBuffer;
+const ctx2d=gl?null:canvas.getContext('2d',{alpha:true});
+try{if(gl){shader=gl.createProgram();gl.attachShader(shader,compile(gl.VERTEX_SHADER,vert));gl.attachShader(shader,compile(gl.FRAGMENT_SHADER,frag));gl.linkProgram(shader);if(!gl.getProgramParameter(shader,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(shader));}}catch(err){status.textContent=String(err);status.classList.add('show');throw err;}
+const loc=(n)=>gl?gl.getUniformLocation(shader,n):null;
+const U={mvp:loc('u_mvp'),model:loc('u_model'),view:loc('u_view'),tex:loc('u_tex'),face:loc('u_face'),bright:loc('u_bright'),alpha:loc('u_alpha'),eye:loc('u_eye'),dof:loc('u_dof')};
+const attrib=(name,items)=>{if(!gl)return null;const l=gl.getAttribLocation(shader,name),b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(items),gl.STATIC_DRAW);gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,name==='a_uv'?2:3,gl.FLOAT,false,0,0);return b};
+// Six 3D faces: front artwork, four solid graphite edges, dark back. Depth test orders all covers.
+function quad(a,b,c,d,n,front,arrays){const {p,uv,normal,faces}=arrays;const verts=[a,b,c,a,c,d];for(let k=0;k<6;k++){p.push(...verts[k]);normal.push(...n);uv.push(...([[0,0],[1,0],[1,1],[0,0],[1,1],[0,1]][k]));faces.push(front)}}
+const A={p:[],uv:[],normal:[],faces:[]};const z=.025;
+quad([-.5,-.5,z],[.5,-.5,z],[.5,.5,z],[-.5,.5,z],[0,0,1],0,A);
+quad([.5,-.5,-z],[-.5,-.5,-z],[-.5,.5,-z],[.5,.5,-z],[0,0,-1],2,A);
+quad([-.5,-.5,-z],[.5,-.5,-z],[.5,-.5,z],[-.5,-.5,z],[0,-1,0],1,A);
+quad([-.5,.5,z],[.5,.5,z],[.5,.5,-z],[-.5,.5,-z],[0,1,0],1,A);
+quad([-.5,-.5,z],[-.5,-.5,-z],[-.5,.5,-z],[-.5,.5,z],[-1,0,0],1,A);
+quad([.5,-.5,-z],[.5,-.5,z],[.5,.5,z],[.5,.5,-z],[1,0,0],1,A);
+const pbuf=attrib('a_pos',A.p),nbuf=attrib('a_normal',A.normal),ubuf=attrib('a_uv',A.uv);
+const textures=[];
+const exts=['jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','avif','avif','avif','avif'];
+function texUpload(image){if(!gl)return null;const tx=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tx);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);gl.generateMipmap(gl.TEXTURE_2D);return tx}
+const cards=Array.from({length:N},(_,i)=>({i,tex:null}));
+function loadImg(i){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{cards[i].image=im;cards[i].tex=texUpload(im);resolve()};im.onerror=()=>reject(new Error('Missing artwork '+(i+1)));im.src=(window.__embeddedCovers?.[i]||'assets/covers/cover-'+String(i+1).padStart(2,'0')+'.'+exts[i])})}
+// TRACE: source 1.20–4.53s only. Observed source behavior is catalogued in
+// ORBIT-APPLE-REFERENCE-ANALYSIS.md. 3D positions/camera are FIT HYPOTHESES.
+// These are not the old V1/V2 circular choreography.
+function coverPose(i,t){
+ const s=clamp(t,0,DURATION)+1.20;   // local output time -> reference source time
+ const order=(i*13)%24;
+ const easeOut=x=>1-Math.pow(1-clamp(x,0,1),3);
+ const theta=order*Math.PI*2/24
+  + .092*Math.sin(order*1.73)
+  + .63*(s-1.75)
+  + .035*Math.sin(i*1.91)
+  + .024*(s-1.75)*Math.sin(i*.87);
+ const birth=.13+.87*easeOut((s-1.22-(i%4)*.018)/.55);
+ const growth=1+.22*smooth((s-2.40)/1.08);
+ const rx=3.08*birth*growth, ry=2.07*birth*growth;
+ let x=rx*Math.cos(theta)+.09*Math.sin(3*theta+i*.5);
+ let y=ry*Math.sin(theta)+.10*Math.cos(3*theta+i*.8);
+ let z=.05+2.15*Math.cos(theta-.2)+.42*Math.sin(2*theta+i*.23);
+ let yaw=1.55*(1-Math.cos(theta))/2+.065*Math.sin(i*.7+s*.8);
+ let pitch=1.29*Math.sin(theta)*(.63+.37*(1-Math.cos(theta))/2)+.055*Math.sin(i*.8);
+ let roll=.13*Math.cos(theta)-.10*Math.sin(2*theta);
+ let size=(1.30+.12*Math.sin(i*2.12))*(.81+.19*Math.cos(theta));
+ // Source 3.48+: broad 3D foreground deck replaces the distant orbital field.
+ // Only cards already near the camera/right-hand arc are chosen; others peel off.
+ const packet=[11,22,9,0,7,20,18];
+ const hand=smooth((s-3.48)/.39);
+ if(hand>0){
+  const j=packet.indexOf(i);
+  if(j>=0){
+   const endx=1.05+.18*(j%3)+.06*j;
+   const endy=1.52-.55*j;
+   const endz=2.45-.27*j;
+   x=mix(x,endx,hand);y=mix(y,endy,hand);z=mix(z,endz,hand);
+   yaw=mix(yaw,-.12+.07*j,hand);
+   pitch=mix(pitch,.59+.03*j,hand);
+   roll=mix(roll,-.14,hand);
+   size=mix(size,1.82+.065*j,hand);
+  } else {
+   x=mix(x,Math.cos(theta)*9.2+1.2,hand);
+   y=mix(y,Math.sin(theta)*6.7+2.1,hand);
+   z=mix(z,-1.8,hand);
+  }
+ }
+ // The handoff ends without building Apple's final brand/CTA scene.
+ if(packet.includes(i)){
+  const j=packet.indexOf(i),leave=smooth((s-4.12)/.40);
+  x+=(-1.8+.26*j)*leave;
+  y+=(5.8+.28*j)*leave;
+  z+=2.0*leave;
+ }
+ return {pos:[x,y,z],yaw,pitch,roll,size,bright:1.08,dof:0,opacity:1};
+}
+function cameraAt(t){
+ const s=clamp(t,0,DURATION)+1.2;
+ const move=smooth((s-2.15)/1.35),burst=smooth((s-3.45)/.42);
+ const eye=[.12*move-.32*burst,.25*move+.04*burst,13.5-2.25*move-3.10*burst];
+ const target=[0,-.72,0];
+ return {eye,view:lookAt(eye,target,[0,1,0])};
+}
+const projection=perspective(48*Math.PI/180,W/H,.1,50);
+// Progressive fallback: same 3D camera and object poses projected on CPU for browsers
+// where WebGL is unavailable (such as the current headless QA sandbox).
+function projectPoint(p,m){
+ const clip=[m[0]*p[0]+m[4]*p[1]+m[8]*p[2]+m[12],m[1]*p[0]+m[5]*p[1]+m[9]*p[2]+m[13],m[2]*p[0]+m[6]*p[1]+m[10]*p[2]+m[14],m[3]*p[0]+m[7]*p[1]+m[11]*p[2]+m[15]];
+ const w=clip[3]||.00001;return [(clip[0]/w*.5+.5)*W,(-clip[1]/w*.5+.5)*H,clip[2]/w];
+}
+function renderCanvasAt(t){
+ const ctx=ctx2d;if(!ctx)return;
+ ctx.clearRect(0,0,W,H);
+ const c=cameraAt(t);
+ const renderList=cards.map(card=>{const d=coverPose(card.i,t);return {card,d,dist:Math.hypot(...sub(d.pos,c.eye))}})
+ .filter(o=>o.card.image).sort((a,b)=>b.dist-a.dist);
+ for(const {card,d,dist} of renderList){
+ const m=mul(translate(...d.pos),mul(rz(d.roll),mul(ry(d.yaw),mul(rx(d.pitch),scale(d.size,d.size,d.size)))));
+ const mvp=mul(projection,mul(c.view,m));
+ const tl=projectPoint([-.5,.5,.025],mvp),tr=projectPoint([.5,.5,.025],mvp),bl=projectPoint([-.5,-.5,.025],mvp),br=projectPoint([.5,-.5,.025],mvp);
+ if([tl,tr,bl,br].some(v=>!Number.isFinite(v[0])||!Number.isFinite(v[1])))continue;
+ const image=card.image,near=clamp((23-dist)/14,.42,1);
+ ctx.save();ctx.globalAlpha=near*d.opacity;ctx.beginPath();ctx.moveTo(tl[0],tl[1]);ctx.lineTo(tr[0],tr[1]);ctx.lineTo(br[0],br[1]);ctx.lineTo(bl[0],bl[1]);ctx.closePath();
+ ctx.shadowColor='rgba(0,0,0,.86)';ctx.shadowBlur=27*near;ctx.shadowOffsetX=10;ctx.shadowOffsetY=17;ctx.fillStyle='#1b1b1f';ctx.fill();ctx.shadowColor='transparent';
+ ctx.clip();
+ ctx.setTransform((tr[0]-tl[0])/image.naturalWidth,(tr[1]-tl[1])/image.naturalWidth,(bl[0]-tl[0])/image.naturalHeight,(bl[1]-tl[1])/image.naturalHeight,tl[0],tl[1]);
+ ctx.drawImage(image,0,0);
+ ctx.restore();
+ ctx.save();ctx.globalAlpha=near*.69*d.opacity;ctx.beginPath();ctx.moveTo(tl[0],tl[1]);ctx.lineTo(tr[0],tr[1]);ctx.lineTo(br[0],br[1]);ctx.lineTo(bl[0],bl[1]);ctx.closePath();ctx.strokeStyle='rgba(203,205,214,.26)';ctx.lineWidth=1.5;ctx.stroke();ctx.restore();
+ }
+}
+function renderAt(input){const t=clamp(input,0,DURATION);if(!gl){renderCanvasAt(t);window.__orbitLastTime=t;return;}gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clearDepth(1);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.disable(gl.CULL_FACE);gl.disable(gl.BLEND);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(shader);
+ const c=cameraAt(t);gl.uniformMatrix4fv(U.view,false,new Float32Array(c.view));gl.uniform3fv(U.eye,new Float32Array(c.eye));gl.uniform1i(U.tex,0);
+ // Stable source order; z-buffer correctly resolves all intersections regardless of array order.
+ for(const card of cards){if(!card.tex)continue;const d=coverPose(card.i,t);
+ let m=mul(translate(...d.pos),mul(rz(d.roll),mul(ry(d.yaw),mul(rx(d.pitch),scale(d.size,d.size,d.size)))));
+ gl.uniformMatrix4fv(U.model,false,new Float32Array(m));gl.uniformMatrix4fv(U.mvp,false,new Float32Array(mul(projection,mul(c.view,m))));gl.uniform1f(U.bright,d.bright);gl.uniform1f(U.alpha,d.opacity);gl.uniform1f(U.dof,d.dof);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,card.tex);
+ for(let f=0;f<6;f++){gl.uniform1f(U.face,f===0?0:(f===1?2:1));gl.drawArrays(gl.TRIANGLES,f*6,6)} }
+ window.__orbitLastTime=t;}
+window.seekTo=renderAt;
+window.__orbit={duration:DURATION,renderAt,ready:false,coverCount:N};
+window.__hf=window.__hf||{};window.__hf.buildReady=window.__hf.buildReady||{};
+const built=Promise.all(cards.map((_,i)=>loadImg(i))).then(()=>{window.__orbit.ready=true;renderAt(0);return true}).catch(e=>{status.textContent='ARTWORK LOAD FAILED: '+e.message;status.classList.add('show');window.__orbit.error=String(e);throw e});
+window.__hf.buildReady['bg-orbit-images']=built;
+let deterministicSeek=false;
+window.addEventListener('hf-seek',e=>{deterministicSeek=true;if(previewHandle!==null)clearInterval(previewHandle);renderAt(e.detail?.time??0)});
+window.addEventListener('message',e=>{if(e.data?.type==='ORBIT_SEEK')renderAt(e.data.time)});
+// Human preview uses wall-clock only; renders use explicit deterministic seeking above.
+// A browser-only clock for interactive preview. Renderers drive every frame via hf-seek.
+let previewHandle=null;
+let previewFrame=0;
+if(!new URLSearchParams(location.search).has('capture')){
+ previewHandle=setInterval(()=>{
+   if(!deterministicSeek&&window.__orbit.ready)
+     renderAt((previewFrame++/30)%DURATION);
+ },32);
+}
+})();
+</script>
+</body></html>
