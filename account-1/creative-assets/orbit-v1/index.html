@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>BeatGaler — Orbit study 01</title>
+<style>
+:root{color-scheme:dark} *{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:#020204;overflow:hidden}
+body{display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,sans-serif}
+#stage{position:relative;width:min(100vw,calc(100vh * .5625));height:min(100vh,calc(100vw * 1.77778));overflow:hidden;isolation:isolate;background:radial-gradient(ellipse 110% 72% at 47% 43%,#19191d 0%,#09090d 38%,#020204 73%,#000 100%)}
+#stage::before{content:'';position:absolute;inset:-15%;z-index:0;pointer-events:none;background:radial-gradient(ellipse 40% 42% at 37% 49%,rgba(97,91,108,.10),transparent 73%),radial-gradient(ellipse 48% 56% at 84% 20%,rgba(80,93,122,.06),transparent 80%)}
+#art{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
+#finish{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 77% 73% at 50% 47%,transparent 38%,rgba(0,0,0,.13) 69%,rgba(0,0,0,.57) 100%),linear-gradient(180deg,rgba(0,0,0,.23),transparent 26%,transparent 76%,rgba(0,0,0,.24));}
+#grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.065;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 160 160%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.82%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.38%22/%3E%3C/svg%3E')}
+#status{position:absolute;z-index:4;bottom:28px;left:0;right:0;color:#9c9ca4;text-align:center;letter-spacing:.19em;font-size:10px;opacity:0;transition:opacity 180ms}
+#status.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="stage" data-composition-id="bg-cover-orbit-v1" data-width="720" data-height="1280" data-duration="5.8" data-fps="24">
+  <canvas id="art" width="720" height="1280" aria-label="An animated cinematic three-dimensional orbit of BeatGaler beat cover art"></canvas>
+  <div id="finish"></div><div id="grain"></div><div id="status"></div>
+</div>
+<script>
+(() => {
+'use strict';
+const DURATION=5.8, W=720,H=1280,N=24;
+const canvas=document.getElementById('art');
+const gl=canvas.getContext('webgl2',{alpha:true,antialias:true,depth:true,premultipliedAlpha:false,preserveDrawingBuffer:true,powerPreference:'high-performance'});
+const status=document.getElementById('status');
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const smooth=(x)=>{x=clamp(x,0,1);return x*x*(3-2*x)};
+const smoother=(x)=>{x=clamp(x,0,1);return x*x*x*(x*(x*6-15)+10)};
+const mix=(a,b,s)=>a*(1-s)+b*s;
+const hash=(i)=>{let x=Math.sin((i+1)*127.1+55.61)*43758.5453;return x-Math.floor(x)};
+const V=(x,y,z)=>[x,y,z];
+const add=(a,b)=>a.map((q,i)=>q+b[i]);
+const sub=(a,b)=>a.map((q,i)=>q-b[i]);
+const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const norm=(a)=>{const d=Math.hypot(...a)||1;return a.map(v=>v/d)};
+const mul=(a,b)=>{const o=Array(16).fill(0);for(let c=0;c<4;c++)for(let r=0;r<4;r++)for(let k=0;k<4;k++)o[c*4+r]+=a[k*4+r]*b[c*4+k];return o};
+const id=()=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+const translate=(x,y,z)=>[1,0,0,0,0,1,0,0,0,0,1,0,x,y,z,1];
+const scale=(x,y,z)=>[x,0,0,0,0,y,0,0,0,0,z,0,0,0,0,1];
+const ry=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[c,0,-s,0,0,1,0,0,s,0,c,0,0,0,0,1]};
+const rx=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[1,0,0,0,0,c,s,0,0,-s,c,0,0,0,0,1]};
+const rz=(r)=>{let c=Math.cos(r),s=Math.sin(r);return[c,s,0,0,-s,c,0,0,0,0,1,0,0,0,0,1]};
+const perspective=(fov,aspect,near,far)=>{const f=1/Math.tan(fov/2),d=near-far;return[f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/d,-1,0,0,far*near*2/d,0]};
+const lookAt=(eye,target,up)=>{const z=norm(sub(eye,target)),x=norm(cross(up,z)),y=cross(z,x);return[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1]};
+const vert=`#version 300 es
+precision highp float;
+in vec3 a_pos;in vec3 a_normal;in vec2 a_uv;
+uniform mat4 u_mvp;uniform mat4 u_model;uniform mat4 u_view;
+out vec2 v_uv;out vec3 v_n;out vec3 v_p;out float v_depth;
+void main(){vec4 p=u_model*vec4(a_pos,1.0);gl_Position=u_mvp*vec4(a_pos,1.0);v_uv=a_uv;v_p=p.xyz;v_n=normalize(mat3(u_model)*a_normal);v_depth=-(u_view*p).z;}`;
+const frag=`#version 300 es
+precision highp float;
+in vec2 v_uv;in vec3 v_n;in vec3 v_p;in float v_depth;
+uniform sampler2D u_tex;uniform float u_face;uniform float u_bright;uniform float u_alpha;
+uniform vec3 u_eye;out vec4 outColor;
+void main(){vec3 n=normalize(v_n);vec3 light=normalize(vec3(-.56,.84,1.75));vec3 eye=normalize(u_eye-v_p);vec3 halfv=normalize(light+eye);
+float diffuse=max(dot(n,light),0.0);float spec=pow(max(dot(n,halfv),0.0),46.0);
+vec3 color=u_face<.5 ? texture(u_tex,v_uv).rgb : (u_face<1.5?vec3(.135,.137,.146):vec3(.055,.056,.063));
+float lighting=u_face<.5?(0.80+0.22*diffuse):(0.33+0.50*diffuse);
+color*=lighting*u_bright; color+=spec*(u_face<.5?.095:.17);
+if(u_face<.5){float rim=smoothstep(.975,1.0,max(abs(v_uv.x-.5),abs(v_uv.y-.5))*2.0);color+=rim*vec3(.10,.10,.11);}
+float haze=1.0-smoothstep(10.5,24.0,v_depth)*.45;
+float alpha=u_alpha*clamp(haze,.2,1.0);
+outColor=vec4(color*mix(.64,1.0,haze),alpha);
+}`;
+function compile(type,src){const sh=gl.createShader(type);gl.shaderSource(sh,src);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(sh));return sh}
+let shader,geometry,uvBuffer,normBuffer;
+const ctx2d=gl?null:canvas.getContext('2d',{alpha:true});
+try{if(gl){shader=gl.createProgram();gl.attachShader(shader,compile(gl.VERTEX_SHADER,vert));gl.attachShader(shader,compile(gl.FRAGMENT_SHADER,frag));gl.linkProgram(shader);if(!gl.getProgramParameter(shader,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(shader));}}catch(err){status.textContent=String(err);status.classList.add('show');throw err;}
+const loc=(n)=>gl?gl.getUniformLocation(shader,n):null;
+const U={mvp:loc('u_mvp'),model:loc('u_model'),view:loc('u_view'),tex:loc('u_tex'),face:loc('u_face'),bright:loc('u_bright'),alpha:loc('u_alpha'),eye:loc('u_eye')};
+const attrib=(name,items)=>{if(!gl)return null;const l=gl.getAttribLocation(shader,name),b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(items),gl.STATIC_DRAW);gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,name==='a_uv'?2:3,gl.FLOAT,false,0,0);return b};
+// Six 3D faces: front artwork, four solid graphite edges, dark back. Depth test orders all covers.
+function quad(a,b,c,d,n,front,arrays){const {p,uv,normal,faces}=arrays;const verts=[a,b,c,a,c,d];for(let k=0;k<6;k++){p.push(...verts[k]);normal.push(...n);uv.push(...([[0,0],[1,0],[1,1],[0,0],[1,1],[0,1]][k]));faces.push(front)}}
+const A={p:[],uv:[],normal:[],faces:[]};const z=.025;
+quad([-.5,-.5,z],[.5,-.5,z],[.5,.5,z],[-.5,.5,z],[0,0,1],0,A);
+quad([.5,-.5,-z],[-.5,-.5,-z],[-.5,.5,-z],[.5,.5,-z],[0,0,-1],2,A);
+quad([-.5,-.5,-z],[.5,-.5,-z],[.5,-.5,z],[-.5,-.5,z],[0,-1,0],1,A);
+quad([-.5,.5,z],[.5,.5,z],[.5,.5,-z],[-.5,.5,-z],[0,1,0],1,A);
+quad([-.5,-.5,z],[-.5,-.5,-z],[-.5,.5,-z],[-.5,.5,z],[-1,0,0],1,A);
+quad([.5,-.5,-z],[.5,-.5,z],[.5,.5,z],[.5,.5,-z],[1,0,0],1,A);
+const pbuf=attrib('a_pos',A.p),nbuf=attrib('a_normal',A.normal),ubuf=attrib('a_uv',A.uv);
+const textures=[];
+const exts=['jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','jpg','avif','avif','avif','avif'];
+function texUpload(image){if(!gl)return null;const tx=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tx);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);gl.generateMipmap(gl.TEXTURE_2D);return tx}
+const cards=Array.from({length:N},(_,i)=>({i,tex:null}));
+function loadImg(i){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{cards[i].image=im;cards[i].tex=texUpload(im);resolve()};im.onerror=()=>reject(new Error('Missing artwork '+(i+1)));im.src=(window.__embeddedCovers?.[i]||'assets/covers/cover-'+String(i+1).padStart(2,'0')+'.'+exts[i])})}
+// World coordinates, not CSS translations. Independent asymmetric splines create parallax/occlusion.
+function coverPose(i,t){
+ const golden=2.399963229728653;const k=i+1;const phi=i*golden+.18;
+ const rate=(.14+hash(i*3)*.17);const turn=phi+rate*(t+.22*Math.sin(t*.85+i));
+ const ring=1.35+hash(i*7)*1.20;
+ const lift=Math.sin(i*1.72)*.21;
+ let x=Math.cos(turn)*ring*1.07 + .14*Math.sin(t*.69+i*1.1);
+ let y=Math.sin(turn)*ring*1.59 + lift +.20*Math.cos(t*.55+i*.73);
+ let depth=-3.2+hash(i*19)*6.6+.32*Math.cos(t*.7+i*1.63)+t*(hash(i*13)-.38)*.24;
+ const local=(t+.5)*.7;
+ // Art-directed near-camera protagonists: independent passes at different speeds and depths.
+ if(i===0){x=mix(-2.5,2.5,smoother((t+.2)/5.6));y=.15+.65*Math.sin(t*.72+.4);depth=3.2+.45*Math.sin(t*.45);}
+ if(i===1){x=.2+1.95*smoother(t/5.1);y=1.04-.45*Math.sin(t*.69+.4);depth=3.5-.4*t; }
+ if(i===6){x=mix(2.45,-2.10,smoother((t+.6)/6.5));y=-1.03+.65*Math.sin(t*.5+.6);depth=1.6+.39*t;}
+ if(i===13){x=-1.2+1.12*Math.sin(t*.49+.6);y=-2.15+t*.13;depth=2.2+.18*Math.sin(t*.7);}
+ if(i===19){x=1.62-1.12*smoother(t/5.8);y=2.27-.57*Math.sin(t*.67);depth=2.45+.5*Math.cos(t*.5);}
+ // Camera-facing with modest independent axis tilt; sleeves never turn paper-thin.
+ const yaw=clamp(-x*.075,-.32,.32)+.11*Math.sin(i*1.72+t*.57);
+ const pitch=clamp(-y*.04,-.25,.25)+.07*Math.sin(t*.74+i);
+ const roll=(hash(i*11)-.5)*.28 + .08*Math.sin(local+i*.81);
+ let size=mix(.82,1.57,hash(i*23));if(i===0)size=1.75;if(i===1)size=1.78;if(i===6)size=1.80;if(i===13||i===19)size=1.46;
+ return {pos:[x,y,depth],yaw,pitch,roll,size,bright:clamp(.84+(depth+2.6)*.035,.74,1.13)};
+}
+function cameraAt(t){
+ const push=Math.sin(Math.PI*clamp(t/DURATION,0,1))**2;
+ const eye=[-.24+1.95*Math.sin(.16+t*.36),.30+.67*Math.sin(t*.48-.8),12.5-1.65*push+.45*Math.cos(t*.45)];
+ const target=[.05+.54*Math.sin(t*.39-1.1),-.08+.53*Math.sin(t*.48+.3),-.35];
+ const bank=.020*Math.sin(t*.84-.5);
+ return {eye,view:lookAt(eye,target,[Math.sin(bank),Math.cos(bank),0])}
+}
+const projection=perspective(43*Math.PI/180,W/H,.1,50);
+// Progressive fallback: same 3D camera and object poses projected on CPU for browsers
+// where WebGL is unavailable (such as the current headless QA sandbox).
+function projectPoint(p,m){
+ const clip=[m[0]*p[0]+m[4]*p[1]+m[8]*p[2]+m[12],m[1]*p[0]+m[5]*p[1]+m[9]*p[2]+m[13],m[2]*p[0]+m[6]*p[1]+m[10]*p[2]+m[14],m[3]*p[0]+m[7]*p[1]+m[11]*p[2]+m[15]];
+ const w=clip[3]||.00001;return [(clip[0]/w*.5+.5)*W,(-clip[1]/w*.5+.5)*H,clip[2]/w];
+}
+function renderCanvasAt(t){
+ const ctx=ctx2d;if(!ctx)return;
+ ctx.clearRect(0,0,W,H);
+ const c=cameraAt(t);
+ const renderList=cards.map(card=>{const d=coverPose(card.i,t);return {card,d,dist:Math.hypot(...sub(d.pos,c.eye))}})
+ .filter(o=>o.card.image).sort((a,b)=>b.dist-a.dist);
+ for(const {card,d,dist} of renderList){
+ const m=mul(translate(...d.pos),mul(rz(d.roll),mul(ry(d.yaw),mul(rx(d.pitch),scale(d.size,d.size,d.size)))));
+ const mvp=mul(projection,mul(c.view,m));
+ const tl=projectPoint([-.5,.5,.025],mvp),tr=projectPoint([.5,.5,.025],mvp),bl=projectPoint([-.5,-.5,.025],mvp),br=projectPoint([.5,-.5,.025],mvp);
+ if([tl,tr,bl,br].some(v=>!Number.isFinite(v[0])||!Number.isFinite(v[1])))continue;
+ const image=card.image,near=clamp((23-dist)/14,.42,1);
+ ctx.save();ctx.globalAlpha=near;ctx.beginPath();ctx.moveTo(tl[0],tl[1]);ctx.lineTo(tr[0],tr[1]);ctx.lineTo(br[0],br[1]);ctx.lineTo(bl[0],bl[1]);ctx.closePath();
+ ctx.shadowColor='rgba(0,0,0,.86)';ctx.shadowBlur=27*near;ctx.shadowOffsetX=10;ctx.shadowOffsetY=17;ctx.fillStyle='#1b1b1f';ctx.fill();ctx.shadowColor='transparent';
+ ctx.clip();
+ ctx.setTransform((tr[0]-tl[0])/image.naturalWidth,(tr[1]-tl[1])/image.naturalWidth,(bl[0]-tl[0])/image.naturalHeight,(bl[1]-tl[1])/image.naturalHeight,tl[0],tl[1]);
+ ctx.drawImage(image,0,0);
+ ctx.restore();
+ ctx.save();ctx.globalAlpha=near*.69;ctx.beginPath();ctx.moveTo(tl[0],tl[1]);ctx.lineTo(tr[0],tr[1]);ctx.lineTo(br[0],br[1]);ctx.lineTo(bl[0],bl[1]);ctx.closePath();ctx.strokeStyle='rgba(203,205,214,.26)';ctx.lineWidth=1.5;ctx.stroke();ctx.restore();
+ }
+}
+function renderAt(input){const t=clamp(input,0,DURATION);if(!gl){renderCanvasAt(t);window.__orbitLastTime=t;return;}gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clearDepth(1);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.disable(gl.CULL_FACE);gl.disable(gl.BLEND);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(shader);
+ const c=cameraAt(t);gl.uniformMatrix4fv(U.view,false,new Float32Array(c.view));gl.uniform3fv(U.eye,new Float32Array(c.eye));gl.uniform1i(U.tex,0);
+ // Stable source order; z-buffer correctly resolves all intersections regardless of array order.
+ for(const card of cards){if(!card.tex)continue;const d=coverPose(card.i,t);
+ let m=mul(translate(...d.pos),mul(rz(d.roll),mul(ry(d.yaw),mul(rx(d.pitch),scale(d.size,d.size,d.size)))));
+ gl.uniformMatrix4fv(U.model,false,new Float32Array(m));gl.uniformMatrix4fv(U.mvp,false,new Float32Array(mul(projection,mul(c.view,m))));gl.uniform1f(U.bright,d.bright);gl.uniform1f(U.alpha,1);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,card.tex);
+ for(let f=0;f<6;f++){gl.uniform1f(U.face,f===0?0:(f===1?2:1));gl.drawArrays(gl.TRIANGLES,f*6,6)} }
+ window.__orbitLastTime=t;}
+window.seekTo=renderAt;
+window.__orbit={duration:DURATION,renderAt,ready:false,coverCount:N};
+window.__hf=window.__hf||{};window.__hf.buildReady=window.__hf.buildReady||{};
+const built=Promise.all(cards.map((_,i)=>loadImg(i))).then(()=>{window.__orbit.ready=true;renderAt(0);return true}).catch(e=>{status.textContent='ARTWORK LOAD FAILED: '+e.message;status.classList.add('show');window.__orbit.error=String(e);throw e});
+window.__hf.buildReady['bg-orbit-images']=built;
+window.addEventListener('hf-seek',e=>{renderAt(e.detail?.time??window.__hfThreeTime??0)});
+window.addEventListener('message',e=>{if(e.data?.type==='ORBIT_SEEK')renderAt(e.data.time)});
+// Human preview uses wall-clock only; renders use explicit deterministic seeking above.
+let start=null,play=true;
+function tick(ms){if(start===null)start=ms;if(play&&window.__orbit.ready)renderAt((ms-start)/1000%DURATION);requestAnimationFrame(tick)}
+if(!new URLSearchParams(location.search).has('capture'))requestAnimationFrame(tick);
+})();
+</script>
+</body></html>
