@@ -178,11 +178,11 @@ window.addEventListener('message',e=>{if(e.data?.type==='ORBIT_SEEK')renderAt(e.
 // Human preview uses wall-clock only; renders use explicit deterministic seeking above.
 // A browser-only clock for interactive preview. Renderers drive every frame via hf-seek.
 let previewHandle=null;
-const humanStart=performance.now();
+let previewFrame=0;
 if(!new URLSearchParams(location.search).has('capture')){
  previewHandle=setInterval(()=>{
    if(!deterministicSeek&&window.__orbit.ready)
-     renderAt((performance.now()-humanStart)/1000%DURATION);
+     renderAt((previewFrame++/30)%DURATION);
  },32);
 }
 })();
