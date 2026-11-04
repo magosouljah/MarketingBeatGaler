@@ -6,26 +6,27 @@
 <title>BeatGaler — Orbit study 01</title>
 <style>
 :root{color-scheme:dark} *{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;background:#020204;overflow:hidden}
+html,body{margin:0;width:100%;height:100%;background:#f6f6f6;overflow:hidden}
 body{display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,sans-serif}
-#stage{position:relative;width:min(100vw,calc(100vh * .5625));height:min(100vh,calc(100vw * 1.77778));overflow:hidden;isolation:isolate;background:radial-gradient(ellipse 110% 72% at 47% 43%,#19191d 0%,#09090d 38%,#020204 73%,#000 100%)}
-#stage::before{content:'';position:absolute;inset:-15%;z-index:0;pointer-events:none;background:radial-gradient(ellipse 40% 42% at 37% 49%,rgba(97,91,108,.10),transparent 73%),radial-gradient(ellipse 48% 56% at 84% 20%,rgba(80,93,122,.06),transparent 80%)}
+#stage{position:relative;width:min(100vw,calc(100vh * .5625));height:min(100vh,calc(100vw * 1.77778));overflow:hidden;isolation:isolate;background:#f6f6f6}
+#stage::before{content:"";position:absolute;inset:0;background:#f6f6f6}
 #art{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
-#finish{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 77% 73% at 50% 47%,transparent 38%,rgba(0,0,0,.13) 69%,rgba(0,0,0,.57) 100%),linear-gradient(180deg,rgba(0,0,0,.23),transparent 26%,transparent 76%,rgba(0,0,0,.24));}
-#grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.065;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 160 160%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.82%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.38%22/%3E%3C/svg%3E')}
+#finish{position:absolute;inset:0;z-index:2;pointer-events:none}
+#grain{display:none}
 #status{position:absolute;z-index:4;bottom:28px;left:0;right:0;color:#9c9ca4;text-align:center;letter-spacing:.19em;font-size:10px;opacity:0}
 #status.show{opacity:1}
+#center-copy{position:absolute;z-index:4;top:47%;left:0;width:100%;text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:62px;letter-spacing:-.055em;color:#111;transform:translateY(-50%);pointer-events:none}
 </style>
 </head>
 <body>
 <div id="stage" data-composition-id="bg-cover-orbit-v1" data-no-timeline data-width="720" data-height="1280" data-duration="5.8" data-fps="24">
   <canvas id="art" width="720" height="1280" aria-label="An animated cinematic three-dimensional orbit of BeatGaler beat cover art"></canvas>
-  <div id="finish"></div><div id="grain"></div><div id="status"></div>
+  <div id="finish"></div><div id="center-copy">BEATGALER</div><div id="grain"></div><div id="status"></div>
 </div>
 <script>
 (() => {
 'use strict';
-const DURATION=5.8, W=720,H=1280,N=24;
+const DURATION=5.8, W=720,H=1280,N=20;
 const canvas=document.getElementById('art');
 const gl=canvas.getContext('webgl2',{alpha:true,antialias:true,depth:true,premultipliedAlpha:false,preserveDrawingBuffer:true,powerPreference:'high-performance'});
 const status=document.getElementById('status');
@@ -66,7 +67,7 @@ vec3 color=u_face<.5 ? textureLod(u_tex,v_uv,u_dof).rgb : (u_face<1.5?vec3(.135,
 float lighting=u_face<.5?(0.80+0.22*diffuse):(0.33+0.50*diffuse);
 color*=lighting*u_bright; color+=spec*(u_face<.5?.095:.17);
 if(u_face<.5){float rim=smoothstep(.975,1.0,max(abs(v_uv.x-.5),abs(v_uv.y-.5))*2.0);color+=rim*vec3(.10,.10,.11);}
-float haze=1.0-smoothstep(10.5,24.0,v_depth)*.45;
+float haze=1.0;
 float alpha=u_alpha*clamp(haze,.2,1.0);
 outColor=vec4(color*mix(.64,1.0,haze),alpha);
 }`;
@@ -94,44 +95,29 @@ const cards=Array.from({length:N},(_,i)=>({i,tex:null}));
 function loadImg(i){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{cards[i].image=im;cards[i].tex=texUpload(im);resolve()};im.onerror=()=>reject(new Error('Missing artwork '+(i+1)));im.src=(window.__embeddedCovers?.[i]||'assets/covers/cover-'+String(i+1).padStart(2,'0')+'.'+exts[i])})}
 // World coordinates, not CSS translations. Independent asymmetric splines create parallax/occlusion.
 function coverPose(i,t){
- const group=(i+2)%4,phase=i*2.399963229728653 + .38;
- const variation=hash(i*3),drift=.46+.21*hash(i*37);
- // Real helices in X/Y/Z, with four deliberately separated depth strata.
- // Individual speeds, elliptical radii, wobbles and axial drift prevent a rigid carousel.
- const u=phase + drift*t + .10*Math.sin(t*.71+i*.91);
- const rx0=[1.63,1.89,2.15,2.45][group],ry0=[2.50,3.10,3.75,4.25][group];
- const rx=rx0+hash(i*23)*.43,ry=ry0+hash(i*13)*.43;
- let x=Math.cos(u)*rx + .16*Math.sin(t*.8+i*2.1);
- let y=Math.sin(u)*ry + .13*Math.cos(t*.68+i*1.8);
- const zbase=[3.1,.55,-2.0,-4.5][group];
- let z=zbase + .68*Math.sin(u*1.37+i*.7) + .35*Math.sin(.66*t+i*1.3);
- let size=[1.58,1.34,1.03,.80][group]*(.87+.23*variation);
- // Visible thickness, front-face parallax and independent three-axis angular response.
- // Four art-directed cinematic flybys create a shifting focal point through the tunnel.
- const hero=[2,8,15,11].indexOf(i);
- if(hero>=0){
-   const center=[.68,2.16,3.60,5.04][hero],dt=t-center;
-   const intensity=Math.exp(-.45*dt*dt);
-   x=mix(x,2.12*dt+.15*Math.sin(t*1.3+hero),intensity);
-   y=mix(y,.34*Math.sin(t*.83+hero*1.62),intensity);
-   z=mix(z,4.7+.12*Math.sin(t*.55+hero),intensity);
-   size=mix(size,1.98+.22*Math.sin(t*.53+hero*.7),intensity);
- }
- const yaw=clamp(-x*.23 + .24*Math.sin(.69*t+i*1.71),-.78,.78);
- const pitch=clamp(-y*.13 + .15*Math.cos(.52*t+i*.84),-.52,.52);
- const roll=.18*Math.sin(u+i*.31)+.10*Math.sin(.83*t+i*1.4);
- const bright=[1.05,.94,.62,.39][group];
- return {pos:[x,y,z],yaw,pitch,roll,size,bright,dof:[0,.1,1.0,2.3][group],opacity:[1,.84,.51,.26][group]};
+ // Apple reference study: a single asymmetric wreath, broad open center,
+ // nearly edge-on artwork on the sides, strong face-on views on near arc.
+ const n=20;
+ const order=(i*7)%n;
+ const theta=order*Math.PI*2/n + .14 + .27*t;
+ const radiusX=3.65, radiusY=2.46;
+ const x=radiusX*Math.cos(theta);
+ const y=radiusY*Math.sin(theta)-.12;
+ const z=1.6+2.0*Math.sin(theta+.38);
+ const yaw=-.74*Math.cos(theta)+.13*Math.sin(theta*2+i*.3);
+ const pitch=.14*Math.cos(theta+.4);
+ const roll=.17*Math.cos(theta-.7);
+ const size=1.43 + .10*Math.sin(theta*3);
+ const bright=1.18;
+ return {pos:[x,y,z],yaw,pitch,roll,size,bright,dof:0,opacity:1};
 }
 function cameraAt(t){
- const tempo=smoother(t/DURATION);
- // Camera move is not locked to card phase: lateral truck + slight tilt + progressive push.
- const eye=[-.48+1.15*Math.sin(t*.43-.10),.10+.53*Math.sin(t*.41-.38),11.50-1.62*tempo];
- const target=[.16+.24*Math.sin(t*.47+.34),-.02+.36*Math.sin(t*.61+.33),-1.2];
- const bank=.035*Math.sin(t*.54+.1);
- return {eye,view:lookAt(eye,target,[Math.sin(bank),Math.cos(bank),0])}
+ // Restrained lateral dolly; the orbit is the protagonist, not camera shake.
+ const eye=[.15+.20*Math.sin(t*.35),.12,12.6];
+ const target=[0,-.05,0];
+ return {eye,view:lookAt(eye,target,[0,1,0])};
 }
-const projection=perspective(44*Math.PI/180,W/H,.1,50);
+const projection=perspective(48*Math.PI/180,W/H,.1,50);
 // Progressive fallback: same 3D camera and object poses projected on CPU for browsers
 // where WebGL is unavailable (such as the current headless QA sandbox).
 function projectPoint(p,m){
