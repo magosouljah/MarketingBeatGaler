@@ -22,6 +22,7 @@ Necesitas Python 3.10+, Git y acceso a GitHub. Reinicia la sesión del agente de
 Opciones:
 
 - `python skillpack/manager.py install --profile phase2 --dry-run`: muestra el plan sin descargar.
+- `python skillpack/manager.py install --profile phase2 --agent codex --skill reference-to-motion`: instala solo una skill específica para validar el flujo.
 - `python skillpack/manager.py install --profile all --agent both`: instala las **57 candidatas** (más consumo de contexto, no es necesario para la primera prueba).
 - `python skillpack/manager.py install --profile phase2 --agent both --force`: refresca las skills **ya gestionadas** desde el mismo origen, descartando cambios locales de esas skills.
 - `python skillpack/manager.py doctor --profile all`: muestra qué está instalado, falta o fue modificado.

@@ -16,5 +16,10 @@ jobs:
         run: python skillpack/manager.py validate
       - name: Run offline skill installer tests
         run: python -m unittest discover -s skillpack/tests -v
+      - name: Smoke install one pinned external skill (never execute source code)
+        run: |
+          python skillpack/manager.py install --profile phase2 --agent codex --skill reference-to-motion
+          test -f .agents/skills/reference-to-motion/SKILL.md
+          test -f .agents/skills/reference-to-motion/_beatgaler-source.json
       - name: Audit protected project direction
         run: python learning/engine.py audit

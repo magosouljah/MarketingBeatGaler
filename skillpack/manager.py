@@ -173,6 +173,7 @@ def main(argv=None):
             p.add_argument('--force', action='store_true',
                            help='Refresh only skills managed from the same source')
             p.add_argument('--dry-run', action='store_true')
+            p.add_argument('--skill', default=None, help='Install only one named skill from the profile')
     args = parser.parse_args(argv)
     try:
         catalog = load_catalog()
@@ -181,6 +182,10 @@ def main(argv=None):
                   sum(len(s['skills']) for s in catalog['sources']), 'named skills')
             return 0
         selected = select(catalog, args.profile)
+        if args.command == 'install' and args.skill:
+            selected = [(s, k) for s, k in selected if k['name'] == args.skill]
+            if not selected:
+                raise ValueError('Skill not found in profile: ' + args.skill)
         agents = list(AGENTS) if args.agent == 'both' else [args.agent]
         if args.command in ('list', 'doctor'):
             for s, k in selected:
