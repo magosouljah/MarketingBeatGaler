@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Owner examines a new continuous orbit preview and approves depth, occlusion and camera motion; retain original render and comparison frames.",
+  "account": "account-1",
+  "candidate_rule": "Before final shading, require a camera-and-depth blocking preview with independently staged cover positions and demonstrable near/far parallax.",
+  "cause_hypothesis": "Flat layout and similar depth/movement across covers reduced apparent parallax.",
+  "check_id": "orbit-depth",
+  "id": "orbit-initial-rejection--orbit-depth",
+  "problem_evidence": "Earlier six-second orbit rejected; the production brief reports insufficient depth and camera choreography. Original MP4 is not stored in this repository.",
+  "source_case": "orbit-initial-rejection",
+  "state": "proposed"
+}
