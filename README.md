@@ -33,3 +33,7 @@ La infraestructura audiovisual de scraping, transcripción, generación de scrip
 ## Reference Analysis V1
 
 Executable full-frame source preparation, technical reports, optional annotated 2D kinematics and Learning Engine integration: [execution guide](shared/reference_analysis/README.md), [skill](skills/reference-analysis/SKILL.md), [research](shared/reference_analysis/RESEARCH.md). The original Apple Music MP4 is still unavailable in this checkout; the committed demonstration is synthetic. New tests: `python -m unittest discover -s shared/reference_analysis/tests -v`. A [pre-existing protected hash mismatch](shared/reference_analysis/AUDIT-BLOCKER.md) was repaired with explicit owner authorization, preserving direction text and the integrity check.
+
+### First real reference intake
+
+The original 6.033s Apple Music cover-orbit video was recovered from the user's previous ChatGPT Library upload and independently measured (FFprobe and short seed-based OpenCV tracks). It is **not** stored in GitHub or this checkout. [Derived source analysis, data, limitations and next comparison](account-1/research/reference-analysis/apple-music-orbit-v1/ANALYSIS.md). This is unapproved research, not a reconstructed or validated cinematic result.
