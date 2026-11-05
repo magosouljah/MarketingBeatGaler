@@ -1,0 +1,10 @@
+{
+  "account": "account-1",
+  "case_id": "orbit-initial-rejection",
+  "failed": [
+    "orbit-depth",
+    "orbit-motion"
+  ],
+  "human_approved": false,
+  "passed": []
+}
