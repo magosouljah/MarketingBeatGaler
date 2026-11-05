@@ -1,6 +1,6 @@
 # DIRECCIÓN — MarketingBeatGaler
 
-**Archivo protegido.** Ningún agente, incluido ChatGPT, puede editarlo sin autorización **explícita y específica** del propietario (`magosouljah`). El permiso general para editar este repositorio NO incluye este archivo. Cada cambio autorizado debe indicar esa autorización en el commit y actualizar `.github/direccion.sha256`.
+**Archivo protegido.** Ningún agente, incluido ChatGPT, puede editarlo sin autorización **explícita y específica** del propietario (`BRUNO`). El permiso general para editar este repositorio NO incluye este archivo. Cada cambio autorizado debe indicar esa autorización en el commit y actualizar `.github/direccion.sha256`.
 
 ## Misión
 Producir videos de BeatGaler con calidad profesional, costo controlado y aprendizaje verificable. **Calidad antes que volumen.**
