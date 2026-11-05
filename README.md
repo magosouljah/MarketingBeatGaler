@@ -37,3 +37,7 @@ Executable full-frame source preparation, technical reports, optional annotated 
 ### First real reference intake
 
 The original 6.033s Apple Music cover-orbit video was recovered from the user's previous ChatGPT Library upload and independently measured (FFprobe and short seed-based OpenCV tracks). It is **not** stored in GitHub or this checkout. [Derived source analysis, data, limitations and next comparison](account-1/research/reference-analysis/apple-music-orbit-v1/ANALYSIS.md). This is unapproved research, not a reconstructed or validated cinematic result.
+
+## Skills de motion graphics para Fase 2
+
+[Motion Skills Library](skillpack/README.md): **57 skills catalogadas y fijadas por SHA** desde 7 repositorios de GitHub; **19 prioritarias para la primera prueba de motion design**. Instalador reproducible para Codex y Claude Code: `python skillpack/manager.py install --profile phase2 --agent both` desde el IDE local. Las fuentes externas se descargan en cada equipo y no están incluidas físicamente en el repositorio; `DIRECCION.md` continúa protegido.
