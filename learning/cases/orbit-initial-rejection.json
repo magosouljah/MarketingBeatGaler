@@ -1,0 +1,25 @@
+{
+  "id": "orbit-initial-rejection",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "source": "account-1/scripts/FIRST-VIDEO-V1.md: Prior attempts and feedback; historical feedback, not frame-measured",
+  "checks": [
+    {
+      "id": "orbit-depth",
+      "status": "fail",
+      "evidence": "Earlier six-second orbit rejected; the production brief reports insufficient depth and camera choreography. Original MP4 is not stored in this repository.",
+      "hypothesis": "Flat layout and similar depth/movement across covers reduced apparent parallax.",
+      "proposed_rule": "Before final shading, require a camera-and-depth blocking preview with independently staged cover positions and demonstrable near/far parallax.",
+      "acceptance_test": "Owner examines a new continuous orbit preview and approves depth, occlusion and camera motion; retain original render and comparison frames."
+    },
+    {
+      "id": "orbit-motion",
+      "status": "fail",
+      "evidence": "Earlier six-second orbit rejected; the brief describes uniform motion and simplistic trajectories, not a faithful cinematic choreography.",
+      "hypothesis": "Uniform speed and synchronized trajectories produced mechanical motion.",
+      "proposed_rule": "Block and review independent 3D trajectories and camera easing before materials or final rendering; test temporal continuity on consecutive frames.",
+      "acceptance_test": "Owner approves a new continuous animation preview; QA captures a temporal contact sheet across the entire six-second scene."
+    }
+  ]
+}
