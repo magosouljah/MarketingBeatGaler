@@ -1,0 +1,20 @@
+name: Skills Library CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate pinned source catalog
+        run: python skillpack/manager.py validate
+      - name: Run offline skill installer tests
+        run: python -m unittest discover -s skillpack/tests -v
+      - name: Audit protected project direction
+        run: python learning/engine.py audit

@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "barty",
+      "repo": "Barty-Bart/motion-graphics",
+      "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
+      "license": "MIT; bundled media have additional licenses",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "explainer-default",
+          "path": "skills/explainer-default",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "explainer-engaging",
+          "path": "skills/explainer-engaging",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "explainer-high-energy",
+          "path": "skills/explainer-high-energy",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-broll",
+          "path": "skills/motion-broll",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "object-separation",
+          "path": "skills/object-separation",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "sound-effects",
+          "path": "skills/sound-effects",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyperframes",
+      "repo": "heygen-com/hyperframes",
+      "commit": "4935d6736b64ed3dd68524c1cb2c7f011171baef",
+      "license": "Apache-2.0",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "hyperframes",
+          "path": "skills/hyperframes",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "hyperframes-cli",
+          "path": "skills/hyperframes-cli",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "hyperframes-registry",
+          "path": "skills/hyperframes-registry",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "media-use",
+          "path": "skills/media-use",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "reverse-any-video",
+          "path": "skills/reverse-any-video",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "style-sampling",
+          "path": "skills/style-sampling",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-to-hyperframes",
+          "path": "skills/remotion-to-hyperframes",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "figma",
+          "path": "skills/figma",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "slideshow",
+          "path": "skills/slideshow",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charlie",
+      "repo": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "license": "MIT",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "animated-chart",
+          "path": "skills/animated-chart",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "apple-launch-film",
+          "path": "skills/apple-launch-film",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "brand-intake",
+          "path": "skills/brand-intake",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "launch-video",
+          "path": "skills/launch-video",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "loop-cover",
+          "path": "skills/loop-cover",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "milestone-reveal",
+          "path": "skills/milestone-reveal",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "model-showdown",
+          "path": "skills/model-showdown",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "motion-brief-writer",
+          "path": "skills/motion-brief-writer",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-effects",
+          "path": "skills/motion-effects",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-prompt-writer",
+          "path": "skills/motion-prompt-writer",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "newsletter-promo",
+          "path": "skills/newsletter-promo",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "reel-export",
+          "path": "skills/reel-export",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "reference-to-motion",
+          "path": "skills/reference-to-motion",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "title-sequence-3d",
+          "path": "skills/title-sequence-3d",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "vox-explainer",
+          "path": "skills/vox-explainer",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blixvip",
+      "repo": "blixvip/skills",
+      "commit": "b8b7e23c9f54c4450d9f8821581f8aad7e91984e",
+      "license": "MIT",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "motion-pipeline",
+          "path": "motion-pipeline",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "motion-plan",
+          "path": "motion-plan",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-assets",
+          "path": "motion-assets",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-design",
+          "path": "motion-design",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "motion-animate",
+          "path": "motion-animate",
+          "profiles": [
+            "phase2",
+            "all"
+          ]
+        },
+        {
+          "name": "ae-extendscript",
+          "path": "ae-extendscript",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liam-remotion",
+      "repo": "Liamrjohnston/remotion-motion-graphics-skill",
+      "commit": "b860c7921f2220b9e2a84e815ba0ae7b10858f08",
+      "license": "MIT",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "article-highlights",
+          "path": "skills/article-highlights",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "cinematic-camera",
+          "path": "skills/cinematic-camera",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "motion-graphics",
+          "path": "skills/motion-graphics",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "terminal-inserts",
+          "path": "skills/terminal-inserts",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remotion",
+      "repo": "remotion-dev/skills",
+      "commit": "a2824c67f8b4585c294a8101db9f9f0ad3c643f8",
+      "license": "No repository LICENSE found; review local-use terms",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "remotion-best-practices",
+          "path": "skills/remotion-best-practices",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-captions",
+          "path": "skills/remotion-captions",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-create",
+          "path": "skills/remotion-create",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-docs",
+          "path": "skills/remotion-docs",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-interactivity",
+          "path": "skills/remotion-interactivity",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-license",
+          "path": "skills/remotion-license",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-maps",
+          "path": "skills/remotion-maps",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-markup",
+          "path": "skills/remotion-markup",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-multimedia",
+          "path": "skills/remotion-multimedia",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-render",
+          "path": "skills/remotion-render",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-saas",
+          "path": "skills/remotion-saas",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-studio",
+          "path": "skills/remotion-studio",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "remotion-upgrade",
+          "path": "skills/remotion-upgrade",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visualx",
+      "repo": "VisualxIntelligence/motion-tools-and-skills",
+      "commit": "2fae287134109449676d9afbfd38318985d75121",
+      "license": "MIT repo; individual attributions may vary",
+      "note": "Third-party skill. Review upstream scripts and constraints before use.",
+      "skills": [
+        {
+          "name": "3d-product",
+          "path": "skills/3d-product",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "motion-design-principles",
+          "path": "skills/motion-design-principles",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "motion-designer",
+          "path": "skills/motion-designer",
+          "profiles": [
+            "all"
+          ]
+        },
+        {
+          "name": "video-shotcraft",
+          "path": "skills/video-shotcraft",
+          "profiles": [
+            "all"
+          ]
+        }
+      ]
+    }
+  ]
+}
