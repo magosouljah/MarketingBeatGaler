@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "reference-direction-baseline-failure",
+  "failed": [
+    "direction-baseline-audit"
+  ],
+  "human_approved": false,
+  "passed": []
+}

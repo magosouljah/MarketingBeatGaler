@@ -1,0 +1,14 @@
+{
+  "account": "account-1",
+  "checks": [
+    {
+      "evidence": "account-1/research/reference-analysis/synthetic-v1/reference-tests.txt: test_audio_start_offset_warning passes with canonical 0.2s offset; technical verification only, not owner artistic approval.",
+      "id": "audio-offset-fixture",
+      "status": "pass"
+    }
+  ],
+  "human_approved": false,
+  "id": "reference-offset-fixture-correction",
+  "project": "reference-intelligence-v1",
+  "validates_proposal": "reference-offset-fixture-failure--audio-offset-fixture"
+}

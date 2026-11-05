@@ -1,0 +1,24 @@
+Reviewed reference-test: 0 failed, 1 passed; proposals are NOT validated lessons
+Reviewed reference-failure: 1 failed, 0 passed; proposals are NOT validated lessons
+test_estimates_cannot_be_labeled_measurements (test_pipeline.ContractTests.test_estimates_cannot_be_labeled_measurements) ... ok
+test_incomplete_decode_rejected (test_pipeline.ContractTests.test_incomplete_decode_rejected) ... ok
+test_metric_is_pixel_difference_not_motion (test_pipeline.ContractTests.test_metric_is_pixel_difference_not_motion) ... ok
+test_reject_duplicate_and_reversed_timestamps (test_pipeline.ContractTests.test_reject_duplicate_and_reversed_timestamps) ... ok
+test_trajectory_uses_vfr_timing (test_pipeline.ContractTests.test_trajectory_uses_vfr_timing) ... ok
+test_audio_start_offset_warning (test_pipeline.IntegrationTests.test_audio_start_offset_warning) ... ok
+test_bad_inputs_and_resource_limits (test_pipeline.IntegrationTests.test_bad_inputs_and_resource_limits) ... ok
+test_duplicate_record_and_wrong_pts_even_with_rehashed_manifest (test_pipeline.IntegrationTests.test_duplicate_record_and_wrong_pts_even_with_rehashed_manifest) ... ok
+test_engine_registration_and_failure_preserve_gates (test_pipeline.IntegrationTests.test_engine_registration_and_failure_preserve_gates) ... ok
+test_existing_output_never_overwritten (test_pipeline.IntegrationTests.test_existing_output_never_overwritten) ... ok
+test_fractional_fps_b_frames_and_nonzero_origin (test_pipeline.IntegrationTests.test_fractional_fps_b_frames_and_nonzero_origin) ... ok
+test_incomplete_report_detected (test_pipeline.IntegrationTests.test_incomplete_report_detected) ... ok
+test_known_cut_hold_and_tracking (test_pipeline.IntegrationTests.test_known_cut_hold_and_tracking) ... ok
+test_mid_decode_failure_never_publishes_partial_output (test_pipeline.IntegrationTests.test_mid_decode_failure_never_publishes_partial_output) ... ok
+test_missing_and_altered_frame_detected (test_pipeline.IntegrationTests.test_missing_and_altered_frame_detected) ... ok
+test_reproducible_analysis (test_pipeline.IntegrationTests.test_reproducible_analysis) ... ok
+test_variable_frame_timing_preserved (test_pipeline.IntegrationTests.test_variable_frame_timing_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 5.913s
+
+OK

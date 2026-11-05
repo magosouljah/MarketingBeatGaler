@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "reference-offset-fixture-correction",
+  "failed": [],
+  "human_approved": false,
+  "passed": [
+    "audio-offset-fixture"
+  ]
+}

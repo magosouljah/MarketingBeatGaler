@@ -1,0 +1,28 @@
+{
+  "base_commit": "02ac140eef4050f4ae64ac25d67eb374d3cec608",
+  "new_tests_passed": 17,
+  "existing_tests_passed": 6,
+  "existing_tests_failed": [
+    "test_repository_audits"
+  ],
+  "checks": {
+    "reference-tests": {
+      "exit_code": 0,
+      "log": "reference-tests.txt"
+    },
+    "learning-tests": {
+      "exit_code": 1,
+      "log": "learning-tests.txt"
+    },
+    "learning-audit": {
+      "exit_code": 1,
+      "log": "learning-audit.txt"
+    },
+    "skill-validation": {
+      "exit_code": 0,
+      "log": "skill-validation.txt"
+    }
+  },
+  "creative_approval": false,
+  "original_apple_video_analyzed": false
+}

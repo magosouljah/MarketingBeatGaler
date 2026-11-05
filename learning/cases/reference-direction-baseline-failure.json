@@ -1,0 +1,16 @@
+{
+  "account": "account-1",
+  "checks": [
+    {
+      "acceptance_test": "After owner-authorized repair, raw-byte integrity audit and all existing/new tests pass in a fresh checkout. No creative approval inferred.",
+      "evidence": "shared/reference_analysis/AUDIT-BLOCKER.md; account-1/research/reference-analysis/synthetic-v1/learning-audit.txt; existing main blob hash does not match recorded protected hash.",
+      "hypothesis": "[evaluation-process; unvalidated] Later direction commits did not update the recorded hash; Windows autocrlf adds a second byte-level mismatch.",
+      "id": "direction-baseline-audit",
+      "proposed_rule": "problem: A pre-existing protection failure blocks full validation of new experiments.\nimplementation: Only after explicit owner authorization, reconcile approved direction content, expected hash and a stable cross-platform checkout policy; never disable the check.\nuse_when: Baseline audit differs before feature code changes.\navoid_when: Direction content is unreviewed or owner authorization is absent.",
+      "status": "fail"
+    }
+  ],
+  "human_approved": false,
+  "id": "reference-direction-baseline-failure",
+  "project": "reference-intelligence-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "fps": 30,
+  "frame_count": 60,
+  "cut_frame": 30,
+  "square": {
+    "frames": [
+      0,
+      29
+    ],
+    "x_left_pixels": "10 + 2*frame",
+    "y_top_pixels": 32,
+    "size_pixels": 16,
+    "vx_pixels_per_second": 60
+  },
+  "hold_frames": [
+    30,
+    59
+  ],
+  "audio": "440Hz continuous tone; not a beat detector test"
+}

@@ -1,0 +1,3 @@
+Invalid duration for option itsoffset: .2
+Error parsing options for input file E:\777\app\beatgaler_MARKETING\account-1\research\reference-analysis\synthetic-v1\input\source.mkv.
+Error opening input files: Invalid argument
