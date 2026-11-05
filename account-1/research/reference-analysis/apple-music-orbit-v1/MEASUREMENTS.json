@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "source": {
+    "filename": "-5258203640291409657.mp4",
+    "sha256": "74301c7f543eeb2695bdb496aca7e480150262e505ed5156184cceb4c5cdd2db",
+    "bytes": 2919113,
+    "origin": "previously uploaded by user, recovered from user's ChatGPT Library",
+    "reference_url": "https://www.instagram.com/p/DcBoH7XgD1V/",
+    "media_committed": false
+  },
+  "tooling": {
+    "probe": "FFprobe",
+    "image_differences": "OpenCV 4.13.0; 64x64 grayscale means",
+    "tracks": "OpenCV sparse Lucas-Kanade seeded from three manually selected cover ROIs on frame 80",
+    "run_location": "isolated analysis workspace; not claimed to have run repository Reference Intelligence V1 CLI"
+  },
+  "video": {
+    "width": 512,
+    "height": 910,
+    "frames": 181,
+    "reported_fps": "30/1",
+    "duration_s": 6.033333,
+    "first_frame_pts_s": 0,
+    "last_frame_pts_s": 6,
+    "regular_frame_interval_s_approx": 0.033333
+  },
+  "audio": {
+    "codec": "aac",
+    "stream_start_s": 0,
+    "stream_duration_s": 5.926667,
+    "analysis_status": "not assessed perceptually"
+  },
+  "measurement_type": "thumbnail grayscale mean absolute consecutive frame difference; not object speed, no calibrated camera data",
+  "movement_peak_frames": [
+    {
+      "frame": 122,
+      "time_s": 4.0667,
+      "diff": 0.172
+    },
+    {
+      "frame": 116,
+      "time_s": 3.8667,
+      "diff": 0.1508
+    },
+    {
+      "frame": 127,
+      "time_s": 4.2333,
+      "diff": 0.1463
+    }
+  ],
+  "intervals": [
+    {
+      "frame_range": [
+        0,
+        35
+      ],
+      "start_s": 0,
+      "end_s": 1.167,
+      "mean_delta": 0.0012,
+      "mean_saturated_fraction": 0
+    },
+    {
+      "frame_range": [
+        36,
+        47
+      ],
+      "start_s": 1.2,
+      "end_s": 1.567,
+      "mean_delta": 0.0305,
+      "mean_saturated_fraction": 0.0532
+    },
+    {
+      "frame_range": [
+        48,
+        70
+      ],
+      "start_s": 1.6,
+      "end_s": 2.333,
+      "mean_delta": 0.0561,
+      "mean_saturated_fraction": 0.0965
+    },
+    {
+      "frame_range": [
+        71,
+        89
+      ],
+      "start_s": 2.367,
+      "end_s": 2.967,
+      "mean_delta": 0.0579,
+      "mean_saturated_fraction": 0.0998
+    },
+    {
+      "frame_range": [
+        90,
+        109
+      ],
+      "start_s": 3,
+      "end_s": 3.633,
+      "mean_delta": 0.082,
+      "mean_saturated_fraction": 0.1206
+    },
+    {
+      "frame_range": [
+        110,
+        129
+      ],
+      "start_s": 3.667,
+      "end_s": 4.3,
+      "mean_delta": 0.1278,
+      "mean_saturated_fraction": 0.1918
+    },
+    {
+      "frame_range": [
+        130,
+        139
+      ],
+      "start_s": 4.333,
+      "end_s": 4.633,
+      "mean_delta": 0.0499,
+      "mean_saturated_fraction": 0.0205
+    },
+    {
+      "frame_range": [
+        140,
+        180
+      ],
+      "start_s": 4.667,
+      "end_s": 6,
+      "mean_delta": 0.0007,
+      "mean_saturated_fraction": 0
+    }
+  ],
+  "evidence_limitations": [
+    "The clip is low-resolution 512x910; image-metric differences do not measure camera/object speed.",
+    "Scene/event boundaries below are authored estimates from visual inspection, not detected cuts.",
+    "The original film and extracts are not versioned to avoid redistribution of third-party copyrighted media.",
+    "Source did not run through Reference Intelligence V1 CLI in this isolated container; independent FFprobe/OpenCV metadata only."
+  ]
+}
