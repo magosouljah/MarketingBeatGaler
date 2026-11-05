@@ -1,0 +1,11 @@
+{
+  "check_id": "audio-offset-fixture",
+  "evidence": "account-1/research/reference-analysis/synthetic-v1/initial-offset-failure.txt; actual first integration run failed on itsoffset .2; canonical 0.2 passes test_audio_start_offset_warning.",
+  "cause_category": "implementation",
+  "hypothesis": "This FFmpeg build requires a leading zero in duration strings. The fixture failed before analysis, not because sync detection was wrong.",
+  "problem": "Invalid fixture arguments can be confused with analyzer failures.",
+  "implementation": "Use a canonical decimal duration such as 0.2 and retain subprocess stderr/return code.",
+  "use_when": "Constructing controlled audio-delay fixtures and timing CLI arguments.",
+  "avoid_when": "Diagnosing an already decoded clip without checking its actual stream PTS.",
+  "acceptance_test": "New test must encode a controlled 0.2s audio offset and verify measured offset and warning; no artistic approval inferred."
+}

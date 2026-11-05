@@ -1,0 +1,11 @@
+{
+  "check_id": "direction-baseline-audit",
+  "evidence": "shared/reference_analysis/AUDIT-BLOCKER.md; account-1/research/reference-analysis/synthetic-v1/learning-audit.txt; existing main blob hash does not match recorded protected hash.",
+  "cause_category": "evaluation-process",
+  "hypothesis": "Later direction commits did not update the recorded hash; Windows autocrlf adds a second byte-level mismatch.",
+  "problem": "A pre-existing protection failure blocks full validation of new experiments.",
+  "implementation": "Only after explicit owner authorization, reconcile approved direction content, expected hash and a stable cross-platform checkout policy; never disable the check.",
+  "use_when": "Baseline audit differs before feature code changes.",
+  "avoid_when": "Direction content is unreviewed or owner authorization is absent.",
+  "acceptance_test": "After owner-authorized repair, raw-byte integrity audit and all existing/new tests pass in a fresh checkout. No creative approval inferred."
+}

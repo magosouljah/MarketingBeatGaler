@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "reference-synthetic-v1",
+  "failed": [],
+  "human_approved": false,
+  "passed": [
+    "reference-integrity"
+  ]
+}

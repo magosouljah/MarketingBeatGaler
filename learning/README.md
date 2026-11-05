@@ -32,3 +32,7 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 - Todas las demás instrucciones, código, casos, reviews y skills pueden evolucionar normalmente, con commits y pruebas. No se inventan métricas ni aprobaciones.
 - `audit` comprueba formato, trazabilidad y la integridad del archivo rector; **no** verifica automáticamente la calidad artística del MP4.
 - Próximo trabajo real: crear preview editable de órbita 3D de portadas, evaluar con frames y video, corregir y validar con el propietario. HyperFrames es la elección inicial según `FASE-0.md`; herramientas 3D complementarias requieren justificación, no sustitución silenciosa.
+
+## Reference Analysis integration
+
+The [Reference Analysis CLI](../shared/reference_analysis/README.md) validates full-frame evidence before `register`, then reuses this engine for cases/reviews. `failure` records diagnostics and generates existing-format proposals with use/avoid conditions. No parallel promotion mechanism or automatic owner approval. See the [baseline audit blocker](../shared/reference_analysis/AUDIT-BLOCKER.md) before claiming all tests pass.

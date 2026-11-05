@@ -1,0 +1,14 @@
+{
+  "account": "account-1",
+  "checks": [
+    {
+      "evidence": "account-1/research/reference-analysis/synthetic-v1/analysis/manifest.json validated against all output files and source frame PTS.",
+      "id": "reference-integrity",
+      "status": "pass"
+    }
+  ],
+  "human_approved": false,
+  "id": "reference-synthetic-v1",
+  "project": "reference-intelligence-v1",
+  "source": "account-1/research/reference-analysis/synthetic-v1/analysis/analysis.json; source SHA256 5a4e21c0598ea6af03ff41820823956879bd915902c017df12b3aa64049bbfc5"
+}

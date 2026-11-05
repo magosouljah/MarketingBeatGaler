@@ -13,3 +13,5 @@ Recursos reutilizables para ambas cuentas; **no contiene** gusto creativo, hooks
 
 Las carpetas marcadas con `.gitkeep` están reservadas; **no representan funcionalidad implementada**.
 
+
+- [reference_analysis/](reference_analysis/README.md) — implemented video evidence preparation, reports, estimated annotated 2D kinematics and learning integration. Does not implement semantic vision or artistic approval.

@@ -1,0 +1,1 @@
+ERROR: DIRECCION.md changed: explicit owner authorization and hash update required

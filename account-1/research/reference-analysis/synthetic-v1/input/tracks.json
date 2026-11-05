@@ -1,0 +1,24 @@
+[
+  {
+    "id": "square-center",
+    "evidence": "Synthetic generator truth; coordinates in coded 160x96 image.",
+    "uncertainty": "Generator truth supplied for demonstration; real reference needs manual tracking error bounds.",
+    "samples": [
+      {
+        "frame": 0,
+        "x": 0.1125,
+        "y": 0.4166666666666667
+      },
+      {
+        "frame": 10,
+        "x": 0.2375,
+        "y": 0.4166666666666667
+      },
+      {
+        "frame": 20,
+        "x": 0.3625,
+        "y": 0.4166666666666667
+      }
+    ]
+  }
+]

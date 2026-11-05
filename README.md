@@ -29,3 +29,7 @@ Un video interesante **no** es necesariamente un outlier. Solo clasificarlo como
 ## Estado
 
 La infraestructura audiovisual de scraping, transcripción, generación de scripts, edición y render aún no está implementada; las carpetas reservadas no significan funcionalidad terminada. El **Learning Engine V1** sí dispone de una CLI y pruebas locales. No iniciar producción masiva hasta pasar los gates de [PLAN.md](PLAN.md).
+
+## Reference Analysis V1
+
+Executable full-frame source preparation, technical reports, optional annotated 2D kinematics and Learning Engine integration: [execution guide](shared/reference_analysis/README.md), [skill](skills/reference-analysis/SKILL.md), [research](shared/reference_analysis/RESEARCH.md). The original Apple Music MP4 is still unavailable in this checkout; the committed demonstration is synthetic. New tests: `python -m unittest discover -s shared/reference_analysis/tests -v`. A [pre-existing protected hash mismatch](shared/reference_analysis/AUDIT-BLOCKER.md) blocks the existing audit; it is not bypassed.

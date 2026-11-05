@@ -1,0 +1,20 @@
+name: Reference Analysis CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  reference-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install open video tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Verify video tools are available (do not silently skip integration)
+        run: ffmpeg -version && ffprobe -version
+      - name: Run contract and actual video integration tests
+        run: python -m unittest discover -s shared/reference_analysis/tests -v

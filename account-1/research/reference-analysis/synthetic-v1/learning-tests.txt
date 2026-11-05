@@ -1,0 +1,30 @@
+Reviewed orbit-initial-rejection: 2 failed, 0 passed; proposals are NOT validated lessons
+Validated lesson created: C:\Users\GTA7\AppData\Local\Temp\tmpqjvdqnt8\lessons\account-1\orbit-depth.md
+Reviewed orbit-initial-rejection: 2 failed, 0 passed; proposals are NOT validated lessons
+Reviewed orbit-initial-rejection: 2 failed, 0 passed; proposals are NOT validated lessons
+test_direction_tampering_detected (test_engine.LearningEngineTests.test_direction_tampering_detected) ... ok
+test_invalid_ids_rejected (test_engine.LearningEngineTests.test_invalid_ids_rejected) ... ok
+test_promote_requires_new_verified_case (test_engine.LearningEngineTests.test_promote_requires_new_verified_case) ... ok
+test_promotion_requires_owner_approval_and_passing_evidence (test_engine.LearningEngineTests.test_promotion_requires_owner_approval_and_passing_evidence) ... ok
+test_rejection_is_not_approved (test_engine.LearningEngineTests.test_rejection_is_not_approved) ... ok
+test_repository_audits (test_engine.LearningEngineTests.test_repository_audits) ... ERROR
+test_review_creates_reproducible_report_and_proposals (test_engine.LearningEngineTests.test_review_creates_reproducible_report_and_proposals) ... ok
+
+======================================================================
+ERROR: test_repository_audits (test_engine.LearningEngineTests.test_repository_audits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\777\app\beatgaler_MARKETING\learning\tests\test_engine.py", line 11, in test_repository_audits
+    engine.audit()
+    ~~~~~~~~~~~~^^
+  File "E:\777\app\beatgaler_MARKETING\learning\engine.py", line 150, in audit
+    fail('DIRECCION.md changed: explicit owner authorization and hash update required')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\777\app\beatgaler_MARKETING\learning\engine.py", line 17, in fail
+    raise ValueError(message)
+ValueError: DIRECCION.md changed: explicit owner authorization and hash update required
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.070s
+
+FAILED (errors=1)
