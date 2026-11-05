@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Owner approves a new continuous animation preview; QA captures a temporal contact sheet across the entire six-second scene.",
+  "account": "account-1",
+  "candidate_rule": "Block and review independent 3D trajectories and camera easing before materials or final rendering; test temporal continuity on consecutive frames.",
+  "cause_hypothesis": "Uniform speed and synchronized trajectories produced mechanical motion.",
+  "check_id": "orbit-motion",
+  "id": "orbit-initial-rejection--orbit-motion",
+  "problem_evidence": "Earlier six-second orbit rejected; the brief describes uniform motion and simplistic trajectories, not a faithful cinematic choreography.",
+  "source_case": "orbit-initial-rejection",
+  "state": "proposed"
+}
