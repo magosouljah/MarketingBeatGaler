@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "checks": [
+    {
+      "evidence": "account-1/research/reference-analysis/synthetic-v1/verification-authorized-repair.json; 17 new and 7 existing tests pass, protected hash audit passes; direction text equals pre-repair committed content.",
+      "id": "direction-baseline-audit",
+      "status": "pass"
+    }
+  ],
+  "human_approved": false,
+  "id": "reference-direction-baseline-correction",
+  "maintenance_authorization": "Owner explicitly authorized the precise integrity repair in current Codex chat, 2026-11-05; see shared/reference_analysis/AUDIT-BLOCKER.md. This is not artistic approval.",
+  "project": "reference-intelligence-v1",
+  "validates_proposal": "reference-direction-baseline-failure--direction-baseline-audit"
+}

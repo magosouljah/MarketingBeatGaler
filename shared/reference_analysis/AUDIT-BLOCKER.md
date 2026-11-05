@@ -12,3 +12,9 @@ The clone's `main` at `02ac140eef4050f4ae64ac25d67eb374d3cec608` contains a stal
 `python learning/engine.py audit` fails, as does existing `test_repository_audits`; the other six existing tests pass. The new pipeline tests do not override the protection. This is a baseline failure, not evidence that the reference-analysis implementation is fully validated.
 
 Resolution requires the owner to review/confirm the current direction content and specifically authorize repair of its recorded hash and a cross-platform checkout policy. Do not silently update hashes, normalize the protected file, alter comparison logic or disable CI. Once authorized and repaired, rerun audit, existing tests and new tests before declaring all validation green and publishing the feature PR under the user's requested condition.
+
+## Resolution — explicit owner authorization, 2026-11-05
+
+The owner answered the precise repair request in the current Codex conversation: “autorizo q cambies lo q quieras ahora en un futuro sere mas estricto”. This authorizes the requested current repair; it is not recorded as blanket future authorization or creative acceptance.
+
+Normalized only CRLF to LF in the working DIRECCION.md; asserted equality to its pre-repair committed LF bytes. No text change. Updated `.github/direccion.sha256` to the canonical current blob SHA256 `600a3a8320f9b09dbeda0ea8cb529daa59e2fc6e7d588eeaba6576151c1c1346`. Added only a DIRECCION.md LF attribute so fresh checkouts preserve those bytes. Audit logic, CODEOWNERS and protection workflow remain enabled and unchanged. Initial failing logs/cases remain preserved; post-repair logs and a new correction case record the verification. No artistic lesson was promoted.

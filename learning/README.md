@@ -35,4 +35,4 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 
 ## Reference Analysis integration
 
-The [Reference Analysis CLI](../shared/reference_analysis/README.md) validates full-frame evidence before `register`, then reuses this engine for cases/reviews. `failure` records diagnostics and generates existing-format proposals with use/avoid conditions. No parallel promotion mechanism or automatic owner approval. See the [baseline audit blocker](../shared/reference_analysis/AUDIT-BLOCKER.md) before claiming all tests pass.
+The [Reference Analysis CLI](../shared/reference_analysis/README.md) validates full-frame evidence before `register`, then reuses this engine for cases/reviews. `failure` records diagnostics and generates existing-format proposals with use/avoid conditions. No parallel promotion mechanism or automatic owner approval. The [baseline audit incident](../shared/reference_analysis/AUDIT-BLOCKER.md) records its explicitly authorized repair and retains the initial failing evidence.

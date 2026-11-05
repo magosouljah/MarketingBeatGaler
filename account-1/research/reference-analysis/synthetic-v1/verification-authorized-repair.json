@@ -1,0 +1,27 @@
+{
+  "new_tests_passed": 17,
+  "existing_tests_passed": 7,
+  "checks": {
+    "reference-tests": {
+      "exit_code": 0,
+      "log": "post-repair-reference-tests.txt"
+    },
+    "learning-tests": {
+      "exit_code": 0,
+      "log": "post-repair-learning-tests.txt"
+    },
+    "learning-audit": {
+      "exit_code": 0,
+      "log": "post-repair-learning-audit.txt"
+    },
+    "output-validation": {
+      "exit_code": 0,
+      "log": "post-repair-output-validation.txt"
+    }
+  },
+  "direction_text_changed": false,
+  "direction_canonical_sha256": "600a3a8320f9b09dbeda0ea8cb529daa59e2fc6e7d588eeaba6576151c1c1346",
+  "owner_authorized_integrity_maintenance": true,
+  "creative_approval": false,
+  "original_apple_video_analyzed": false
+}

@@ -3,3 +3,5 @@ account-1/research/reference-analysis/** -text whitespace=cr-at-eol
 account-2/research/reference-analysis/** -text whitespace=cr-at-eol
 shared/reference_analysis/** text eol=lf
 skills/reference-analysis/** text eol=lf
+# Owner-authorized maintenance on 2026-11-05: preserve canonical protected bytes.
+DIRECCION.md text eol=lf
