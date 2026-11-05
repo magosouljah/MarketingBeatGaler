@@ -4,7 +4,7 @@
 
 ## Procedencia y límites
 
-El archivo `-5258203640291409657.mp4` fue recuperado de la **biblioteca de archivos que el usuario subió anteriormente**. Coincide visualmente con la referencia principal de [FIRST-VIDEO-REFERENCES.md](../../design-references/FIRST-VIDEO-REFERENCES.md): [Apple Music](https://www.instagram.com/p/DcBoH7XgD1V/). Su SHA-256 es `74301c7f543eeb2695bdb496aca7e480150262e505ed5156184cceb4c5cdd2db`, tamaño 2.919.113 bytes. La copia no existe necesariamente en el checkout del IDE. **No subir el MP4 ni sus fotogramas derivados a GitHub:** el material original es una obra de un tercero; este commit almacena solamente datos derivados y observaciones.
+El archivo `-5258203640291409657.mp4` fue recuperado de la **biblioteca de archivos que el usuario subió anteriormente**. Coincide visualmente con la referencia principal de [FIRST-VIDEO-REFERENCES.md](../../../design-references/FIRST-VIDEO-REFERENCES.md): [Apple Music](https://www.instagram.com/p/DcBoH7XgD1V/). Su SHA-256 es `74301c7f543eeb2695bdb496aca7e480150262e505ed5156184cceb4c5cdd2db`, tamaño 2.919.113 bytes. La copia no existe necesariamente en el checkout del IDE. **No subir el MP4 ni sus fotogramas derivados a GitHub:** el material original es una obra de un tercero; este commit almacena solamente datos derivados y observaciones.
 
 Se ejecutaron **FFprobe y un análisis local independiente con OpenCV** sobre los bytes recuperados, no la CLI oficial de Reference Intelligence V1. No interpretar esto como prueba de que el pipeline V1 ya procesó este MP4. Próxima ejecución en el IDE: usar la CLI aprobada contra el archivo descargado en un directorio ignorado por Git.
 
