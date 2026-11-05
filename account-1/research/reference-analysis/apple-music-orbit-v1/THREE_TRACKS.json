@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "method": "manual polygons around three cover artworks at frame 80, sparse Lucas-Kanade optical flow, median feature-center estimate; not semantic tracking, identity can drift",
+  "source_sha256": "74301c7f543eeb2695bdb496aca7e480150262e505ed5156184cceb4c5cdd2db",
+  "normalized_coordinate_system": {
+    "x": "image width 512, rightward positive",
+    "y": "image height 910, downward positive",
+    "time": "native presentation timestamps, seconds"
+  },
+  "tracks": [
+    {
+      "id": "purple-rose",
+      "color_cue": "purple rose artwork",
+      "start_frame": 80,
+      "notes": "90 seed corners; 75 survive by frame 90; strong leftward displacement; verify seed ROI and overlaps visually",
+      "samples": [
+        [
+          80,
+          2.6667,
+          0.7881,
+          0.5044,
+          90
+        ],
+        [
+          82,
+          2.7333,
+          0.7174,
+          0.5251,
+          90
+        ],
+        [
+          84,
+          2.8,
+          0.6348,
+          0.541,
+          90
+        ],
+        [
+          86,
+          2.8667,
+          0.543,
+          0.5504,
+          90
+        ],
+        [
+          88,
+          2.9333,
+          0.4408,
+          0.554,
+          82
+        ],
+        [
+          90,
+          3,
+          0.34,
+          0.5386,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "blue-crystal",
+      "color_cue": "blue crystal artwork",
+      "start_frame": 80,
+      "notes": "90 seed corners; 59 survive at frame 90, more drift risk as image crosses other artwork",
+      "samples": [
+        [
+          80,
+          2.6667,
+          0.9258,
+          0.4709,
+          90
+        ],
+        [
+          82,
+          2.7333,
+          0.8584,
+          0.5029,
+          87
+        ],
+        [
+          84,
+          2.8,
+          0.7801,
+          0.5292,
+          87
+        ],
+        [
+          86,
+          2.8667,
+          0.6896,
+          0.5514,
+          82
+        ],
+        [
+          88,
+          2.9333,
+          0.5873,
+          0.5649,
+          63
+        ],
+        [
+          90,
+          3,
+          0.4646,
+          0.5729,
+          59
+        ]
+      ]
+    },
+    {
+      "id": "photo-figure",
+      "color_cue": "photographic cover with figure",
+      "start_frame": 80,
+      "notes": "90 seed corners; 55 survive at frame 86; tracking terminated before severe feature loss; do not connect further samples over occlusion",
+      "samples": [
+        [
+          80,
+          2.6667,
+          0.668,
+          0.5593,
+          90
+        ],
+        [
+          82,
+          2.7333,
+          0.5697,
+          0.5805,
+          83
+        ],
+        [
+          84,
+          2.8,
+          0.4732,
+          0.5893,
+          81
+        ],
+        [
+          86,
+          2.8667,
+          0.375,
+          0.5813,
+          55
+        ]
+      ]
+    }
+  ],
+  "sample_tuple": "[frame_index, pts_seconds, estimated_x_norm, estimated_y_norm, surviving_seed_features]",
+  "limitations": [
+    "Sparse optical flow follows local image features and does not guarantee persistent album identity.",
+    "It measures screen-space displacement over a short span, not 3D path or ease curves.",
+    "Feature survival is not an uncertainty probability.",
+    "No automatic bounding box, cover rotation, camera pose, or occlusion segmentation is inferred."
+  ]
+}

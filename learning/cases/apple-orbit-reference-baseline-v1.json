@@ -1,0 +1,24 @@
+{
+  "id": "apple-orbit-reference-baseline-v1",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "source": "account-1/research/reference-analysis/apple-music-orbit-v1/MEASUREMENTS.json; original SHA256 74301c7f543eeb2695bdb496aca7e480150262e505ed5156184cceb4c5cdd2db",
+  "checks": [
+    {
+      "id": "source-provenance",
+      "status": "pass",
+      "evidence": "User's previously uploaded original recovered and probed; SHA256 and basic stream metadata documented in MEASUREMENTS.json. Original not committed."
+    },
+    {
+      "id": "frame-timing",
+      "status": "pass",
+      "evidence": "FFprobe measured 181 presentation timestamps from 0 to 6.000s and a 6.033333s container; frame intervals approximately 33.333ms."
+    },
+    {
+      "id": "screen-space-exploration",
+      "status": "pass",
+      "evidence": "Manual seed ROIs for three distinct cover appearances at frame 80 and tentative short KLT trajectories in THREE_TRACKS.json, explicitly flagged as nonsemantic estimates. No 3D camera inferred."
+    }
+  ]
+}
