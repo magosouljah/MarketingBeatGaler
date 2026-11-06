@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "batchPath": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/hyperframes/rows.json",
+  "manifestPath": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/manifest.json",
+  "total": 3,
+  "completed": 3,
+  "failed": 0,
+  "skipped": 0,
+  "rows": [
+    {
+      "index": 0,
+      "outputPath": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-a.mp4",
+      "status": "completed",
+      "durationMs": 6000,
+      "renderTimeMs": 26568,
+      "reference_background": {
+        "kind": "solid",
+        "rgb": [
+          7,
+          7,
+          10
+        ]
+      },
+      "error": null,
+      "startedAt": "2026-11-06T03:36:37.577Z",
+      "completedAt": "2026-11-06T03:37:04.550Z",
+      "variables": {
+        "variant": "a"
+      }
+    },
+    {
+      "index": 1,
+      "outputPath": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-b.mp4",
+      "status": "completed",
+      "durationMs": 6000,
+      "renderTimeMs": 25066,
+      "reference_background": {
+        "kind": "solid",
+        "rgb": [
+          7,
+          7,
+          10
+        ]
+      },
+      "error": null,
+      "startedAt": "2026-11-06T03:37:04.550Z",
+      "completedAt": "2026-11-06T03:37:29.955Z",
+      "variables": {
+        "variant": "b"
+      }
+    },
+    {
+      "index": 2,
+      "outputPath": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-c.mp4",
+      "status": "completed",
+      "durationMs": 6000,
+      "renderTimeMs": 27320,
+      "reference_background": {
+        "kind": "solid",
+        "rgb": [
+          7,
+          7,
+          10
+        ]
+      },
+      "error": null,
+      "startedAt": "2026-11-06T03:37:29.956Z",
+      "completedAt": "2026-11-06T03:37:57.611Z",
+      "variables": {
+        "variant": "c"
+      }
+    }
+  ]
+}

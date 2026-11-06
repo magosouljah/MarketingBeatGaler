@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Geometry edge_on_share in the orbit 0.3-0.5 with hero covers frontal; owner compares against the reference phase sheet.",
+  "account": "account-1",
+  "candidate_rule": "problem: Covers that mostly face the camera read flat even when their depths differ.\nimplementation: Give the orbit a wide orientation distribution (a share of covers within ~20° of edge-on) and reserve frontal faces for heroes.\nuse_when: Orbit phases whose job is depth, not cover legibility.\navoid_when: Beats where individual covers must be recognised.",
+  "cause_hypothesis": "[implementation; unvalidated] yaw/pitch offsets of ±34°/±20° around a radial facing keep faces readable but remove the sliver/face contrast that carries depth in the reference.",
+  "check_id": "foreshortening",
+  "id": "choreography-lab-v1-abc--foreshortening",
+  "problem_evidence": "Geometry: only 13-15 % of visible covers are near edge-on (|facing|<0.25) during the orbit in all variants; most covers face the lens. Local-only phase sheet reference-runs/apple-music/phase2-phase-comparison-LOCAL-ONLY.jpg (not committed, third-party frames) shows the reference wreath dominated by steeply tilted, small covers.",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

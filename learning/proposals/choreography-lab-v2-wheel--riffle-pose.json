@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Median on-screen page aspect in 3.7-4.1 s within 15 % of the reference, owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: Riffle pages read upright instead of lying back.\nimplementation: Raise the viewing elevation over the rim (more wheel tilt) and centre the passing point; compare page aspect (width/height) to the reference.\nuse_when: Rolodex-style climaxes.\navoid_when: Pages must face the viewer frontally.",
+  "cause_hypothesis": "[implementation; unvalidated] Climax wheel tilt (x 0.5 rad) and position are a hand fit with too little elevation.",
+  "check_id": "riffle-pose",
+  "id": "choreography-lab-v2-wheel--riffle-pose",
+  "problem_evidence": "Local side-by-side 3.7-4.1 s: our pages stand more upright and sit lower; reference pages lie back (seen from above) and centre around x 0.55.",
+  "source_case": "choreography-lab-v2-wheel",
+  "state": "proposed"
+}

@@ -1,5 +1,7 @@
 # Apple Music — primera referencia audiovisual real (V1)
 
+**Actualización 2026-11-05:** reejecutado con Reference Intelligence V1 sobre una recodificación local medida contra este original → [PHASE2-RERUN.md](PHASE2-RERUN.md).
+
 **Estado:** primer experimento de observación medido; **NO aprobado artísticamente**, no reconstruido, sin video nuevo renderizado. Cuenta: `account-1`.
 
 ## Procedencia y límites

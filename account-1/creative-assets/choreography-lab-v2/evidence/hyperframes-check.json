@@ -1,0 +1,439 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:45355/lib/three.core.min.js",
+        "line": 5
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:45355/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:45355/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:45355/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:45355/"
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "canvas_content_at_edge",
+        "severity": "warning",
+        "time": 1.667,
+        "selector": "#stage",
+        "message": "Canvas content touches the frame edge (left, right).",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "containerSelector": "#root",
+        "fixHint": "Keep drawn text inside the visible part of the canvas, or mark intentional full-bleed art with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "dataAttributes": {
+          "data-start": "0",
+          "data-duration": "6",
+          "data-track-index": "0",
+          "data-layout-allow-occlusion": "",
+          "data-engine": "three.js r184"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 4.333,
+        "occurrences": 5,
+        "heldMs": 2666.0000000000005,
+        "times": [
+          1.667,
+          2.333,
+          3,
+          3.667,
+          4.333
+        ]
+      }
+    ],
+    "duration": 6,
+    "samples": [
+      0.333,
+      1,
+      1.667,
+      2.333,
+      3,
+      3.667,
+      4.333,
+      5,
+      5.667
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 1,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0.333,
+      1.667,
+      3,
+      4.333,
+      5.667
+    ],
+    "checked": 16,
+    "passed": 16
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 7,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"BeatGaler\" (1 word) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "BeatGaler",
+        "selector": "#end-brand",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 235.73,
+          "y": 241.95,
+          "width": 248.52,
+          "height": 52.10000000000002
+        },
+        "time": 4.305,
+        "words": 1,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"1 month of\" (3 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "1 month of",
+        "selector": "#end-pre",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 299.53,
+          "y": 354.97,
+          "width": 120.92000000000002,
+          "height": 28.060000000000002
+        },
+        "time": 4.305,
+        "words": 3,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"for your beats and projects\" (5 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "for your beats and projects",
+        "selector": "#end-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 243.52,
+          "y": 664.92,
+          "width": 232.96,
+          "height": 73.38999999999999
+        },
+        "time": 4.305,
+        "words": 5,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"CODE: FREEGALER\" (2 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "CODE: FREEGALER",
+        "selector": "#end-pill",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 253.2,
+          "y": 793.45,
+          "width": 213.59999999999997,
+          "height": 22
+        },
+        "time": 4.305,
+        "words": 2,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"*New users only. Use code FREEGALER at sign-up for 1 mont...\" (23 words) is on screen 1.70 s (±0.01 s), under the 5.55 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
+        "selector": "#end-fine",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 102.86,
+          "y": 866.92,
+          "width": 514.28,
+          "height": 39.389999999999986
+        },
+        "time": 4.305,
+        "words": 23,
+        "seconds": 1.699,
+        "floorSeconds": 5.55
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 19 px (2.6% of the 720 px short side, what a phone can read) and \"*New users only. Use code FREEGALER at sign-u...\" renders at 16 px for 1.63 s: set reading text to at least 19 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
+        "selector": "#end-fine",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 102.86,
+          "y": 866.92,
+          "width": 514.28,
+          "height": 39.39
+        },
+        "time": 4.375,
+        "times": [
+          4.375
+        ],
+        "fontPx": 16,
+        "floorPx": 19,
+        "seconds": 1.625,
+        "elements": [
+          {
+            "selector": "#end-fine",
+            "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
+            "fontPx": 16,
+            "time": 4.375,
+            "seconds": 1.625
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Unlimited Free* Storage\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Unlimited Free* Storage",
+        "selector": "#end-line",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 185.98,
+          "y": 398.25,
+          "width": 348.03,
+          "height": 216
+        },
+        "time": 4.406,
+        "words": 3,
+        "seconds": 1.598,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 48
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "19931e29-35d7-4449-8cf7-8eccba0bbc11",
+    "revision": "3bc3596e-764f-4a44-93dd-f8a8deac7c32",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/19931e29-35d7-4449-8cf7-8eccba0bbc11.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.17",
+    "latestVersion": "0.9.19",
+    "updateAvailable": true,
+    "checkedAt": "2026-11-06T18:41:02.841Z"
+  }
+}

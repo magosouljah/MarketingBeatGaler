@@ -1,0 +1,15 @@
+{
+  "id": "choreography-lab-v1-iter2",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v1-iter1--gather-continuity",
+  "source": "account-1/creative-assets/choreography-lab-v1/evidence/geometry-metrics.json; renders account-1/creative-assets/choreography-lab-v1/evidence/renders/",
+  "checks": [
+    {
+      "id": "gather-continuity",
+      "status": "pass",
+      "evidence": "account-1/creative-assets/choreography-lab-v1/evidence/geometry-metrics.json: peel-gather max centroid acceleration B 25.2, C 19.1 px/frame^2 after switching to easeSmoothOut. Technical verification only; owner has not reviewed playback."
+    }
+  ]
+}

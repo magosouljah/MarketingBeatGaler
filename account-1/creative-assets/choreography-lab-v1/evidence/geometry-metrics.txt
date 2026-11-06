@@ -1,0 +1,15 @@
+a {'rigid3d_residual_med': 0.0, 'camera_travel': 0.0, 'camera_peak_accel': 0.0, 'min_cam_dist': 6.614, 'max_centroid_accel_px': 228.82}
+    entrance {'visible': 20.0, 'scale_contrast': 3.2462, 'overlap_pairs': 8.0, 'occluded_share': 0.1348, 'edge_on_share': 0.1583, 'speed_px_s_med': 463.3147, 'speed_cv': 0.3056, 'coherence': 0.5655, 'max_accel': 228.818}
+    orbit {'visible': 22.0, 'scale_contrast': 4.1908, 'overlap_pairs': 10.0, 'occluded_share': 0.1383, 'edge_on_share': 0.15, 'speed_px_s_med': 254.762, 'speed_cv': 0.3201, 'coherence': 0.1664, 'max_accel': 1.866}
+    peel-gather {'visible': 22.5, 'scale_contrast': 2.968, 'overlap_pairs': 9.0, 'occluded_share': 0.132, 'edge_on_share': 0.1304, 'speed_px_s_med': 513.3076, 'speed_cv': 0.318, 'coherence': 0.1416, 'max_accel': 4.292}
+    land-hold {'visible': 20.0, 'scale_contrast': 2.8122, 'overlap_pairs': 9.0, 'occluded_share': 0.1198, 'edge_on_share': 0.15, 'speed_px_s_med': 106.6464, 'speed_cv': 0.3325, 'coherence': 0.339, 'max_accel': 0.597}
+b {'rigid3d_residual_med': 0.03446, 'camera_travel': 0.0, 'camera_peak_accel': 0.0, 'min_cam_dist': 5.135, 'max_centroid_accel_px': 151.61}
+    entrance {'visible': 22.0, 'scale_contrast': 2.7593, 'overlap_pairs': 45.5, 'occluded_share': 1.8228, 'edge_on_share': 0.0435, 'speed_px_s_med': 163.5358, 'speed_cv': 1.5782, 'coherence': 0.5503, 'max_accel': 151.609}
+    orbit {'visible': 19.0, 'scale_contrast': 5.4504, 'overlap_pairs': 13.0, 'occluded_share': 0.2541, 'edge_on_share': 0.1429, 'speed_px_s_med': 167.3415, 'speed_cv': 0.6535, 'coherence': 0.2121, 'max_accel': 12.828}
+    peel-gather {'visible': 23.0, 'scale_contrast': 2.8423, 'overlap_pairs': 19.5, 'occluded_share': 0.2156, 'edge_on_share': 0.0851, 'speed_px_s_med': 387.9866, 'speed_cv': 0.6446, 'coherence': 0.3474, 'max_accel': 25.204}
+    land-hold {'visible': 24.0, 'scale_contrast': 1.0056, 'overlap_pairs': 2.0, 'occluded_share': 0.0032, 'edge_on_share': 0.0, 'speed_px_s_med': 0.0, 'speed_cv': 2.3028, 'coherence': 0.2444, 'max_accel': 15.953}
+c {'rigid3d_residual_med': 0.03446, 'camera_travel': 9.6397, 'camera_peak_accel': 0.02216, 'min_cam_dist': 4.069, 'max_centroid_accel_px': 219.7}
+    entrance {'visible': 19.0, 'scale_contrast': 2.9691, 'overlap_pairs': 48.0, 'occluded_share': 1.6236, 'edge_on_share': 0.0909, 'speed_px_s_med': 494.388, 'speed_cv': 1.1967, 'coherence': 0.5217, 'max_accel': 219.702}
+    orbit {'visible': 13.0, 'scale_contrast': 3.5279, 'overlap_pairs': 9.0, 'occluded_share': 0.2158, 'edge_on_share': 0.1333, 'speed_px_s_med': 330.885, 'speed_cv': 0.599, 'coherence': 0.6038, 'max_accel': 10.014}
+    peel-gather {'visible': 21.0, 'scale_contrast': 2.4316, 'overlap_pairs': 18.0, 'occluded_share': 0.2384, 'edge_on_share': 0.0909, 'speed_px_s_med': 425.962, 'speed_cv': 0.5923, 'coherence': 0.4076, 'max_accel': 19.07}
+    land-hold {'visible': 24.0, 'scale_contrast': 1.0057, 'overlap_pairs': 2.0, 'occluded_share': 0.0032, 'edge_on_share': 0.0, 'speed_px_s_med': 17.6366, 'speed_cv': 1.1792, 'coherence': 0.4453, 'max_accel': 16.792}

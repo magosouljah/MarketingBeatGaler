@@ -1,0 +1,157 @@
+Checking browser...
+Browser: env
+◆  Batch rendering 3 rows → /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/manifest.json
+   batch concurrency: 1
+Batch row 0: /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-a.mp4
+[INFO] [Render] Pipeline started {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","platform":"linux","arch":"x64","nodeVersion":"v22.23.4","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"pipeline","status":"checkpoint","elapsedMs":4,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"compile","status":"start","elapsedMs":7,"needsAlpha":false}
+[INFO] Compiled composition metadata {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","entryFile":"index.html","staticDuration":6,"width":720,"height":1280,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"compile","status":"end","elapsedMs":56,"durationMs":49,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"compile","status":"checkpoint","elapsedMs":56,"message":"composition metadata resolved","width":720,"height":1280,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"259184c79ff3be01"}
+[INFO] [Render] Low-memory render profile active: screenshot capture, auto-worker calibration skipped, pinned to 1 worker. Override with --no-low-memory-mode or PRODUCER_LOW_MEMORY_MODE=false. {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","totalMemMb":8022,"thresholdMb":8192}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"browser_probe","status":"start","elapsedMs":56,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"browser_probe","status":"end","elapsedMs":65,"durationMs":9,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"browser_probe","status":"checkpoint","elapsedMs":65,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"259184c79ff3be01","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"video_extract","status":"start","elapsedMs":65,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"video_extract","status":"end","elapsedMs":66,"durationMs":1,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"video_extract","status":"checkpoint","elapsedMs":66,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":2}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"hdr_detection","status":"checkpoint","elapsedMs":66,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"audio_process","status":"start","elapsedMs":66,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"file_server","status":"start","elapsedMs":67,"reused":false}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"audio_process","status":"end","elapsedMs":70,"durationMs":4,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"file_server","status":"end","elapsedMs":72,"durationMs":5}
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"capture_calibration","status":"checkpoint","elapsedMs":1647,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":false,"lowMemoryMode":true,"deInversionEligible":false,"deParallelRouterEligible":false}
+[INFO] [Render] Low-memory profile, pinning to 1 capture worker (auto-worker calibration skipped). {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"worker_resolution","status":"checkpoint","elapsedMs":1647,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"capture_strategy","status":"checkpoint","elapsedMs":1648,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"capture_streaming","status":"start","elapsedMs":1648,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
+[BrowserManager] Browser launched (Chrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (132ms)
+[initSession:screenshot] GSAP proxy flush complete (141ms)
+[non-blocking] Failed to load resource: the server responded with a status of 404 (Not Found)
+[HyperFrames] render runtime fps {"canonicalFps":30,"source":"render-options","rawFpsSource":"render-options","rawFps":30}
+[Browser:WARN] THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.
+[Browser:WARN] [.WebGL-0x37f4001c9c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[initSession:screenshot] pollHfReady complete (493ms)
+[Browser:WARN] [.WebGL-0x37f4001c9c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (495ms)
+[initSession:screenshot] applyVideoMetadataHints complete (495ms)
+[initSession:screenshot] media + fonts + tailwind ready (500ms)
+[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (512ms)
+[Browser:WARN] [.WebGL-0x37f4001c9c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x37f4001c9c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"capture_streaming","status":"end","elapsedMs":26194,"durationMs":24546,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"assemble","status":"start","elapsedMs":26195,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"assemble","status":"end","elapsedMs":26247,"durationMs":52,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"636c2ccb-e5bf-443f-acfb-6287cbe61565","phase":"pipeline","status":"checkpoint","elapsedMs":26291,"message":"artifact validated","totalElapsedMs":26291}
+◇  /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-a.mp4
+   2.2 MB · 6.0s video · rendered in 26.3s
+   screenshot capture · software gpu · compile 0.1s · extract 0.0s · audio 0.0s · probe 0.0s · setup 1.6s · capture 24.5s · encode (during capture) 24.5s · assemble 0.1s
+   Screenshot capture (slower): BeginFrame did not run. Needs chrome-headless-shell and no --resolution upscale. Heavy compositions can stall on software GL.
+Batch row 1: /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-b.mp4
+[INFO] [Render] Pipeline started {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","platform":"linux","arch":"x64","nodeVersion":"v22.23.4","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"pipeline","status":"checkpoint","elapsedMs":0,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"compile","status":"start","elapsedMs":0,"needsAlpha":false}
+[INFO] Compiled composition metadata {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","entryFile":"index.html","staticDuration":6,"width":720,"height":1280,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"compile","status":"end","elapsedMs":23,"durationMs":23,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"compile","status":"checkpoint","elapsedMs":23,"message":"composition metadata resolved","width":720,"height":1280,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"d6b2653771400b1a"}
+[INFO] [Render] Low-memory render profile active: screenshot capture, auto-worker calibration skipped, pinned to 1 worker. Override with --no-low-memory-mode or PRODUCER_LOW_MEMORY_MODE=false. {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","totalMemMb":8022,"thresholdMb":8192}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"browser_probe","status":"start","elapsedMs":23,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"browser_probe","status":"end","elapsedMs":27,"durationMs":4,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"browser_probe","status":"checkpoint","elapsedMs":27,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"d6b2653771400b1a","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"video_extract","status":"start","elapsedMs":27,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"video_extract","status":"end","elapsedMs":27,"durationMs":0,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"video_extract","status":"checkpoint","elapsedMs":28,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":2}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"hdr_detection","status":"checkpoint","elapsedMs":28,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"audio_process","status":"start","elapsedMs":28,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"file_server","status":"start","elapsedMs":28,"reused":false}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"audio_process","status":"end","elapsedMs":30,"durationMs":2,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"file_server","status":"end","elapsedMs":30,"durationMs":2}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"capture_calibration","status":"checkpoint","elapsedMs":31,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":false,"lowMemoryMode":true,"deInversionEligible":false,"deParallelRouterEligible":false}
+[INFO] [Render] Low-memory profile, pinning to 1 capture worker (auto-worker calibration skipped). {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"worker_resolution","status":"checkpoint","elapsedMs":31,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"capture_strategy","status":"checkpoint","elapsedMs":31,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"capture_streaming","status":"start","elapsedMs":31,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
+[BrowserManager] Browser launched (Chrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (94ms)
+[initSession:screenshot] GSAP proxy flush complete (101ms)
+[non-blocking] Failed to load resource: the server responded with a status of 404 (Not Found)
+[HyperFrames] render runtime fps {"canonicalFps":30,"source":"render-options","rawFpsSource":"render-options","rawFps":30}
+[Browser:WARN] THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.
+[initSession:screenshot] pollHfReady complete (794ms)
+[Browser:WARN] [.WebGL-0x3a34001d4a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x3a34001d4a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (796ms)
+[initSession:screenshot] applyVideoMetadataHints complete (796ms)
+[initSession:screenshot] media + fonts + tailwind ready (798ms)
+[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (808ms)
+[Browser:WARN] [.WebGL-0x3a34001d4a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x3a34001d4a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"capture_streaming","status":"end","elapsedMs":24990,"durationMs":24959,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"assemble","status":"start","elapsedMs":24991,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"assemble","status":"end","elapsedMs":25041,"durationMs":50,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"cddc51b4-d36a-402f-9ba3-230c70d79ec5","phase":"pipeline","status":"checkpoint","elapsedMs":25086,"message":"artifact validated","totalElapsedMs":25086}
+◇  /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-b.mp4
+   2.0 MB · 6.0s video · rendered in 25.1s
+   screenshot capture · software gpu · compile 0.0s · extract 0.0s · audio 0.0s · probe 0.0s · setup 0.0s · capture 25.0s · encode (during capture) 24.9s · assemble 0.1s
+   Screenshot capture (slower): BeginFrame did not run. Needs chrome-headless-shell and no --resolution upscale. Heavy compositions can stall on software GL.
+Batch row 2: /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-c.mp4
+[INFO] [Render] Pipeline started {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","platform":"linux","arch":"x64","nodeVersion":"v22.23.4","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"pipeline","status":"checkpoint","elapsedMs":1,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"compile","status":"start","elapsedMs":1,"needsAlpha":false}
+[INFO] Compiled composition metadata {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","entryFile":"index.html","staticDuration":6,"width":720,"height":1280,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"compile","status":"end","elapsedMs":12,"durationMs":11,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"compile","status":"checkpoint","elapsedMs":12,"message":"composition metadata resolved","width":720,"height":1280,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"d0fba48bff01ffa8"}
+[INFO] [Render] Low-memory render profile active: screenshot capture, auto-worker calibration skipped, pinned to 1 worker. Override with --no-low-memory-mode or PRODUCER_LOW_MEMORY_MODE=false. {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","totalMemMb":8022,"thresholdMb":8192}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"browser_probe","status":"start","elapsedMs":12,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"browser_probe","status":"end","elapsedMs":15,"durationMs":3,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"browser_probe","status":"checkpoint","elapsedMs":15,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"d0fba48bff01ffa8","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"video_extract","status":"start","elapsedMs":15,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"video_extract","status":"end","elapsedMs":15,"durationMs":0,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"video_extract","status":"checkpoint","elapsedMs":16,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":2}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"hdr_detection","status":"checkpoint","elapsedMs":16,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"audio_process","status":"start","elapsedMs":16,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"file_server","status":"start","elapsedMs":16,"reused":false}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"audio_process","status":"end","elapsedMs":18,"durationMs":2,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"file_server","status":"end","elapsedMs":18,"durationMs":2}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"capture_calibration","status":"checkpoint","elapsedMs":19,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":false,"lowMemoryMode":true,"deInversionEligible":false,"deParallelRouterEligible":false}
+[INFO] [Render] Low-memory profile, pinning to 1 capture worker (auto-worker calibration skipped). {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"worker_resolution","status":"checkpoint","elapsedMs":19,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"capture_strategy","status":"checkpoint","elapsedMs":19,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"capture_streaming","status":"start","elapsedMs":19,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
+[BrowserManager] Browser launched (Chrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (100ms)
+[initSession:screenshot] GSAP proxy flush complete (104ms)
+[non-blocking] Failed to load resource: the server responded with a status of 404 (Not Found)
+[HyperFrames] render runtime fps {"canonicalFps":30,"source":"render-options","rawFpsSource":"render-options","rawFps":30}
+[Browser:WARN] THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.
+[initSession:screenshot] pollHfReady complete (794ms)
+[Browser:WARN] [.WebGL-0x2f9400198a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x2f9400198a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (797ms)
+[initSession:screenshot] applyVideoMetadataHints complete (797ms)
+[initSession:screenshot] media + fonts + tailwind ready (799ms)
+[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (811ms)
+[Browser:WARN] [.WebGL-0x2f9400198a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x2f9400198a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"capture_streaming","status":"end","elapsedMs":27336,"durationMs":27317,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"assemble","status":"start","elapsedMs":27336,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"assemble","status":"end","elapsedMs":27387,"durationMs":51,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"6031dca7-f255-47d2-add3-0c11ff208071","phase":"pipeline","status":"checkpoint","elapsedMs":27430,"message":"artifact validated","totalElapsedMs":27429}
+◇  /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/variant-c.mp4
+   2.3 MB · 6.0s video · rendered in 27.4s
+   screenshot capture · software gpu · compile 0.0s · extract 0.0s · audio 0.0s · probe 0.0s · setup 0.0s · capture 27.3s · encode (during capture) 27.3s · assemble 0.1s
+   Screenshot capture (slower): BeginFrame did not run. Needs chrome-headless-shell and no --resolution upscale. Heavy compositions can stall on software GL.
+Batch complete: 3 completed.
+Manifest: /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/evidence/renders/manifest.json

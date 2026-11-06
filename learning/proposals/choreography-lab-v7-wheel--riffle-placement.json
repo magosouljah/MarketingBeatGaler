@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Riffle IoU >= 0.42 with riffle curl within ±0.5 of the reference; owner review of frames 116-127.",
+  "account": "account-1",
+  "candidate_rule": "problem: The level stack sits right of the reference stack.\nimplementation: Add a camera view-offset track and test shifts of 0.1-0.3 W during the riffle, checking that page angles at frames 116-127 do not change.\nuse_when: A stack's look is right but its place on screen is not.\navoid_when: The stack position is already approved.",
+  "cause_hypothesis": "[implementation; unvalidated] Moving the wheel left in world space also brings the far side of the wheel into frame; a lens shift (camera view offset) could recentre the stack without changing its angles.",
+  "check_id": "riffle-placement",
+  "id": "choreography-lab-v7-wheel--riffle-placement",
+  "problem_evidence": "Riffle silhouette IoU 0.32 vs 0.46 in the first v7 and 0.47 in v6: the level stack is narrower and sits right (about 0.5-0.95 W) of the reference stack (about 0.05-0.85 W).",
+  "source_case": "choreography-lab-v7-wheel",
+  "state": "proposed"
+}

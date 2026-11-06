@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Flow curl frames 99-108 within ±1.5 of the reference with approach IoU >= 0.40; owner review of frames 94-102.",
+  "account": "account-1",
+  "candidate_rule": "problem: The ring keeps visibly rotating after its angle change.\nimplementation: Fit the roll track for 3.3-3.7 s directly against per-frame flow curl (target ~0) instead of silhouette axis, which saturates when cards are cut by the frame edge.\nuse_when: A ring turns to a new screen angle and then riffles.\navoid_when: The turn is the end of the shot.",
+  "cause_hypothesis": "[implementation; unvalidated] The residual screen rotation comes from the combined roll, rise and dolly of the ring, not from the wheel spin alone.",
+  "check_id": "post-turn-rotation",
+  "id": "choreography-lab-v7-wheel--post-turn-rotation",
+  "problem_evidence": "Delivered 6b version: flow curl frames 99-108 = 3.5/3.9/4.5/3.4 vs reference 0.8/0.5/-0.7/0.0 (first v7 2.6/2.5/3.5/2.2, v6 1.6/3.6/2.6/0.3); the larger roll to -1.57 for the level stack adds to it. Changing wheel speed in 3.25-3.55 s did not reduce it monotonically.",
+  "source_case": "choreography-lab-v7-wheel",
+  "state": "proposed"
+}

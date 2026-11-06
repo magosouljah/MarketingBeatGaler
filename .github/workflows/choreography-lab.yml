@@ -1,0 +1,39 @@
+name: Choreography Lab CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  motion-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install optional motion-metric dependencies
+        run: pip install numpy opencv-python-headless
+      - name: Motion-metric tests (must not be skipped here)
+        run: |
+          python -c "import cv2, numpy"
+          python -m unittest discover -s shared/motion_metrics/tests -t . -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Lab composition syntax and lint
+        working-directory: account-1/creative-assets/choreography-lab-v1/hyperframes
+        env:
+          HYPERFRAMES_SKIP_SKILLS: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          node --check src/choreography.js
+          npx --yes hyperframes@0.9.17 lint
+      - name: Lab V2 composition syntax and lint
+        working-directory: account-1/creative-assets/choreography-lab-v2/hyperframes
+        env:
+          HYPERFRAMES_SKIP_SKILLS: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          node --check src/wheel.js
+          npx --yes hyperframes@0.9.17 lint

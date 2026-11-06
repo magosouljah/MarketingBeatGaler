@@ -1,0 +1,16 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v2-wheel",
+  "failed": [
+    "fan-out-motion",
+    "approach-occlusion",
+    "riffle-pose"
+  ],
+  "human_approved": false,
+  "passed": [
+    "energy-arc",
+    "wheel-tempo",
+    "riffle-occlusion",
+    "no-grid"
+  ]
+}

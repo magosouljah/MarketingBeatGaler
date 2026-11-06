@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Appear curl within ±1.5/s of the reference and appear IoU >= 0.36 with 0 % visible backs; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The ring spins and shows slivers while it is still being revealed.\nimplementation: Hold the wheel angle until the reveal completes and fit the entrance tip/roll with the four-term pose score.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
+  "cause_hypothesis": "[implementation; unvalidated] The wheel already spins during the reveal and the new front-facing blade pitch turns early pages edge-on from the entrance viewpoint.",
+  "check_id": "appear-spin",
+  "id": "choreography-lab-v5-wheel--appear-spin",
+  "problem_evidence": "Appear-phase curl 3.71 vs reference 0.56; appear IoU 0.32 (v4 0.36); pages read edge-on during the reveal.",
+  "source_case": "choreography-lab-v5-wheel",
+  "state": "proposed"
+}

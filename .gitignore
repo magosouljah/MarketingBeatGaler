@@ -8,3 +8,7 @@ __pycache__/
 !/.agents/skills/beatgaler-motion-hub/
 /.claude/skills/*
 !/.claude/skills/beatgaler-motion-hub/
+
+# HyperFrames local studio/snapshot state
+.hyperframes/
+node_modules/
