@@ -85,11 +85,17 @@ export const RIG = {
     // the same screen size, flatter perspective
     // and higher / further left than v6, where the reference stack sits
     // (frames 110-130: silhouette IoU 0.47 against 0.36 with the v6 placement)
-    [3.75, [0.35, 1.4, 0.7]],
-    [4.8, [0.35, 1.4, 1.2]],
+    // v7b (owner: "un poco más cerca como en V6"): nearer than v7 (0.7 / 1.2)
+    [3.75, [0.6, 1.5, 1.6]],
+    [4.8, [0.6, 1.5, 2.1]],
   ],
-  // ring pose, Euler XYZ radians + screen roll. Held for the whole shot.
-  rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.8, [-0.75, 0.0, 0.0, 0.0]]],
+  // ring pose, Euler XYZ radians + screen roll.
+  rotation: [
+    [1.22, [-0.75, 0.0, 0.0, 0.0]],
+    [3.45, [-0.75, 0.0, 0.0, 0.0]],
+    [3.75, [-0.75, 0.2, 0.0, 0.0]], // v7b: slight yaw for the stack (sides lean as in the reference)
+    [4.8, [-0.75, 0.2, 0.0, 0.0]],
+  ],
   // rigid moves of the whole wheel: [tip about the screen x axis, roll about the view axis].
   // v5: roll fitted so the silhouette's main axis follows the reference
   // (≈ +28° at 1.9 s, -54° at 3.3 s, -60° at 3.8 s; owner frame ~99).
@@ -99,15 +105,25 @@ export const RIG = {
     [1.72, [0.0, 0.18]],
     [2.88, [0.0, 0.18]], // v6: roll change starts earlier and ends later (owner: frame ~94 felt abrupt);
     [3.42, [0.0, -0.84]], // v7: no pause any more (v6 held the roll 3.4-3.5 s and then turned again)
-    [3.75, [-0.3, -1.1]], // -1.0 lets the stack leave the frame by 4.0 s; -1.1 holds it to ~4.4 s like Apple
-    [4.8, [-0.3, -1.1]],
+    [3.75, [-0.6, -1.57]], // v7b: wheel axis level on screen for the stack (see pitch)
+    [4.8, [-0.6, -1.57]],
   ],
   // blade pitch: pages turn about their radial line.
   // v6: 2.59 rad (the v4 page planes, owner: v4 matched Apple better at
   // frame ~94) through the wheel and approach, easing to 2.2 for the climax
   // (owner: at frame ~116 v5 pages, 2.5 rad, lay more horizontal than Apple's):
   // 2.35 for the climax, chosen side by side against 2.2 / 2.5 / 2.7.
-  pitch: [[1.22, [2.5916]], [3.45, [2.5916]], [3.75, [2.35]], [4.8, [2.35]]],
+  pitch: [[1.22, [2.5916]], [3.45, [2.5916]], [3.75, [3.1416]], [4.8, [3.1416]]],
+  // v7b (owner, frame ~121, asked several times: the page angle is wrong).
+  // In the reference stack every cover lies level (near and far edges
+  // horizontal), all covers parallel, stacked one above the other: a rolodex
+  // seen from slightly above. Ours rotated from card to card (edges -15, 0,
+  // +25 deg on screen in one frame) because with the blade pitch the "level"
+  // edge was not parallel to the wheel axis, so it turned with the wheel. For the
+  // stack the pitch goes to PI (that edge lies along the axis, so it keeps its
+  // direction whatever the wheel angle), the roll brings the axis level on
+  // screen (-1.57, see tip) and a slight yaw (rotation[1] = 0.2) gives the
+  // sides the reference's lean.
   // Both sides of a page print the same cover at the same brightness and the
   // same orientation, so no page ever reads as "seen from behind"; which way
   // the planes lean is set by pitch and roll (v5 found v4's lean was mirrored).
@@ -171,7 +187,8 @@ export function buildRig(rig = RIG) {
     const i = Math.floor(x);
     return theta[i] + (theta[Math.min(i + 1, n - 1)] - theta[i]) * (x - i);
   };
-  return { spread, omega, position, rotation, scale, angle, tip, pitch };
+  const twist = rig.twist ? track(rig.twist) : null;
+  return { spread, omega, position, rotation, scale, angle, tip, pitch, twist };
 }
 
 // ------------------------------------------------------------------ poses
@@ -226,6 +243,8 @@ export function pageLocal(R, k, t, rig = RIG) {
   _z.crossVectors(_y, _x);
   _m.makeBasis(_y, _x, _z);
   _m.multiply(new THREE.Matrix4().makeRotationY(R.pitch ? R.pitch(t)[0] : rig.bladePitch));
+  // twist: each page turns in its own plane (about its normal); page centres do not move
+  if (R.twist) _m.multiply(new THREE.Matrix4().makeRotationZ(R.twist(t)[0]));
   if (rig.coverFlip) _m.multiply(new THREE.Matrix4().makeRotationZ(Math.PI));
   _m.setPosition(_x.x * rig.radius, _x.y * rig.radius, 0);
   return _m.clone();

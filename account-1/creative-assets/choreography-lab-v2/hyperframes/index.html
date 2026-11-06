@@ -11,6 +11,16 @@
         src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2");
         font-weight: 400;
       }
+      @font-face {
+        font-family: "Archivo";
+        src: url("assets/fonts/archivo-latin-400-normal.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Archivo";
+        src: url("assets/fonts/archivo-latin-600-normal.woff2") format("woff2");
+        font-weight: 600;
+      }
       :root {
         --ground: #0c0c0c;
         --ink: #ffffff;
@@ -71,9 +81,12 @@
         font-size: 64px;
         letter-spacing: -0.04em;
       }
-      /* End card laid out on the reference's measured positions (fractions of
-         the frame height): brand 0.158, headline 0.27-0.40, sub lines 0.507 and
-         0.537, pill 0.59, fine print 0.64. Owner: sub line higher, not centred. */
+      /* End card (v7b, owner: own judgement, good spacing and proportions; it
+         does not have to copy Apple). One centred column on a 4-step rhythm:
+         brand 48 px, a regular-weight "1 month of" 26 px set close to the headline it
+         belongs to, headline 76 px, sub line 32 px, pill, fine print. Gaps:
+         brand -> group 64, "1 month of" -> headline 14, headline -> sub 46,
+         sub -> pill 36, pill -> fine 34. The column sits a little above centre. */
       #endcard {
         position: absolute;
         inset: 0;
@@ -86,32 +99,34 @@
         display: block;
       }
       #end-brand {
-        top: 186px;
-        font-size: 32px;
+        top: 244px;
+        font-size: 48px;
         line-height: 1;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.035em;
       }
       #end-pre {
-        top: 262px;
-        font-size: 30px;
+        top: 356px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 400;
+        font-size: 26px;
         line-height: 1;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
       }
       #end-line {
-        top: 306px;
+        top: 396px;
         font-size: 76px;
         line-height: 0.98;
         letter-spacing: -0.04em;
         transform-origin: 50% 45%;
       }
       #end-sub {
-        top: 630px;
+        top: 665px;
         font-size: 32px;
         line-height: 1.2;
         letter-spacing: -0.02em;
       }
       #end-pill {
-        top: 728px;
+        top: 778px;
       }
       .pill {
         display: inline-block;
@@ -121,19 +136,21 @@
         border-radius: 27px;
         background: var(--ink);
         color: var(--ground);
-        font-family: "Inter", sans-serif;
+        font-family: "Archivo", sans-serif;
         font-weight: 600;
         font-size: 21px;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.04em;
         white-space: nowrap;
       }
       #end-fine {
-        top: 808px;
+        top: 866px;
         left: 100px;
         width: 520px;
-        font-family: "Inter", sans-serif;
-        font-size: 17px;
-        line-height: 1.35;
+        text-wrap: balance;
+        font-family: "Archivo", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
         color: var(--muted);
       }
       #stage {

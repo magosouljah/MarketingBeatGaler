@@ -1,289 +1,289 @@
 [
  {
-  "score": 0.4688,
-  "iou": 0.4623,
-  "orient": 0.8816,
-  "backs": 0.1559,
-  "axis_err": 0.1364,
+  "score": 0.4213,
+  "iou": 0.4323,
+  "orient": 0.8851,
+  "backs": 0.1656,
+  "axis_err": 0.189,
   "per": [
    {
     "t": 1.3,
-    "iou": 0.3575,
-    "orient": 0.8863,
-    "backs": 0.0457,
+    "iou": 0.357,
+    "orient": 0.884,
+    "backs": 0.0456,
     "axis": 24.8,
     "ref_axis": 15.6,
-    "axis_err": 0.1015
+    "axis_err": 0.1017
    },
    {
     "t": 1.4,
-    "iou": 0.4227,
-    "orient": 0.9251,
-    "backs": 0.3969,
-    "axis": 9.9,
+    "iou": 0.4219,
+    "orient": 0.9242,
+    "backs": 0.3951,
+    "axis": 10.0,
     "ref_axis": 6.9,
-    "axis_err": 0.0335
+    "axis_err": 0.0344
    },
    {
     "t": 1.5,
-    "iou": 0.4064,
-    "orient": 0.9151,
-    "backs": 0.3132,
-    "axis": 8.6,
+    "iou": 0.4071,
+    "orient": 0.9148,
+    "backs": 0.3076,
+    "axis": 8.8,
     "ref_axis": 13.6,
-    "axis_err": 0.0555
+    "axis_err": 0.0535
    },
    {
     "t": 1.6,
-    "iou": 0.4233,
+    "iou": 0.4217,
     "orient": 0.8768,
-    "backs": 0.1916,
-    "axis": 9.7,
+    "backs": 0.183,
+    "axis": 9.9,
     "ref_axis": 27.3,
-    "axis_err": 0.1965
+    "axis_err": 0.1942
    },
    {
     "t": 1.7,
-    "iou": 0.4299,
-    "orient": 0.8563,
-    "backs": 0.159,
-    "axis": 11.7,
+    "iou": 0.4269,
+    "orient": 0.8581,
+    "backs": 0.1449,
+    "axis": 12.5,
     "ref_axis": 25.6,
-    "axis_err": 0.1547
+    "axis_err": 0.1459
    },
    {
     "t": 1.8,
-    "iou": 0.4574,
-    "orient": 0.8655,
-    "backs": 0.1515,
-    "axis": 8.3,
+    "iou": 0.4532,
+    "orient": 0.8744,
+    "backs": 0.1316,
+    "axis": 9.6,
     "ref_axis": 27.8,
-    "axis_err": 0.2167
+    "axis_err": 0.2024
    },
    {
     "t": 1.9,
-    "iou": 0.4661,
-    "orient": 0.8589,
-    "backs": 0.1473,
-    "axis": 11.5,
+    "iou": 0.4598,
+    "orient": 0.8744,
+    "backs": 0.1218,
+    "axis": 14.7,
     "ref_axis": 28.4,
-    "axis_err": 0.1882
+    "axis_err": 0.1527
    },
    {
     "t": 2.0,
-    "iou": 0.4546,
-    "orient": 0.8638,
-    "backs": 0.1459,
-    "axis": 12.2,
+    "iou": 0.4669,
+    "orient": 0.8899,
+    "backs": 0.113,
+    "axis": 16.1,
     "ref_axis": 26.7,
-    "axis_err": 0.1613
+    "axis_err": 0.1184
    },
    {
     "t": 2.1,
-    "iou": 0.4769,
-    "orient": 0.8912,
-    "backs": 0.1458,
-    "axis": 10.1,
+    "iou": 0.4693,
+    "orient": 0.9072,
+    "backs": 0.1066,
+    "axis": 12.6,
     "ref_axis": 28.6,
-    "axis_err": 0.2048
+    "axis_err": 0.1772
    },
    {
     "t": 2.2,
-    "iou": 0.5042,
-    "orient": 0.9172,
-    "backs": 0.1477,
-    "axis": 10.1,
+    "iou": 0.5105,
+    "orient": 0.9273,
+    "backs": 0.1044,
+    "axis": 13.3,
     "ref_axis": 30.4,
-    "axis_err": 0.2247
+    "axis_err": 0.1893
    },
    {
     "t": 2.3,
-    "iou": 0.5253,
-    "orient": 0.9214,
-    "backs": 0.1503,
-    "axis": 12.1,
+    "iou": 0.5226,
+    "orient": 0.942,
+    "backs": 0.1024,
+    "axis": 17.0,
     "ref_axis": 28.8,
-    "axis_err": 0.1855
+    "axis_err": 0.1317
    },
    {
     "t": 2.4,
-    "iou": 0.5665,
-    "orient": 0.9156,
-    "backs": 0.1537,
-    "axis": 12.2,
+    "iou": 0.5621,
+    "orient": 0.9381,
+    "backs": 0.1018,
+    "axis": 18.8,
     "ref_axis": 24.9,
-    "axis_err": 0.1412
+    "axis_err": 0.0684
    },
    {
     "t": 2.5,
-    "iou": 0.59,
-    "orient": 0.9266,
-    "backs": 0.1575,
-    "axis": 11.9,
+    "iou": 0.5889,
+    "orient": 0.9603,
+    "backs": 0.1027,
+    "axis": 17.5,
     "ref_axis": 22.2,
-    "axis_err": 0.1147
+    "axis_err": 0.0524
    },
    {
     "t": 2.6,
-    "iou": 0.6321,
-    "orient": 0.9466,
-    "backs": 0.1614,
-    "axis": 14.0,
+    "iou": 0.6186,
+    "orient": 0.9692,
+    "backs": 0.1048,
+    "axis": 19.6,
     "ref_axis": 21.3,
-    "axis_err": 0.081
+    "axis_err": 0.0186
    },
    {
     "t": 2.7,
-    "iou": 0.5944,
-    "orient": 0.9362,
-    "backs": 0.1649,
-    "axis": 14.1,
+    "iou": 0.5948,
+    "orient": 0.9523,
+    "backs": 0.1079,
+    "axis": 20.5,
     "ref_axis": 19.8,
-    "axis_err": 0.0624
+    "axis_err": 0.0084
    },
    {
     "t": 2.8,
-    "iou": 0.5141,
-    "orient": 0.9501,
-    "backs": 0.1695,
-    "axis": 12.2,
+    "iou": 0.5256,
+    "orient": 0.974,
+    "backs": 0.1111,
+    "axis": 17.7,
     "ref_axis": 16.9,
-    "axis_err": 0.0521
+    "axis_err": 0.0094
    },
    {
     "t": 2.9,
-    "iou": 0.5254,
-    "orient": 0.9452,
-    "backs": 0.1727,
-    "axis": 10.5,
+    "iou": 0.5427,
+    "orient": 0.9622,
+    "backs": 0.115,
+    "axis": 15.4,
     "ref_axis": 14.1,
-    "axis_err": 0.0397
+    "axis_err": 0.0145
    },
    {
     "t": 3.0,
-    "iou": 0.4188,
-    "orient": 0.9436,
-    "backs": 0.1725,
-    "axis": 4.5,
+    "iou": 0.4342,
+    "orient": 0.9553,
+    "backs": 0.1178,
+    "axis": 10.8,
     "ref_axis": 9.5,
-    "axis_err": 0.0547
+    "axis_err": 0.0142
    },
    {
     "t": 3.1,
-    "iou": 0.4536,
-    "orient": 0.9326,
-    "backs": 0.1743,
-    "axis": -17.8,
+    "iou": 0.4642,
+    "orient": 0.9482,
+    "backs": 0.1162,
+    "axis": -15.0,
     "ref_axis": -14.6,
-    "axis_err": 0.0353
+    "axis_err": 0.004
    },
    {
     "t": 3.2,
-    "iou": 0.4284,
-    "orient": 0.8955,
-    "backs": 0.1717,
-    "axis": -47.0,
+    "iou": 0.4339,
+    "orient": 0.918,
+    "backs": 0.1209,
+    "axis": -52.7,
     "ref_axis": -34.0,
-    "axis_err": 0.1439
+    "axis_err": 0.2068
    },
    {
     "t": 3.3,
-    "iou": 0.3639,
-    "orient": 0.8796,
-    "backs": 0.1764,
-    "axis": -56.0,
+    "iou": 0.3539,
+    "orient": 0.9084,
+    "backs": 0.1363,
+    "axis": -60.6,
     "ref_axis": -53.6,
-    "axis_err": 0.0264
+    "axis_err": 0.0781
    },
    {
     "t": 3.4,
-    "iou": 0.3648,
-    "orient": 0.8878,
-    "backs": 0.1871,
-    "axis": -64.3,
+    "iou": 0.3512,
+    "orient": 0.8917,
+    "backs": 0.1719,
+    "axis": -64.1,
     "ref_axis": -55.9,
-    "axis_err": 0.0933
+    "axis_err": 0.0911
    },
    {
     "t": 3.5,
-    "iou": 0.3732,
-    "orient": 0.9278,
-    "backs": 0.2182,
-    "axis": -69.3,
+    "iou": 0.3708,
+    "orient": 0.8932,
+    "backs": 0.2903,
+    "axis": -67.0,
     "ref_axis": -54.9,
-    "axis_err": 0.1602
+    "axis_err": 0.1351
    },
    {
     "t": 3.6,
-    "iou": 0.3847,
-    "orient": 0.9145,
-    "backs": 0.2382,
-    "axis": -63.5,
+    "iou": 0.3375,
+    "orient": 0.8462,
+    "backs": 0.1961,
+    "axis": -72.0,
     "ref_axis": -49.7,
-    "axis_err": 0.1534
+    "axis_err": 0.2483
    },
    {
     "t": 3.7,
-    "iou": 0.4399,
-    "orient": 0.7932,
-    "backs": 0.132,
-    "axis": -56.4,
+    "iou": 0.2958,
+    "orient": 0.8012,
+    "backs": 0.1461,
+    "axis": 78.7,
     "ref_axis": -52.3,
-    "axis_err": 0.0456
+    "axis_err": 0.5451
    },
    {
     "t": 3.8,
-    "iou": 0.4238,
-    "orient": 0.6412,
-    "backs": 0.0589,
-    "axis": -55.5,
+    "iou": 0.3449,
+    "orient": 0.8302,
+    "backs": 0.0279,
+    "axis": 83.8,
     "ref_axis": -62.5,
-    "axis_err": 0.0777
+    "axis_err": 0.3752
    },
    {
     "t": 3.9,
-    "iou": 0.4629,
-    "orient": 0.7895,
-    "backs": 0.056,
-    "axis": -50.6,
+    "iou": 0.4202,
+    "orient": 0.8485,
+    "backs": 0.0523,
+    "axis": 78.6,
     "ref_axis": -65.2,
-    "axis_err": 0.1615
+    "axis_err": 0.4023
    },
    {
     "t": 4.0,
-    "iou": 0.4862,
-    "orient": 0.8171,
-    "backs": 0.0717,
-    "axis": -50.8,
+    "iou": 0.4183,
+    "orient": 0.9035,
+    "backs": 0.0962,
+    "axis": 76.0,
     "ref_axis": -63.7,
-    "axis_err": 0.1429
+    "axis_err": 0.4479
    },
    {
     "t": 4.1,
-    "iou": 0.5053,
-    "orient": 0.869,
-    "backs": 0.0589,
-    "axis": -48.0,
+    "iou": 0.3993,
+    "orient": 0.8458,
+    "backs": 0.059,
+    "axis": 74.9,
     "ref_axis": -67.8,
-    "axis_err": 0.2204
+    "axis_err": 0.4142
    },
    {
     "t": 4.2,
-    "iou": 0.4659,
-    "orient": 0.7875,
-    "backs": 0.0316,
-    "axis": -51.7,
+    "iou": 0.3773,
+    "orient": 0.84,
+    "backs": 0.2029,
+    "axis": 80.4,
     "ref_axis": -76.2,
-    "axis_err": 0.2726
+    "axis_err": 0.26
    },
    {
     "t": 4.3,
-    "iou": 0.4124,
-    "orient": 0.8522,
-    "backs": 0.1123,
-    "axis": -53.0,
+    "iou": 0.0493,
+    "orient": 0.3792,
+    "backs": 1.0,
+    "axis": -4.6,
     "ref_axis": 88.7,
-    "axis_err": 0.4251
+    "axis_err": 0.9629
    }
   ],
   "cand": {}

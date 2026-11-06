@@ -25,7 +25,7 @@ Una **rueda de 28 portadas equiespaciadas**. Cada portada es una «página» rad
 | 1,53–3,65 | La rueda gira en sentido horario alrededor de «Unlimited» / «Free*» / «Storage» (rápido–lento–rápido, como Apple); cada palabra entra con la animación medida en Apple y nunca se queda quieta |
 | 3,0–3,75 | El círculo gira sobre el eje de la vista hasta el ángulo de Apple (−54° en el fotograma 99) y se acerca; las páginas muestran siempre su frente |
 | 3,75–4,5 | **Riffle**: la rueda **no se mueve**; el giro (6–6,5 rad/s) apila las páginas y las saca por arriba. Cada página que sale del cuadro se retira y no vuelve a entrar |
-| 4,3–6,0 | Cierre «BeatGaler / 1 month of / Unlimited Free* Storage / for your beats and projects», pill «CODE: FREEGALER» y letra pequeña con la oferta (1 mes gratis con código, luego $11/mes USD, renovación automática). **FREEGALER es un código inventado: darlo de alta antes de publicar** |
+| 4,3–6,0 | Cierre «BeatGaler / 1 month of (regular) / Unlimited Free* Storage / for your beats and projects», pill «CODE: FREEGALER» y letra pequeña con la oferta (1 mes gratis con código, luego $11/mes USD, renovación automática). **FREEGALER es un código inventado: darlo de alta antes de publicar** |
 
 Todos los parámetros están en `RIG` (incluye `retireFrom`: desde cuándo se retiran las páginas que salen del cuadro; `showBacks`: páginas de una sola cara; `tip`: inclinación rígida de toda la rueda, y `pitch`: giro de cada página sobre su línea radial) dentro de [`hyperframes/src/wheel.js`](hyperframes/src/wheel.js): número de páginas, tamaño, radio, paso de pala, lente, abanico (`spread`), velocidad angular (`omega`), posición, rotación y escala de la rueda como pistas Hermite por tiempo. Todo depende solo de `t`.
 

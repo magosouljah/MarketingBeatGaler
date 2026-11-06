@@ -4,13 +4,16 @@
   "failed": [
     "approach-occlusion",
     "post-turn-rotation",
-    "appear-spin"
+    "appear-spin",
+    "riffle-placement"
   ],
   "human_approved": false,
   "passed": [
     "speed-arc",
+    "stack-page-angle",
     "climax-perspective",
     "text-always-moving",
-    "end-card-layout"
+    "end-card-layout",
+    "end-card-typography"
   ]
 }

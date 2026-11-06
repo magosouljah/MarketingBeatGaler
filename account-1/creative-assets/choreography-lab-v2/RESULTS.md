@@ -4,6 +4,23 @@
 
 ## Iteración 6 (`wheel-v7.mp4`, 2026-11-06)
 
+**Revisión 6b, el mismo día, antes de entregar.** El propietario revisó el primer v7: «ve el frame 121, el ángulo de las portadas no está bien», pidió ponerlas un poco más cerca, como en v6, y no mandar el video sin eso. Para el cierre pidió «BeatGaler» más grande, «1 month of» sin negritas y un poco más chico, y buenos espacios con criterio propio, sin tener que copiar a Apple. El `wheel-v7.mp4` versionado ya es 6b.
+
+- **Ángulo (fotogramas 116–127).** En Apple todas las portadas de la pila están niveladas (bordes cercano y lejano horizontales), son paralelas entre sí y se apilan una sobre otra, como un rolodex visto un poco desde arriba. En la nuestra cada portada tenía otro ángulo en el mismo fotograma (bordes a −15°, 0° y +25°). La causa: con el paso de pala, el borde «nivelado» no era paralelo al eje de la rueda y giraba con ella. Para la pila, el paso de pala va a π, de modo que ese borde queda sobre el eje y conserva su dirección sea cual sea el ángulo de la rueda. El giro de pantalla lleva el eje a horizontal (−1,57 rad) y una guiñada leve (`rotation[1]` = 0,2) da a los lados la inclinación de Apple. Se probó antes un giro de cada página en su plano (`twist`, queda disponible en `pageLocal` pero sin usar): nivelaba una portada, pero las vecinas seguían girando. Medido: el rotacional de pantalla en el riffle es 0,04 (Apple 0,14, primer v7 0,98) y la orientación de bordes en 1,3–4,3 s es 0,885, la más alta del laboratorio.
+- **Distancia.** En la pila la rueda queda más cerca que en el primer v7 (z 1,6 / 2,1 en vez de 0,7 / 1,2), con portadas de un tamaño parecido al de v6.
+- **Costo, medido.** El IoU de silueta del riffle baja de 0,46 a 0,32: la pila de rolodex es más angosta y queda a la derecha de la de Apple. El rotacional después del giro del círculo (fotogramas 99–108) sube a 3,4–4,5, porque el giro de pantalla es mayor (hasta −1,57).
+- **Cierre.** Columna centrada con ritmo propio: marca de 48 px, «1 month of» en Archivo regular de 26 px (OFL, vendorizada junto a Archivo Black), titular de 76 px, texto inferior de 32 px, pill y letra pequeña en Archivo regular, con el texto repartido en líneas parejas (`text-wrap: balance`). Separaciones: marca→grupo 64, «1 month of»→titular 14, titular→texto inferior 46, texto inferior→pill 36, pill→letra pequeña 34. El bloque queda un poco arriba del centro.
+
+| Medida (versión entregada, 6b) | v6 | primer v7 | **v7 (6b)** |
+| --- | ---: | ---: | ---: |
+| IoU por fotograma, media 1,23–4,4 s | 0,45 | 0,46 | 0,43 |
+| — aparición / rueda / acercamiento / riffle | 0,37 / 0,52 / 0,36 / 0,47 | 0,36 / 0,53 / 0,42 / 0,46 | 0,36 / 0,53 / 0,41 / 0,32 |
+| Orientación de bordes, 1,3–4,3 s | 0,875 | 0,882 | **0,885** |
+| Rotacional de pantalla en el riffle (Apple 0,14) | — | 0,98 | **0,04** |
+| Oclusión en el riffle (Apple 0,78) | 0,77 | 0,71 | **0,75** |
+
+Lo que sigue es el primer v7, sin cambios.
+
 Observaciones del propietario sobre v6 (los números de fotograma son aproximados):
 1. En Apple las portadas salen rápido, se frenan hacia el fotograma ~50 y vuelven a acelerar hacia el ~93.
 2. En el ~116 los ángulos de las portadas siguen mal.

@@ -37,13 +37,13 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46313/lib/three.core.min.js",
+        "url": "http://127.0.0.1:45355/lib/three.core.min.js",
         "line": 5
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -61,12 +61,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46313/"
+        "url": "http://127.0.0.1:45355/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -84,12 +84,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46313/"
+        "url": "http://127.0.0.1:45355/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -107,12 +107,12 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:46313/"
+        "url": "http://127.0.0.1:45355/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "message": "[.WebGL-0x201c0019d600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -130,7 +130,7 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:46313/"
+        "url": "http://127.0.0.1:45355/"
       }
     ]
   },
@@ -250,10 +250,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 276.43,
-          "y": 183.97,
-          "width": 167.13,
-          "height": 35.06
+          "x": 235.73,
+          "y": 241.95,
+          "width": 248.52,
+          "height": 52.10000000000002
         },
         "time": 4.305,
         "words": 1,
@@ -269,10 +269,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 275.33,
-          "y": 260.97,
-          "width": 169.33999999999997,
-          "height": 32.06
+          "x": 299.53,
+          "y": 354.97,
+          "width": 120.92000000000002,
+          "height": 28.060000000000002
         },
         "time": 4.305,
         "words": 3,
@@ -289,7 +289,7 @@
         "sourceFile": "index.html",
         "bbox": {
           "x": 243.52,
-          "y": 629.92,
+          "y": 664.92,
           "width": 232.96,
           "height": 73.38999999999999
         },
@@ -307,10 +307,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 260.61,
-          "y": 741.45,
-          "width": 198.76999999999998,
-          "height": 25
+          "x": 253.2,
+          "y": 793.45,
+          "width": 213.59999999999997,
+          "height": 22
         },
         "time": 4.305,
         "words": 2,
@@ -326,10 +326,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 108.73,
-          "y": 807.92,
-          "width": 502.53999999999996,
-          "height": 65.88
+          "x": 102.86,
+          "y": 866.92,
+          "width": 514.28,
+          "height": 39.389999999999986
         },
         "time": 4.305,
         "words": 23,
@@ -339,29 +339,29 @@
       {
         "code": "text_below_floor",
         "severity": "warning",
-        "message": "Type floor is 19 px (2.6% of the 720 px short side, what a phone can read) and \"*New users only. Use code FREEGALER at sign-u...\" renders at 17 px for 1.63 s: set reading text to at least 19 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "message": "Type floor is 19 px (2.6% of the 720 px short side, what a phone can read) and \"*New users only. Use code FREEGALER at sign-u...\" renders at 16 px for 1.63 s: set reading text to at least 19 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
         "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
         "selector": "#end-fine",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 108.73,
-          "y": 807.92,
-          "width": 502.54,
-          "height": 65.88
+          "x": 102.86,
+          "y": 866.92,
+          "width": 514.28,
+          "height": 39.39
         },
         "time": 4.375,
         "times": [
           4.375
         ],
-        "fontPx": 17,
+        "fontPx": 16,
         "floorPx": 19,
         "seconds": 1.625,
         "elements": [
           {
             "selector": "#end-fine",
             "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
-            "fontPx": 17,
+            "fontPx": 16,
             "time": 4.375,
             "seconds": 1.625
           }
@@ -377,7 +377,7 @@
         "sourceFile": "index.html",
         "bbox": {
           "x": 185.98,
-          "y": 308.25,
+          "y": 398.25,
           "width": 348.03,
           "height": 216
         },
@@ -425,9 +425,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "386ecc48-5288-422a-85de-ee0ea30a0b49",
-    "revision": "48cfa3c8-bd33-4084-8fa7-030c4e7051e7",
-    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/386ecc48-5288-422a-85de-ee0ea30a0b49.json",
+    "id": "19931e29-35d7-4449-8cf7-8eccba0bbc11",
+    "revision": "3bc3596e-764f-4a44-93dd-f8a8deac7c32",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/19931e29-35d7-4449-8cf7-8eccba0bbc11.json",
     "attribution": "recorded-revision"
   },
   "_meta": {

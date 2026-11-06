@@ -79,56 +79,56 @@
  },
  "lab": {
   "energy": {
-   "fan-out": 0.23,
-   "wheel": 0.561,
-   "approach": 0.791,
+   "fan-out": 0.205,
+   "wheel": 0.496,
+   "approach": 0.74,
    "riffle": 1.0,
-   "clear": 0.034
+   "clear": 0.01
   },
   "motion": {
    "fan-out": {
     "coverage": 0.0938,
-    "speed_med": 0.6606,
-    "affine_residual": 0.4037,
-    "speed_cv": 0.3963,
-    "coherence": 0.4996,
-    "curl": 4.0186,
-    "occlusion_proxy": 0.2805
+    "speed_med": 0.656,
+    "affine_residual": 0.3919,
+    "speed_cv": 0.4022,
+    "coherence": 0.4983,
+    "curl": 3.9644,
+    "occlusion_proxy": 0.2802
    },
    "wheel": {
-    "coverage": 0.1789,
-    "speed_med": 0.5975,
-    "affine_residual": 0.3759,
-    "speed_cv": 0.3874,
-    "coherence": 0.1507,
-    "curl": 5.3997,
-    "occlusion_proxy": 0.1298
+    "coverage": 0.1744,
+    "speed_med": 0.5992,
+    "affine_residual": 0.3704,
+    "speed_cv": 0.385,
+    "coherence": 0.1665,
+    "curl": 5.3957,
+    "occlusion_proxy": 0.1243
    },
    "approach": {
-    "coverage": 0.2554,
-    "speed_med": 0.974,
-    "affine_residual": 0.7069,
-    "speed_cv": 0.4571,
-    "coherence": 0.3431,
-    "curl": 3.9125,
-    "occlusion_proxy": 0.4537
+    "coverage": 0.251,
+    "speed_med": 1.0246,
+    "affine_residual": 0.6642,
+    "speed_cv": 0.4415,
+    "coherence": 0.3862,
+    "curl": 4.0831,
+    "occlusion_proxy": 0.4613
    },
    "riffle": {
-    "coverage": 0.2851,
-    "speed_med": 0.772,
-    "affine_residual": 0.788,
-    "speed_cv": 0.6319,
-    "coherence": 0.4838,
-    "curl": 0.9845,
-    "occlusion_proxy": 0.7107
+    "coverage": 0.3295,
+    "speed_med": 0.7884,
+    "affine_residual": 0.8481,
+    "speed_cv": 0.6804,
+    "coherence": 0.415,
+    "curl": 0.0388,
+    "occlusion_proxy": 0.7462
    },
    "clear": {
-    "coverage": 0.0705,
-    "speed_med": 0.0151,
-    "affine_residual": 0.1844,
-    "speed_cv": 0.1546,
-    "coherence": 0.8955,
-    "curl": -0.0068,
+    "coverage": 0.0727,
+    "speed_med": 0.0152,
+    "affine_residual": 0.178,
+    "speed_cv": 0.1501,
+    "coherence": 0.8975,
+    "curl": -0.0061,
     "occlusion_proxy": 0.0
    }
   }

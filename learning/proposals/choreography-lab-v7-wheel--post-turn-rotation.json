@@ -5,7 +5,7 @@
   "cause_hypothesis": "[implementation; unvalidated] The residual screen rotation comes from the combined roll, rise and dolly of the ring, not from the wheel spin alone.",
   "check_id": "post-turn-rotation",
   "id": "choreography-lab-v7-wheel--post-turn-rotation",
-  "problem_evidence": "Flow curl frames 99-108: 2.6/2.5/3.5/2.2 vs reference 0.8/0.5/-0.7/0.0 (v6 1.6/3.6/2.6/0.3). Changing wheel speed in 3.25-3.55 s did not reduce it monotonically (lower speed: 6.0 at frame 99; higher: 5.2).",
+  "problem_evidence": "Delivered 6b version: flow curl frames 99-108 = 3.5/3.9/4.5/3.4 vs reference 0.8/0.5/-0.7/0.0 (first v7 2.6/2.5/3.5/2.2, v6 1.6/3.6/2.6/0.3); the larger roll to -1.57 for the level stack adds to it. Changing wheel speed in 3.25-3.55 s did not reduce it monotonically.",
   "source_case": "choreography-lab-v7-wheel",
   "state": "proposed"
 }

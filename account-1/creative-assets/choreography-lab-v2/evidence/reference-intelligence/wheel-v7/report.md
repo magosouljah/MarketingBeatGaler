@@ -1,6 +1,6 @@
 # Reference Analysis V1
 
-Source: `wheel-v7.mp4`; SHA256 `52c08bd13ab44ce1a8afd3521ac8e7878f08ff4fc6afa8f8c5c8b27aa60698f8`.
+Source: `wheel-v7.mp4`; SHA256 `16beb0b4353442c7927ea4539c3d41dc7ff65f81f3f01b5cb9380456f6c0c0a0`.
 Account: account-1. Full source-frame coverage: 180 frames.
 
 ## Direct measurements

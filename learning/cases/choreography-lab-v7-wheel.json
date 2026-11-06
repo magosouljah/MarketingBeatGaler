@@ -4,8 +4,8 @@
   "project": "first-ad",
   "human_approved": false,
   "validates_proposal": "choreography-lab-v6-wheel--approach-occlusion",
-  "owner_direction": "Owner in chat 2026-11-06 (frames approximate): Apple covers come out fast, slow down ~frame 50, speed up again ~frame 93; frame ~116 page angles wrong; ring angle change 94-102 not as smooth as Apple; no text ever stands still; sub line 'for your beats / and projects', placed higher like Apple; offer: 1 month free with a discount code, then $11/month USD, auto-renew; code invented by the agent in a pill like Apple's button; '1 month of' between brand and headline. Direction, not approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/speed-curve-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v7.mp4",
+  "owner_direction": "Owner in chat 2026-11-06 (frames approximate): Apple covers come out fast, slow down ~frame 50, speed up again ~frame 93; frame ~116 page angles wrong; ring angle change 94-102 not as smooth as Apple; no text ever stands still; sub line 'for your beats / and projects', placed higher like Apple; offer: 1 month free with a discount code, then $11/month USD, auto-renew; code invented by the agent in a pill like Apple's button; '1 month of' between brand and headline. Direction, not approval. Second review before delivery (same day): frame 121 page angle still wrong, asked several times; pages a bit closer like v6; do not send the video without that. End card: BeatGaler bigger, '1 month of' not bold and slightly smaller, own judgement on spacing and proportions (need not copy Apple).",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/speed-curve-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v7.mp4; account-1/creative-assets/choreography-lab-v2/evidence/contact-sheets/wheel-v7-5fps.jpg",
   "checks": [
     {
       "id": "approach-occlusion",
@@ -21,9 +21,14 @@
       "evidence": "Median moving-pixel speed per frame (speed-curve-v7.json): frames 45/48/51 = 0.77/0.76/0.78 vs reference 0.75/0.87/0.77 (v6 0.54/0.61/0.61); frames 72/75 = 0.49/0.51 vs 0.54/0.55; frames 90/96 = 0.95/1.04 vs 0.89/1.11. Owner review pending."
     },
     {
+      "id": "stack-page-angle",
+      "status": "pass",
+      "evidence": "Frames 116-127: all stack pages level and parallel (rolodex: pitch PI so the level edge lies along the wheel axis, axis level on screen with roll -1.57, yaw 0.2 for the side lean). Riffle flow curl 0.04 vs reference 0.14 (first v7 0.98); edge orientation 1.3-4.3 s 0.885 (best of the lab). Owner review of frame ~121 pending."
+    },
+    {
       "id": "climax-perspective",
       "status": "pass",
-      "evidence": "Lens narrows 62->50 deg during the approach with the wheel further back (dolly zoom) and the stack placed higher/left; frames 110-130 silhouette IoU 0.47 vs 0.36 with the v6 placement; pose score 1.3-4.3 s 0.469 (v6 0.439), edge orientation 0.882 (0.875). Owner review of frame ~116 pending."
+      "evidence": "Lens narrows 62->50 deg during the approach (dolly zoom). Delivered 6b version: stack nearer (z 1.6/2.1) as asked; riffle silhouette IoU 0.32 (first v7 0.46): the rolodex stack is narrower and right of the reference's. Recorded as pass only for perspective (near and far pages close in size); placement is covered by riffle-placement."
     },
     {
       "id": "text-always-moving",
@@ -38,7 +43,7 @@
     {
       "id": "post-turn-rotation",
       "status": "fail",
-      "evidence": "Flow curl frames 99-108: 2.6/2.5/3.5/2.2 vs reference 0.8/0.5/-0.7/0.0 (v6 1.6/3.6/2.6/0.3). Changing wheel speed in 3.25-3.55 s did not reduce it monotonically (lower speed: 6.0 at frame 99; higher: 5.2).",
+      "evidence": "Delivered 6b version: flow curl frames 99-108 = 3.5/3.9/4.5/3.4 vs reference 0.8/0.5/-0.7/0.0 (first v7 2.6/2.5/3.5/2.2, v6 1.6/3.6/2.6/0.3); the larger roll to -1.57 for the level stack adds to it. Changing wheel speed in 3.25-3.55 s did not reduce it monotonically.",
       "hypothesis": "[implementation; unvalidated] The residual screen rotation comes from the combined roll, rise and dolly of the ring, not from the wheel spin alone.",
       "proposed_rule": "problem: The ring keeps visibly rotating after its angle change.\nimplementation: Fit the roll track for 3.3-3.7 s directly against per-frame flow curl (target ~0) instead of silhouette axis, which saturates when cards are cut by the frame edge.\nuse_when: A ring turns to a new screen angle and then riffles.\navoid_when: The turn is the end of the shot.",
       "acceptance_test": "Flow curl frames 99-108 within ±1.5 of the reference with approach IoU >= 0.40; owner review of frames 94-102."
@@ -50,6 +55,19 @@
       "hypothesis": "[implementation; unvalidated] The screen rotation during the reveal comes from the pages' pop-in growth on a tilted ring.",
       "proposed_rule": "problem: The reveal reads as spinning although the wheel is still.\nimplementation: Test pop-in variants (no growth, growth from the page centre along the radial, opacity only) and compare appear curl and frames 41-50.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
       "acceptance_test": "Appear curl within ±1.5 of the reference with appear IoU >= 0.36; owner review."
+    },
+    {
+      "id": "riffle-placement",
+      "status": "fail",
+      "evidence": "Riffle silhouette IoU 0.32 vs 0.46 in the first v7 and 0.47 in v6: the level stack is narrower and sits right (about 0.5-0.95 W) of the reference stack (about 0.05-0.85 W).",
+      "hypothesis": "[implementation; unvalidated] Moving the wheel left in world space also brings the far side of the wheel into frame; a lens shift (camera view offset) could recentre the stack without changing its angles.",
+      "proposed_rule": "problem: The level stack sits right of the reference stack.\nimplementation: Add a camera view-offset track and test shifts of 0.1-0.3 W during the riffle, checking that page angles at frames 116-127 do not change.\nuse_when: A stack's look is right but its place on screen is not.\navoid_when: The stack position is already approved.",
+      "acceptance_test": "Riffle IoU >= 0.42 with riffle curl within ±0.5 of the reference; owner review of frames 116-127."
+    },
+    {
+      "id": "end-card-typography",
+      "status": "pass",
+      "evidence": "Brand 48 px; '1 month of' Archivo regular 26 px (not bold); centred column with gaps 64/14/46/36/34 px; fine print balanced over two lines. Owner review pending."
     }
   ]
 }
