@@ -34,6 +34,12 @@ export const RIG = {
   // and pages on the other side open to full faces, as in the reference.
   bladePitch: -0.55,
   fov: 62,
+  // v7 (owner: at frame ~116 the page angles are wrong): the reference stack
+  // reads as layers of nearly equal size, a long lens. Ours had one huge near
+  // page with strongly diverging edges (30 deg and 80 deg against Apple's ~55 deg
+  // for both). The lens narrows to 50 deg during the approach while the wheel
+  // stays further back (a dolly zoom), so the stack keeps its size on screen.
+  fovTrack: [[3.3, [62]], [3.75, [50]], [4.8, [50]]],
   camera: [0, 0, 6.2],
   appear: 1.22, // first frame with pages (reference: 1.20-1.23 s)
   leave: 4.8, // safety: nothing of the wheel after this (reference: clear by ~4.4 s)
@@ -48,10 +54,22 @@ export const RIG = {
   revealDir: 1, // order of appearance: +1 along the spin, -1 against it
   popIn: 0.05, // seconds for each page to grow from nothing to full size
   coverFlip: true, // cover art upside down: its top edge points to the wheel centre
-  // wheel angular velocity, rad/s (sign sets the turning direction). At the
-  // climax ~1 page passes per frame (reference "riffle"): 2*PI/cards*30 ~ 6.7
-  // (spin ramps up while pages appear: reference shows almost no screen rotation 1.2-1.6 s)
-  omega: [[1.22, [-0.4]], [1.65, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.8, [-6.5]]],
+  // wheel angular velocity, rad/s (sign sets the turning direction).
+  // v7 (owner: Apple's covers come out fast, slow down around frame 50 and
+  // speed up again around frame 93): shaped from the reference's screen
+  // rotation (flow curl) frame by frame: almost still while pages appear
+  // (to 1.4 s), burst to a peak at 1.6 s (frame 48), slowest at 2.45 s
+  // (frame ~75), faster again 2.8-3.15 s (frames 84-95). Then it eases off
+  // while the ring turns (3.25-3.45 s) so the screen rotation dies out
+  // smoothly instead of stopping and restarting (v6: curl 1.6 at frame 99,
+  // 3.6 at frame 102), and picks up for the stack.
+  omega: [
+    [1.22, [-0.2]], [1.38, [-0.6]], [1.5, [-3.6]], [1.6, [-4.7]], [1.72, [-4.0]], [1.85, [-3.3]],
+    [2.0, [-2.85]], [2.2, [-2.55]], [2.45, [-2.25]], [2.65, [-2.4]], [2.85, [-2.75]], [3.0, [-3.0]],
+    [3.12, [-3.4]], [3.25, [-2.9]], [3.4, [-2.4]], [3.55, [-3.4]], [3.75, [-4.6]],
+    // the stack speeds up at the end so the last pages clear by ~4.45 s (reference ~4.47 s)
+    [3.95, [-4.8]], [4.2, [-8.0]], [4.8, [-9.0]],
+  ],
   // wheel centre (world). No upward exit any more (owner, v4 review): the
   // wheel holds its place and the spin carries the pages out of frame.
   position: [
@@ -59,9 +77,16 @@ export const RIG = {
     [1.45, [0.15, 1.05, -0.4]],
     [1.72, [0.05, 1.05, 0.0]],
     [3.0, [0.05, 1.05, 0.3]],
-    [3.3, [0.05, 1.05, 0.5]],
-    [3.75, [0.7, 1.05, 2.2]],
-    [4.8, [0.7, 1.05, 2.5]],
+    // v7: the ring rises a little while it turns, so its near arc climbs toward
+    // the word as in the reference (frames 100-108; IoU 0.41 vs 0.37 over 86-108)
+    [3.3, [0.05, 1.15, 0.5]],
+    [3.5, [0.2, 1.25, 0.75]],
+    // v7: further back than v6 (2.2 / 2.5) because the lens narrows (fovTrack);
+    // the same screen size, flatter perspective
+    // and higher / further left than v6, where the reference stack sits
+    // (frames 110-130: silhouette IoU 0.47 against 0.36 with the v6 placement)
+    [3.75, [0.35, 1.4, 0.7]],
+    [4.8, [0.35, 1.4, 1.2]],
   ],
   // ring pose, Euler XYZ radians + screen roll. Held for the whole shot.
   rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.8, [-0.75, 0.0, 0.0, 0.0]]],
@@ -72,9 +97,8 @@ export const RIG = {
     [1.22, [-0.5, 0.35]], // v6: entrance back to the v4 values (owner: frames 41-50 read better in v4)
     [1.42, [-0.3, 0.3]],
     [1.72, [0.0, 0.18]],
-    [2.9, [0.0, 0.18]], // v6: roll change starts earlier and ends later (owner: frame ~94 felt abrupt);
-    [3.4, [0.0, -0.8]], //     the silhouette axis still follows the reference curve frame by frame
-    [3.5, [0.0, -0.8]],
+    [2.88, [0.0, 0.18]], // v6: roll change starts earlier and ends later (owner: frame ~94 felt abrupt);
+    [3.42, [0.0, -0.84]], // v7: no pause any more (v6 held the roll 3.4-3.5 s and then turned again)
     [3.75, [-0.3, -1.1]], // -1.0 lets the stack leave the frame by 4.0 s; -1.1 holds it to ~4.4 s like Apple
     [4.8, [-0.3, -1.1]],
   ],
@@ -233,6 +257,13 @@ export function createWheel(canvas, rig = RIG) {
   camera.position.set(...rig.camera);
   camera.lookAt(0, 0, 0);
   const R = buildRig(rig);
+  // optional lens track: a narrower lens late in the move flattens the
+  // perspective (near and far pages closer in size), as in the reference stack.
+  const fovAt = rig.fovTrack ? track(rig.fovTrack) : () => [rig.fov];
+  function lens(t) {
+    const f = fovAt(t)[0];
+    if (camera.fov !== f) { camera.fov = f; camera.updateProjectionMatrix(); }
+  }
   const alpha = roundedAlpha();
   const geo = new THREE.PlaneGeometry(rig.page, rig.page);
   const loader = new THREE.TextureLoader();
@@ -273,6 +304,7 @@ export function createWheel(canvas, rig = RIG) {
     const cs = [[-0.5, -0.5], [0.5, -0.5], [0.5, 0.5], [-0.5, 0.5]];
     camera.updateMatrixWorld();
     for (let t = rig.retireFrom; t <= DURATION; t += 1 / 240) {
+      lens(t);
       const W = wheelMatrix(R, t, rig);
       for (let k = 0; k < rig.cards; k++) {
         if (retire[k] !== Infinity) continue;
@@ -291,6 +323,7 @@ export function createWheel(canvas, rig = RIG) {
   }
 
   function apply(t) {
+    lens(t);
     wheel.visible = t >= rig.appear && t < rig.leave;
     wheel.matrix.copy(wheelMatrix(R, t, rig));
     for (const p of pages) {

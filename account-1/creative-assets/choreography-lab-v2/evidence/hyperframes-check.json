@@ -37,13 +37,13 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:43411/lib/three.core.min.js",
+        "url": "http://127.0.0.1:46313/lib/three.core.min.js",
         "line": 5
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -61,12 +61,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:43411/"
+        "url": "http://127.0.0.1:46313/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -84,12 +84,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:43411/"
+        "url": "http://127.0.0.1:46313/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -107,12 +107,12 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:43411/"
+        "url": "http://127.0.0.1:46313/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "message": "[.WebGL-0x1544001ddc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -130,7 +130,7 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:43411/"
+        "url": "http://127.0.0.1:46313/"
       }
     ]
   },
@@ -232,13 +232,13 @@
       4.333,
       5.667
     ],
-    "checked": 12,
-    "passed": 12
+    "checked": 16,
+    "passed": 16
   },
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 4,
+    "warningCount": 7,
     "infoCount": 0,
     "findings": [
       {
@@ -250,10 +250,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 281.8,
-          "y": 400,
-          "width": 156.39,
-          "height": 32
+          "x": 276.43,
+          "y": 183.97,
+          "width": 167.13,
+          "height": 35.06
         },
         "time": 4.305,
         "words": 1,
@@ -263,40 +263,109 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"for beats and projects\" (4 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "for beats and projects",
-        "selector": "#end-sub",
+        "message": "The film's last line \"1 month of\" (3 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "1 month of",
+        "selector": "#end-pre",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 186.02,
-          "y": 723.41,
-          "width": 347.95000000000005,
-          "height": 32
+          "x": 275.33,
+          "y": 260.97,
+          "width": 169.33999999999997,
+          "height": 32.06
         },
         "time": 4.305,
-        "words": 4,
+        "words": 3,
         "seconds": 1.699,
         "floorSeconds": 2
       },
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"*Terms and conditions apply.\" (4 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "*Terms and conditions apply.",
+        "message": "The film's last line \"for your beats and projects\" (5 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "for your beats and projects",
+        "selector": "#end-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 243.52,
+          "y": 629.92,
+          "width": 232.96,
+          "height": 73.38999999999999
+        },
+        "time": 4.305,
+        "words": 5,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"CODE: FREEGALER\" (2 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "CODE: FREEGALER",
+        "selector": "#end-pill",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 260.61,
+          "y": 741.45,
+          "width": 198.76999999999998,
+          "height": 25
+        },
+        "time": 4.305,
+        "words": 2,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"*New users only. Use code FREEGALER at sign-up for 1 mont...\" (23 words) is on screen 1.70 s (±0.01 s), under the 5.55 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
         "selector": "#end-fine",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 227.86,
-          "y": 906.41,
-          "width": 264.28,
-          "height": 23
+          "x": 108.73,
+          "y": 807.92,
+          "width": 502.53999999999996,
+          "height": 65.88
         },
         "time": 4.305,
-        "words": 4,
+        "words": 23,
         "seconds": 1.699,
-        "floorSeconds": 2
+        "floorSeconds": 5.55
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 19 px (2.6% of the 720 px short side, what a phone can read) and \"*New users only. Use code FREEGALER at sign-u...\" renders at 17 px for 1.63 s: set reading text to at least 19 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
+        "selector": "#end-fine",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 108.73,
+          "y": 807.92,
+          "width": 502.54,
+          "height": 65.88
+        },
+        "time": 4.375,
+        "times": [
+          4.375
+        ],
+        "fontPx": 17,
+        "floorPx": 19,
+        "seconds": 1.625,
+        "elements": [
+          {
+            "selector": "#end-fine",
+            "text": "*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.",
+            "fontPx": 17,
+            "time": 4.375,
+            "seconds": 1.625
+          }
+        ]
       },
       {
         "code": "line_unread",
@@ -307,10 +376,10 @@
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 173.14,
-          "y": 461.6,
-          "width": 373.69999999999993,
-          "height": 231.93999999999994
+          "x": 185.98,
+          "y": 308.25,
+          "width": 348.03,
+          "height": 216
         },
         "time": 4.406,
         "words": 3,
@@ -356,9 +425,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "4bc3ed5c-d070-45d0-a9f7-182388c89916",
-    "revision": "5389aa70-29cb-4c75-bfe5-6dfbc6ebe64c",
-    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/4bc3ed5c-d070-45d0-a9f7-182388c89916.json",
+    "id": "386ecc48-5288-422a-85de-ee0ea30a0b49",
+    "revision": "48cfa3c8-bd33-4084-8fa7-030c4e7051e7",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/386ecc48-5288-422a-85de-ee0ea30a0b49.json",
     "attribution": "recorded-revision"
   },
   "_meta": {

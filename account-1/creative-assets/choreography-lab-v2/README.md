@@ -1,6 +1,6 @@
 # BeatGaler — Choreography Lab V2: rueda tipo rolodex (reconstrucción de Apple Music)
 
-**Estado:** iteración 5 de la reconstrucción (`wheel-v6.mp4`) · **sin aprobación creativa** · no es el anuncio.
+**Estado:** iteración 6 de la reconstrucción (`wheel-v7.mp4`) · **sin aprobación creativa** · no es el anuncio.
 
 ## Decisión del propietario (2026-11-05, en el chat)
 
@@ -22,17 +22,17 @@ Una **rueda de 28 portadas equiespaciadas**. Cada portada es una «página» rad
 | --- | --- |
 | 0–1,2 | Marca «BeatGaler» que se encoge (equivale al logo de Apple) |
 | 1,22–1,72 | Las páginas aparecen **una tras otra** a lo largo de la rueda (conteo medido en Apple); la rueda empieza casi de canto y se abre inclinándose hacia el lente |
-| 1,53–3,65 | La rueda gira en sentido horario (≈ 2,6 rad/s) alrededor de «Unlimited» / «Free*» / «Storage»; cada palabra entra con la animación medida en Apple |
+| 1,53–3,65 | La rueda gira en sentido horario alrededor de «Unlimited» / «Free*» / «Storage» (rápido–lento–rápido, como Apple); cada palabra entra con la animación medida en Apple y nunca se queda quieta |
 | 3,0–3,75 | El círculo gira sobre el eje de la vista hasta el ángulo de Apple (−54° en el fotograma 99) y se acerca; las páginas muestran siempre su frente |
 | 3,75–4,5 | **Riffle**: la rueda **no se mueve**; el giro (6–6,5 rad/s) apila las páginas y las saca por arriba. Cada página que sale del cuadro se retira y no vuelve a entrar |
-| 4,3–6,0 | Cierre «BeatGaler / Unlimited Free* Storage / for beats and projects» + letra pequeña (**provisional**: «*Terms and conditions apply.» hasta tener las condiciones reales) |
+| 4,3–6,0 | Cierre «BeatGaler / 1 month of / Unlimited Free* Storage / for your beats and projects», pill «CODE: FREEGALER» y letra pequeña con la oferta (1 mes gratis con código, luego $11/mes USD, renovación automática). **FREEGALER es un código inventado: darlo de alta antes de publicar** |
 
 Todos los parámetros están en `RIG` (incluye `retireFrom`: desde cuándo se retiran las páginas que salen del cuadro; `showBacks`: páginas de una sola cara; `tip`: inclinación rígida de toda la rueda, y `pitch`: giro de cada página sobre su línea radial) dentro de [`hyperframes/src/wheel.js`](hyperframes/src/wheel.js): número de páginas, tamaño, radio, paso de pala, lente, abanico (`spread`), velocidad angular (`omega`), posición, rotación y escala de la rueda como pistas Hermite por tiempo. Todo depende solo de `t`.
 
 ## Ver, editar, renderizar
 
-- Render actual: `evidence/renders/wheel-v6.mp4` («Unlimited Free* Storage»). Anteriores: `wheel-v5.mp4`, `wheel-v4.mp4` (aparición escalonada, portadas giradas 180°), `wheel-v3.mp4` (fondo #0C0C0C) y (HyperFrames 0.9.17, 720×1280, 30 fps, 6 s). `wheel-v2.mp4` (fondo claro, copy «Create ur Galer»).
-- Comparativas con Apple **solo locales** (contienen fotogramas de Apple; no se versionan): `reference-runs/apple-music/ref-vs-wheel-v6-LOCAL-ONLY.mp4` (con número de fotograma), `ref-vs-wheel-v6-LOCAL-ONLY-slow4x.mp4` (a 1/4 de velocidad) y las de v3 y v2.
+- Render actual: `evidence/renders/wheel-v7.mp4`. Anteriores: `wheel-v6.mp4`, `wheel-v5.mp4`, `wheel-v4.mp4` (aparición escalonada, portadas giradas 180°), `wheel-v3.mp4` (fondo #0C0C0C) y (HyperFrames 0.9.17, 720×1280, 30 fps, 6 s). `wheel-v2.mp4` (fondo claro, copy «Create ur Galer»).
+- Comparativas con Apple **solo locales** (contienen fotogramas de Apple; no se versionan): `reference-runs/apple-music/ref-vs-wheel-v7-LOCAL-ONLY.mp4` (Apple | v7 | v6, con número de fotograma), `ref-vs-wheel-v7-LOCAL-ONLY-slow4x.mp4` (a 1/4 de velocidad) y las de v3 y v2.
 
 ```powershell
 cd account-1/creative-assets/choreography-lab-v2/hyperframes

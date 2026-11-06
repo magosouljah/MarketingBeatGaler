@@ -71,37 +71,68 @@
         font-size: 64px;
         letter-spacing: -0.04em;
       }
+      /* End card laid out on the reference's measured positions (fractions of
+         the frame height): brand 0.158, headline 0.27-0.40, sub lines 0.507 and
+         0.537, pill 0.59, fine print 0.64. Owner: sub line higher, not centred. */
       #endcard {
+        position: absolute;
+        inset: 0;
+        text-align: center;
+      }
+      #endcard > * {
         position: absolute;
         left: 0;
         width: 720px;
-        top: 400px;
-        text-align: center;
+        display: block;
       }
       #end-brand {
-        display: block;
-        font-size: 30px;
+        top: 186px;
+        font-size: 32px;
+        line-height: 1;
         letter-spacing: -0.03em;
-        margin-bottom: 34px;
+      }
+      #end-pre {
+        top: 262px;
+        font-size: 30px;
+        line-height: 1;
+        letter-spacing: -0.02em;
       }
       #end-line {
-        display: block;
+        top: 306px;
         font-size: 76px;
         line-height: 0.98;
         letter-spacing: -0.04em;
+        transform-origin: 50% 45%;
       }
       #end-sub {
-        display: block;
-        margin-top: 34px;
-        font-size: 30px;
+        top: 630px;
+        font-size: 32px;
+        line-height: 1.2;
         letter-spacing: -0.02em;
       }
+      #end-pill {
+        top: 728px;
+      }
+      .pill {
+        display: inline-block;
+        padding: 0 30px;
+        height: 54px;
+        line-height: 54px;
+        border-radius: 27px;
+        background: var(--ink);
+        color: var(--ground);
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+      }
       #end-fine {
-        display: block;
-        margin: 150px auto 0;
+        top: 808px;
+        left: 100px;
         width: 520px;
         font-family: "Inter", sans-serif;
-        font-size: 19px;
+        font-size: 17px;
         line-height: 1.35;
         color: var(--muted);
       }
@@ -120,13 +151,17 @@
       <div id="brand" class="clip" data-start="0" data-duration="1.2" data-track-index="1"><span id="brand-mark">BeatGaler</span></div>
       <div id="w1" class="word clip" data-start="1.53" data-duration="0.67" data-track-index="2"><span class="wt">Unlimited</span></div>
       <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2"><span class="wt">Free*</span></div>
-      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2"><span class="wt">Storage</span></div>
+      <div id="w3" class="word clip" data-start="3.03" data-duration="0.62" data-track-index="2"><span class="wt">Storage</span></div>
       <div id="endcard" class="clip" data-start="4.3" data-duration="1.7" data-track-index="3">
         <span id="end-brand">BeatGaler</span>
+        <span id="end-pre">1 month of</span>
         <span id="end-line"><span class="el">Unlimited</span><br /><span class="el">Free*</span><br /><span class="el">Storage</span></span>
-        <span id="end-sub">for beats and projects</span>
-        <!-- PLACEHOLDER fine print: replace with BeatGaler's real terms before any publication -->
-        <span id="end-fine">*Terms and conditions apply.</span>
+        <span id="end-sub">for your beats<br />and projects</span>
+        <!-- Offer terms from the owner (2026-11-06): 1 month free with a code, then
+             $11/month USD, renews automatically. FREEGALER is a placeholder code
+             invented for the lab: it must exist in BeatGaler before publication. -->
+        <span id="end-pill"><span class="pill">CODE: FREEGALER</span></span>
+        <span id="end-fine">*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.</span>
       </div>
       <canvas id="stage" class="clip" data-start="0" data-duration="6" data-track-index="0" width="720" height="1280" data-layout-allow-occlusion></canvas>
     </div>
@@ -143,17 +178,32 @@
       tl.to(window.__labState, { t: 6, duration: 6, ease: "none", onUpdate: () => window.__labRender() }, 0);
       // brand mark shrinks toward the point where the deck appears (reference: logo shrinks 0.5-1.2 s)
       tl.fromTo("#brand-mark", { scale: 1, x: 0 }, { scale: 0.12, x: -40, duration: 0.65, ease: "power2.in" }, 0.5);
-      // Centre words, measured on the reference frame by frame: each word cuts
-      // in ~26 px low with a slight tilt, rises into place in ~4 frames
-      // (ease out), then keeps drifting up slowly until the next word cuts in.
-      [["#w1 .wt", 1.53, 0.67], ["#w2 .wt", 2.2, 0.87], ["#w3 .wt", 3.07, 0.58]].forEach(([sel, at, hold]) => {
-        tl.fromTo(sel, { y: 26, rotation: -3.5, scale: 0.97 }, { y: 0, rotation: 0, scale: 1, duration: 0.14, ease: "power3.out" }, at);
-        tl.to(sel, { y: -24, duration: hold - 0.14, ease: "none" }, at + 0.14);
+      // Centre words, measured on the reference frame by frame (v7): a word cuts
+      // in small (~85 %), low and tilted, grows to ~95 % in ~5 frames, then never
+      // stops: it keeps growing (to 100 % by the next cut, about +5 %) and rising
+      // (~26 px), decelerating but still moving when the next word replaces it
+      // ("1 mes" 212->223 px wide and 23 px up over frames 71-87; "gratis*"
+      // 232->245 px and 25 px up over frames 97-109).
+      [["#w1 .wt", 1.53, 0.67], ["#w2 .wt", 2.2, 0.87], ["#w3 .wt", 3.03, 0.62]].forEach(([sel, at, hold]) => {
+        const inT = 0.16;
+        const run = hold - inT;
+        const tail = run + 0.4; // tween runs past the cut so the word is still moving when it goes
+        const p = Math.sin((Math.PI / 2) * (run / tail)); // sine.out progress at the cut
+        tl.fromTo(sel, { y: 26, rotation: -3.5, scale: 0.85 }, { y: 0, rotation: 0, scale: 0.95, duration: inT, ease: "power3.out" }, at);
+        tl.to(sel, { y: -26 / p, scale: 0.95 + 0.05 / p, duration: tail, ease: "sine.out" }, at + inT);
       });
-      // End card (reference frames 129-136): brand and sub line are up first,
-      // the three headline lines cut in together behind the last cover and settle up.
-      tl.fromTo("#end-line", { y: 14 }, { y: 0, duration: 0.2, ease: "power2.out" }, 4.37);
+      // End card (reference frames 129-180): brand, sub line and pill are up
+      // first; the headline cuts in at 4.37 s small and keeps zooming in place
+      // (reference: 0.93 -> 1.0 of its final width, still creeping at the end);
+      // the lower block keeps drifting up (reference: sub line 10 px, pill 12 px).
+      // Owner: no text ever stands still, so the brand and "1 month of" creep too
+      // (in the reference the logo is the one element that holds).
+      tl.fromTo("#end-line", { scale: 0.86, y: 12 }, { scale: 0.93, y: 0, duration: 0.12, ease: "power3.out" }, 4.37);
+      tl.to("#end-line", { scale: 1.02, duration: 2.0, ease: "power2.out" }, 4.49);
       tl.fromTo("#end-line", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.001 }, 4.37);
+      tl.fromTo(["#end-sub", "#end-fine"], { y: 0 }, { y: -14, duration: 1.7, ease: "power1.out" }, 4.3);
+      tl.fromTo("#end-pill", { y: 0 }, { y: -14, duration: 1.7, ease: "none" }, 4.3);
+      tl.fromTo(["#end-brand", "#end-pre"], { scale: 1 }, { scale: 1.03, duration: 1.7, ease: "sine.out" }, 4.3);
       window.__timelines = window.__timelines || {};
       window.__timelines["lab2"] = tl;
       window.addEventListener("hf-seek", (e) => {

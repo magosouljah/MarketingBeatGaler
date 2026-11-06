@@ -1,6 +1,45 @@
 # Lab V2 — resultados
 
-**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3), `choreography-lab-v5-wheel` (iteración 4) y `choreography-lab-v6-wheel` (iteración 5).
+**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3), `choreography-lab-v5-wheel` (iteración 4), `choreography-lab-v6-wheel` (iteración 5) y `choreography-lab-v7-wheel` (iteración 6).
+
+## Iteración 6 (`wheel-v7.mp4`, 2026-11-06)
+
+Observaciones del propietario sobre v6 (los números de fotograma son aproximados):
+1. En Apple las portadas salen rápido, se frenan hacia el fotograma ~50 y vuelven a acelerar hacia el ~93.
+2. En el ~116 los ángulos de las portadas siguen mal.
+3. El cambio de ángulo del círculo (94–102) no se siente tan suave como en Apple.
+4. En Apple ningún texto se queda quieto.
+5. Cambiar el texto inferior a «for your beats / and projects» y subirlo, como en Apple.
+
+Además dio la oferta: 1 mes gratis con código, luego $11/mes en USD, con renovación automática; pidió que el código vaya en una pill como el «Activar ahora» de Apple y un «1 month of» encima del titular.
+
+Cambios:
+1. **Velocidad:** la velocidad angular de la rueda se volvió a trazar sobre el giro en pantalla de Apple (rotacional del flujo óptico), fotograma a fotograma. La rueda queda casi quieta hasta 1,4 s, tiene su pico a 1,6 s (fotograma 48), va más lenta a 2,45 s (~75) y vuelve a acelerar entre 2,8 y 3,15 s. La velocidad mediana por fotograma (`evidence/speed-curve-v7.json`, px/fotograma a 360 px de alto) da:
+
+| Fotograma | 45 | 48 | 51 | 72 | 75 | 90 | 96 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Apple | 0,75 | 0,87 | 0,77 | 0,54 | 0,55 | 0,89 | 1,11 |
+| v6 | 0,54 | 0,61 | 0,61 | 0,56 | 0,57 | 0,87 | 1,08 |
+| v7 | 0,77 | 0,76 | 0,78 | 0,49 | 0,51 | 0,95 | 1,04 |
+
+   v6 se movía casi a velocidad constante; v7 tiene el arranque rápido, el freno y la segunda aceleración.
+2. **Ángulos del ~116:** en v6, la portada cercana tenía un borde lateral a ~30° y el otro a ~80°, porque estaba muy cerca de un lente gran angular. En Apple ambos bordes van a ~55°, y la pila se ve como capas casi del mismo tamaño, como con un teleobjetivo. v7 cierra el lente de 62° a 50° durante el acercamiento (`fovTrack`, nuevo en `wheel.js`) mientras la rueda se queda más atrás (efecto *dolly zoom*): el tamaño en pantalla se mantiene y la perspectiva se aplana. La pila también sube y se corre a la izquierda, donde está la de Apple: en los fotogramas 110–130, el IoU de silueta sube de 0,36 a 0,47. Al final la rueda acelera para que las últimas portadas salgan a ~4,45 s (Apple ~4,47 s).
+3. **Giro del círculo:** el giro de pantalla ya no hace la pausa de 3,4–3,5 s que tenía v6, y el anillo sube un poco mientras gira, de modo que su arco cercano se acerca a la palabra, como en Apple (fotogramas 100–108). «Storage» entra a 3,03 s (Apple: fotograma 91); en v6 entraba a 3,07 s, dos fotogramas tarde.
+4. **Texto siempre en movimiento** (medido en Apple): cada palabra del centro entra al ~85 %, abajo y ladeada, llega al ~95 % en ~5 fotogramas y después nunca se detiene. Sigue creciendo hasta el 100 % (+5 %) y subiendo ~26 px, cada vez más despacio, y todavía se mueve cuando la reemplaza la siguiente («1 mes»: de 212 a 223 px de ancho y 23 px hacia arriba en los fotogramas 71–87). En el cierre, el titular entra al 86 % y hace un zoom lento en su lugar (Apple: del 93 % al 100 % de su ancho final); el texto inferior, la pill y la letra pequeña suben ~14 px; la marca y «1 month of» crecen un 3 %. En Apple el logo es lo único que se queda quieto; aquí también se mueve, por indicación del propietario.
+5. **Cierre:** marca, titular, texto inferior en dos líneas, pill y letra pequeña colocados en las posiciones medidas en Apple: 0,158 / 0,27–0,40 / 0,51–0,54 / 0,59 / 0,64 del alto. «1 month of» va entre la marca y el titular. La pill dice «CODE: FREEGALER». Letra pequeña: «*New users only. Use code FREEGALER at sign-up for 1 month free, then $11/month (USD). Renews automatically until canceled. Terms apply.» **FREEGALER es un código inventado para el laboratorio: hay que darlo de alta en BeatGaler antes de publicar.**
+
+| Medida | v6 | v7 |
+| --- | ---: | ---: |
+| IoU por fotograma, media 1,23–4,4 s | 0,45 | **0,46** |
+| — aparición / rueda / acercamiento / riffle | 0,37 / 0,52 / 0,36 / 0,47 | 0,36 / 0,53 / **0,42** / 0,46 |
+| Puntaje de pose 1,3–4,3 s (IoU, orientación de bordes) | 0,44 (0,45, 0,87) | **0,47** (0,46, 0,88) |
+| Oclusión en el acercamiento (Apple 0,58) | 0,43 | **0,45** |
+| Arco de energía (Apple 0,24 / 0,45 / 0,65 / 1,00) | 0,19 / 0,49 / 0,73 / 1,00 | 0,23 / 0,56 / 0,79 / 1,00 |
+
+Sigue abierto:
+- **El giro durante la aparición no venía de la rueda.** Con la rueda casi quieta hasta 1,4 s, el rotacional del flujo en la aparición sigue en 4,0 (Apple 0,56). La hipótesis de v6 queda descartada; ahora la sospecha es cómo crecen las portadas al aparecer.
+- **El giro en pantalla después del cambio de ángulo no se apaga del todo** (fotogramas 99–108: rotacional 2,1–3,5; Apple ~0). Bajar o subir la velocidad de la rueda en ese tramo no lo corrige de forma monótona.
+- **Riffle:** en v7 es relativamente más lento que en Apple: el arco de energía de rueda y acercamiento queda más alto que el de Apple.
 
 ## Iteración 5 (`wheel-v6.mp4`, 2026-11-06)
 

@@ -1,0 +1,55 @@
+{
+  "id": "choreography-lab-v7-wheel",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v6-wheel--approach-occlusion",
+  "owner_direction": "Owner in chat 2026-11-06 (frames approximate): Apple covers come out fast, slow down ~frame 50, speed up again ~frame 93; frame ~116 page angles wrong; ring angle change 94-102 not as smooth as Apple; no text ever stands still; sub line 'for your beats / and projects', placed higher like Apple; offer: 1 month free with a discount code, then $11/month USD, auto-renew; code invented by the agent in a pill like Apple's button; '1 month of' between brand and headline. Direction, not approval.",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/speed-curve-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v7.mp4",
+  "checks": [
+    {
+      "id": "approach-occlusion",
+      "status": "fail",
+      "evidence": "Approach occlusion proxy 0.45 vs reference 0.58 (v6 0.43). Meets the proposed >= 0.45 threshold only at the limit; approach IoU 0.42 (v6 0.36). Kept as fail: still well below the reference.",
+      "hypothesis": "[implementation; unvalidated] Page spacing still leaves gaps while the ring turns.",
+      "proposed_rule": "problem: Pages do not overlap enough during the approach.\nimplementation: Test more pages or larger pages on the wheel, re-fitting with the four-term pose score.\nuse_when: Approach beats into a card ring.\navoid_when: Readability of individual covers matters more than density.",
+      "acceptance_test": "Approach occlusion proxy >= 0.52 with approach IoU >= 0.40; owner review."
+    },
+    {
+      "id": "speed-arc",
+      "status": "pass",
+      "evidence": "Median moving-pixel speed per frame (speed-curve-v7.json): frames 45/48/51 = 0.77/0.76/0.78 vs reference 0.75/0.87/0.77 (v6 0.54/0.61/0.61); frames 72/75 = 0.49/0.51 vs 0.54/0.55; frames 90/96 = 0.95/1.04 vs 0.89/1.11. Owner review pending."
+    },
+    {
+      "id": "climax-perspective",
+      "status": "pass",
+      "evidence": "Lens narrows 62->50 deg during the approach with the wheel further back (dolly zoom) and the stack placed higher/left; frames 110-130 silhouette IoU 0.47 vs 0.36 with the v6 placement; pose score 1.3-4.3 s 0.469 (v6 0.439), edge orientation 0.882 (0.875). Owner review of frame ~116 pending."
+    },
+    {
+      "id": "text-always-moving",
+      "status": "pass",
+      "evidence": "Centre words: cut in at 85%, reach 95% in ~5 frames, then keep growing (+5%) and rising (~26 px) with sine.out still running at the next cut, as measured on reference frames 71-87 and 97-109. End card: headline zoom 0.86->~1.02, sub/pill/fine print drift up 14 px, brand and pre-line +3%. Owner review pending."
+    },
+    {
+      "id": "end-card-layout",
+      "status": "pass",
+      "evidence": "Brand / headline / two-line sub / pill / fine print at reference fractions of height 0.158 / 0.27-0.40 / 0.51-0.54 / 0.59 / 0.64; copy and offer as given by the owner; code FREEGALER is a lab placeholder that must exist before publication."
+    },
+    {
+      "id": "post-turn-rotation",
+      "status": "fail",
+      "evidence": "Flow curl frames 99-108: 2.6/2.5/3.5/2.2 vs reference 0.8/0.5/-0.7/0.0 (v6 1.6/3.6/2.6/0.3). Changing wheel speed in 3.25-3.55 s did not reduce it monotonically (lower speed: 6.0 at frame 99; higher: 5.2).",
+      "hypothesis": "[implementation; unvalidated] The residual screen rotation comes from the combined roll, rise and dolly of the ring, not from the wheel spin alone.",
+      "proposed_rule": "problem: The ring keeps visibly rotating after its angle change.\nimplementation: Fit the roll track for 3.3-3.7 s directly against per-frame flow curl (target ~0) instead of silhouette axis, which saturates when cards are cut by the frame edge.\nuse_when: A ring turns to a new screen angle and then riffles.\navoid_when: The turn is the end of the shot.",
+      "acceptance_test": "Flow curl frames 99-108 within ±1.5 of the reference with approach IoU >= 0.40; owner review of frames 94-102."
+    },
+    {
+      "id": "appear-spin",
+      "status": "fail",
+      "evidence": "With the wheel nearly still until 1.4 s, appear-phase curl is still 4.0 vs reference 0.56: the v6 hypothesis (spin during reveal) is refuted.",
+      "hypothesis": "[implementation; unvalidated] The screen rotation during the reveal comes from the pages' pop-in growth on a tilted ring.",
+      "proposed_rule": "problem: The reveal reads as spinning although the wheel is still.\nimplementation: Test pop-in variants (no growth, growth from the page centre along the radial, opacity only) and compare appear curl and frames 41-50.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
+      "acceptance_test": "Appear curl within ±1.5 of the reference with appear IoU >= 0.36; owner review."
+    }
+  ]
+}

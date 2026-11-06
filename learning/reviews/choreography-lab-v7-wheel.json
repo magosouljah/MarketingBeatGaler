@@ -1,0 +1,16 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v7-wheel",
+  "failed": [
+    "approach-occlusion",
+    "post-turn-rotation",
+    "appear-spin"
+  ],
+  "human_approved": false,
+  "passed": [
+    "speed-arc",
+    "climax-perspective",
+    "text-always-moving",
+    "end-card-layout"
+  ]
+}
