@@ -61,6 +61,7 @@ Lectura:
 4. **Órbita lenta.** 0,23–0,31 alturas/s vs 0,62.
 5. **C pierde la estructura** durante la órbita (13 portadas visibles, coherencia 0,60).
 6. **Hueco antes del clímax** (≈ 3,5–3,9 s): cuadro oscuro y disperso en B y C (visible en `contact-sheets/*climax*`).
+7. **Poco escorzo.** Solo 13–15 % de las portadas visibles están casi de canto en la órbita; la mayoría mira al lente. En la hoja local de fases (`reference-runs/apple-music/phase2-phase-comparison-LOCAL-ONLY.jpg`, no versionada por ser material de terceros) la corona de la referencia está dominada por portadas pequeñas y muy inclinadas, con mucho espacio negativo: ahí está gran parte de su profundidad.
 
 **Corregido dentro del experimento (iteración 1 → 2):** el despegue hacia la galería usaba `easeOutQuint` desde la pose viva de órbita → tirón de velocidad de **72 px/fotograma²** (`evidence/iteration-1/geometry-metrics.json`). Se cambió a un ease con pendiente inicial cero (`easeSmoothOut`) → **25 px/fotograma²** en B y 19 en C. Es una corrección técnica verificada, **no** una regla creativa validada.
 
@@ -68,12 +69,13 @@ Lectura:
 
 ## 5. Propuestas para el siguiente experimento (no validadas)
 
-Registradas como propuestas en `learning/proposals/choreography-lab-v1-abc--*.json`, cada una con su prueba de aceptación:
+Registradas como propuestas en `learning/proposals/choreography-lab-v1-abc--*.json` (6) más `choreography-lab-v1-iter1--gather-continuity` (corregida técnicamente) y `apple-orbit-phase2-rerun-v1--source-identity`, cada una con su prueba de aceptación:
 
 1. **energy-arc:** limitar la energía de entrada (despegue más corto y con arranque suave, mazo más pequeño) y hacer del clímax la fase más enérgica. Aceptación: diferencia media del clímax ≥ 1,3× la de la órbita y ≥ la de la entrada, más revisión del propietario.
 2. **negative-space:** reducir escala o número visible durante la órbita hasta cobertura 0,15–0,25 manteniendo la galería final.
 3. **climax-occlusion:** clímax con 3–5 portadas grandes en capas de profundidad cercanas que se tapan entre sí (no el riffle de Apple). Aceptación: proxy de oclusión ≥ 0,45 y pares solapados ≥ 20 con continuidad ≤ 30 px/fotograma².
 4. **camera-legibility (C):** la cámara no debe bajar de ~16 portadas visibles en la órbita; mover la cámara más lejos o mover el objetivo, no acercarse.
 5. **orbit-tempo:** subir la velocidad de órbita hacia 0,45–0,6 alturas/s y comprobar lectura en reproducción a 0,5×.
+6. **foreshortening:** abrir la distribución de orientaciones (30–50 % de portadas cerca del canto en la órbita) y reservar las caras frontales para los héroes.
 
 **Pregunta para el propietario:** ¿qué dirección merece la siguiente iteración — B (objetos, cámara fija) o C (objetos + cámara)? La métrica no decide gusto; ver `comparison-abc-side-by-side.mp4`.

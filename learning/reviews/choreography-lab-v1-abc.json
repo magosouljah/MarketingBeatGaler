@@ -6,7 +6,8 @@
     "negative-space",
     "climax-occlusion",
     "camera-legibility",
-    "orbit-tempo"
+    "orbit-tempo",
+    "foreshortening"
   ],
   "human_approved": false,
   "passed": [
