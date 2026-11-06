@@ -1,0 +1,75 @@
+{
+  "id": "choreography-lab-v1-abc",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "source": "account-1/creative-assets/choreography-lab-v1/RESULTS.md; account-1/creative-assets/choreography-lab-v1/evidence/ (renders, geometry-metrics.json, motion-field-*.json, reference-comparison.json, hyperframes-check.json)",
+  "skills": "beatgaler-motion-hub, reference-analysis, hyperframes + hyperframes-cli + hyperframes-registry 4935d673, title-sequence-3d 229022eb, motion-animate/motion-plan b8b7e23c, reference-to-motion 229022eb",
+  "checks": [
+    {
+      "id": "render-pipeline",
+      "status": "pass",
+      "evidence": "HyperFrames 0.9.17 lint 0/0, check ok (5 runtime warnings: software-GL notices), render --batch produced 3 x 180 frames 720x1280 6.0 s; account-1/creative-assets/choreography-lab-v1/evidence/hyperframes-check.json, render-log.txt."
+    },
+    {
+      "id": "render-determinism",
+      "status": "pass",
+      "evidence": "Two independent renders of variant A produced identical SHA-256 2ed7629ab3fba3c0ffc8..."
+    },
+    {
+      "id": "rigid-control",
+      "status": "pass",
+      "evidence": "Variant A: 3D Kabsch rigid residual 0.000 per frame, screen speed CV 0.32 in orbit, camera travel 0: behaves as the intended rigid control."
+    },
+    {
+      "id": "independent-trajectories",
+      "status": "pass",
+      "evidence": "Variants B/C: rigid residual median 0.034 u/frame, orbit speed CV 0.65/0.60 vs A 0.32, climax overlap pairs 19.5/18 vs A 9."
+    },
+    {
+      "id": "camera-continuity",
+      "status": "pass",
+      "evidence": "Variant C: camera travel 9.64 u, peak acceleration 0.022 u/frame^2, lands on B's master frame at 5.45 s (Hermite C1)."
+    },
+    {
+      "id": "energy-arc",
+      "status": "fail",
+      "evidence": "account-1/creative-assets/choreography-lab-v1/evidence/reference-comparison.json: relative mean frame difference entrance/orbit/climax/hold = B 1.00/0.63/0.84/0.24, C 1.00/0.65/0.79/0.24; reference 0.29/0.55/1.00/0.07.",
+      "hypothesis": "[reference-interpretation + implementation; unvalidated] 24 covers launch from the deck within ~1 s on a full-speed ease (entrance centroid accel 152-220 px/frame^2) while the climax relies on decelerating landings.",
+      "proposed_rule": "problem: The most energetic moment arrives at the entrance, not at the climax.\nimplementation: Budget motion energy per phase: shorter deck travel and soft-start launches; put the fastest, closest, most overlapping motion in the climax.\nuse_when: Short (4-8 s) build-to-payoff cover choreographies.\navoid_when: The brief asks for an explosive opening hook.",
+      "acceptance_test": "Pipeline mean difference: climax >= 1.3x orbit and >= entrance; owner approves the build in continuous playback."
+    },
+    {
+      "id": "negative-space",
+      "status": "fail",
+      "evidence": "Frame coverage orbit 0.28-0.34 and climax 0.35-0.40 vs reference 0.17 / 0.23 (motion-field medians).",
+      "hypothesis": "[implementation; unvalidated] Card scale 0.95 and three strata fill the frame; dark ground hides it in stills but flow coverage confirms density.",
+      "proposed_rule": "problem: Dense coverage reads as collage.\nimplementation: Keep orbit coverage near 0.15-0.25 by scale/visible count; reserve density for the climax.\nuse_when: Orbit phases of cover choreographies.\navoid_when: Final gallery/grid compositions that are meant to fill the frame.",
+      "acceptance_test": "Orbit coverage 0.15-0.25 measured by shared.motion_metrics and owner review of collage risk."
+    },
+    {
+      "id": "climax-occlusion",
+      "status": "fail",
+      "evidence": "Occlusion proxy in climax 0.17-0.22 vs reference 0.74; overlap pairs 18-19.5.",
+      "hypothesis": "[reference-interpretation; unvalidated] Our heroes cross a forming grid one by one; the reference stacks several large foreshortened covers in close depth layers.",
+      "proposed_rule": "problem: The climax lacks layered foreground occlusion.\nimplementation: Stage 3-5 large covers in near depth layers that overlap each other during the climax, with an original arrangement (not the reference riffle).\nuse_when: Climax beats meant to feel physical and close.\navoid_when: Moments where product UI or text must stay readable.",
+      "acceptance_test": "Occlusion proxy >= 0.45 and overlap pairs >= 20 while centroid acceleration stays <= 30 px/frame^2; owner review."
+    },
+    {
+      "id": "camera-legibility",
+      "status": "fail",
+      "evidence": "Variant C orbit: 13 visible covers (B 19, A 22), scale contrast 3.53 (B 5.45), direction coherence 0.60 (B 0.21).",
+      "hypothesis": "[implementation; unvalidated] Camera passes close to the helix (z 5.6-7.4) so the structure leaves the frame and camera motion dominates screen motion.",
+      "proposed_rule": "problem: An animated camera can hide the choreography it is meant to reveal.\nimplementation: Keep enough of the structure in frame (>= ~16 covers) during camera moves; move the target or the lens height before moving closer.\nuse_when: Camera moves over multi-object choreographies.\navoid_when: Deliberate hero close-ups.",
+      "acceptance_test": "Variant C orbit visible-cover median >= 16 and coherence <= 0.4 from geometry metrics; owner compares B vs C."
+    },
+    {
+      "id": "orbit-tempo",
+      "status": "fail",
+      "evidence": "Orbit screen speed 0.23-0.31 frame heights/s vs reference 0.62.",
+      "hypothesis": "[reference-interpretation; unvalidated] Global angular velocity of ~1 rad/s around a vertical axis moves front/back covers in opposite directions, lowering median screen speed.",
+      "proposed_rule": "problem: The orbit can feel sluggish next to the reference tempo.\nimplementation: Raise the cruise angular velocity or orbit axis tilt until median screen speed reaches 0.45-0.6 H/s, then check readability at 0.5x.\nuse_when: Orbit phases under 2 s.\navoid_when: Covers must be readable individually during the orbit.",
+      "acceptance_test": "Orbit speed_med 0.45-0.6 H/s and owner confirms covers remain readable."
+    }
+  ]
+}

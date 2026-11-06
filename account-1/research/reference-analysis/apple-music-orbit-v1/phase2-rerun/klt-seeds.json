@@ -1,0 +1,54 @@
+[
+ {
+  "id": "wreath-orange-card",
+  "frame": 60,
+  "roi": [
+   0.56,
+   0.45,
+   0.66,
+   0.6
+  ],
+  "end_frame": 89,
+  "note": "Orange/red cover in lower-right arc of the wreath."
+ },
+ {
+  "id": "wreath-pink-large-card",
+  "frame": 60,
+  "roi": [
+   0.76,
+   0.37,
+   0.95,
+   0.52
+  ],
+  "end_frame": 89,
+  "note": "Large pink cover on right side of the wreath."
+ },
+ {
+  "id": "sweep-orange-teal-card",
+  "frame": 106,
+  "roi": [
+   0.15,
+   0.38,
+   0.42,
+   0.5
+  ],
+  "end_frame": 126,
+  "note": "Foreground stack, top card; partly overlapped by pink card.",
+  "fb_max_px": 2.5,
+  "min_survival": 0.25
+ },
+ {
+  "id": "sweep-road-card",
+  "frame": 110,
+  "roi": [
+   0.45,
+   0.5,
+   0.6,
+   0.62
+  ],
+  "end_frame": 126,
+  "note": "Dark road-lights cover, second layer of foreground stack.",
+  "fb_max_px": 2.5,
+  "min_survival": 0.25
+ }
+]

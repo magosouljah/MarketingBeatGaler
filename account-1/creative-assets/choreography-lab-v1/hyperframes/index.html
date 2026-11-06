@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>BeatGaler · Choreography Lab V1</title>
+    <script src="lib/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #07070a;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        background: var(--ground);
+      }
+      #stage {
+        position: absolute;
+        inset: 0;
+        width: 720px;
+        height: 1280px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      One editable scene, three motion models. Pick the model with the
+      `variant` variable: a | b | c (Studio Variables panel, or render --batch rows.json).
+      Motion code: src/choreography.js. Lab notes: ../README.md
+    -->
+    <div
+      id="root"
+      data-composition-id="lab"
+      data-start="0"
+      data-duration="6"
+      data-fps="30"
+      data-width="720"
+      data-height="1280"
+      data-composition-variables='[{"id":"variant","type":"string","label":"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)","default":"c"}]'
+    >
+      <canvas
+        id="stage"
+        class="clip"
+        data-start="0"
+        data-duration="6"
+        data-track-index="0"
+        width="720"
+        height="1280"
+      ></canvas>
+    </div>
+    <script>
+      // Registered synchronously so the first seek waits for covers + shader compile.
+      window.__hf = window.__hf || {};
+      window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__labReady = new Promise((resolve) => (window.__resolveLab = resolve));
+      window.__hf.buildReady["lab-covers"] = window.__labReady;
+      window.__labState = { t: 0 };
+      window.__labRender = function () {
+        if (window.__lab) window.__lab.render(window.__labState.t);
+      };
+      const tl = gsap.timeline({ paused: true });
+      tl.to(window.__labState, { t: 6, duration: 6, ease: "none", onUpdate: () => window.__labRender() }, 0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["lab"] = tl;
+      window.addEventListener("hf-seek", (e) => {
+        window.__labState.t = e.detail.time;
+        window.__labRender();
+      });
+    </script>
+    <script type="module">
+      import { createLab } from "./src/choreography.js";
+      const vars = (window.__hyperframes && window.__hyperframes.getVariables && window.__hyperframes.getVariables()) || {};
+      const fromUrl = new URLSearchParams(location.search).get("variant");
+      const variant = String(vars.variant || fromUrl || "c").toLowerCase();
+      const lab = createLab(document.getElementById("stage"), variant);
+      lab.ready.then(() => {
+        window.__lab = lab;
+        window.__labRender();
+        window.__resolveLab();
+      });
+    </script>
+  </body>
+</html>

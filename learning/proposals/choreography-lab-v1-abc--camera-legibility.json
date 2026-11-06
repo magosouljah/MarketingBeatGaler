@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Variant C orbit visible-cover median >= 16 and coherence <= 0.4 from geometry metrics; owner compares B vs C.",
+  "account": "account-1",
+  "candidate_rule": "problem: An animated camera can hide the choreography it is meant to reveal.\nimplementation: Keep enough of the structure in frame (>= ~16 covers) during camera moves; move the target or the lens height before moving closer.\nuse_when: Camera moves over multi-object choreographies.\navoid_when: Deliberate hero close-ups.",
+  "cause_hypothesis": "[implementation; unvalidated] Camera passes close to the helix (z 5.6-7.4) so the structure leaves the frame and camera motion dominates screen motion.",
+  "check_id": "camera-legibility",
+  "id": "choreography-lab-v1-abc--camera-legibility",
+  "problem_evidence": "Variant C orbit: 13 visible covers (B 19, A 22), scale contrast 3.53 (B 5.45), direction coherence 0.60 (B 0.21).",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

@@ -1,0 +1,81 @@
+[
+ {
+  "id": "wreath-orange-card",
+  "evidence": "Authored ROI [0.56, 0.45, 0.66, 0.6] on coded frame 60; OpenCV 5.0.0 goodFeaturesToTrack (35 seeds) + pyramidal LK with forward-backward check; fb<1.0px, min survival 0.4; median of survivors; 18 survive at frame 64. Orange/red cover in lower-right arc of the wreath.",
+  "uncertainty": "Feature-cluster median, not a verified card centre; perspective, overlap and partial exit bias it; stopped at identity-loss threshold.",
+  "samples": [
+   {
+    "frame": 60,
+    "x": 0.6236,
+    "y": 0.5055
+   },
+   {
+    "frame": 61,
+    "x": 0.5906,
+    "y": 0.5141
+   },
+   {
+    "frame": 62,
+    "x": 0.5534,
+    "y": 0.523
+   },
+   {
+    "frame": 63,
+    "x": 0.5184,
+    "y": 0.5242
+   },
+   {
+    "frame": 64,
+    "x": 0.4835,
+    "y": 0.5246
+   }
+  ]
+ },
+ {
+  "id": "wreath-pink-large-card",
+  "evidence": "Authored ROI [0.76, 0.37, 0.95, 0.52] on coded frame 60; OpenCV 5.0.0 goodFeaturesToTrack (104 seeds) + pyramidal LK with forward-backward check; fb<1.0px, min survival 0.4; median of survivors; 43 survive at frame 67. Large pink cover on right side of the wreath.",
+  "uncertainty": "Feature-cluster median, not a verified card centre; perspective, overlap and partial exit bias it; stopped at identity-loss threshold.",
+  "samples": [
+   {
+    "frame": 60,
+    "x": 0.8181,
+    "y": 0.4488
+   },
+   {
+    "frame": 61,
+    "x": 0.7951,
+    "y": 0.4587
+   },
+   {
+    "frame": 62,
+    "x": 0.7728,
+    "y": 0.4752
+   },
+   {
+    "frame": 63,
+    "x": 0.7509,
+    "y": 0.4849
+   },
+   {
+    "frame": 64,
+    "x": 0.7291,
+    "y": 0.4896
+   },
+   {
+    "frame": 65,
+    "x": 0.708,
+    "y": 0.5127
+   },
+   {
+    "frame": 66,
+    "x": 0.6788,
+    "y": 0.5178
+   },
+   {
+    "frame": 67,
+    "x": 0.6415,
+    "y": 0.531
+   }
+  ]
+ }
+]

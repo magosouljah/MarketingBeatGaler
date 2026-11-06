@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Orbit speed_med 0.45-0.6 H/s and owner confirms covers remain readable.",
+  "account": "account-1",
+  "candidate_rule": "problem: The orbit can feel sluggish next to the reference tempo.\nimplementation: Raise the cruise angular velocity or orbit axis tilt until median screen speed reaches 0.45-0.6 H/s, then check readability at 0.5x.\nuse_when: Orbit phases under 2 s.\navoid_when: Covers must be readable individually during the orbit.",
+  "cause_hypothesis": "[reference-interpretation; unvalidated] Global angular velocity of ~1 rad/s around a vertical axis moves front/back covers in opposite directions, lowering median screen speed.",
+  "check_id": "orbit-tempo",
+  "id": "choreography-lab-v1-abc--orbit-tempo",
+  "problem_evidence": "Orbit screen speed 0.23-0.31 frame heights/s vs reference 0.62.",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

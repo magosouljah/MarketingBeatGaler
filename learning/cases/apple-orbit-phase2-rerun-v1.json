@@ -1,0 +1,27 @@
+{
+  "id": "apple-orbit-phase2-rerun-v1",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "source": "reference-runs/apple-music/source.MP4 (local, not committed) SHA256 885dc1c1c3dd641670405ba637aff5865cc7fd44cbe713614038fa4cebe64c14; account-1/research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md",
+  "checks": [
+    {
+      "id": "reference-integrity",
+      "status": "pass",
+      "evidence": "Reference Intelligence V1 analyze + validate PASS on all 178 frames with annotations and KLT tracks; derived files in account-1/research/reference-analysis/apple-music-orbit-v1/phase2-rerun/ (frames not committed)."
+    },
+    {
+      "id": "temporal-correspondence",
+      "status": "pass",
+      "evidence": "Interval-mean grayscale difference matches MEASUREMENTS.json best at -3 frames (SSE 0.000148 vs 0.000333/0.000372); top-3 difference peaks at local 119/124/113 = documented original 122/127/116."
+    },
+    {
+      "id": "source-identity",
+      "status": "fail",
+      "evidence": "Local file is not byte-identical to the documented original (SHA 885dc1c1... vs 74301c7f..., 720x1280/178 frames vs 512x910/181). Only measured correspondence supports using it.",
+      "hypothesis": "[evaluation-process; unvalidated] The owner re-downloaded the same Instagram post at a higher resolution; the downloader dropped the first 3 frames.",
+      "proposed_rule": "problem: A reference file can silently differ from the documented original.\nimplementation: Before analysis, compare SHA-256; if different, require a measured temporal-alignment test against stored derived data and record the offset; never mix frame indices between encodes.\nuse_when: Any reference re-supplied after its first documentation.\navoid_when: Byte-identical source.",
+      "acceptance_test": "Owner confirms the origin of reference-runs/apple-music/source.MP4 or supplies the original 74301c7f... file; next reference rerun records hash check + alignment before any measurement."
+    }
+  ]
+}

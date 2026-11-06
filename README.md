@@ -32,7 +32,7 @@ La infraestructura audiovisual de scraping, transcripción, generación de scrip
 
 ## Reference Analysis V1
 
-Executable full-frame source preparation, technical reports, optional annotated 2D kinematics and Learning Engine integration: [execution guide](shared/reference_analysis/README.md), [skill](skills/reference-analysis/SKILL.md), [research](shared/reference_analysis/RESEARCH.md). The original Apple Music MP4 is still unavailable in this checkout; the committed demonstration is synthetic. New tests: `python -m unittest discover -s shared/reference_analysis/tests -v`. A [pre-existing protected hash mismatch](shared/reference_analysis/AUDIT-BLOCKER.md) was repaired with explicit owner authorization, preserving direction text and the integrity check.
+Executable full-frame source preparation, technical reports, optional annotated 2D kinematics and Learning Engine integration: [execution guide](shared/reference_analysis/README.md), [skill](skills/reference-analysis/SKILL.md), [research](shared/reference_analysis/RESEARCH.md). The Apple Music reference is never committed; a local re-encode was measured against the documented original and analysed in [PHASE2-RERUN.md](account-1/research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md). Optional dense-motion metrics and seeded KLT tracks (numpy + OpenCV): [shared/motion_metrics](shared/motion_metrics/README.md). New tests: `python -m unittest discover -s shared/reference_analysis/tests -v`. A [pre-existing protected hash mismatch](shared/reference_analysis/AUDIT-BLOCKER.md) was repaired with explicit owner authorization, preserving direction text and the integrity check.
 
 ### First real reference intake
 
@@ -41,3 +41,7 @@ The original 6.033s Apple Music cover-orbit video was recovered from the user's 
 ## Skills de motion graphics para Fase 2
 
 [Motion Skills Library](skillpack/README.md): **57 skills catalogadas y fijadas por SHA** desde 7 repositorios de GitHub; **19 prioritarias para la primera prueba de motion design**. Instalador reproducible para Codex y Claude Code: `python skillpack/manager.py install --profile phase2 --agent both` desde el IDE local. Las fuentes externas se descargan en cada equipo y no están incluidas físicamente en el repositorio; `DIRECCION.md` continúa protegido.
+
+## Fase 2 — primer experimento 3D
+
+[Choreography Lab V1](account-1/creative-assets/choreography-lab-v1/README.md): un proyecto HyperFrames editable con tres modelos de movimiento sobre portadas reales — **A** órbita rígida y cámara fija (control), **B** trayectorias individuales con profundidad, **C** B + cámara 3D animada — con renders, geometría exacta, medición contra la referencia y [resultados](account-1/creative-assets/choreography-lab-v1/RESULTS.md). **Sin aprobación creativa**; 11 propuestas abiertas en el Learning Engine.

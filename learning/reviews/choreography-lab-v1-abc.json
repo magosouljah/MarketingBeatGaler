@@ -1,0 +1,19 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v1-abc",
+  "failed": [
+    "energy-arc",
+    "negative-space",
+    "climax-occlusion",
+    "camera-legibility",
+    "orbit-tempo"
+  ],
+  "human_approved": false,
+  "passed": [
+    "render-pipeline",
+    "render-determinism",
+    "rigid-control",
+    "independent-trajectories",
+    "camera-continuity"
+  ]
+}
