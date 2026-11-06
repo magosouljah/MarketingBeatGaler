@@ -1,0 +1,52 @@
+{
+  "id": "choreography-lab-v4-wheel",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v3-wheel--riffle-pose",
+  "owner_direction": "Owner in chat 2026-11-06: covers must appear one after another (not all at once spreading from a centre); text sits right of the ring centre so it feels centred; covers flatten in the sweep; rotate all covers 180 deg so their top points to the centre; compare frame by frame. Direction, not approval.",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v4.mp4",
+  "checks": [
+    {
+      "id": "staggered-appearance",
+      "status": "pass",
+      "evidence": "Pages revealed one by one along the wheel on the page counts measured in the reference (1/3/12/16/20/26/28 at 1.233-1.567 s); appear-phase silhouette IoU 0.36 vs v3 0.29. Owner review pending."
+    },
+    {
+      "id": "text-placement",
+      "status": "pass",
+      "evidence": "Word box centred on the measured reference text centre (0.52 W, 0.41 H)."
+    },
+    {
+      "id": "cover-orientation",
+      "status": "pass",
+      "evidence": "coverFlip: every cover rotated 180 deg in its plane; cover top points to the wheel centre."
+    },
+    {
+      "id": "riffle-pose",
+      "status": "pass",
+      "evidence": "Lens ends beside the left rim looking along it: pages stack face-on and rise; riffle IoU 0.25 vs v3 0.18; riffle occlusion proxy 0.78 vs reference 0.78. Technical only."
+    },
+    {
+      "id": "sweep-flattening",
+      "status": "pass",
+      "evidence": "Climax blade pitch -0.8 instead of -1.45; side-by-side frames 3.3-4.0 s keep faces visible. Owner review pending."
+    },
+    {
+      "id": "energy-arc",
+      "status": "fail",
+      "evidence": "Relative mean difference appear/wheel/approach/riffle = 0.33/0.98/1.00/0.83 vs reference 0.24/0.45/0.65/1.00; riffle coverage 0.16 vs 0.32.",
+      "hypothesis": "[implementation; unvalidated] The stack is half the size of the reference stack, so the climax changes fewer pixels than the approach.",
+      "proposed_rule": "problem: The climax stack is too small to be the energy peak.\nimplementation: Bring the lens closer to the rim run (without entering the rim) or enlarge pages for the climax until riffle coverage approaches the reference.\nuse_when: Rolodex climaxes.\navoid_when: When the stack must leave room for text.",
+      "acceptance_test": "Riffle coverage >= 0.27 and riffle is the energy peak (same-clock comparison); owner review."
+    },
+    {
+      "id": "appear-spin",
+      "status": "fail",
+      "evidence": "Appear-phase curl 3.71 vs reference 0.56 (v3 1.36): with pages already at final spacing, the wheel spin is visible while they appear.",
+      "hypothesis": "[implementation; unvalidated] The reference wheel barely turns until the ring is complete.",
+      "proposed_rule": "problem: The wheel visibly spins while its pages are still appearing.\nimplementation: Hold the wheel angle (omega near 0) until the last page has appeared, then accelerate.\nuse_when: Staggered reveals of an ordered ring.\navoid_when: The brief wants a spinning build.",
+      "acceptance_test": "Appear-phase curl within ±1.5 /s of the reference and appear IoU not below 0.36; owner review."
+    }
+  ]
+}

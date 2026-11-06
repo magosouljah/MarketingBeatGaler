@@ -1,6 +1,30 @@
 # Lab V2 — resultados
 
-**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1) y `choreography-lab-v3-wheel` (iteración 2).
+**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2) y `choreography-lab-v4-wheel` (iteración 3).
+
+## Iteración 3 (`wheel-v4.mp4`, 2026-11-06)
+
+Observaciones del propietario sobre v3: (1) las portadas salían todas a la vez desde un centro y se iban separando, mientras que en Apple van saliendo una tras otra; (2) en Apple el texto está cargado a la derecha dentro del círculo para que *se sienta* centrado; (3) en el barrido las portadas se aplanan; (4) girar todas las portadas 180° para que su parte de arriba apunte al centro.
+
+Cambios:
+1. **Aparición página a página.** Conté en la referencia cuántas páginas hay visibles en cada fotograma (1,233 s: 1; 1,267: 3; 1,300: 12; 1,333: 16; 1,400: 20; 1,500: 26; 1,567: todas) y cada página aparece en ese orden a lo largo de la rueda (`reveal`), creciendo en 0,05 s. Las páginas ya no se separan: ocupan su lugar definitivo desde el primer fotograma. La página inicial y la posición se ajustaron por IoU de silueta en 1,27–1,53 s.
+2. **Texto:** centrado en el punto medido de Apple (0,52 W; 0,41 H), es decir, desplazado a la derecha dentro del círculo.
+3. **Barrido sin aplanar:** el giro de cada página sobre su línea radial pasa de −0,55 a −0,8 (antes llegaba a −1,45 y quedaban planas). La cámara termina junto al borde izquierdo de la rueda, mirando a lo largo de él: las páginas se apilan de frente y el giro horario las sube y aleja.
+4. **Portadas giradas 180°** (`coverFlip`): la parte de arriba de cada portada apunta al centro de la rueda.
+
+Comparación fotograma a fotograma (`tools/frame_iou.py`: IoU de silueta en cada fotograma de 1,23 a 4,4 s; `evidence/frame-iou-v4.json` y `frame-iou-v3.json`):
+
+| Fase | v3 | v4 |
+| --- | ---: | ---: |
+| Aparición 1,2–1,6 | 0,29 | **0,36** |
+| Rueda 1,6–3,0 | 0,50 | 0,49 |
+| Acercamiento 3,0–3,65 | 0,31 | **0,34** |
+| Riffle 3,65–4,35 | 0,18 | **0,25** |
+| Media | 0,36 | **0,38** |
+
+Mismo reloj, medición de movimiento (`evidence/reference-comparison-v4.json`): la oclusión del riffle iguala la de Apple (0,78 contra 0,78) y la del acercamiento sube de 0,17 a 0,30 (Apple 0,58). **Hay dos retrocesos:**
+- **Arco de energía:** el pico pasa al acercamiento (1,00) y el riffle queda en 0,83, porque nuestra pila cubre la mitad que la de Apple (cobertura 0,16 contra 0,32).
+- **Giro durante la aparición:** curl 3,7 contra 0,56 de Apple (v3: 1,36). Como las páginas ya están en su sitio definitivo, el giro de la rueda se ve mientras van apareciendo.
 
 ## Iteración 2 (`wheel-v3.mp4`, 2026-11-06)
 

@@ -38,42 +38,54 @@ export const RIG = {
   appear: 1.22, // first frame with pages (reference: 1.20-1.23 s)
   leave: 4.5, // wheel is off frame from here (reference: clear by ~4.4 s)
   phase0: -0.9, // wheel angle of the deck when it appears (radians, wheel space)
-  // fraction of the full circle the pages occupy (pages join the wheel from one end)
-  spread: [[1.22, [0.35]], [1.3, [0.55]], [1.42, [0.8]], [1.56, [0.96]], [1.66, [1.0]]],
+  // pages sit at their final spacing from the start (no fan-out)
+  spread: [[0, [1.0]], [6, [1.0]]],
+  // pages appear one after another along the wheel, in the spin direction.
+  // [time, pages visible] counted frame by frame in the reference (1.233 s: 1,
+  // 1.267: 3, 1.300: 12, 1.333: 16, 1.400: 20, 1.500: 26, 1.567: all)
+  reveal: [[1.222, 0], [1.233, 1], [1.267, 3], [1.3, 12], [1.333, 16], [1.4, 20], [1.5, 26], [1.567, 28]],
+  revealFirst: 24, // index of the first page to appear (fitted by silhouette IoU, 1.27-1.43 s)
+  revealDir: 1, // order of appearance: +1 along the spin, -1 against it
+  popIn: 0.05, // seconds for each page to grow from nothing to full size
+  coverFlip: true, // cover art upside down: its top edge points to the wheel centre
   // wheel angular velocity, rad/s (sign sets the turning direction). At the
   // climax ~1 page passes per frame (reference "riffle"): 2*PI/cards*30 ~ 6.7
-  omega: [[1.22, [-2.0]], [1.6, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.6, [-6.5]]],
+  // (spin ramps up while pages appear: reference shows almost no screen rotation 1.2-1.6 s)
+  omega: [[1.22, [-0.4]], [1.65, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.6, [-6.5]]],
   // wheel centre (world)
   position: [
-    [1.22, [0.3, 1.0, -1.0]],
+    [1.22, [0.0, 1.25, -1.0]],
     [1.45, [0.15, 1.05, -0.4]],
     [1.72, [0.05, 1.05, 0.0]],
     [3.0, [0.05, 1.05, 0.5]],
     [3.4, [0.6, 0.95, 1.6]],
-    [3.72, [1.45, 0.95, 3.4]],
-    [4.02, [1.45, 1.0, 3.5]],
-    [4.3, [1.45, 3.8, 3.0]],
-    [4.5, [1.45, 7.0, 2.4]],
+    [3.72, [2.3, 0.8, 3.55]],
+    [4.02, [2.3, 0.85, 3.65]],
+    [4.3, [2.3, 3.8, 3.15]],
+    [4.5, [2.3, 7.0, 2.65]],
   ],
   // ring pose, Euler XYZ radians + screen roll (fitted 2026-11-06 by mask IoU
   // at 1.9/2.2/2.6 s: 0.51, was 0.25). Held for the whole shot: the climax is
   // reached by tipping the same wheel, never by swinging its axis sideways.
   rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.5, [-0.75, 0.0, 0.0, 0.0]]],
   // rigid moves of the whole wheel: [tip about the screen x axis, final roll].
-  // Entrance: opens from edge-on. Climax: the bottom-left rim comes toward the
-  // lens and we look down on it while the spin carries pages up and away
-  // (reference 3.33-3.73 s: the lower row slides left and lies back).
+  // Entrance: opens from edge-on. Climax: the wheel tips and slides right so the
+  // lens ends up beside its left rim, looking along it: consecutive pages stack
+  // face-on and the clockwise spin carries them up and away (reference
+  // 3.33-3.73 s: the lower row slides left and lies back, then the stack rises).
   tip: [
-    [1.22, [-0.8, 0.45]],
+    [1.22, [-0.5, 0.35]],
     [1.42, [-0.3, 0.3]],
     [1.72, [0.0, 0.25]],
     [3.0, [0.0, 0.25]],
-    [3.72, [-0.35, 0.6]],
-    [4.5, [-0.35, 0.6]],
+    [3.72, [-0.6, 0.35]],
+    [4.5, [-0.6, 0.35]],
   ],
-  // blade pitch over time: pages turn on their radial line and lie back into
-  // the wheel plane for the climax
-  pitch: [[1.22, [-0.55]], [3.0, [-0.55]], [3.72, [-1.45]], [4.5, [-1.45]]],
+  // blade pitch over time. Iteration 2 laid the pages flat for the climax
+  // (-1.45); the owner saw them flatten and the silhouette fit agrees: keep it.
+  // Now -0.8 at the climax: enough to lie back like the reference stack while
+  // the faces stay visible (the lens looks along the rim, so pages stack).
+  pitch: [[1.22, [-0.55]], [3.0, [-0.55]], [3.72, [-0.8]], [4.5, [-0.8]]],
   // overall wheel scale
   scale: [[1.22, [0.85]], [1.45, [0.92]], [1.72, [0.95]], [3.0, [1.02]], [3.72, [1.1]], [4.5, [1.1]]],
 };
@@ -157,6 +169,23 @@ export function wheelMatrix(R, t, rig = RIG) {
 }
 
 // Page k in wheel space: centre on the radius, plane = span(radial, axis).
+// time at which page k appears (inverse of the measured reveal curve)
+export function revealTime(k, rig = RIG) {
+  const dir = rig.revealDir ?? 1; // +1: along the spin, -1: against it
+  const order = (((k - (rig.revealFirst ?? 0)) * dir) % rig.cards + rig.cards) % rig.cards; // 0 = first
+  const r = rig.reveal;
+  if (!r) return rig.appear;
+  const target = order + 1;
+  for (let i = 1; i < r.length; i++) {
+    if (r[i][1] >= target) {
+      const [t0, c0] = r[i - 1];
+      const [t1, c1] = r[i];
+      return t0 + (t1 - t0) * ((target - c0) / Math.max(c1 - c0, 1e-9)) - 1e-4;
+    }
+  }
+  return r[r.length - 1][0];
+}
+
 export function pageLocal(R, k, t, rig = RIG) {
   const N = rig.cards;
   const spread = R.spread(t)[0];
@@ -167,6 +196,7 @@ export function pageLocal(R, k, t, rig = RIG) {
   _z.crossVectors(_y, _x);
   _m.makeBasis(_y, _x, _z);
   _m.multiply(new THREE.Matrix4().makeRotationY(R.pitch ? R.pitch(t)[0] : rig.bladePitch));
+  if (rig.coverFlip) _m.multiply(new THREE.Matrix4().makeRotationZ(Math.PI));
   _m.setPosition(_x.x * rig.radius, _x.y * rig.radius, 0);
   return _m.clone();
 }
@@ -225,13 +255,20 @@ export function createWheel(canvas, rig = RIG) {
     g.matrixAutoUpdate = false;
     g.add(new THREE.Mesh(geo, front), new THREE.Mesh(geo, back));
     wheel.add(g);
-    pages.push({ k, cover, g, front, back });
+    pages.push({ k, cover, g, front, back, reveal: revealTime(k, rig) });
   }
 
   function apply(t) {
     wheel.visible = t >= rig.appear && t < rig.leave;
     wheel.matrix.copy(wheelMatrix(R, t, rig));
-    for (const p of pages) p.g.matrix.copy(pageLocal(R, p.k, t, rig));
+    for (const p of pages) {
+      const m = pageLocal(R, p.k, t, rig);
+      const u = Math.min(1, Math.max(0, (t - p.reveal) / (rig.popIn || 1e-6)));
+      const grow = 1 - Math.pow(1 - u, 3);
+      p.g.visible = t >= p.reveal;
+      if (grow < 1) m.multiply(new THREE.Matrix4().makeScale(Math.max(grow, 1e-4), Math.max(grow, 1e-4), 1));
+      p.g.matrix.copy(m);
+    }
     scene.updateMatrixWorld(true);
   }
   function render(t) {

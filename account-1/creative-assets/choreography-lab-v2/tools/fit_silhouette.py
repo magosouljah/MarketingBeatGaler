@@ -18,7 +18,7 @@ TIMES=[float(x) for x in os.environ.get("FIT_TIMES","1.9,2.2,2.6").split(",")]
 def mask(im,bg=(243,243,243)):
     a=np.asarray(im.convert('RGB').resize((90,160),Image.BILINEAR)).astype(float)
     m=np.linalg.norm(a-np.array(bg),axis=2)>30
-    if os.environ.get("FIT_TEXTBOX","1")=="1": m[66:84,22:70]=False  # centre text box excluded
+    if os.environ.get("FIT_TEXTBOX","1")=="1": m[59:76,22:72]=False  # reference text box (0.37-0.47 H, 0.25-0.8 W) excluded
     m[:16,:]=False if os.environ.get("FIT_TOPBAND")=="1" else m[:16,:]
     return m
 refm=[mask(Image.open(f'{F}/{round(t*30):06d}.png')) for t in TIMES]
