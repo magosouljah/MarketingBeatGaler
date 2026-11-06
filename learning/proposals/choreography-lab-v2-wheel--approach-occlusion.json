@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Approach occlusion proxy >= 0.45, no frame with coverage < 0.1 between 3.0 and 3.65 s, owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: Re-orienting a card wheel can pass through an edge-on pose and empty the frame.\nimplementation: Move the camera toward the face side of the rim first and turn the axis while faces stay visible; check every frame of the transition.\nuse_when: Transitions between two views of the same card structure.\navoid_when: A deliberate flip or wipe.",
+  "cause_hypothesis": "[reference-interpretation; unvalidated] The reference keeps faces visible while bottom-right pages grow and overlap; our transition rotates the axis through an edge-on pose.",
+  "check_id": "approach-occlusion",
+  "id": "choreography-lab-v2-wheel--approach-occlusion",
+  "problem_evidence": "Approach 3.0-3.65 s: occlusion proxy 0.15 vs 0.58; frames around 3.5 s show near-edge-on pages while the wheel axis turns.",
+  "source_case": "choreography-lab-v2-wheel",
+  "state": "proposed"
+}

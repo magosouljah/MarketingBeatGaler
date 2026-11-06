@@ -45,3 +45,5 @@ The original 6.033s Apple Music cover-orbit video was recovered from the user's 
 ## Fase 2 — primer experimento 3D
 
 [Choreography Lab V1](account-1/creative-assets/choreography-lab-v1/README.md): un proyecto HyperFrames editable con tres modelos de movimiento sobre portadas reales — **A** órbita rígida y cámara fija (control), **B** trayectorias individuales con profundidad, **C** B + cámara 3D animada — con renders, geometría exacta, medición contra la referencia y [resultados](account-1/creative-assets/choreography-lab-v1/RESULTS.md). **Sin aprobación creativa**; 8 propuestas nuevas sin validar en el Learning Engine.
+
+**Lab V2 (tras la revisión del propietario):** [reconstrucción como rueda tipo rolodex](account-1/creative-assets/choreography-lab-v2/README.md), sin grid, en el mismo reloj que Apple. Arco de energía, velocidad de giro y oclusión del clímax ya coinciden en las mediciones; quedan tres diferencias abiertas ([resultados](account-1/creative-assets/choreography-lab-v2/RESULTS.md)).

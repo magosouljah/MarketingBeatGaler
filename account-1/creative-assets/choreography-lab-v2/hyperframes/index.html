@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>BeatGaler · Choreography Lab V2 · rolodex wheel</title>
+    <script src="lib/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Archivo Black";
+        src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2");
+        font-weight: 400;
+      }
+      :root {
+        --ground: #f3f3f3;
+        --ink: #0b0b0c;
+        --font-display: "Archivo Black", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        background: var(--ground);
+        font-family: var(--font-display);
+        color: var(--ink);
+      }
+      .word {
+        position: absolute;
+        left: 0;
+        width: 620px;
+        top: 520px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 74px;
+        letter-spacing: -0.035em;
+        line-height: 1;
+      }
+      #brand {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #brand-mark {
+        display: block;
+        font-size: 64px;
+        letter-spacing: -0.04em;
+      }
+      #endcard {
+        position: absolute;
+        left: 0;
+        width: 720px;
+        top: 440px;
+        text-align: center;
+      }
+      #end-brand {
+        display: block;
+        font-size: 30px;
+        letter-spacing: -0.03em;
+        margin-bottom: 34px;
+      }
+      #end-line {
+        display: block;
+        font-size: 84px;
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      #stage {
+        position: absolute;
+        inset: 0;
+        width: 720px;
+        height: 1280px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Wheel rig and every motion parameter: src/wheel.js (RIG). Lab notes: ../README.md -->
+    <div id="root" data-composition-id="lab2" data-start="0" data-duration="6" data-fps="30" data-width="720" data-height="1280">
+      <div id="brand" class="clip" data-start="0" data-duration="1.2" data-track-index="1"><span id="brand-mark">BeatGaler</span></div>
+      <div id="w1" class="word clip" data-start="1.6" data-duration="0.6" data-track-index="2">Create</div>
+      <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2">ur</div>
+      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2">Galer</div>
+      <div id="endcard" class="clip" data-start="4.37" data-duration="1.63" data-track-index="3">
+        <span id="end-brand">BeatGaler</span>
+        <span id="end-line">Create<br />ur<br />Galer</span>
+      </div>
+      <canvas id="stage" class="clip" data-start="0" data-duration="6" data-track-index="0" width="720" height="1280" data-layout-allow-occlusion></canvas>
+    </div>
+    <script>
+      window.__hf = window.__hf || {};
+      window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__wheelReady = new Promise((resolve) => (window.__resolveWheel = resolve));
+      window.__hf.buildReady["lab2-wheel"] = window.__wheelReady;
+      window.__labState = { t: 0 };
+      window.__labRender = function () {
+        if (window.__lab) window.__lab.render(window.__labState.t);
+      };
+      const tl = gsap.timeline({ paused: true });
+      tl.to(window.__labState, { t: 6, duration: 6, ease: "none", onUpdate: () => window.__labRender() }, 0);
+      // brand mark shrinks toward the point where the deck appears (reference: logo shrinks 0.5-1.2 s)
+      tl.fromTo("#brand-mark", { scale: 1, x: 0 }, { scale: 0.12, x: -40, duration: 0.65, ease: "power2.in" }, 0.5);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["lab2"] = tl;
+      window.addEventListener("hf-seek", (e) => {
+        window.__labState.t = e.detail.time;
+        window.__labRender();
+      });
+    </script>
+    <script type="module">
+      import { createWheel } from "./src/wheel.js";
+      const lab = createWheel(document.getElementById("stage"));
+      lab.ready.then(() => {
+        window.__lab = lab;
+        window.__labRender();
+        window.__resolveWheel();
+      });
+    </script>
+  </body>
+</html>

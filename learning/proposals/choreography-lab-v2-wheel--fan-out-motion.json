@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Fan-out curl within ±1.5 /s of the reference and owner review of 1.2-1.6 s side by side.",
+  "account": "account-1",
+  "candidate_rule": "problem: The deck spins while it fans out.\nimplementation: Hold the wheel orientation and angle during the fan-out; open the spread only, then start the spin.\nuse_when: Fan-out entrances of ordered card rings.\navoid_when: A brief that asks for a spinning entrance.",
+  "cause_hypothesis": "[implementation; unvalidated] Entrance rotation knots (roll/turn from 1.22 to 1.5 s) and the wheel already spinning at -1.2 rad/s add a screen rotation the reference does not have.",
+  "check_id": "fan-out-motion",
+  "id": "choreography-lab-v2-wheel--fan-out-motion",
+  "problem_evidence": "Fan-out 1.2-1.6 s: curl -4.81 vs reference +0.56; contact sheet shows our deck swinging while the reference row opens almost without turning.",
+  "source_case": "choreography-lab-v2-wheel",
+  "state": "proposed"
+}

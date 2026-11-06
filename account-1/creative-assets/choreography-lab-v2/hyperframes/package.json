@@ -1,0 +1,10 @@
+{
+  "name": "beatgaler-choreography-lab-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.17 preview",
+    "check": "npx --yes hyperframes@0.9.17 check",
+    "render": "npx --yes hyperframes@0.9.17 render --quality draft -o ../evidence/renders/wheel-v2.mp4"
+  }
+}

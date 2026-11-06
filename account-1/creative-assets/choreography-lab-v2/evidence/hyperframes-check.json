@@ -1,0 +1,332 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:33541/lib/three.core.min.js",
+        "line": 5
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:33541/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:33541/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:33541/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "lab2",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:33541/"
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "canvas_content_at_edge",
+        "severity": "warning",
+        "time": 1.667,
+        "selector": "#stage",
+        "message": "Canvas content touches the frame edge (right).",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "containerSelector": "#root",
+        "fixHint": "Keep drawn text inside the visible part of the canvas, or mark intentional full-bleed art with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "dataAttributes": {
+          "data-start": "0",
+          "data-duration": "6",
+          "data-track-index": "0",
+          "data-layout-allow-occlusion": "",
+          "data-engine": "three.js r184"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 4.333,
+        "occurrences": 5,
+        "heldMs": 2666.0000000000005,
+        "times": [
+          1.667,
+          2.333,
+          3,
+          3.667,
+          4.333
+        ]
+      }
+    ],
+    "duration": 6,
+    "samples": [
+      0.333,
+      1,
+      1.667,
+      2.333,
+      3,
+      3.667,
+      4.333,
+      5,
+      5.667
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 1,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0.333,
+      1.667,
+      3,
+      4.333,
+      5.667
+    ],
+    "checked": 5,
+    "passed": 5
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"BeatGaler\" (1 word) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "BeatGaler",
+        "selector": "#end-brand",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 281.8,
+          "y": 440,
+          "width": 156.39,
+          "height": 32
+        },
+        "time": 4.406,
+        "words": 1,
+        "seconds": 1.598,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Create ur Galer\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Create ur Galer",
+        "selector": "#end-line",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 216.09,
+          "y": 501,
+          "width": 287.79999999999995,
+          "height": 256.63
+        },
+        "time": 4.406,
+        "words": 3,
+        "seconds": 1.598,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 48
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "366b29d1-ae0b-48a5-abea-51bdd5f41349",
+    "revision": "9747bcb7-1f8a-496d-936f-2ead53e2b4f6",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/366b29d1-ae0b-48a5-abea-51bdd5f41349.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.17",
+    "latestVersion": "0.9.18",
+    "updateAvailable": true,
+    "checkedAt": "2026-11-06T03:23:39.963Z"
+  }
+}

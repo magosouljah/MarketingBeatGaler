@@ -77,3 +77,7 @@ El laboratorio [`choreography-lab-v1`](../../../creative-assets/choreography-lab
 - **El residuo afín no distingue una órbita rígida 3D de trayectorias independientes**: el control rígido del laboratorio (variante A) mide 0,79 en su órbita. Sirve para comparar estructuras de imagen, no para probar rigidez. Para nuestras escenas la rigidez se mide con la geometría exacta (residuo Kabsch 3D).
 - El fondo blanco y el texto estático de la referencia cuentan como primer plano en `coverage`.
 - Audio no examinado perceptualmente.
+
+## 6. Actualización: archivo de Instagram (2026-11-05)
+
+El propietario pasó el MP4 descargado del post: SHA-256 `515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a`, 1 368 842 bytes, 720×1280, 180 fotogramas a 29,97 fps, 6,006 s. Tampoco es byte-idéntico al original documentado, pero es el más completo de los disponibles: desfase −1 fotograma (SSE 0,000155), picos en los mismos fotogramas originales 122/127/116. El `source.MP4` usado arriba es una **recodificación de este archivo** (PSNR mediano 45,7 dB con desfase de 2 fotogramas). Desde ahora es la referencia principal: `reference-runs/apple-music/instagram-original.mp4` (local, no versionado). Con él se reinterpretó la estructura como una rueda tipo rolodex: [Lab V2](../../../creative-assets/choreography-lab-v2/RESULTS.md).
