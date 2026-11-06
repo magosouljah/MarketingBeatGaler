@@ -69,22 +69,26 @@ export const RIG = {
   // v5: roll fitted so the silhouette's main axis follows the reference
   // (≈ +28° at 1.9 s, -54° at 3.3 s, -60° at 3.8 s; owner frame ~99).
   tip: [
-    [1.22, [-0.2, 0.3]],
-    [1.42, [-0.3, 0.28]],
+    [1.22, [-0.5, 0.35]], // v6: entrance back to the v4 values (owner: frames 41-50 read better in v4)
+    [1.42, [-0.3, 0.3]],
     [1.72, [0.0, 0.18]],
-    [3.0, [0.0, 0.18]],
-    [3.3, [0.0, -0.8]],
-    [3.45, [0.0, -0.8]],
-    [3.75, [-0.3, -1.1]],
+    [2.9, [0.0, 0.18]], // v6: roll change starts earlier and ends later (owner: frame ~94 felt abrupt);
+    [3.4, [0.0, -0.8]], //     the silhouette axis still follows the reference curve frame by frame
+    [3.5, [0.0, -0.8]],
+    [3.75, [-0.3, -1.1]], // -1.0 lets the stack leave the frame by 4.0 s; -1.1 holds it to ~4.4 s like Apple
     [4.8, [-0.3, -1.1]],
   ],
-  // blade pitch: pages turn about their radial line. v5: 2.2 rad (= pi - 0.94)
-  // so every visible page shows its FRONT (v4 showed backs on ~85 % of the
-  // visible area; the reference never shows a back). Constant: no flattening.
-  pitch: [[1.22, [2.2]], [3.45, [2.2]], [3.75, [2.5]], [4.8, [2.5]]],
-  // Single-sided pages: a page turning its back to the lens disappears exactly
-  // when it is edge-on, so no back is ever seen (the reference never shows one).
-  showBacks: false,
+  // blade pitch: pages turn about their radial line.
+  // v6: 2.59 rad (the v4 page planes, owner: v4 matched Apple better at
+  // frame ~94) through the wheel and approach, easing to 2.2 for the climax
+  // (owner: at frame ~116 v5 pages, 2.5 rad, lay more horizontal than Apple's):
+  // 2.35 for the climax, chosen side by side against 2.2 / 2.5 / 2.7.
+  pitch: [[1.22, [2.5916]], [3.45, [2.5916]], [3.75, [2.35]], [4.8, [2.35]]],
+  // Both sides of a page print the same cover at the same brightness and the
+  // same orientation, so no page ever reads as "seen from behind"; which way
+  // the planes lean is set by pitch and roll (v5 found v4's lean was mirrored).
+  showBacks: true,
+  backTint: 1.0,
   // pages that leave the frame after this time are removed for good, so the
   // wheel does not bring them back in from below (owner, v4 review)
   retireFrom: 3.55,
@@ -332,7 +336,7 @@ export function createWheel(canvas, rig = RIG) {
         p.front.map = textures[p.cover].front;
         p.back.map = textures[p.cover].back;
         p.front.color.setScalar(1);
-        p.back.color.setScalar(0.82);
+        p.back.color.setScalar(rig.backTint ?? 0.82);
         p.front.needsUpdate = p.back.needsUpdate = true;
       }
       return renderer.compileAsync(scene, camera);

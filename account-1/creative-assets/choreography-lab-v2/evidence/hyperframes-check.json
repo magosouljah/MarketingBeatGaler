@@ -37,13 +37,13 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46225/lib/three.core.min.js",
+        "url": "http://127.0.0.1:43411/lib/three.core.min.js",
         "line": 5
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -61,12 +61,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46225/"
+        "url": "http://127.0.0.1:43411/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -84,12 +84,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:46225/"
+        "url": "http://127.0.0.1:43411/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -107,12 +107,12 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:46225/"
+        "url": "http://127.0.0.1:43411/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "message": "[.WebGL-0x1774001c2800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -130,7 +130,7 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:46225/"
+        "url": "http://127.0.0.1:43411/"
       }
     ]
   },
@@ -232,8 +232,8 @@
       4.333,
       5.667
     ],
-    "checked": 7,
-    "passed": 7
+    "checked": 12,
+    "passed": 12
   },
   "craft": {
     "ok": true,
@@ -244,7 +244,7 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"BeatGaler\" (1 word) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "message": "The film's last line \"BeatGaler\" (1 word) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
         "text": "BeatGaler",
         "selector": "#end-brand",
         "dataAttributes": {},
@@ -255,34 +255,15 @@
           "width": 156.39,
           "height": 32
         },
-        "time": 4.406,
+        "time": 4.305,
         "words": 1,
-        "seconds": 1.598,
+        "seconds": 1.699,
         "floorSeconds": 2
       },
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"Free* Unlimited Cloud\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "Free* Unlimited Cloud",
-        "selector": "#end-line",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 173.14,
-          "y": 461,
-          "width": 373.69999999999993,
-          "height": 231.94000000000005
-        },
-        "time": 4.406,
-        "words": 3,
-        "seconds": 1.598,
-        "floorSeconds": 2
-      },
-      {
-        "code": "line_unread",
-        "severity": "warning",
-        "message": "The film's last line \"for beats and projects\" (4 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "message": "The film's last line \"for beats and projects\" (4 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
         "text": "for beats and projects",
         "selector": "#end-sub",
         "dataAttributes": {},
@@ -293,15 +274,15 @@
           "width": 347.95000000000005,
           "height": 32
         },
-        "time": 4.406,
+        "time": 4.305,
         "words": 4,
-        "seconds": 1.598,
+        "seconds": 1.699,
         "floorSeconds": 2
       },
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"*Terms and conditions apply.\" (4 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "message": "The film's last line \"*Terms and conditions apply.\" (4 words) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
         "text": "*Terms and conditions apply.",
         "selector": "#end-fine",
         "dataAttributes": {},
@@ -312,8 +293,27 @@
           "width": 264.28,
           "height": 23
         },
-        "time": 4.406,
+        "time": 4.305,
         "words": 4,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Unlimited Free* Storage\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Unlimited Free* Storage",
+        "selector": "#end-line",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 173.14,
+          "y": 461.6,
+          "width": 373.69999999999993,
+          "height": 231.93999999999994
+        },
+        "time": 4.406,
+        "words": 3,
         "seconds": 1.598,
         "floorSeconds": 2
       }
@@ -356,15 +356,15 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "fb6fc266-c617-43a9-8fae-132d0b312fa7",
-    "revision": "9e9b3b4c-14a8-483d-b104-843f4f879355",
-    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/fb6fc266-c617-43a9-8fae-132d0b312fa7.json",
+    "id": "4bc3ed5c-d070-45d0-a9f7-182388c89916",
+    "revision": "5389aa70-29cb-4c75-bfe5-6dfbc6ebe64c",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/4bc3ed5c-d070-45d0-a9f7-182388c89916.json",
     "attribution": "recorded-revision"
   },
   "_meta": {
     "version": "0.9.17",
     "latestVersion": "0.9.19",
     "updateAvailable": true,
-    "checkedAt": "2026-11-06T06:25:47.640Z"
+    "checkedAt": "2026-11-06T18:41:02.841Z"
   }
 }

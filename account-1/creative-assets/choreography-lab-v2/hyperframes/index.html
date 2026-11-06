@@ -52,6 +52,13 @@
         letter-spacing: -0.035em;
         line-height: 1;
       }
+      .wt {
+        display: inline-block;
+        transform-origin: 50% 60%;
+      }
+      .el {
+        display: inline-block;
+      }
       #brand {
         position: absolute;
         inset: 0;
@@ -111,12 +118,12 @@
     <!-- Wheel rig and every motion parameter: src/wheel.js (RIG). Lab notes: ../README.md -->
     <div id="root" data-composition-id="lab2" data-start="0" data-duration="6" data-fps="30" data-width="720" data-height="1280">
       <div id="brand" class="clip" data-start="0" data-duration="1.2" data-track-index="1"><span id="brand-mark">BeatGaler</span></div>
-      <div id="w1" class="word clip" data-start="1.6" data-duration="0.6" data-track-index="2">Free*</div>
-      <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2">Unlimited</div>
-      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2">Cloud</div>
-      <div id="endcard" class="clip" data-start="4.37" data-duration="1.63" data-track-index="3">
+      <div id="w1" class="word clip" data-start="1.53" data-duration="0.67" data-track-index="2"><span class="wt">Unlimited</span></div>
+      <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2"><span class="wt">Free*</span></div>
+      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2"><span class="wt">Storage</span></div>
+      <div id="endcard" class="clip" data-start="4.3" data-duration="1.7" data-track-index="3">
         <span id="end-brand">BeatGaler</span>
-        <span id="end-line">Free*<br />Unlimited<br />Cloud</span>
+        <span id="end-line"><span class="el">Unlimited</span><br /><span class="el">Free*</span><br /><span class="el">Storage</span></span>
         <span id="end-sub">for beats and projects</span>
         <!-- PLACEHOLDER fine print: replace with BeatGaler's real terms before any publication -->
         <span id="end-fine">*Terms and conditions apply.</span>
@@ -136,6 +143,17 @@
       tl.to(window.__labState, { t: 6, duration: 6, ease: "none", onUpdate: () => window.__labRender() }, 0);
       // brand mark shrinks toward the point where the deck appears (reference: logo shrinks 0.5-1.2 s)
       tl.fromTo("#brand-mark", { scale: 1, x: 0 }, { scale: 0.12, x: -40, duration: 0.65, ease: "power2.in" }, 0.5);
+      // Centre words, measured on the reference frame by frame: each word cuts
+      // in ~26 px low with a slight tilt, rises into place in ~4 frames
+      // (ease out), then keeps drifting up slowly until the next word cuts in.
+      [["#w1 .wt", 1.53, 0.67], ["#w2 .wt", 2.2, 0.87], ["#w3 .wt", 3.07, 0.58]].forEach(([sel, at, hold]) => {
+        tl.fromTo(sel, { y: 26, rotation: -3.5, scale: 0.97 }, { y: 0, rotation: 0, scale: 1, duration: 0.14, ease: "power3.out" }, at);
+        tl.to(sel, { y: -24, duration: hold - 0.14, ease: "none" }, at + 0.14);
+      });
+      // End card (reference frames 129-136): brand and sub line are up first,
+      // the three headline lines cut in together behind the last cover and settle up.
+      tl.fromTo("#end-line", { y: 14 }, { y: 0, duration: 0.2, ease: "power2.out" }, 4.37);
+      tl.fromTo("#end-line", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.001 }, 4.37);
       window.__timelines = window.__timelines || {};
       window.__timelines["lab2"] = tl;
       window.addEventListener("hf-seek", (e) => {

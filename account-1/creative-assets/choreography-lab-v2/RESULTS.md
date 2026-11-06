@@ -1,6 +1,30 @@
 # Lab V2 — resultados
 
-**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3) y `choreography-lab-v5-wheel` (iteración 4).
+**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3), `choreography-lab-v5-wheel` (iteración 4) y `choreography-lab-v6-wheel` (iteración 5).
+
+## Iteración 5 (`wheel-v6.mp4`, 2026-11-06)
+
+Observaciones del propietario sobre v5: (1) los fotogramas 41–50 se veían mejor en v4; (2) las palabras del centro entran con una animación que hay que replicar; texto nuevo «Unlimited» / «Free*» / «Storage»; (3) en el fotograma ~94 el cambio de ángulo es brusco; (4) en el ~94 las portadas están más planas que en Apple (v4 se parecía más) y en el ~116 más horizontales.
+
+Cambios:
+1. **Entrada:** vuelve a la inclinación de v4 y a sus planos de página (paso de pala 2,59 rad, que equivale al −0,55 de v4 pero con la otra cara hacia la cámara).
+2. **Las dos caras de cada página imprimen la misma portada**, con el mismo brillo y la misma orientación. Ninguna página se lee como vista «por detrás». Qué tanto se inclinan los planos lo deciden el paso de pala y el giro (en v5 vimos que la inclinación de v4 estaba al revés).
+3. **Ángulo del círculo:** el giro empieza antes (2,9 s) y termina después (3,4 s). Por fotograma, el eje mayor ahora da 1° / −8° / −30° / −52° a 3,0 / 3,1 / 3,2 / 3,3 s, frente a 10° / −15° / −34° / −54° de Apple. v5 daba 31° / 29° / −4° / −57°: un salto de 53° en 0,1 s, que es lo brusco que viste.
+4. **Clímax:** paso de pala 2,35, elegido comparando lado a lado contra 2,2, 2,5 y 2,7; con 2,5 (v5) las portadas quedaban más horizontales. El giro de pantalla se mantiene en −1,1, porque con −1,0 la pila sale del cuadro antes de 4,0 s.
+5. **Texto:** «Unlimited» / «Free*» / «Storage» y cierre «Unlimited Free* Storage / for beats and projects». Animación medida en Apple fotograma a fotograma: cada palabra entra por corte unos 26 px abajo y con −3,5° de inclinación, sube a su lugar en unos 4 fotogramas (ease-out) y sigue subiendo despacio hasta que entra la siguiente. En el cierre, la marca y la línea inferior aparecen primero (4,3 s) y las tres líneas del titular entran juntas a 4,37 s, asentándose hacia arriba. La primera palabra entra a 1,53 s, como en Apple.
+
+| Medida | v4 | v5 | v6 |
+| --- | ---: | ---: | ---: |
+| IoU por fotograma, media 1,23–4,4 s | 0,38 | 0,43 | **0,45** |
+| — aparición / rueda / acercamiento / riffle | 0,36 / 0,49 / 0,34 / 0,25 | 0,32 / 0,49 / 0,33 / 0,46 | **0,37 / 0,52 / 0,36 / 0,47** |
+| Orientación de bordes (1 = igual) | — | 0,83 | **0,87** |
+| Error medio del eje mayor | 0,36 | 0,13 | **0,12** |
+| Arco de energía (Apple 0,24/0,45/0,65/1,00) | 0,33/0,98/1,00/0,83 | 0,14/0,51/0,76/1,00 | **0,19/0,49/0,73/1,00** |
+| Oclusión en el acercamiento (Apple 0,58) | 0,30 | 0,34 | **0,43** |
+
+En el 19 % del área visible se ve la cara trasera de una página; como ahora imprime la misma portada con el mismo brillo y la misma orientación, se ve igual que el frente.
+
+Sigue abierto: la rueda gira durante la aparición (curl 4,0 contra 0,56 de Apple).
 
 ## Iteración 4 (`wheel-v5.mp4`, 2026-11-06)
 

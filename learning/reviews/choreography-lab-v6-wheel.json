@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v6-wheel",
+  "failed": [
+    "approach-occlusion",
+    "appear-spin"
+  ],
+  "human_approved": false,
+  "passed": [
+    "entrance-v4-look",
+    "axis-continuity",
+    "word-animation",
+    "climax-page-angle"
+  ]
+}
