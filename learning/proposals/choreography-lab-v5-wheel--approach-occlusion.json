@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Approach occlusion proxy >= 0.45 with ring IoU >= 0.45 and 0 % backs; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: Pages do not overlap enough during the approach.\nimplementation: Test more pages or larger pages on the wheel, re-fitting the ring pose with the four-term score.\nuse_when: Approach beats into a card ring.\navoid_when: Readability of individual covers matters more than density.",
+  "cause_hypothesis": "[implementation; unvalidated] Gaps between pages stay open while the ring turns toward the reference angle.",
+  "check_id": "approach-occlusion",
+  "id": "choreography-lab-v5-wheel--approach-occlusion",
+  "problem_evidence": "Approach 3.0-3.65 s occlusion proxy 0.34 vs reference 0.58.",
+  "source_case": "choreography-lab-v5-wheel",
+  "state": "proposed"
+}

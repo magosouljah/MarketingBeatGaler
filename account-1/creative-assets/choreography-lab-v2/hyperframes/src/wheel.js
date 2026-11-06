@@ -36,7 +36,7 @@ export const RIG = {
   fov: 62,
   camera: [0, 0, 6.2],
   appear: 1.22, // first frame with pages (reference: 1.20-1.23 s)
-  leave: 4.5, // wheel is off frame from here (reference: clear by ~4.4 s)
+  leave: 4.8, // safety: nothing of the wheel after this (reference: clear by ~4.4 s)
   phase0: -0.9, // wheel angle of the deck when it appears (radians, wheel space)
   // pages sit at their final spacing from the start (no fan-out)
   spread: [[0, [1.0]], [6, [1.0]]],
@@ -51,43 +51,45 @@ export const RIG = {
   // wheel angular velocity, rad/s (sign sets the turning direction). At the
   // climax ~1 page passes per frame (reference "riffle"): 2*PI/cards*30 ~ 6.7
   // (spin ramps up while pages appear: reference shows almost no screen rotation 1.2-1.6 s)
-  omega: [[1.22, [-0.4]], [1.65, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.6, [-6.5]]],
-  // wheel centre (world)
+  omega: [[1.22, [-0.4]], [1.65, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.8, [-6.5]]],
+  // wheel centre (world). No upward exit any more (owner, v4 review): the
+  // wheel holds its place and the spin carries the pages out of frame.
   position: [
     [1.22, [0.0, 1.25, -1.0]],
     [1.45, [0.15, 1.05, -0.4]],
     [1.72, [0.05, 1.05, 0.0]],
-    [3.0, [0.05, 1.05, 0.5]],
-    [3.4, [0.6, 0.95, 1.6]],
-    [3.72, [2.3, 0.8, 3.55]],
-    [4.02, [2.3, 0.85, 3.65]],
-    [4.3, [2.3, 3.8, 3.15]],
-    [4.5, [2.3, 7.0, 2.65]],
+    [3.0, [0.05, 1.05, 0.3]],
+    [3.3, [0.05, 1.05, 0.5]],
+    [3.75, [0.7, 1.05, 2.2]],
+    [4.8, [0.7, 1.05, 2.5]],
   ],
-  // ring pose, Euler XYZ radians + screen roll (fitted 2026-11-06 by mask IoU
-  // at 1.9/2.2/2.6 s: 0.51, was 0.25). Held for the whole shot: the climax is
-  // reached by tipping the same wheel, never by swinging its axis sideways.
-  rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.5, [-0.75, 0.0, 0.0, 0.0]]],
-  // rigid moves of the whole wheel: [tip about the screen x axis, final roll].
-  // Entrance: opens from edge-on. Climax: the wheel tips and slides right so the
-  // lens ends up beside its left rim, looking along it: consecutive pages stack
-  // face-on and the clockwise spin carries them up and away (reference
-  // 3.33-3.73 s: the lower row slides left and lies back, then the stack rises).
+  // ring pose, Euler XYZ radians + screen roll. Held for the whole shot.
+  rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.8, [-0.75, 0.0, 0.0, 0.0]]],
+  // rigid moves of the whole wheel: [tip about the screen x axis, roll about the view axis].
+  // v5: roll fitted so the silhouette's main axis follows the reference
+  // (≈ +28° at 1.9 s, -54° at 3.3 s, -60° at 3.8 s; owner frame ~99).
   tip: [
-    [1.22, [-0.5, 0.35]],
-    [1.42, [-0.3, 0.3]],
-    [1.72, [0.0, 0.25]],
-    [3.0, [0.0, 0.25]],
-    [3.72, [-0.6, 0.35]],
-    [4.5, [-0.6, 0.35]],
+    [1.22, [-0.2, 0.3]],
+    [1.42, [-0.3, 0.28]],
+    [1.72, [0.0, 0.18]],
+    [3.0, [0.0, 0.18]],
+    [3.3, [0.0, -0.8]],
+    [3.45, [0.0, -0.8]],
+    [3.75, [-0.3, -1.1]],
+    [4.8, [-0.3, -1.1]],
   ],
-  // blade pitch over time. Iteration 2 laid the pages flat for the climax
-  // (-1.45); the owner saw them flatten and the silhouette fit agrees: keep it.
-  // Now -0.8 at the climax: enough to lie back like the reference stack while
-  // the faces stay visible (the lens looks along the rim, so pages stack).
-  pitch: [[1.22, [-0.55]], [3.0, [-0.55]], [3.72, [-0.8]], [4.5, [-0.8]]],
+  // blade pitch: pages turn about their radial line. v5: 2.2 rad (= pi - 0.94)
+  // so every visible page shows its FRONT (v4 showed backs on ~85 % of the
+  // visible area; the reference never shows a back). Constant: no flattening.
+  pitch: [[1.22, [2.2]], [3.45, [2.2]], [3.75, [2.5]], [4.8, [2.5]]],
+  // Single-sided pages: a page turning its back to the lens disappears exactly
+  // when it is edge-on, so no back is ever seen (the reference never shows one).
+  showBacks: false,
+  // pages that leave the frame after this time are removed for good, so the
+  // wheel does not bring them back in from below (owner, v4 review)
+  retireFrom: 3.55,
   // overall wheel scale
-  scale: [[1.22, [0.85]], [1.45, [0.92]], [1.72, [0.95]], [3.0, [1.02]], [3.72, [1.1]], [4.5, [1.1]]],
+  scale: [[1.22, [0.85]], [1.45, [0.92]], [1.72, [0.95]], [3.0, [0.95]], [3.3, [1.1]], [4.8, [1.1]]],
 };
 
 // ---------------------------------------------------------------- helpers
@@ -253,9 +255,35 @@ export function createWheel(canvas, rig = RIG) {
     const back = new THREE.MeshBasicMaterial({ alphaMap: alpha, alphaTest: 0.5, side: THREE.BackSide });
     const g = new THREE.Group();
     g.matrixAutoUpdate = false;
-    g.add(new THREE.Mesh(geo, front), new THREE.Mesh(geo, back));
+    g.add(new THREE.Mesh(geo, front));
+    if (rig.showBacks !== false) g.add(new THREE.Mesh(geo, back));
     wheel.add(g);
     pages.push({ k, cover, g, front, back, reveal: revealTime(k, rig) });
+  }
+
+  // Retire times: first time (>= retireFrom) each page is fully outside the
+  // frame or behind the lens. Computed once, so seeking stays a pure function of t.
+  const retire = new Float64Array(rig.cards).fill(Infinity);
+  if (rig.retireFrom !== undefined) {
+    const v = new THREE.Vector3();
+    const cs = [[-0.5, -0.5], [0.5, -0.5], [0.5, 0.5], [-0.5, 0.5]];
+    camera.updateMatrixWorld();
+    for (let t = rig.retireFrom; t <= DURATION; t += 1 / 240) {
+      const W = wheelMatrix(R, t, rig);
+      for (let k = 0; k < rig.cards; k++) {
+        if (retire[k] !== Infinity) continue;
+        const M = W.clone().multiply(pageLocal(R, k, t, rig));
+        let left = 0, right = 0, up = 0, down = 0, behind = 0;
+        for (const [x, y] of cs) {
+          v.set(x * rig.page, y * rig.page, 0).applyMatrix4(M);
+          const d = v.clone().applyMatrix4(camera.matrixWorldInverse);
+          if (d.z > -camera.near) { behind++; continue; }
+          v.project(camera);
+          if (v.x < -1) left++; if (v.x > 1) right++; if (v.y > 1) up++; if (v.y < -1) down++;
+        }
+        if (behind === 4 || left === 4 || right === 4 || up === 4 || down === 4) retire[k] = t;
+      }
+    }
   }
 
   function apply(t) {
@@ -265,7 +293,7 @@ export function createWheel(canvas, rig = RIG) {
       const m = pageLocal(R, p.k, t, rig);
       const u = Math.min(1, Math.max(0, (t - p.reveal) / (rig.popIn || 1e-6)));
       const grow = 1 - Math.pow(1 - u, 3);
-      p.g.visible = t >= p.reveal;
+      p.g.visible = t >= p.reveal && t < retire[p.k];
       if (grow < 1) m.multiply(new THREE.Matrix4().makeScale(Math.max(grow, 1e-4), Math.max(grow, 1e-4), 1));
       p.g.matrix.copy(m);
     }
@@ -293,7 +321,7 @@ export function createWheel(canvas, rig = RIG) {
         });
         const c = new THREE.Vector3().setFromMatrixPosition(mw);
         const nrm = new THREE.Vector3(0, 0, 1).transformDirection(mw);
-        return { id: `${p.k}:${p.cover}`, corners: pts, camDist: c.distanceTo(camera.position),
+        return { id: `${p.k}:${p.cover}`, visible: p.g.visible, backsRendered: rig.showBacks !== false, corners: pts, camDist: c.distanceTo(camera.position),
           facing: nrm.dot(camera.position.clone().sub(c).normalize()) };
       }),
     };

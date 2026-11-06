@@ -37,13 +37,13 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:34565/lib/three.core.min.js",
+        "url": "http://127.0.0.1:46225/lib/three.core.min.js",
         "line": 5
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x2d44001cdc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -61,12 +61,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:34565/"
+        "url": "http://127.0.0.1:46225/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x2d44001cdc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -84,12 +84,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:34565/"
+        "url": "http://127.0.0.1:46225/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x2d44001cdc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -107,12 +107,12 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:34565/"
+        "url": "http://127.0.0.1:46225/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x2d44001cdc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "message": "[.WebGL-0x3c4c0018e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -130,7 +130,7 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:34565/"
+        "url": "http://127.0.0.1:46225/"
       }
     ]
   },
@@ -179,14 +179,15 @@
           "height": 1280
         },
         "firstSeen": 1.667,
-        "lastSeen": 3.667,
-        "occurrences": 4,
-        "heldMs": 1999.9999999999998,
+        "lastSeen": 4.333,
+        "occurrences": 5,
+        "heldMs": 2666.0000000000005,
         "times": [
           1.667,
           2.333,
           3,
-          3.667
+          3.667,
+          4.333
         ]
       }
     ],
@@ -355,9 +356,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "c48e1a44-9860-46a1-bd2d-0caa2afca1a6",
-    "revision": "b7666743-4f1e-4d08-8963-c1157a2878dd",
-    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/c48e1a44-9860-46a1-bd2d-0caa2afca1a6.json",
+    "id": "fb6fc266-c617-43a9-8fae-132d0b312fa7",
+    "revision": "9e9b3b4c-14a8-483d-b104-843f4f879355",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/fb6fc266-c617-43a9-8fae-132d0b312fa7.json",
     "attribution": "recorded-revision"
   },
   "_meta": {

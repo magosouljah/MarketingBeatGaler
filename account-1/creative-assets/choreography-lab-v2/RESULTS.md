@@ -1,6 +1,31 @@
 # Lab V2 — resultados
 
-**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2) y `choreography-lab-v4-wheel` (iteración 3).
+**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3) y `choreography-lab-v5-wheel` (iteración 4).
+
+## Iteración 4 (`wheel-v5.mp4`, 2026-11-06)
+
+Observaciones del propietario sobre v4: (1) hacia el fotograma 99 el ángulo del círculo de Apple está entre 45° y 90° y el nuestro en casi −45°; (2) en los fotogramas 106–108 se ve el reverso de las portadas, algo que en Apple nunca pasa; (3) desde el fotograma 120 subía todo el círculo para compensar el ángulo; en Apple las portadas salen solas y las que salen del cuadro no vuelven a entrar por abajo.
+
+Qué medí y qué encontré:
+- **Ángulo:** el eje mayor de la silueta (por momentos de segundo orden, con y hacia arriba) en Apple pasa de +28° a 1,9 s a **−54° a 3,3 s (fotograma 99)** y −60° a 3,8 s. El de v4 se quedaba en +15° a +31° todo el tiempo. Nuestra medición confirma la diferencia que viste.
+- **Reversos:** la geometría exacta de v4 mostraba la cara de atrás en el **60 % del área visible** (86 % en la rueda). La métrica de silueta no lo podía ver, porque el reverso ocupa exactamente la misma forma.
+
+Cambios:
+1. Nueva herramienta `tools/fit_pose.py`, que puntúa cada pose con cuatro medidas: silueta (IoU), orientación de los bordes de las portadas, área de reverso visible (desde la geometría) y error del ángulo del eje mayor.
+2. Paso de pala 2,2 rad (= π − 0,94): toda página visible muestra su frente (reverso visible 0,1 % en la rueda). Las páginas son de una sola cara; una página que gira su espalda hacia la cámara desaparece justo cuando está de canto, así que nunca se ve un reverso ni hay saltos.
+3. El círculo gira sobre el eje de la vista hacia −0,8 rad entre 3,0 y 3,3 s y hacia −1,1 rad en el clímax, ajustado para que el ángulo siga al de Apple: **−56,8° contra −53,6° en el fotograma 99** (v4: +15,6°).
+4. **La rueda ya no sube.** Se queda en su sitio y el giro saca las portadas del cuadro. Cada portada que sale del cuadro desde 3,55 s se retira para siempre, calculado una sola vez al cargar, así que no vuelve a entrar por abajo.
+
+| Medida | v4 | v5 |
+| --- | ---: | ---: |
+| IoU de silueta por fotograma, media 1,23–4,4 s | 0,38 | **0,43** |
+| — aparición / rueda / acercamiento / riffle | 0,36 / 0,49 / 0,34 / 0,25 | 0,32 / 0,49 / 0,33 / **0,46** |
+| Reverso visible (área) | 60 % | **0 %** |
+| Error medio del eje mayor | 0,36 | **0,13** |
+| Arco de energía (aparición/rueda/acercamiento/riffle; Apple 0,24/0,45/0,65/1,00) | 0,33/0,98/1,00/0,83 | **0,14/0,51/0,76/1,00** |
+| Cobertura / oclusión en el riffle (Apple 0,32 / 0,78) | 0,16 / 0,78 | **0,31 / 0,78** |
+
+Sigue abierto: durante la aparición la rueda gira más que la de Apple (curl 3,7 contra 0,56) y las páginas se ven más de canto, con menos caras (IoU 0,32 contra 0,36 en v4); la oclusión del acercamiento sigue en 0,34 contra 0,58.
 
 ## Iteración 3 (`wheel-v4.mp4`, 2026-11-06)
 
