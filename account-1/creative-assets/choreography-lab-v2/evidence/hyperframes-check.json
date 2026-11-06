@@ -37,13 +37,13 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:33541/lib/three.core.min.js",
+        "url": "http://127.0.0.1:43073/lib/three.core.min.js",
         "line": 5
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x17ac001c2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -61,12 +61,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:33541/"
+        "url": "http://127.0.0.1:43073/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x17ac001c2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -84,12 +84,12 @@
           "height": 1280
         },
         "time": 0,
-        "url": "http://127.0.0.1:33541/"
+        "url": "http://127.0.0.1:43073/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "message": "[.WebGL-0x17ac001c2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -107,12 +107,12 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:33541/"
+        "url": "http://127.0.0.1:43073/"
       },
       {
         "code": "console_warning",
         "severity": "warning",
-        "message": "[.WebGL-0x359c001adc00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "message": "[.WebGL-0x17ac001c2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
         "selector": "[data-composition-id]",
         "dataAttributes": {
           "data-composition-id": "lab2",
@@ -130,7 +130,7 @@
           "height": 1280
         },
         "time": 0.333,
-        "url": "http://127.0.0.1:33541/"
+        "url": "http://127.0.0.1:43073/"
       }
     ]
   },
@@ -145,7 +145,7 @@
         "severity": "warning",
         "time": 1.667,
         "selector": "#stage",
-        "message": "Canvas content touches the frame edge (right).",
+        "message": "Canvas content touches the frame edge (left, right).",
         "rect": {
           "left": 0,
           "top": 0,
@@ -179,15 +179,14 @@
           "height": 1280
         },
         "firstSeen": 1.667,
-        "lastSeen": 4.333,
-        "occurrences": 5,
-        "heldMs": 2666.0000000000005,
+        "lastSeen": 3.667,
+        "occurrences": 4,
+        "heldMs": 1999.9999999999998,
         "times": [
           1.667,
           2.333,
           3,
-          3.667,
-          4.333
+          3.667
         ]
       }
     ],
@@ -232,13 +231,13 @@
       4.333,
       5.667
     ],
-    "checked": 5,
-    "passed": 5
+    "checked": 7,
+    "passed": 7
   },
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 2,
+    "warningCount": 4,
     "infoCount": 0,
     "findings": [
       {
@@ -251,7 +250,7 @@
         "sourceFile": "index.html",
         "bbox": {
           "x": 281.8,
-          "y": 440,
+          "y": 400,
           "width": 156.39,
           "height": 32
         },
@@ -263,19 +262,57 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"Create ur Galer\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
-        "text": "Create ur Galer",
+        "message": "The film's last line \"Free* Unlimited Cloud\" (3 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Free* Unlimited Cloud",
         "selector": "#end-line",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 216.09,
-          "y": 501,
-          "width": 287.79999999999995,
-          "height": 256.63
+          "x": 173.14,
+          "y": 461,
+          "width": 373.69999999999993,
+          "height": 231.94000000000005
         },
         "time": 4.406,
         "words": 3,
+        "seconds": 1.598,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"for beats and projects\" (4 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "for beats and projects",
+        "selector": "#end-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 186.02,
+          "y": 723.41,
+          "width": 347.95000000000005,
+          "height": 32
+        },
+        "time": 4.406,
+        "words": 4,
+        "seconds": 1.598,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"*Terms and conditions apply.\" (4 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "*Terms and conditions apply.",
+        "selector": "#end-fine",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 227.86,
+          "y": 906.41,
+          "width": 264.28,
+          "height": 23
+        },
+        "time": 4.406,
+        "words": 4,
         "seconds": 1.598,
         "floorSeconds": 2
       }
@@ -318,15 +355,15 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "366b29d1-ae0b-48a5-abea-51bdd5f41349",
-    "revision": "9747bcb7-1f8a-496d-936f-2ead53e2b4f6",
-    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/366b29d1-ae0b-48a5-abea-51bdd5f41349.json",
+    "id": "a8d34046-c75b-400a-a593-63f9b8b1f826",
+    "revision": "a278463f-4d6a-46b3-8b28-0db098579e41",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/hyperframes/.hyperframes/artifacts/checks/a8d34046-c75b-400a-a593-63f9b8b1f826.json",
     "attribution": "recorded-revision"
   },
   "_meta": {
     "version": "0.9.17",
-    "latestVersion": "0.9.18",
+    "latestVersion": "0.9.19",
     "updateAvailable": true,
-    "checkedAt": "2026-11-06T03:23:39.963Z"
+    "checkedAt": "2026-11-06T06:25:47.640Z"
   }
 }

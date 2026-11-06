@@ -1,58 +1,59 @@
-◆  Rendering hyperframes → /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v2.mp4
+◆  Rendering hyperframes → /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v3.mp4
    30fps · draft · auto workers (2 cores detected)
    GPU: browser GPU (auto-detect)
 Checking browser...
 Browser: env
-[INFO] [Render] Pipeline started {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","platform":"linux","arch":"x64","nodeVersion":"v22.23.4","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"pipeline","status":"checkpoint","elapsedMs":6,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"compile","status":"start","elapsedMs":10,"needsAlpha":false}
+[INFO] [Render] Pipeline started {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","platform":"linux","arch":"x64","nodeVersion":"v22.23.4","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"pipeline","status":"checkpoint","elapsedMs":5,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"compile","status":"start","elapsedMs":9,"needsAlpha":false}
+[INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
 [INFO] [Compiler] Embedded local font file: assets/fonts/archivo-black-latin-400-normal.woff2 (18 KB → data URI)
-[INFO] Compiled composition metadata {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","entryFile":"index.html","staticDuration":6,"width":720,"height":1280,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"compile","status":"end","elapsedMs":96,"durationMs":86,"needsAlpha":false}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"compile","status":"checkpoint","elapsedMs":97,"message":"composition metadata resolved","width":720,"height":1280,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"a3811de341e901a8"}
-[INFO] [Render] Low-memory render profile active: screenshot capture, auto-worker calibration skipped, pinned to 1 worker. Override with --no-low-memory-mode or PRODUCER_LOW_MEMORY_MODE=false. {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","totalMemMb":8022,"thresholdMb":8192}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"browser_probe","status":"start","elapsedMs":97,"forceScreenshot":true,"stagePhase":"calibrating"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"browser_probe","status":"end","elapsedMs":106,"durationMs":9,"forceScreenshot":true,"stagePhase":"calibrating"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"browser_probe","status":"checkpoint","elapsedMs":106,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"a3811de341e901a8","beginFrameStalled":false}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"video_extract","status":"start","elapsedMs":107,"videoCount":0}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"video_extract","status":"end","elapsedMs":107,"durationMs":0,"videoCount":0}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"video_extract","status":"checkpoint","elapsedMs":109,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":7}
-[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"hdr_detection","status":"checkpoint","elapsedMs":110,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"audio_process","status":"start","elapsedMs":110,"audioCount":0}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"file_server","status":"start","elapsedMs":110,"reused":false}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"audio_process","status":"end","elapsedMs":114,"durationMs":4,"audioCount":0}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"file_server","status":"end","elapsedMs":120,"durationMs":10}
+[INFO] Compiled composition metadata {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","entryFile":"index.html","staticDuration":6,"width":720,"height":1280,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"compile","status":"end","elapsedMs":161,"durationMs":152,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"compile","status":"checkpoint","elapsedMs":162,"message":"composition metadata resolved","width":720,"height":1280,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"3cd3e6b47e25ff2a"}
+[INFO] [Render] Low-memory render profile active: screenshot capture, auto-worker calibration skipped, pinned to 1 worker. Override with --no-low-memory-mode or PRODUCER_LOW_MEMORY_MODE=false. {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","totalMemMb":8022,"thresholdMb":8192}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"browser_probe","status":"start","elapsedMs":162,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"browser_probe","status":"end","elapsedMs":182,"durationMs":20,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"browser_probe","status":"checkpoint","elapsedMs":182,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"3cd3e6b47e25ff2a","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"video_extract","status":"start","elapsedMs":182,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"video_extract","status":"end","elapsedMs":183,"durationMs":1,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"video_extract","status":"checkpoint","elapsedMs":184,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":7}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"hdr_detection","status":"checkpoint","elapsedMs":185,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"audio_process","status":"start","elapsedMs":185,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"file_server","status":"start","elapsedMs":185,"reused":false}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"audio_process","status":"end","elapsedMs":192,"durationMs":7,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"file_server","status":"end","elapsedMs":193,"durationMs":7}
 [hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"capture_calibration","status":"checkpoint","elapsedMs":2091,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":false,"lowMemoryMode":true,"deInversionEligible":false,"deParallelRouterEligible":false}
-[INFO] [Render] Low-memory profile, pinning to 1 capture worker (auto-worker calibration skipped). {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"worker_resolution","status":"checkpoint","elapsedMs":2091,"message":"resolved","workerCount":1}
-[INFO] streaming-encode gate {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"capture_strategy","status":"checkpoint","elapsedMs":2092,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"capture_streaming","status":"start","elapsedMs":2092,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"capture_calibration","status":"checkpoint","elapsedMs":2463,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":false,"lowMemoryMode":true,"deInversionEligible":false,"deParallelRouterEligible":false}
+[INFO] [Render] Low-memory profile, pinning to 1 capture worker (auto-worker calibration skipped). {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"worker_resolution","status":"checkpoint","elapsedMs":2464,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"capture_strategy","status":"checkpoint","elapsedMs":2465,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"capture_streaming","status":"start","elapsedMs":2465,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
 [BrowserManager] Browser launched (Chrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
-[initSession:screenshot] page.goto start (0ms)
-[initSession:screenshot] page.goto complete (143ms)
-[initSession:screenshot] GSAP proxy flush complete (152ms)
+[initSession:screenshot] page.goto start (1ms)
+[initSession:screenshot] page.goto complete (175ms)
+[initSession:screenshot] GSAP proxy flush complete (193ms)
 [non-blocking] Failed to load resource: the server responded with a status of 404 (Not Found)
 [HyperFrames] render runtime fps {"canonicalFps":30,"source":"render-options","rawFpsSource":"render-options","rawFps":30}
 [Browser:WARN] THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.
-[Browser:WARN] [.WebGL-0x27b400197400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[Browser:WARN] [.WebGL-0x27b400197400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[initSession:screenshot] pollHfReady complete (372ms)
-[initSession:screenshot] pollSubCompositionTimelines complete (ready) (375ms)
-[initSession:screenshot] applyVideoMetadataHints complete (375ms)
-[initSession:screenshot] media + fonts + tailwind ready (378ms)
-[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (395ms)
-[Browser:WARN] [.WebGL-0x27b400197400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[Browser:WARN] [.WebGL-0x27b400197400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"capture_streaming","status":"end","elapsedMs":22602,"durationMs":20510,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"assemble","status":"start","elapsedMs":22603,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"assemble","status":"end","elapsedMs":22660,"durationMs":57,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
-[INFO] [Render:trace] {"renderJobId":"bf16e555-d7b3-430a-a745-0b42cc0ae784","phase":"pipeline","status":"checkpoint","elapsedMs":22712,"message":"artifact validated","totalElapsedMs":22712}
-◇  /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v2.mp4
-   2.0 MB · 6.0s video · rendered in 22.7s
-   screenshot capture · software gpu · compile 0.1s · extract 0.0s · audio 0.0s · probe 0.0s · setup 2.0s · capture 20.5s · encode (during capture) 20.5s · assemble 0.1s
+[Browser:WARN] [.WebGL-0x191400196800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x191400196800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[initSession:screenshot] pollHfReady complete (447ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (450ms)
+[initSession:screenshot] applyVideoMetadataHints complete (451ms)
+[initSession:screenshot] media + fonts + tailwind ready (454ms)
+[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (470ms)
+[Browser:WARN] [.WebGL-0x191400196800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Browser:WARN] [.WebGL-0x191400196800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"capture_streaming","status":"end","elapsedMs":22164,"durationMs":19699,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"assemble","status":"start","elapsedMs":22165,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"assemble","status":"end","elapsedMs":22223,"durationMs":58,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"2e89ef30-40e2-4ac1-810f-6efc9b03f032","phase":"pipeline","status":"checkpoint","elapsedMs":22278,"message":"artifact validated","totalElapsedMs":22277}
+◇  /home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v3.mp4
+   1.8 MB · 6.0s video · rendered in 22.3s
+   screenshot capture · software gpu · compile 0.2s · extract 0.0s · audio 0.0s · probe 0.0s · setup 2.3s · capture 19.7s · encode (during capture) 19.7s · assemble 0.1s
    Screenshot capture (slower): BeginFrame did not run. Needs chrome-headless-shell and no --resolution upscale. Heavy compositions can stall on software GL.
    Keep editing by chatting with Framey in the HyperFrames desktop app → https://hyperframes.studio/studio/download?os=linux&src=cli
-@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[243,243,243]}}
+@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[12,12,12]}}

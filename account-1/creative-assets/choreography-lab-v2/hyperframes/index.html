@@ -12,8 +12,9 @@
         font-weight: 400;
       }
       :root {
-        --ground: #f3f3f3;
-        --ink: #0b0b0c;
+        --ground: #0c0c0c;
+        --ink: #ffffff;
+        --muted: rgba(255, 255, 255, 0.62);
         --font-display: "Archivo Black", sans-serif;
       }
       * {
@@ -45,7 +46,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 74px;
+        font-size: 62px;
         letter-spacing: -0.035em;
         line-height: 1;
       }
@@ -65,7 +66,7 @@
         position: absolute;
         left: 0;
         width: 720px;
-        top: 440px;
+        top: 400px;
         text-align: center;
       }
       #end-brand {
@@ -76,9 +77,24 @@
       }
       #end-line {
         display: block;
-        font-size: 84px;
+        font-size: 76px;
         line-height: 0.98;
         letter-spacing: -0.04em;
+      }
+      #end-sub {
+        display: block;
+        margin-top: 34px;
+        font-size: 30px;
+        letter-spacing: -0.02em;
+      }
+      #end-fine {
+        display: block;
+        margin: 150px auto 0;
+        width: 520px;
+        font-family: "Inter", sans-serif;
+        font-size: 19px;
+        line-height: 1.35;
+        color: var(--muted);
       }
       #stage {
         position: absolute;
@@ -93,12 +109,15 @@
     <!-- Wheel rig and every motion parameter: src/wheel.js (RIG). Lab notes: ../README.md -->
     <div id="root" data-composition-id="lab2" data-start="0" data-duration="6" data-fps="30" data-width="720" data-height="1280">
       <div id="brand" class="clip" data-start="0" data-duration="1.2" data-track-index="1"><span id="brand-mark">BeatGaler</span></div>
-      <div id="w1" class="word clip" data-start="1.6" data-duration="0.6" data-track-index="2">Create</div>
-      <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2">ur</div>
-      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2">Galer</div>
+      <div id="w1" class="word clip" data-start="1.6" data-duration="0.6" data-track-index="2">Free*</div>
+      <div id="w2" class="word clip" data-start="2.2" data-duration="0.87" data-track-index="2">Unlimited</div>
+      <div id="w3" class="word clip" data-start="3.07" data-duration="0.58" data-track-index="2">Cloud</div>
       <div id="endcard" class="clip" data-start="4.37" data-duration="1.63" data-track-index="3">
         <span id="end-brand">BeatGaler</span>
-        <span id="end-line">Create<br />ur<br />Galer</span>
+        <span id="end-line">Free*<br />Unlimited<br />Cloud</span>
+        <span id="end-sub">for beats and projects</span>
+        <!-- PLACEHOLDER fine print: replace with BeatGaler's real terms before any publication -->
+        <span id="end-fine">*Terms and conditions apply.</span>
       </div>
       <canvas id="stage" class="clip" data-start="0" data-duration="6" data-track-index="0" width="720" height="1280" data-layout-allow-occlusion></canvas>
     </div>

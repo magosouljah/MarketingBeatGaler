@@ -32,42 +32,50 @@ export const RIG = {
   // blade pitch: each page turns about its own radial line (turbine blade).
   // With the wheel tilted by the same angle, pages on one side read edge-on
   // and pages on the other side open to full faces, as in the reference.
-  bladePitch: 0.62,
+  bladePitch: -0.55,
   fov: 62,
   camera: [0, 0, 6.2],
   appear: 1.22, // first frame with pages (reference: 1.20-1.23 s)
   leave: 4.5, // wheel is off frame from here (reference: clear by ~4.4 s)
   phase0: -0.9, // wheel angle of the deck when it appears (radians, wheel space)
-  // fraction of the full circle the pages occupy (deck -> open wheel)
-  spread: [[1.22, [0.14]], [1.32, [0.3]], [1.45, [0.66]], [1.62, [0.96]], [1.75, [1.0]]],
+  // fraction of the full circle the pages occupy (pages join the wheel from one end)
+  spread: [[1.22, [0.35]], [1.3, [0.55]], [1.42, [0.8]], [1.56, [0.96]], [1.66, [1.0]]],
   // wheel angular velocity, rad/s (sign sets the turning direction). At the
   // climax ~1 page passes per frame (reference "riffle"): 2*PI/cards*30 ~ 6.7
-  omega: [[1.22, [-1.2]], [1.6, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.6, [-6.5]]],
+  omega: [[1.22, [-2.0]], [1.6, [-2.6]], [3.0, [-2.5]], [3.45, [-3.2]], [3.7, [-6.0]], [4.3, [-6.5]], [4.6, [-6.5]]],
   // wheel centre (world)
   position: [
-    [1.22, [0.25, 0.8, -0.3]],
-    [1.45, [0.15, 0.95, -0.1]],
-    [1.7, [0.1, 1.0, 0.0]],
-    [3.0, [0.1, 0.95, 0.6]],
-    [3.42, [0.05, 0.95, 0.85]],
-    [3.68, [0.05, -1.7, 2.7]],
-    [3.9, [0.05, -1.5, 2.75]],
-    [4.05, [0.05, -1.2, 2.8]],
-    [4.32, [0.05, 4.2, 2.2]],
-    [4.5, [0.05, 7.5, 1.8]],
+    [1.22, [0.3, 1.0, -1.0]],
+    [1.45, [0.15, 1.05, -0.4]],
+    [1.72, [0.05, 1.05, 0.0]],
+    [3.0, [0.05, 1.05, 0.5]],
+    [3.4, [0.6, 0.95, 1.6]],
+    [3.72, [1.45, 0.95, 3.4]],
+    [4.02, [1.45, 1.0, 3.5]],
+    [4.3, [1.45, 3.8, 3.0]],
+    [4.5, [1.45, 7.0, 2.4]],
   ],
-  // wheel orientation: Euler XYZ radians (x = tilt, matches blade pitch; y = turn the axis sideways; z = spin offset) + screen roll
-  rotation: [
-    [1.22, [0.62, -0.5, -0.3, -1.5]],
-    [1.5, [0.62, 0.3, -0.05, -1.5]],
-    [1.7, [0.62, 0.45, 0.0, -1.5]],
-    [3.0, [0.62, 0.45, 0.0, -1.5]],
-    [3.42, [0.62, 0.45, 0.0, -1.5]],
-    [3.68, [0.5, 1.57, 0.0, 0.0]],
-    [4.3, [0.5, 1.57, 0.0, 0.0]],
+  // ring pose, Euler XYZ radians + screen roll (fitted 2026-11-06 by mask IoU
+  // at 1.9/2.2/2.6 s: 0.51, was 0.25). Held for the whole shot: the climax is
+  // reached by tipping the same wheel, never by swinging its axis sideways.
+  rotation: [[1.22, [-0.75, 0.0, 0.0, 0.0]], [4.5, [-0.75, 0.0, 0.0, 0.0]]],
+  // rigid moves of the whole wheel: [tip about the screen x axis, final roll].
+  // Entrance: opens from edge-on. Climax: the bottom-left rim comes toward the
+  // lens and we look down on it while the spin carries pages up and away
+  // (reference 3.33-3.73 s: the lower row slides left and lies back).
+  tip: [
+    [1.22, [-0.8, 0.45]],
+    [1.42, [-0.3, 0.3]],
+    [1.72, [0.0, 0.25]],
+    [3.0, [0.0, 0.25]],
+    [3.72, [-0.35, 0.6]],
+    [4.5, [-0.35, 0.6]],
   ],
+  // blade pitch over time: pages turn on their radial line and lie back into
+  // the wheel plane for the climax
+  pitch: [[1.22, [-0.55]], [3.0, [-0.55]], [3.72, [-1.45]], [4.5, [-1.45]]],
   // overall wheel scale
-  scale: [[1.22, [0.95]], [1.45, [0.85]], [1.7, [0.82]], [3.0, [0.95]], [3.42, [0.98]], [3.68, [1.15]], [4.3, [1.15]]],
+  scale: [[1.22, [0.85]], [1.45, [0.92]], [1.72, [0.95]], [3.0, [1.02]], [3.72, [1.1]], [4.5, [1.1]]],
 };
 
 // ---------------------------------------------------------------- helpers
@@ -106,6 +114,8 @@ export function buildRig(rig = RIG) {
   const position = track(rig.position);
   const rotation = track(rig.rotation);
   const scale = track(rig.scale);
+  const tip = rig.tip ? track(rig.tip) : null;
+  const pitch = rig.pitch ? track(rig.pitch) : null;
   // integrate wheel angle once (table, 1/1200 s)
   const dt = 1 / 1200;
   const n = Math.ceil(DURATION / dt) + 2;
@@ -119,7 +129,7 @@ export function buildRig(rig = RIG) {
     const i = Math.floor(x);
     return theta[i] + (theta[Math.min(i + 1, n - 1)] - theta[i]) * (x - i);
   };
-  return { spread, omega, position, rotation, scale, angle };
+  return { spread, omega, position, rotation, scale, angle, tip, pitch };
 }
 
 // ------------------------------------------------------------------ poses
@@ -136,6 +146,13 @@ export function wheelMatrix(R, t, rig = RIG) {
   // r[3]: roll about the camera's view axis, applied last (turns the whole
   // pattern of faces/slivers around the screen)
   q.premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 0, 1), r[3] ?? 0));
+  // tip: [angle about the screen's horizontal axis (negative = bottom of the
+  // wheel swings toward the lens), final roll about the view axis]. Used for
+  // the entrance (wheel opens from edge-on) and the climax (bottom rim dives
+  // past the lens) so both moves rotate the wheel as one rigid object.
+  const tp = R.tip ? R.tip(t) : [0, 0];
+  q.premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), tp[0]));
+  q.premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 0, 1), tp[1]));
   return new THREE.Matrix4().compose(new THREE.Vector3(...p), q, new THREE.Vector3(s, s, s));
 }
 
@@ -149,7 +166,7 @@ export function pageLocal(R, k, t, rig = RIG) {
   // page basis: art "up" = radial (outward), art "right" = wheel axis
   _z.crossVectors(_y, _x);
   _m.makeBasis(_y, _x, _z);
-  _m.multiply(new THREE.Matrix4().makeRotationY(rig.bladePitch));
+  _m.multiply(new THREE.Matrix4().makeRotationY(R.pitch ? R.pitch(t)[0] : rig.bladePitch));
   _m.setPosition(_x.x * rig.radius, _x.y * rig.radius, 0);
   return _m.clone();
 }
