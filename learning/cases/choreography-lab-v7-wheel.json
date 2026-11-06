@@ -2,7 +2,7 @@
   "id": "choreography-lab-v7-wheel",
   "account": "account-1",
   "project": "first-ad",
-  "human_approved": false,
+  "human_approved": true,
   "validates_proposal": "choreography-lab-v6-wheel--approach-occlusion",
   "owner_direction": "Owner in chat 2026-11-06 (frames approximate): Apple covers come out fast, slow down ~frame 50, speed up again ~frame 93; frame ~116 page angles wrong; ring angle change 94-102 not as smooth as Apple; no text ever stands still; sub line 'for your beats / and projects', placed higher like Apple; offer: 1 month free with a discount code, then $11/month USD, auto-renew; code invented by the agent in a pill like Apple's button; '1 month of' between brand and headline. Direction, not approval. Second review before delivery (same day): frame 121 page angle still wrong, asked several times; pages a bit closer like v6; do not send the video without that. End card: BeatGaler bigger, '1 month of' not bold and slightly smaller, own judgement on spacing and proportions (need not copy Apple).",
   "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/speed-curve-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v7.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v7.mp4; account-1/creative-assets/choreography-lab-v2/evidence/contact-sheets/wheel-v7-5fps.jpg",
@@ -69,5 +69,6 @@
       "status": "pass",
       "evidence": "Brand 48 px; '1 month of' Archivo regular 26 px (not bold); centred column with gaps 64/14/46/36/34 px; fine print balanced over two lines. Owner review pending."
     }
-  ]
+  ],
+  "approval_evidence": "Owner in chat, 2026-11-06 14:37 America/Mexico_City, after reviewing ref-vs-wheel-v7b (commit f004327): 'ok finalizamos me encanta' - approves wheel-v7.mp4 as the final lab version. Approval of the video; failing checks in this case remain open and no proposal is promoted by this approval alone."
 }

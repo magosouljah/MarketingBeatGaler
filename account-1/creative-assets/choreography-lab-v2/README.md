@@ -1,6 +1,6 @@
 # BeatGaler — Choreography Lab V2: rueda tipo rolodex (reconstrucción de Apple Music)
 
-**Estado:** iteración 6 de la reconstrucción (`wheel-v7.mp4`) · **sin aprobación creativa** · no es el anuncio.
+**Estado:** versión final del laboratorio: `wheel-v7.mp4`, **aprobada por el propietario** el 2026-11-06 («ok finalizamos me encanta»). No es el anuncio completo. Aprendizajes: [LEARNINGS.md](LEARNINGS.md).
 
 ## Decisión del propietario (2026-11-05, en el chat)
 

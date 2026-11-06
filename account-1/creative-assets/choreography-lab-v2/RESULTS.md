@@ -1,6 +1,6 @@
 # Lab V2 — resultados
 
-**No es aprobación creativa.** Medición técnica y autoevaluación del agente. Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3), `choreography-lab-v5-wheel` (iteración 4), `choreography-lab-v6-wheel` (iteración 5) y `choreography-lab-v7-wheel` (iteración 6).
+**v7 aprobada por el propietario** como versión final (2026-11-06, «ok finalizamos me encanta»). Lo demás es medición técnica y autoevaluación del agente; resumen de lo aprendido en [LEARNINGS.md](LEARNINGS.md). Casos: `choreography-lab-v2-wheel` (iteración 1), `choreography-lab-v3-wheel` (iteración 2), `choreography-lab-v4-wheel` (iteración 3), `choreography-lab-v5-wheel` (iteración 4), `choreography-lab-v6-wheel` (iteración 5) y `choreography-lab-v7-wheel` (iteración 6).
 
 ## Iteración 6 (`wheel-v7.mp4`, 2026-11-06)
 

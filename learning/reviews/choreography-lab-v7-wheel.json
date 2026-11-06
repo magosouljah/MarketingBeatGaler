@@ -7,7 +7,7 @@
     "appear-spin",
     "riffle-placement"
   ],
-  "human_approved": false,
+  "human_approved": true,
   "passed": [
     "speed-arc",
     "stack-page-angle",
