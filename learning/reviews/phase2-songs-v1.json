@@ -1,0 +1,19 @@
+{
+  "account": "account-1",
+  "case_id": "phase2-songs-v1",
+  "failed": [
+    "beat-sync-coverage",
+    "word-overlap"
+  ],
+  "human_approved": false,
+  "passed": [
+    "v7-reproduction",
+    "fragment-and-length",
+    "beat-sync",
+    "loudness",
+    "variant-uniqueness",
+    "stack-preserved",
+    "white-version",
+    "text-always-moving"
+  ]
+}
