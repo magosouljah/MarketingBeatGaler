@@ -1,0 +1,46 @@
+name: BeatGaler orbit V1 preview (no deploy)
+on:
+  push:
+    branches:
+      - marketing/orbit-reference-rebuild-v3
+    paths:
+      - 'account-1/creative-assets/orbit-v3/**'
+      - '.github/workflows/orbit-v3-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HYPERFRAMES_NO_UPDATE_CHECK: '1'
+      HYPERFRAMES_SKIP_SKILLS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Render via approved HyperFrames first
+        id: hyperframes
+        working-directory: account-1/creative-assets/orbit-v3
+        run: |
+          npx --yes hyperframes@latest lint
+          npx --yes hyperframes@latest check --json
+          npx --yes hyperframes@latest render --quality draft -o "$GITHUB_WORKSPACE/orbit-preview.mp4"
+      - name: Validate playable iPhone MP4
+        run: |
+          test -s orbit-preview.mp4
+          ffprobe -v error -show_entries format=duration -of default=nokey=1:noprint_wrappers=1 orbit-preview.mp4
+          ffprobe -v error -show_entries stream=codec_name,pix_fmt,width,height,r_frame_rate -of json orbit-preview.mp4
+          ffmpeg -hide_banner -loglevel error -i orbit-preview.mp4 -frames:v 1 -y orbit-frame-check.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beatgaler-orbit-v3-iphone-preview
+          path: |
+            orbit-preview.mp4
+            orbit-frame-check.png
+          if-no-files-found: error
+          retention-days: 14
