@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En la copia con contador el plano del CTA no pasa de 60 frames sin un cambio claro, y el propietario califica Ritmo con 8 o mas.",
+  "account": "account-1",
+  "candidate_rule": "El cierre con CTA dura lo minimo para leerlo una vez (objetivo: 2 s o menos de encuadre quieto). Si la locucion final es mas larga, empieza antes, sobre la transicion, en vez de alargar el plano; y mientras dura, la camara y el fondo siguen en movimiento.",
+  "cause_hypothesis": "El cierre se estiro para que cupiera la locucion completa («Comment GALER to try it for free», 2.7 s) y el toque del cursor en «free» (F328); durante esos 3.2 s el encuadre casi no cambia, justo lo que la leccion no-static-screen-over-two-seconds prohibe en el resto del video.",
+  "check_id": "cta-hold-not-overlong",
+  "id": "add-finder-scorecard-v1--cta-hold-not-overlong",
+  "problem_evidence": "Ritmo: 6 de 10. A la pregunta «¿Dónde lo sientes mal?» el propietario eligio solo «Final/CTA largo» (el cierre con la pildora, F260-F357, 3.2 s). No marco el inicio, la duda del cursor ni la galeria.",
+  "source_case": "add-finder-scorecard-v1",
+  "state": "proposed"
+}

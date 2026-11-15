@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario elige un tratamiento entre opciones antes de la primera prueba animada y califica Texto con 8 o mas en ese video.",
+  "account": "account-1",
+  "candidate_rule": "Antes de animar el texto de un video, mostrar al propietario dos o tres tratamientos tipograficos distintos sobre un frame real (fuente, peso, color, sombra, entrada) y animar solo el que elija.",
+  "cause_hypothesis": "Si no convence ningun grupo de letras, el problema no es un momento concreto sino el tratamiento tipografico general (fuente, peso, color, forma de entrar), que el agente eligio solo y fue corrigiendo por rondas sin que el propietario viera alternativas. Es una hipotesis: falta que el diga que le molesta.",
+  "check_id": "type-treatment-chosen-from-options",
+  "id": "add-finder-scorecard-v1--type-treatment-chosen-from-options",
+  "problem_evidence": "Texto: 6 de 10. A la pregunta «¿Qué letras no te convencen?» el propietario marco las cuatro opciones: HUNDREDS OF BEATS, NO IDEA / WHICH…, A BETTER WAY y el texto del CTA. No explico que les falla.",
+  "source_case": "add-finder-scorecard-v1",
+  "state": "proposed"
+}

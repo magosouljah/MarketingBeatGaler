@@ -93,7 +93,26 @@ Detalle en [`shared/hyperframes/README.md`](../../../shared/hyperframes/README.m
 | Componer a sangre en 1080×1920 | Bordes cortados en el teléfono | Guía de teléfono antes del render |
 | `grep -m1` con `pipefail` en un script | Fallo silencioso | `fc-match` directo; probar cada script |
 
-## 9. Abierto
+## 9. Calificación del propietario (2026-11-15)
+
+Cuestionario v2 sobre la final v2: **promedio 7.0** en 14 aspectos ([`scores/add-finder.json`](../../../learning/scorecard/scores/add-finder.json)).
+
+| Nota | Aspectos |
+| --- | --- |
+| 9 | Fidelidad al producto |
+| 8 | Formato en teléfono |
+| 7 | Sincronía, Movimiento, Cámara y transiciones, Claridad visual, Acabado premium, Entendimiento, Control de calidad, Criterio propio, Ejecución global |
+| 6 | Ritmo, Texto, Montaje de audio |
+| — | Eficiencia (sin calificar) |
+
+Qué hay detrás de los 6 (caso `add-finder-scorecard-v1`, tres propuestas nuevas):
+
+- **Ritmo:** el cierre con el CTA es largo (F260–F357, 3.2 s).
+- **Dispersión:** «están todas del mismo tamaño y no se sienten dinámicos».
+- **Texto:** no convence ningún grupo de letras; falta saber qué les molesta. Para el siguiente video: enseñar opciones de tipografía antes de animar.
+- **Montaje de audio:** sin detalle todavía.
+
+## 10. Abierto
 
 - Aprobación del propietario a la final v2 (y con ella promover las 3 propuestas ⏳).
 - Durante el medio segundo de dispersión las portadas aún pueden rozarse al pasar; en reposo no.

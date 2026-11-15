@@ -1,0 +1,11 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-scorecard-v1",
+  "failed": [
+    "cta-hold-not-overlong",
+    "scatter-size-hierarchy-and-drift",
+    "type-treatment-chosen-from-options"
+  ],
+  "human_approved": false,
+  "passed": []
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En un frame del plano final se miden al menos tres tamanos visibles con relacion 3:1 o mayor entre extremos, y el propietario deja de percibirlas iguales o estaticas.",
+  "account": "account-1",
+  "candidate_rule": "La variedad de tamano se mide en pantalla, no en unidades del mundo: en el plano de dispersion debe haber al menos tres escalones claros de tamano visibles a la vez (la mayor al menos 3 veces la menor), y cada objeto sigue derivando con velocidad propia despues del estallido. Comprobarlo en un frame antes del render.",
+  "cause_hypothesis": "En el codigo las portadas tienen escalas de 0.68 a 1.30 y profundidades muy distintas, pero la caja que despeja el CTA mide 860 px de los 982 visibles: empuja fuera de cuadro a casi todas las cercanas (las grandes) y deja a la vista una franja de profundidad parecida. Ademas, tras dispersarse solo se balancean en su sitio; no derivan ni hay paralaje.",
+  "check_id": "scatter-size-hierarchy-and-drift",
+  "id": "add-finder-scorecard-v1--scatter-size-hierarchy-and-drift",
+  "problem_evidence": "Comentario del cuestionario: «siento q cuando se dispersan los beats podría quedar mejor». A la pregunta de que le falta (F242-F260) respondio con sus palabras: «están todas del mismo tamaño y no se sienten dinámicos».",
+  "source_case": "add-finder-scorecard-v1",
+  "state": "proposed"
+}

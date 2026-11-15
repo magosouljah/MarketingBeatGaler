@@ -1,0 +1,36 @@
+{
+  "account": "account-1",
+  "artifact": "Final v2 (11.9 s, version negra y blanca), calificada con el cuestionario v2",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado. Fuente reproducible: account-1/videos/add-finder/project/. Calificaciones: learning/scorecard/scores/add-finder.json.",
+  "checks": [
+    {
+      "acceptance_test": "En la copia con contador el plano del CTA no pasa de 60 frames sin un cambio claro, y el propietario califica Ritmo con 8 o mas.",
+      "evidence": "Ritmo: 6 de 10. A la pregunta «¿Dónde lo sientes mal?» el propietario eligio solo «Final/CTA largo» (el cierre con la pildora, F260-F357, 3.2 s). No marco el inicio, la duda del cursor ni la galeria.",
+      "hypothesis": "El cierre se estiro para que cupiera la locucion completa («Comment GALER to try it for free», 2.7 s) y el toque del cursor en «free» (F328); durante esos 3.2 s el encuadre casi no cambia, justo lo que la leccion no-static-screen-over-two-seconds prohibe en el resto del video.",
+      "id": "cta-hold-not-overlong",
+      "proposed_rule": "El cierre con CTA dura lo minimo para leerlo una vez (objetivo: 2 s o menos de encuadre quieto). Si la locucion final es mas larga, empieza antes, sobre la transicion, en vez de alargar el plano; y mientras dura, la camara y el fondo siguen en movimiento.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En un frame del plano final se miden al menos tres tamanos visibles con relacion 3:1 o mayor entre extremos, y el propietario deja de percibirlas iguales o estaticas.",
+      "evidence": "Comentario del cuestionario: «siento q cuando se dispersan los beats podría quedar mejor». A la pregunta de que le falta (F242-F260) respondio con sus palabras: «están todas del mismo tamaño y no se sienten dinámicos».",
+      "hypothesis": "En el codigo las portadas tienen escalas de 0.68 a 1.30 y profundidades muy distintas, pero la caja que despeja el CTA mide 860 px de los 982 visibles: empuja fuera de cuadro a casi todas las cercanas (las grandes) y deja a la vista una franja de profundidad parecida. Ademas, tras dispersarse solo se balancean en su sitio; no derivan ni hay paralaje.",
+      "id": "scatter-size-hierarchy-and-drift",
+      "proposed_rule": "La variedad de tamano se mide en pantalla, no en unidades del mundo: en el plano de dispersion debe haber al menos tres escalones claros de tamano visibles a la vez (la mayor al menos 3 veces la menor), y cada objeto sigue derivando con velocidad propia despues del estallido. Comprobarlo en un frame antes del render.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario elige un tratamiento entre opciones antes de la primera prueba animada y califica Texto con 8 o mas en ese video.",
+      "evidence": "Texto: 6 de 10. A la pregunta «¿Qué letras no te convencen?» el propietario marco las cuatro opciones: HUNDREDS OF BEATS, NO IDEA / WHICH…, A BETTER WAY y el texto del CTA. No explico que les falla.",
+      "hypothesis": "Si no convence ningun grupo de letras, el problema no es un momento concreto sino el tratamiento tipografico general (fuente, peso, color, forma de entrar), que el agente eligio solo y fue corrigiendo por rondas sin que el propietario viera alternativas. Es una hipotesis: falta que el diga que le molesta.",
+      "id": "type-treatment-chosen-from-options",
+      "proposed_rule": "Antes de animar el texto de un video, mostrar al propietario dos o tres tratamientos tipograficos distintos sobre un frame real (fuente, peso, color, sombra, entrada) y animar solo el que elija.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4; cuestionario respondido el 2026-11-15 a las 01:01 y preguntas de seguimiento a continuacion (America/Mexico_City).",
+  "human_approved": false,
+  "id": "add-finder-scorecard-v1",
+  "note": "Promedio 7.0 sobre 14 aspectos. Montaje de audio tambien recibio 6, pero al preguntar que fallaba el propietario no eligio nada: sin detalle no se propone regla; volver a preguntar con la mezcla del siguiente video. Texto recibio 6 y el propietario marco los cuatro grupos de letras sin decir que les falla. Eficiencia quedo sin calificar. Esta calificacion no es una aprobacion creativa de la final v2.",
+  "project": "add-finder"
+}
