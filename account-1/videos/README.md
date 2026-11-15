@@ -14,5 +14,6 @@ Un video por carpeta, con su fuente, su brief y lo aprendido.
 3. Medir el audio antes de animar: [`shared/editing/find_hits.py`](../../shared/editing/find_hits.py) y [`shared/transcription/align_words.py`](../../shared/transcription/align_words.py).
 4. Componer dentro de las [zonas seguras de Instagram](../../shared/technical-qa/INSTAGRAM-SAFE-ZONES.md).
 5. Cada entrega al propietario lleva copia con contador de frames ([`shared/ffmpeg/review_copy.sh`](../../shared/ffmpeg/review_copy.sh)) y se registra como caso en `learning/cases/`.
+6. Al cerrar el video, pedir el [cuestionario 1-10](../../learning/scorecard/README.md) y registrarlo.
 
 Material común: portadas en [`../creative-assets/covers/`](../creative-assets/covers/) (60, `cover-002` a `cover-061`; no renumerar, add-finder depende de esos números).

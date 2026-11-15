@@ -26,6 +26,10 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 5. Obtiene aprobación humana antes de afirmar calidad creativa profesional; entonces `promote` incorpora la nueva regla validada. Todo se versiona con Git.
 6. En los próximos trabajos, el agente debe leer las reglas en `learning/lessons/<cuenta>/`. Las reglas de la cuenta 1 NO contaminan la cuenta 2.
 
+## Cuestionario por video
+
+Al cerrar cada video el propietario califica 15 aspectos del 1 al 10: [scorecard/README.md](scorecard/README.md). Sirve para comparar videos entre sí; no sustituye a los casos ni a la aprobación explícita.
+
 ## Protección y límites
 
 - `DIRECCION.md` es el **único archivo con permiso especial**. Solo el propietario puede autorizar explícitamente editarlo. `.github/direccion.sha256` permite detectar modificaciones accidentales; `.github/CODEOWNERS` solicita revisión del propietario. Para forzar la aprobación en GitHub también debe habilitarse protección de rama / CODEOWNERS en Settings.

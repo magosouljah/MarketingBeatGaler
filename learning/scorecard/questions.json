@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "scale": {"min": 1, "max": 10, "anchors": {"10": "No cambiaría nada", "8": "Muy bien, detalles menores", "6": "Pasa, pero algo me molesta", "4": "Mal, hay que rehacerlo", "1": "No sirve"}},
+  "questions": [
+    {"id": "hook", "group": "video", "label": "Gancho", "question": "¿Los primeros 2 segundos te hacen quedarte?"},
+    {"id": "clarity", "group": "video", "label": "Claridad", "question": "¿Se entiende qué es BeatGaler y qué hacer, incluso sin sonido?"},
+    {"id": "pacing", "group": "video", "label": "Ritmo", "question": "¿Ninguna parte se siente lenta ni atropellada?"},
+    {"id": "sync", "group": "video", "label": "Sincronía", "question": "¿Imagen, música y voz caen juntas?"},
+    {"id": "motion", "group": "video", "label": "Movimiento", "question": "¿Las animaciones se sienten naturales y con intención?"},
+    {"id": "type", "group": "video", "label": "Texto", "question": "¿Las letras se leen bien y se ven bien?"},
+    {"id": "polish", "group": "video", "label": "Acabado premium", "question": "¿Se ve caro y no de plantilla?"},
+    {"id": "product", "group": "video", "label": "Fidelidad al producto", "question": "¿Lo que sale se parece a BeatGaler de verdad?"},
+    {"id": "cta", "group": "video", "label": "Cierre y CTA", "question": "¿El final deja claro qué hacer y dan ganas de hacerlo?"},
+    {"id": "audio", "group": "video", "label": "Audio", "question": "¿Voz, efectos y mezcla suenan bien?"},
+    {"id": "format", "group": "video", "label": "Formato en teléfono", "question": "¿Se ve bien en tu teléfono dentro de Instagram, sin cortes ni cosas tapadas?"},
+    {"id": "understanding", "group": "proceso", "label": "Entendimiento", "question": "¿Capté lo que pedías sin que tuvieras que repetirlo?"},
+    {"id": "efficiency", "group": "proceso", "label": "Eficiencia", "question": "¿Llegamos al resultado en pocas vueltas?"},
+    {"id": "judgment", "group": "proceso", "label": "Criterio propio", "question": "¿Mis decisiones y propuestas sumaron, sin preguntar de más ni inventar de más?"},
+    {"id": "overall", "group": "global", "label": "Global", "question": "¿Lo publicarías tal cual?"}
+  ]
+}
