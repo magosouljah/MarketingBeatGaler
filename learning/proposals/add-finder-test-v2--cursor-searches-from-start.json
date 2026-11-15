@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El cursor es visible y activo desde el primer segundo, con resaltado de la fila bajo el.",
+  "account": "account-1",
+  "candidate_rule": "El cursor es un personaje desde el primer segundo: entra, recorre la lista, duda sobre archivos concretos, y la fila bajo el dedo se tine de azul claro.",
+  "cause_hypothesis": "El cursor aparecia tarde y solo para hacer clic; no contaba la historia de no saber cual es.",
+  "check_id": "cursor-searches-from-start",
+  "id": "add-finder-test-v2--cursor-searches-from-start",
+  "problem_evidence": "Propietario: «el mause debereia moverse desde el inicio como buscando un beat lentamente mientras hace scroll dudando en beats y asi y ademas donde esta hovering deberia marcarse en azul ligreamente».",
+  "source_case": "add-finder-test-v2",
+  "state": "proposed"
+}

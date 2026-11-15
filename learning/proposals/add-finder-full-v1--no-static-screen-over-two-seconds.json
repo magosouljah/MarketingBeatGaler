@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En la copia con contador no hay ningun tramo de mas de 60 frames con el mismo encuadre estatico.",
+  "account": "account-1",
+  "candidate_rule": "Ningun encuadre permanece mas de ~2 s. Mientras dura una escena la camara sigue moviendose (empuje, giro) y cada medio segundo ocurre un evento nuevo.",
+  "cause_hypothesis": "Se dejo la camara quieta esperando golpes musicales lejanos.",
+  "check_id": "no-static-screen-over-two-seconds",
+  "id": "add-finder-full-v1--no-static-screen-over-two-seconds",
+  "problem_evidence": "Propietario: «6:64 a 10:30 es la misma pantalla; todo eso debe ser mucho más rápido y dinámico» y «11:27 a 15:40 es la misma pantalla».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

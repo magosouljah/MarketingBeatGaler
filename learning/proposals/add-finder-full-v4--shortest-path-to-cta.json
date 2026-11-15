@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario aprueba la version corta.",
+  "account": "account-1",
+  "candidate_rule": "Una vez mostrado el producto, ir directo al CTA usando el ultimo gesto como transicion. Una idea del guion, por central que parezca, se corta si ya no anade comprension.",
+  "cause_hypothesis": "Encontrar el beat, Play, silencio, drop y zoom al disco eran el centro del guion original, pero anadian 3.7 s despues de que el producto ya se habia entendido.",
+  "check_id": "shortest-path-to-cta",
+  "id": "add-finder-full-v4--shortest-path-to-cta",
+  "problem_evidence": "Propietario (17:45): «cuando clickea el tag quiero q en vez de la portada del beat haga zoom hacia [el CTA]; cortamos lo q está entre 8:66 y 12:41; las portadas del final pueden ser las portadas de 8:66». Y (18:25): «olvidamos lo de drop y simplemente q siga con la del inicio y q siga a ritmo».",
+  "source_case": "add-finder-full-v4",
+  "state": "proposed"
+}

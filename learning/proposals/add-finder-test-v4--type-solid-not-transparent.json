@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ninguna palabra aparece semitransparente ni acompanada de simbolos.",
+  "account": "account-1",
+  "candidate_rule": "El texto en pantalla es solido (opacidad 100 %), de un solo color pleno, sin iconos ni adornos. La separacion del fondo se logra con halo o sombra, no con transparencia.",
+  "cause_hypothesis": "Palabras atenuadas al 30 % de opacidad, y despues adornadas con iconos, hacen que el texto parezca un efecto de plantilla.",
+  "check_id": "type-solid-not-transparent",
+  "id": "add-finder-test-v4--type-solid-not-transparent",
+  "problem_evidence": "Propietario sobre la prueba 4: «ok ya me gusto mucho solo las letras no; se ven bastante mal; no me gusta q queden como trans´parente y solo negro la q dice». Y sobre el siguiente intento (fichas azules con icono, 14:12): «no me gusta q tenga los símbolos cada palabra, ninguna debería tener eso».",
+  "source_case": "add-finder-test-v4",
+  "state": "proposed"
+}

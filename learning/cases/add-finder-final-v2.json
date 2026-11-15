@@ -1,0 +1,27 @@
+{
+  "account": "account-1",
+  "artifact": "Final v2 (11.9 s, Finder como ventana flotante; version negra y blanca) — ULTIMA ENTREGA",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "evidence": "Verificacion del agente con la guia de telefono sobre 12 frames: la ventana va de x=80 a x=1000 y empieza en y=270; las palabras comparten ese margen y ancho; la galeria se encuadra a 0.944x y el plano abierto a 0.561x para quedar dentro del recorte. Falta la comprobacion del propietario en su telefono.",
+      "id": "instagram-safe-zones-measured",
+      "status": "pass"
+    },
+    {
+      "evidence": "La disposicion final se calcula con un resolvedor iterativo (dos portadas con rangos de profundidad en contacto no se solapan en pantalla) y la inclinacion maxima bajo a ~32 grados. Verificado por el agente en frames del cierre; durante el medio segundo de dispersion aun pueden rozarse al pasar.",
+      "id": "floating-covers-no-intersection",
+      "status": "pass"
+    },
+    {
+      "evidence": "Sin cambios respecto a la final v1: cursor centrado en reposo y al tocar.",
+      "id": "cta-cursor-centered",
+      "status": "pass"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 23:50 (pidio registrar lo aprendido; no dio aprobacion creativa explicita de esta version).",
+  "human_approved": false,
+  "id": "add-finder-final-v2",
+  "note": "Pendiente: aprobacion explicita del propietario. Hasta entonces estas tres reglas siguen siendo propuestas, no lecciones.",
+  "project": "add-finder"
+}

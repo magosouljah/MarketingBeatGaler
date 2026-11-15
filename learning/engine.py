@@ -105,7 +105,11 @@ def promote(proposal_id, verified_case_id):
     verified = load_case(verified_case_id)
     if verified['id'] == source['id'] or verified['account'] != proposal['account']:
         fail('Verification must be a different case for the same account')
-    if verified.get('validates_proposal') != proposal_id:
+    # One approved test can verify several proposals: `validates_proposals` (list) or the original `validates_proposal` (string).
+    cited = verified.get('validates_proposals')
+    if cited is None:
+        cited = [verified.get('validates_proposal')]
+    if not isinstance(cited, list) or proposal_id not in cited:
         fail('Verification case must explicitly cite the proposal')
     if not verified['human_approved'] or not verified.get('approval_evidence'):
         fail('Creative approval by the owner with evidence is required')
@@ -161,10 +165,15 @@ def audit():
 def status():
     audit()
     cases = len(list((BASE / 'cases').glob('*.json')))
-    proposals = len(list((BASE / 'proposals').glob('*.json')))
     lessons = len(list((BASE / 'lessons').glob('**/*.md')))
-    print(f'Cases: {cases} | Proposed (not validated): {proposals} | Validated lessons: {lessons}')
-    print('Next: produce a verifiable new orbit test, log its evaluation, and request creative approval.')
+    # A proposal stops being pending once its rule exists as a lesson for that account.
+    pending = 0
+    for path in (BASE / 'proposals').glob('*.json'):
+        item = read_json(path)
+        if not (BASE / 'lessons' / str(item.get('account')) / f"{item.get('check_id')}.md").exists():
+            pending += 1
+    print(f'Cases: {cases} | Proposed (not validated): {pending} | Validated lessons: {lessons}')
+    print('Next: read learning/lessons/<account>/ before producing; log every new test as a case and request creative approval.')
 
 
 def main():

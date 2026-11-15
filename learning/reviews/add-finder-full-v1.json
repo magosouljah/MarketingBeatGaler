@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-full-v1",
+  "failed": [
+    "scroll-inertia-curve",
+    "type-words-not-sentences",
+    "no-static-screen-over-two-seconds",
+    "cover-mutation-random-fast",
+    "real-product-ui-components",
+    "scatter-covers-only-varied-angles",
+    "pacing-video-leads-music"
+  ],
+  "human_approved": false,
+  "passed": []
+}

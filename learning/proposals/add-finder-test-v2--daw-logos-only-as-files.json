@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ningun mosaico de la cuadricula muestra logos de DAW.",
+  "account": "account-1",
+  "candidate_rule": "Los iconos de terceros (DAW) solo aparecen mientras el objeto es un archivo (lista y vuelo). Al entrar a la interfaz de BeatGaler todos los marcadores usan el icono neutro de audio.",
+  "cause_hypothesis": "Los logos de DAW tienen sentido como archivo de proyecto, pero dentro de la Gallery un marcador gris con logo ajeno compite con la identidad del producto.",
+  "check_id": "daw-logos-only-as-files",
+  "id": "add-finder-test-v2--daw-logos-only-as-files",
+  "problem_evidence": "Propietario: «cuando ya se estan pasando a portadas las q estan grises no me gustan q algunas sean fl studio ni ableton, mantenemos los de audio (solo cuando se estan volviendo portadas en archivos si me gusta como se ve)».",
+  "source_case": "add-finder-test-v2",
+  "state": "proposed"
+}

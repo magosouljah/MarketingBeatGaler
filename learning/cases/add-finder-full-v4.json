@@ -1,0 +1,19 @@
+{
+  "account": "account-1",
+  "artifact": "Anuncio completo v4 (15.4 s, palabras resincronizadas; aun con filtro, Play en el drop y zoom al disco)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "El propietario aprueba la version corta.",
+      "evidence": "Propietario (17:45): «cuando clickea el tag quiero q en vez de la portada del beat haga zoom hacia [el CTA]; cortamos lo q está entre 8:66 y 12:41; las portadas del final pueden ser las portadas de 8:66». Y (18:25): «olvidamos lo de drop y simplemente q siga con la del inicio y q siga a ritmo».",
+      "hypothesis": "Encontrar el beat, Play, silencio, drop y zoom al disco eran el centro del guion original, pero anadian 3.7 s despues de que el producto ya se habia entendido.",
+      "id": "shortest-path-to-cta",
+      "proposed_rule": "Una vez mostrado el producto, ir directo al CTA usando el ultimo gesto como transicion. Una idea del guion, por central que parezca, se corta si ya no anade comprension.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 17:45 y 18:25.",
+  "human_approved": false,
+  "id": "add-finder-full-v4",
+  "project": "add-finder"
+}

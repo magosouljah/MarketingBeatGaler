@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Captura del propietario en su telefono sin elementos cortados ni bajo la isla.",
+  "account": "account-1",
+  "candidate_rule": "Componer para el telefono real: nada legible en los primeros 250 px ni en los 49 px de cada lado. Una ventana de interfaz se muestra como ventana flotante completa (bajada, con sus bordes y el fondo visible), no agrandando su barra. Verificar los frames clave con shared/technical-qa/phone_guide.py antes de un render largo.",
+  "cause_hypothesis": "Se compuso a sangre completa en 1080x1920 con margenes genericos. El primer arreglo (agrandar la barra de titulo de la ventana) resolvia la isla pero no el recorte lateral ni el aspecto.",
+  "check_id": "instagram-safe-zones-measured",
+  "id": "add-finder-final-v1--instagram-safe-zones-measured",
+  "problem_evidence": "Propietario (18:58): «con el margen en instagram no queda bien, te mandé foto y marque de negro la parte donde queda la dynamic island». Con la captura de su iPhone (19:24): «no agrandes la ventana de finder sino bájala y de atrás el fondo; también fíjate como se ve el borde. se corta». Medido sobre esa captura: Instagram escala el video a lo alto y recorta ~49 px de cada lado; la isla y la barra superior tapan ~250 px.",
+  "source_case": "add-finder-final-v1",
+  "state": "proposed"
+}

@@ -1,0 +1,10 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-test-v4",
+  "failed": [
+    "type-solid-not-transparent",
+    "floating-depth-of-field"
+  ],
+  "human_approved": false,
+  "passed": []
+}

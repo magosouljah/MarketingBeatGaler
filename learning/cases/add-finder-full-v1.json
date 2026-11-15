@@ -1,0 +1,67 @@
+{
+  "account": "account-1",
+  "artifact": "Anuncio completo v1 (21.9 s: Finder, vuelo, galeria, filtro, Play en el drop, zoom al disco, CTA)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "El propietario no percibe un frenon al final del scroll.",
+      "evidence": "Propietario: «en el segundo 2:13 el frenado después del scroll rápido debe ser más lento y natural. mejora la curva».",
+      "hypothesis": "La curva era simetrica (ease in-out): frenaba tan rapido como arrancaba.",
+      "id": "scroll-inertia-curve",
+      "proposed_rule": "Un scroll largo es un impulso con inercia: ataque rapido y cola exponencial larga (posicion proporcional a 1 - e^(-5.2 * u^1.25)).",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Cada palabra clave de la voz aparece grande y sola, y el propietario puede leerla.",
+      "evidence": "Propietario: «but no idea wich ones wich eso no se ve bien alado del mouse, todas las letras deben ser grandes; intenta no poner las frases enteras sino palablras; si deberían detenerse un poquito para q se pueda leer por un mini segundo apenas lo necesario para poder leerlo; luego en there’s a better way no se ve nada ni se nota».",
+      "hypothesis": "Frases completas en tamano pequeno (etiqueta de 38 px junto al cursor, linea de 70 px) no se leen en un Reel.",
+      "id": "type-words-not-sentences",
+      "proposed_rule": "Texto cinetico = palabras clave sueltas, enormes (casi todo el ancho util), una idea a la vez, que entran con el movimiento de la escena y se detienen lo justo para leerse (0.15 a 0.5 s).",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En la copia con contador no hay ningun tramo de mas de 60 frames con el mismo encuadre estatico.",
+      "evidence": "Propietario: «6:64 a 10:30 es la misma pantalla; todo eso debe ser mucho más rápido y dinámico» y «11:27 a 15:40 es la misma pantalla».",
+      "hypothesis": "Se dejo la camara quieta esperando golpes musicales lejanos.",
+      "id": "no-static-screen-over-two-seconds",
+      "proposed_rule": "Ningun encuadre permanece mas de ~2 s. Mientras dura una escena la camara sigue moviendose (empuje, giro) y cada medio segundo ocurre un evento nuevo.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "No se distingue un patron de barrido y toda la mutacion dura 1.3 s o menos.",
+      "evidence": "Propietario en la prueba 1: «puedes hacer q se vallan agregando portadas a lo random pero me gustaria q al ponerse portadas q tengan animacion las portadas como q crecen». En el completo v1: «como mutan los beats a beats con portada y tags debe verse más rápido y random».",
+      "hypothesis": "Revelar todo en ondas uniformes y en dos golpes globales (portadas, luego datos) se ve mecanico y lento.",
+      "id": "cover-mutation-random-fast",
+      "proposed_rule": "Cada tarjeta muta con su propio reloj, en orden aleatorio y en rafagas sobre los golpes: la portada crece desde un punto (~0.2 s) y sus datos entran ~0.1 s despues.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Comparado con el codigo de la app, el elemento coincide en estructura, estados y colores.",
+      "evidence": "Propietario: «los tags donde clicka el louse no se ven así en la galería. usaste los asstes pero de los tags de los beats hay otro tags q son la barra de tags usala y asegúrate de q tenga los colores reales de los tags q decidiste colorear».",
+      "hypothesis": "Se reutilizo el estilo de pildora de las tarjetas para inventar una barra de filtros que no existe en el producto.",
+      "id": "real-product-ui-components",
+      "proposed_rule": "Cada elemento de interfaz que se muestra se copia del componente real de la app (estructura, tipografia, estados y paleta), leyendo su codigo fuente. No se improvisa uno parecido.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "No se percibe un patron de angulos y ninguna tarjeta dispersa muestra titulo, estrellas o tags.",
+      "evidence": "Propietario: «en 11:13 los beats q están dispersos no tienen q tener las beat cards pueden ser solo las portadas; y también no se sienten scattered porq todas tienen el mismo ángulo. así q varíalo un poco para q no se vea un patron».",
+      "hypothesis": "Todas las tarjetas giraban ~50 grados segun su lado: se leia como dos paredes, no como dispersion.",
+      "id": "scatter-covers-only-varied-angles",
+      "proposed_rule": "Al dispersar objetos: solo la portada (sin datos), y angulo, tamano y giro lento distintos en cada una, sin simetria entre lados.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario no percibe lentitud y ninguna escena existe solo para esperar un golpe.",
+      "evidence": "Propietario: «siento q en general el video es muy lento y creo q es porq esperas al drop; así q lo puedes mover atrás lo q quieras».",
+      "hypothesis": "La duracion de cada escena la dictaba la estructura del beat, no lo que la imagen necesitaba.",
+      "id": "pacing-video-leads-music",
+      "proposed_rule": "El ritmo lo marca el video. Si la musica obliga a esperar, se recorta o se mueve la musica (cortes en compas o dentro de un silencio) hasta que cada escena dure lo que necesita.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 14:12.",
+  "human_approved": false,
+  "id": "add-finder-full-v1",
+  "project": "add-finder"
+}

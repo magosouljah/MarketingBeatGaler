@@ -2,6 +2,28 @@
 
 Sistema de research y producción de videos verticales para **BeatGaler**. Documentos de autoridad: [PLAN.md](PLAN.md) y [FASE-0.md](FASE-0.md). **Fase 0: aprobada. Fase 1: Research System, en preparación.**
 
+## Videos
+
+| Video | Cuenta | Estado |
+| --- | --- | --- |
+| [add-finder](account-1/videos/add-finder/) | 1 | Entregado 2026-11-14 (11.9 s, negro y blanco). v5 aprobada; última entrega pendiente de confirmar. **[Todo lo aprendido](account-1/videos/add-finder/LEARNINGS.md)** |
+| [orbit](account-1/videos/orbit/) | 1 | Archivado, nunca aprobado |
+
+## Mapa del repositorio
+
+```
+DIRECCION.md  PLAN.md  FASE-0.md  AGENTS.md     dirección (protegida), plan y reglas para agentes
+account-1/                                      cuenta oficial de BeatGaler
+  videos/<video>/                               un video por carpeta: BRIEF, LEARNINGS, HISTORY, project/, tools/
+  creative-assets/covers/                       60 portadas (cover-002 … cover-061)
+  creative-assets/audio/voice-samples/          pruebas de voz
+  research/  hooks/  formats/  scripts/         referencias, hooks, formatos y briefs antiguos
+account-2/                                      cuenta de contenido para productores
+learning/                                       Learning Engine: cases/ → proposals/ → lessons/
+shared/                                         utilidades técnicas comunes (HyperFrames, FFmpeg, audio, QA)
+skillpack/  skills/                             skills externas fijadas y skill de análisis de referencias
+```
+
 ## Dirección y aprendizaje
 
 - **[DIRECCION.md](DIRECCION.md)** — archivo rector **protegido**: solo se modifica con autorización explícita del propietario.
@@ -9,7 +31,7 @@ Sistema de research y producción de videos verticales para **BeatGaler**. Docum
 - [AGENTS.md](AGENTS.md) — instrucciones obligatorias para agentes de programación.
 - [learning/cases/](learning/cases/) — evidencia de pruebas; [learning/proposals/](learning/proposals/) — ideas todavía no validadas; [learning/lessons/](learning/lessons/) — aprendizajes comprobados.
 
-Inicio rápido: `python learning/engine.py status`. El motor inicial registra y valida mejoras con pruebas; **todavía no crea ni evalúa MP4 automáticamente**.
+Inicio rápido: `python learning/engine.py status`. El motor registra y valida mejoras con pruebas; **no crea ni evalúa MP4 automáticamente**. Hoy: 22 lecciones validadas en la cuenta 1, todas de add-finder.
 
 ## Estructura
 
@@ -28,7 +50,7 @@ Un video interesante **no** es necesariamente un outlier. Solo clasificarlo como
 
 ## Estado
 
-La infraestructura audiovisual de scraping, transcripción, generación de scripts, edición y render aún no está implementada; las carpetas reservadas no significan funcionalidad terminada. El **Learning Engine V1** sí dispone de una CLI y pruebas locales. No iniciar producción masiva hasta pasar los gates de [PLAN.md](PLAN.md).
+Ya existe un flujo de producción probado de punta a punta con un video: HyperFrames para la imagen, FFmpeg para el audio, medición de golpes y de palabras, copia de revisión con contador y guía de zonas seguras (ver [shared/](shared/README.md) y [add-finder](account-1/videos/add-finder/)). Siguen sin implementarse el scraping, la generación de scripts y cualquier evaluación automática de calidad. El **Learning Engine V1** dispone de CLI y pruebas locales. No iniciar producción masiva hasta pasar los gates de [PLAN.md](PLAN.md).
 
 ## Reference Analysis V1
 

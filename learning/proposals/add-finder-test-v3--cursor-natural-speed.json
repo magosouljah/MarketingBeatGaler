@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ningun desplazamiento dura menos de 9 frames y el propietario no lo percibe apresurado.",
+  "account": "account-1",
+  "candidate_rule": "Un desplazamiento del cursor entre dos puntos dura 0.3 s o mas, con aceleracion y frenado suaves; maximo dos o tres desplazamientos por tramo de duda, con pausa entre ellos.",
+  "cause_hypothesis": "Tres desplazamientos encadenados en medio segundo son mas rapidos que una mano real.",
+  "check_id": "cursor-natural-speed",
+  "id": "add-finder-test-v3--cursor-natural-speed",
+  "problem_evidence": "Propietario: «el mouse en F124 a 141 es demasiado rapido porfavor q se sienta mas natural». En ese tramo el cursor hacia tres saltos entre filas en 0.57 s.",
+  "source_case": "add-finder-test-v3",
+  "state": "proposed"
+}

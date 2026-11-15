@@ -4,7 +4,7 @@ on:
     branches:
       - marketing/orbit-reference-rebuild-v3
     paths:
-      - 'account-1/creative-assets/orbit-v3/**'
+      - 'account-1/videos/orbit/v3/**'
       - '.github/workflows/orbit-v3-preview.yml'
   workflow_dispatch:
 permissions:
@@ -25,7 +25,7 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
       - name: Render via approved HyperFrames first
         id: hyperframes
-        working-directory: account-1/creative-assets/orbit-v3
+        working-directory: account-1/videos/orbit/v3
         run: |
           npx --yes hyperframes@latest lint
           npx --yes hyperframes@latest check --json

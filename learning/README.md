@@ -11,7 +11,7 @@ python learning/engine.py review orbit-initial-rejection
 python -m unittest discover -s learning/tests -v
 ```
 
-`review` crea un informe reproducible en `learning/reviews/` y propuestas en `learning/proposals/`. Las propuestas **no son conocimientos probados**. Se pueden editar las skills y probar otras versiones libremente, pero solo se asciende una propuesta a `learning/lessons/account-N/` cuando existe **otra** prueba con el mismo check en `pass`, `validates_proposal` y `human_approved: true` con `approval_evidence` del propietario:
+`review` crea un informe reproducible en `learning/reviews/` y propuestas en `learning/proposals/`. Las propuestas **no son conocimientos probados**. Se pueden editar las skills y probar otras versiones libremente, pero solo se asciende una propuesta a `learning/lessons/account-N/` cuando existe **otra** prueba con el mismo check en `pass`, que cite la propuesta en `validates_proposal` (una) o `validates_proposals` (lista, cuando una misma prueba aprobada verifica varias) y tenga `human_approved: true` con `approval_evidence` del propietario:
 
 ```bash
 python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de-la-nueva-prueba
@@ -31,7 +31,9 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 - `DIRECCION.md` es el **único archivo con permiso especial**. Solo el propietario puede autorizar explícitamente editarlo. `.github/direccion.sha256` permite detectar modificaciones accidentales; `.github/CODEOWNERS` solicita revisión del propietario. Para forzar la aprobación en GitHub también debe habilitarse protección de rama / CODEOWNERS en Settings.
 - Todas las demás instrucciones, código, casos, reviews y skills pueden evolucionar normalmente, con commits y pruebas. No se inventan métricas ni aprobaciones.
 - `audit` comprueba formato, trazabilidad y la integridad del archivo rector; **no** verifica automáticamente la calidad artística del MP4.
-- Próximo trabajo real: crear preview editable de órbita 3D de portadas, evaluar con frames y video, corregir y validar con el propietario. HyperFrames es la elección inicial según `FASE-0.md`; herramientas 3D complementarias requieren justificación, no sustitución silenciosa.
+- Primer ciclo completo: [add-finder](../account-1/videos/add-finder/) (2026-11-14). 11 casos, 22 lecciones validadas por la aprobación de la v5 y 3 propuestas a la espera de que el propietario confirme la última entrega (`cta-cursor-centered`, `instagram-safe-zones-measured`, `floating-covers-no-intersection`). Para promoverlas: crear un caso nuevo con esa confirmación como `approval_evidence` y ejecutar `promote`.
+- La órbita 3D de portadas quedó archivada sin aprobar; sus dos propuestas siguen abiertas. `DIRECCION.md` aún la nombra como prioridad: cambiarlo requiere autorización explícita del propietario.
+- HyperFrames es la elección según `FASE-0.md`; herramientas 3D complementarias requieren justificación, no sustitución silenciosa.
 
 ## Reference Analysis integration
 

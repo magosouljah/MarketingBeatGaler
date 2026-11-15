@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Comparado con el codigo de la app, el elemento coincide en estructura, estados y colores.",
+  "account": "account-1",
+  "candidate_rule": "Cada elemento de interfaz que se muestra se copia del componente real de la app (estructura, tipografia, estados y paleta), leyendo su codigo fuente. No se improvisa uno parecido.",
+  "cause_hypothesis": "Se reutilizo el estilo de pildora de las tarjetas para inventar una barra de filtros que no existe en el producto.",
+  "check_id": "real-product-ui-components",
+  "id": "add-finder-full-v1--real-product-ui-components",
+  "problem_evidence": "Propietario: «los tags donde clicka el louse no se ven así en la galería. usaste los asstes pero de los tags de los beats hay otro tags q son la barra de tags usala y asegúrate de q tenga los colores reales de los tags q decidiste colorear».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

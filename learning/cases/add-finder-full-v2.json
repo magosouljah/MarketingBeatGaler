@@ -1,0 +1,19 @@
+{
+  "account": "account-1",
+  "artifact": "Anuncio completo v2 (15.4 s, beat recortado, palabras como muro de filas del Finder)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Con el texto en pantalla se sigue viendo la interfaz detras y los bloques comparten margen y ancho.",
+      "evidence": "Propietario (16:24): «el hundreds of beats tapa el finder eso definitivamente no se ve bien; lo q creo es q simulaste q las letras eran parte del finder hasta pusiste el highlight azul». Sobre la correccion propuesta (17:14): «si se ve bien pero prefiero negro y q no sea continuo todo. entonces sería hundreds varias veces y luego espacio luego los OF y luego los beats; y también q estén alineados como hubdreds y no como of y como beats».",
+      "hypothesis": "Para integrar el texto se disfrazo de interfaz (franjas de fila y seleccion azul) y se hizo opaco a pantalla completa: escondia justo lo que el anuncio estaba mostrando.",
+      "id": "type-never-covers-or-fakes-ui",
+      "proposed_rule": "El texto va encima de la escena sin fondo propio y sin imitar la interfaz; la escena sigue visible detras. Las palabras repetidas van en bloques separados por aire, todos con el mismo margen izquierdo y el mismo ancho.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 16:24 y 17:14.",
+  "human_approved": false,
+  "id": "add-finder-full-v2",
+  "project": "add-finder"
+}

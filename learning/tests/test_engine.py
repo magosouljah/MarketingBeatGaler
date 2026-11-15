@@ -72,6 +72,32 @@ class LearningEngineTests(unittest.TestCase):
                 self.assertTrue(lesson.exists())
                 self.assertIn('Validated prevention rule', lesson.read_text())
 
+    def test_one_approved_case_can_verify_several_proposals(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            (base / 'cases').mkdir()
+            initial = engine.read_json(engine.BASE / 'cases/orbit-initial-rejection.json')
+            verified = {
+                'id': 'orbit-approved-test', 'account': 'account-1', 'project': 'first-ad',
+                'human_approved': True, 'approval_evidence': 'Owner approved in conversation with verified link',
+                'validates_proposals': ['orbit-initial-rejection--orbit-depth', 'orbit-initial-rejection--orbit-motion'],
+                'checks': [{'id': 'orbit-depth', 'status': 'pass', 'evidence': 'Depth evidence'},
+                           {'id': 'orbit-motion', 'status': 'pass', 'evidence': 'Motion evidence'}]
+            }
+            (base / 'cases/orbit-initial-rejection.json').write_text(json.dumps(initial))
+            (base / 'cases/orbit-approved-test.json').write_text(json.dumps(verified))
+            with patch.object(engine, 'BASE', base):
+                engine.review('orbit-initial-rejection')
+                engine.promote('orbit-initial-rejection--orbit-depth', 'orbit-approved-test')
+                engine.promote('orbit-initial-rejection--orbit-motion', 'orbit-approved-test')
+                self.assertTrue((base / 'lessons/account-1/orbit-depth.md').exists())
+                self.assertTrue((base / 'lessons/account-1/orbit-motion.md').exists())
+                verified['validates_proposals'] = ['orbit-initial-rejection--orbit-depth']
+                (base / 'cases/orbit-approved-test.json').write_text(json.dumps(verified))
+                (base / 'lessons/account-1/orbit-motion.md').unlink()
+                with self.assertRaisesRegex(ValueError, 'explicitly cite'):
+                    engine.promote('orbit-initial-rejection--orbit-motion', 'orbit-approved-test')
+
 
 if __name__ == '__main__':
     unittest.main()

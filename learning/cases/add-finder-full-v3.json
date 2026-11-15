@@ -1,0 +1,19 @@
+{
+  "account": "account-1",
+  "artifact": "Anuncio completo v3 (15.4 s, letras negras en tres bloques)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Cada palabra en pantalla queda a 2 frames o menos del inicio medido de su palabra hablada y el propietario no reporta desfase.",
+      "evidence": "Propietario: «el timing de hundreds of beats no está». Medicion posterior con alineacion forzada: OF entraba 6 frames tarde y BEATS 9; WHICH / ONE'S / WHICH iban ~7 frames adelantadas; «for» aparecia medio segundo antes de que la voz lo dijera.",
+      "hypothesis": "Los tiempos de palabra se estimaron mirando la envolvente de volumen. «beats» quedo partido en dos: la «b-ea» se tomo por «of» y la «ts» final por «beats».",
+      "id": "word-timing-forced-alignment",
+      "proposed_rule": "Los tiempos de cada palabra se obtienen con alineacion forzada contra el texto (shared/transcription/align_words.py) y se contrastan con las sibilantes; nunca a ojo sobre el volumen. La palabra llega a su sitio como maximo 2 frames antes de oirse.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 17:25.",
+  "human_approved": false,
+  "id": "add-finder-full-v3",
+  "project": "add-finder"
+}

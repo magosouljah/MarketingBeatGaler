@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario no percibe lentitud y ninguna escena existe solo para esperar un golpe.",
+  "account": "account-1",
+  "candidate_rule": "El ritmo lo marca el video. Si la musica obliga a esperar, se recorta o se mueve la musica (cortes en compas o dentro de un silencio) hasta que cada escena dure lo que necesita.",
+  "cause_hypothesis": "La duracion de cada escena la dictaba la estructura del beat, no lo que la imagen necesitaba.",
+  "check_id": "pacing-video-leads-music",
+  "id": "add-finder-full-v1--pacing-video-leads-music",
+  "problem_evidence": "Propietario: «siento q en general el video es muy lento y creo q es porq esperas al drop; así q lo puedes mover atrás lo q quieras».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

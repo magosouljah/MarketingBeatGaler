@@ -1,0 +1,10 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-test-v3",
+  "failed": [
+    "cursor-and-scroll-never-together",
+    "cursor-natural-speed"
+  ],
+  "human_approved": false,
+  "passed": []
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario da sus correcciones citando frames.",
+  "account": "account-1",
+  "candidate_rule": "Toda prueba enviada al propietario incluye una copia con contador de frames quemado (shared/ffmpeg/review_copy.sh). El frame 0 es el inicio del anuncio; si el inicio cambia, se avisa que la numeracion se recorrio.",
+  "cause_hypothesis": "Sin una referencia de tiempo exacta el feedback llega como descripciones («en el segundo 3») y obliga a adivinar.",
+  "check_id": "review-copy-frame-counter",
+  "id": "add-finder-test-v1--review-copy-frame-counter",
+  "problem_evidence": "Propietario: «cuando mandes ejemplos quiero q tengan los frames para qte diga donde correguir».",
+  "source_case": "add-finder-test-v1",
+  "state": "proposed"
+}

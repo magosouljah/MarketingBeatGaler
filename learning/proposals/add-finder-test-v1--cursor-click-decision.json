@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En la copia con contador el cursor permanece inmovil al menos 6 frames antes de cada clic y el propietario lo lee como una decision.",
+  "account": "account-1",
+  "candidate_rule": "Todo clic del cursor se construye en cuatro tiempos: llegar, quedarse completamente quieto al menos 0.2 s, encogerse (~0.75x) al presionar con sonido de clic y un aro en el punto, y soltar. Nada mas se mueve durante la pausa.",
+  "cause_hypothesis": "El cursor llegaba y hacia clic en el mismo gesto, con retroceso inmediato. Sin una pausa previa el ojo no distingue decidir de pasar por ahi.",
+  "check_id": "cursor-click-decision",
+  "id": "add-finder-test-v1--cursor-click-decision",
+  "problem_evidence": "Propietario: «siento q la mano cuando hace click no se siente como decicion sino como q se siguie moviendo sin nunca detenerse a ahcer click, y tambien puedes poner un sonido de click y q la mano se haga pequeña».",
+  "source_case": "add-finder-test-v1",
+  "state": "proposed"
+}

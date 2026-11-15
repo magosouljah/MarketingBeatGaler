@@ -1,0 +1,51 @@
+{
+  "account": "account-1",
+  "artifact": "Prueba 1 de la transformacion (7 s, del 1.4 al 8.6 del anuncio, primer beat)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "En la copia con contador, cada impacto visual cae a 1 frame o menos del transiente medido y el propietario no senala desfase con la musica.",
+      "evidence": "Propietario: «en el segundo 3 ya deberian estar ordenadas las portadas, no por el segundo sino por el beat, quedaria mejor». La cuadricula caia en 4.898 s (inicio teorico del compas 4 a 147 BPM); el kick real medido despues estaba en 4.537 s, y el golpe visual quedaba en mitad de un redoble de caja.",
+      "hypothesis": "Los impactos se colocaron sobre una rejilla calculada (BPM x compases) y no sobre los transientes del audio. El MP3 trae ~35 ms de retraso y el patron real de kicks no cae en los tiempos fuertes.",
+      "id": "beat-sync-measured-hits",
+      "proposed_rule": "Antes de animar, medir los transientes reales del audio (shared/editing/find_hits.py) y anclar cada impacto visual a un kick o una caja medidos. Nunca usar segundos redondos ni una rejilla teorica. Si la musica cambia o se recorta, se vuelve a medir.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En la copia con contador el cursor permanece inmovil al menos 6 frames antes de cada clic y el propietario lo lee como una decision.",
+      "evidence": "Propietario: «siento q la mano cuando hace click no se siente como decicion sino como q se siguie moviendo sin nunca detenerse a ahcer click, y tambien puedes poner un sonido de click y q la mano se haga pequeña».",
+      "hypothesis": "El cursor llegaba y hacia clic en el mismo gesto, con retroceso inmediato. Sin una pausa previa el ojo no distingue decidir de pasar por ahi.",
+      "id": "cursor-click-decision",
+      "proposed_rule": "Todo clic del cursor se construye en cuatro tiempos: llegar, quedarse completamente quieto al menos 0.2 s, encogerse (~0.75x) al presionar con sonido de clic y un aro en el punto, y soltar. Nada mas se mueve durante la pausa.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Ningun frame del viaje muestra trazos largos y el propietario no menciona lluvia ni lineas.",
+      "evidence": "Autoevaluacion del agente al entregar la prueba: «las blancas del viaje pueden leerse como lluvia». Propietario: «de aceurdo».",
+      "hypothesis": "Particulas blancas muy estiradas en vertical y con mucha opacidad dejan de leerse como velocidad y pasan a leerse como lluvia.",
+      "id": "speed-lines-read-as-rain",
+      "proposed_rule": "Para dar sensacion de viaje usar motas suaves y desenfocadas, con estiramiento maximo de ~3x y opacidad baja. La velocidad la comunican los objetos que viajan con la camara y la profundidad, no lineas.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "La lista muestra al menos cuatro tipos de archivo reconocibles y el propietario no pide mas variedad.",
+      "evidence": "Propietario: «poca variedad de archivos: podemos usar wav, mp3, .als y .flp de fl studio» (envio capturas de los iconos .flp y .als).",
+      "hypothesis": "Una lista con un solo tipo de archivo no se parece a la carpeta real de un productor.",
+      "id": "file-type-variety",
+      "proposed_rule": "Al representar el caos del usuario, usar los tipos de archivo y los nombres que el publico reconoce de su propio trabajo (audio y proyectos de su DAW), mezclados.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario da sus correcciones citando frames.",
+      "evidence": "Propietario: «cuando mandes ejemplos quiero q tengan los frames para qte diga donde correguir».",
+      "hypothesis": "Sin una referencia de tiempo exacta el feedback llega como descripciones («en el segundo 3») y obliga a adivinar.",
+      "id": "review-copy-frame-counter",
+      "proposed_rule": "Toda prueba enviada al propietario incluye una copia con contador de frames quemado (shared/ffmpeg/review_copy.sh). El frame 0 es el inicio del anuncio; si el inicio cambia, se avisa que la numeracion se recorrio.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 02:40.",
+  "human_approved": false,
+  "id": "add-finder-test-v1",
+  "project": "add-finder"
+}

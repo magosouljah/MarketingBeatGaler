@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-full-v2",
+  "failed": [
+    "type-never-covers-or-fakes-ui"
+  ],
+  "human_approved": false,
+  "passed": []
+}

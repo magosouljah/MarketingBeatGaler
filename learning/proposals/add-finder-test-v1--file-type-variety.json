@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "La lista muestra al menos cuatro tipos de archivo reconocibles y el propietario no pide mas variedad.",
+  "account": "account-1",
+  "candidate_rule": "Al representar el caos del usuario, usar los tipos de archivo y los nombres que el publico reconoce de su propio trabajo (audio y proyectos de su DAW), mezclados.",
+  "cause_hypothesis": "Una lista con un solo tipo de archivo no se parece a la carpeta real de un productor.",
+  "check_id": "file-type-variety",
+  "id": "add-finder-test-v1--file-type-variety",
+  "problem_evidence": "Propietario: «poca variedad de archivos: podemos usar wav, mp3, .als y .flp de fl studio» (envio capturas de los iconos .flp y .als).",
+  "source_case": "add-finder-test-v1",
+  "state": "proposed"
+}

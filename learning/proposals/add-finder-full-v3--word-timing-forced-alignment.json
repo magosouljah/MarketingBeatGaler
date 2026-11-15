@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Cada palabra en pantalla queda a 2 frames o menos del inicio medido de su palabra hablada y el propietario no reporta desfase.",
+  "account": "account-1",
+  "candidate_rule": "Los tiempos de cada palabra se obtienen con alineacion forzada contra el texto (shared/transcription/align_words.py) y se contrastan con las sibilantes; nunca a ojo sobre el volumen. La palabra llega a su sitio como maximo 2 frames antes de oirse.",
+  "cause_hypothesis": "Los tiempos de palabra se estimaron mirando la envolvente de volumen. «beats» quedo partido en dos: la «b-ea» se tomo por «of» y la «ts» final por «beats».",
+  "check_id": "word-timing-forced-alignment",
+  "id": "add-finder-full-v3--word-timing-forced-alignment",
+  "problem_evidence": "Propietario: «el timing de hundreds of beats no está». Medicion posterior con alineacion forzada: OF entraba 6 frames tarde y BEATS 9; WHICH / ONE'S / WHICH iban ~7 frames adelantadas; «for» aparecia medio segundo antes de que la voz lo dijera.",
+  "source_case": "add-finder-full-v3",
+  "state": "proposed"
+}

@@ -8,3 +8,16 @@ __pycache__/
 !/.agents/skills/beatgaler-motion-hub/
 /.claude/skills/*
 !/.claude/skills/beatgaler-motion-hub/
+
+# Videos: material fuente privado, renders y assets que genera tools/prepare.py.
+/account-*/videos/*/inputs/*
+!/account-*/videos/*/inputs/README.md
+/account-*/videos/*/out/
+/account-*/videos/*/project/node_modules/
+/account-*/videos/*/project/package-lock.json
+/account-1/videos/add-finder/project/assets/covers/
+/account-1/videos/add-finder/project/assets/icons/
+/account-1/videos/add-finder/project/assets/vo/
+/account-1/videos/add-finder/project/assets/beat.mp3
+/account-1/videos/add-finder/project/assets/gsap.min.js
+/account-*/videos/*/project/.hyperframes/

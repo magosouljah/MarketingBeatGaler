@@ -1,0 +1,35 @@
+{
+  "account": "account-1",
+  "artifact": "Prueba 2 (8.6 s desde el segundo 0, con voces y contador de frames)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "El cursor es visible y activo desde el primer segundo, con resaltado de la fila bajo el.",
+      "evidence": "Propietario: «el mause debereia moverse desde el inicio como buscando un beat lentamente mientras hace scroll dudando en beats y asi y ademas donde esta hovering deberia marcarse en azul ligreamente».",
+      "hypothesis": "El cursor aparecia tarde y solo para hacer clic; no contaba la historia de no saber cual es.",
+      "id": "cursor-searches-from-start",
+      "proposed_rule": "El cursor es un personaje desde el primer segundo: entra, recorre la lista, duda sobre archivos concretos, y la fila bajo el dedo se tine de azul claro.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Ningun mosaico de la cuadricula muestra logos de DAW.",
+      "evidence": "Propietario: «cuando ya se estan pasando a portadas las q estan grises no me gustan q algunas sean fl studio ni ableton, mantenemos los de audio (solo cuando se estan volviendo portadas en archivos si me gusta como se ve)».",
+      "hypothesis": "Los logos de DAW tienen sentido como archivo de proyecto, pero dentro de la Gallery un marcador gris con logo ajeno compite con la identidad del producto.",
+      "id": "daw-logos-only-as-files",
+      "proposed_rule": "Los iconos de terceros (DAW) solo aparecen mientras el objeto es un archivo (lista y vuelo). Al entrar a la interfaz de BeatGaler todos los marcadores usan el icono neutro de audio.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario no percibe frases pegadas.",
+      "evidence": "Propietario: «las frases las pusiste pegadas creo y tienes q analizar el timing para q queden natural y donde queremos, ahora mismo la frase q divide en 2 audios siento q estan muiy pegados esos dos audios, puedes darle un ligero esapcio» y «agrega video al inicio lo que creas necesario aunq no haya beat todavia».",
+      "hypothesis": "Las frases se colocaron una tras otra para que cupieran antes del primer golpe; la musica mandaba sobre la respiracion de la voz.",
+      "id": "voice-phrase-spacing",
+      "proposed_rule": "Dejar una pausa audible (0.2 s o mas) entre las dos mitades de una frase y mas entre frases. Si la voz no cabe antes del golpe musical, se alarga la imagen o la intro de la musica: nunca se aprieta la voz.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 03:01.",
+  "human_approved": false,
+  "id": "add-finder-test-v2",
+  "project": "add-finder"
+}

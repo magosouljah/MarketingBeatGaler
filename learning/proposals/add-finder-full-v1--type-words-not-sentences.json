@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Cada palabra clave de la voz aparece grande y sola, y el propietario puede leerla.",
+  "account": "account-1",
+  "candidate_rule": "Texto cinetico = palabras clave sueltas, enormes (casi todo el ancho util), una idea a la vez, que entran con el movimiento de la escena y se detienen lo justo para leerse (0.15 a 0.5 s).",
+  "cause_hypothesis": "Frases completas en tamano pequeno (etiqueta de 38 px junto al cursor, linea de 70 px) no se leen en un Reel.",
+  "check_id": "type-words-not-sentences",
+  "id": "add-finder-full-v1--type-words-not-sentences",
+  "problem_evidence": "Propietario: «but no idea wich ones wich eso no se ve bien alado del mouse, todas las letras deben ser grandes; intenta no poner las frases enteras sino palablras; si deberían detenerse un poquito para q se pueda leer por un mini segundo apenas lo necesario para poder leerlo; luego en there’s a better way no se ve nada ni se nota».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

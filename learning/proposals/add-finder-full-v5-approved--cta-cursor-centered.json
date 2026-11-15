@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Cursor en x=540 en reposo y al tocar, sin cubrir el texto del CTA.",
+  "account": "account-1",
+  "candidate_rule": "En el plano final el cursor se compone centrado. Si tapa texto se reacomoda el texto, no se desplaza el cursor a un lado.",
+  "cause_hypothesis": "El cursor esperaba abajo a la derecha y tocaba el borde derecho de la pildora para no tapar el texto.",
+  "check_id": "cta-cursor-centered",
+  "id": "add-finder-full-v5-approved--cta-cursor-centered",
+  "problem_evidence": "En el mismo mensaje de aprobacion el propietario pidio: «solo cambia el final para q el mouse no esté del lado derecho y esté centrada».",
+  "source_case": "add-finder-full-v5-approved",
+  "state": "proposed"
+}

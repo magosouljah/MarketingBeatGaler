@@ -1,0 +1,32 @@
+{
+  "account": "account-1",
+  "artifact": "Final v1 (11.9 s, cursor centrado; version negra y blanca)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Captura del propietario en su telefono sin elementos cortados ni bajo la isla.",
+      "evidence": "Propietario (18:58): «con el margen en instagram no queda bien, te mandé foto y marque de negro la parte donde queda la dynamic island». Con la captura de su iPhone (19:24): «no agrandes la ventana de finder sino bájala y de atrás el fondo; también fíjate como se ve el borde. se corta». Medido sobre esa captura: Instagram escala el video a lo alto y recorta ~49 px de cada lado; la isla y la barra superior tapan ~250 px.",
+      "hypothesis": "Se compuso a sangre completa en 1080x1920 con margenes genericos. El primer arreglo (agrandar la barra de titulo de la ventana) resolvia la isla pero no el recorte lateral ni el aspecto.",
+      "id": "instagram-safe-zones-measured",
+      "proposed_rule": "Componer para el telefono real: nada legible en los primeros 250 px ni en los 49 px de cada lado. Una ventana de interfaz se muestra como ventana flotante completa (bajada, con sus bordes y el fondo visible), no agrandando su barra. Verificar los frames clave con shared/technical-qa/phone_guide.py antes de un render largo.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Ningun frame del plano final muestra dos portadas atravesandose.",
+      "evidence": "Propietario: «al final las portadas flotantes se clipean, en general me gusta como se ven solo q no se clipeen».",
+      "hypothesis": "Planos inclinados a profundidades cercanas que se solapan en pantalla se atraviesan (el navegador parte los planos en preserve-3d).",
+      "id": "floating-covers-no-intersection",
+      "proposed_rule": "La disposicion final de objetos 3D inclinados se resuelve antes de animar: dos objetos cuyos rangos de profundidad se tocan no pueden solaparse en pantalla. Limitar la inclinacion (~32 grados o menos) para que el rango de profundidad de cada plano sea corto.",
+      "status": "fail"
+    },
+    {
+      "evidence": "El cursor espera en (540, 1400), sube recto y toca la pildora en (540, 858) en F328; el bloque del CTA se subio y «to try it for free» se bajo para dejarle sitio. Verificado por el agente en frames; sin comentario posterior del propietario sobre este punto.",
+      "id": "cta-cursor-centered",
+      "status": "pass"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 18:58 y 19:24.",
+  "human_approved": false,
+  "id": "add-finder-final-v1",
+  "project": "add-finder"
+}

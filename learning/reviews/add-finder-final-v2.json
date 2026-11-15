@@ -1,0 +1,11 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-final-v2",
+  "failed": [],
+  "human_approved": false,
+  "passed": [
+    "instagram-safe-zones-measured",
+    "floating-covers-no-intersection",
+    "cta-cursor-centered"
+  ]
+}

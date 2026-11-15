@@ -1,0 +1,13 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-test-v1",
+  "failed": [
+    "beat-sync-measured-hits",
+    "cursor-click-decision",
+    "speed-lines-read-as-rain",
+    "file-type-variety",
+    "review-copy-frame-counter"
+  ],
+  "human_approved": false,
+  "passed": []
+}

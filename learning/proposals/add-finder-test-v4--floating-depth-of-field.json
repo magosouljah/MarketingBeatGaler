@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En un frame del vuelo se distinguen al menos tres planos de nitidez y el propietario lo considera premium.",
+  "account": "account-1",
+  "candidate_rule": "Los objetos que flotan llevan profundidad de campo: foco en el plano del protagonista, los cercanos grandes y desenfocados, los lejanos pequenos, desenfocados y atenuados. En vuelo, tarjetas claras sobre fondo oscuro.",
+  "cause_hypothesis": "Todos los objetos flotantes nitidos y del mismo tono se ven planos.",
+  "check_id": "floating-depth-of-field",
+  "id": "add-finder-test-v4--floating-depth-of-field",
+  "problem_evidence": "Propietario, con dos videos de referencia: «tambien me acabo de dar cuenta q si los beats q estan flotando tienen blur se vana ver de mejro calidad y si las letras tienen sombra y cosas asi… podemos hacer q los beats flotando se vean mucho mas premium».",
+  "source_case": "add-finder-test-v4",
+  "state": "proposed"
+}

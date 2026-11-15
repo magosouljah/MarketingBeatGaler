@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "No se percibe un patron de angulos y ninguna tarjeta dispersa muestra titulo, estrellas o tags.",
+  "account": "account-1",
+  "candidate_rule": "Al dispersar objetos: solo la portada (sin datos), y angulo, tamano y giro lento distintos en cada una, sin simetria entre lados.",
+  "cause_hypothesis": "Todas las tarjetas giraban ~50 grados segun su lado: se leia como dos paredes, no como dispersion.",
+  "check_id": "scatter-covers-only-varied-angles",
+  "id": "add-finder-full-v1--scatter-covers-only-varied-angles",
+  "problem_evidence": "Propietario: «en 11:13 los beats q están dispersos no tienen q tener las beat cards pueden ser solo las portadas; y también no se sienten scattered porq todas tienen el mismo ángulo. así q varíalo un poco para q no se vea un patron».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

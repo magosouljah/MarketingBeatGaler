@@ -1,0 +1,11 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-test-v2",
+  "failed": [
+    "cursor-searches-from-start",
+    "daw-logos-only-as-files",
+    "voice-phrase-spacing"
+  ],
+  "human_approved": false,
+  "passed": []
+}

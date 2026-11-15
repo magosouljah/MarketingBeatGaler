@@ -1,0 +1,27 @@
+{
+  "account": "account-1",
+  "artifact": "Prueba 4 (10.7 s, segundo beat, scroll largo, HUNDREDS/OF/BEATS atenuadas)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Ninguna palabra aparece semitransparente ni acompanada de simbolos.",
+      "evidence": "Propietario sobre la prueba 4: «ok ya me gusto mucho solo las letras no; se ven bastante mal; no me gusta q queden como trans´parente y solo negro la q dice». Y sobre el siguiente intento (fichas azules con icono, 14:12): «no me gusta q tenga los símbolos cada palabra, ninguna debería tener eso».",
+      "hypothesis": "Palabras atenuadas al 30 % de opacidad, y despues adornadas con iconos, hacen que el texto parezca un efecto de plantilla.",
+      "id": "type-solid-not-transparent",
+      "proposed_rule": "El texto en pantalla es solido (opacidad 100 %), de un solo color pleno, sin iconos ni adornos. La separacion del fondo se logra con halo o sombra, no con transparencia.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En un frame del vuelo se distinguen al menos tres planos de nitidez y el propietario lo considera premium.",
+      "evidence": "Propietario, con dos videos de referencia: «tambien me acabo de dar cuenta q si los beats q estan flotando tienen blur se vana ver de mejro calidad y si las letras tienen sombra y cosas asi… podemos hacer q los beats flotando se vean mucho mas premium».",
+      "hypothesis": "Todos los objetos flotantes nitidos y del mismo tono se ven planos.",
+      "id": "floating-depth-of-field",
+      "proposed_rule": "Los objetos que flotan llevan profundidad de campo: foco en el plano del protagonista, los cercanos grandes y desenfocados, los lejanos pequenos, desenfocados y atenuados. En vuelo, tarjetas claras sobre fondo oscuro.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 03:38.",
+  "human_approved": false,
+  "id": "add-finder-test-v4",
+  "project": "add-finder"
+}

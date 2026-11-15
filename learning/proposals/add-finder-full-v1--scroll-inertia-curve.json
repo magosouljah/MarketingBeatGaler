@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario no percibe un frenon al final del scroll.",
+  "account": "account-1",
+  "candidate_rule": "Un scroll largo es un impulso con inercia: ataque rapido y cola exponencial larga (posicion proporcional a 1 - e^(-5.2 * u^1.25)).",
+  "cause_hypothesis": "La curva era simetrica (ease in-out): frenaba tan rapido como arrancaba.",
+  "check_id": "scroll-inertia-curve",
+  "id": "add-finder-full-v1--scroll-inertia-curve",
+  "problem_evidence": "Propietario: «en el segundo 2:13 el frenado después del scroll rápido debe ser más lento y natural. mejora la curva».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-full-v4",
+  "failed": [
+    "shortest-path-to-cta"
+  ],
+  "human_approved": false,
+  "passed": []
+}

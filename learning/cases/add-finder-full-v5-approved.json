@@ -1,0 +1,154 @@
+{
+  "account": "account-1",
+  "approval_evidence": "Propietario, 2026-11-14 18:37 (America/Mexico_City), sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, sobre beatgaler-anuncio-v5.mp4: «me encanta manda versión final solo cambia el final para q el mouse no esté del lado derecho y esté centrada». Aprobacion previa parcial (03:38, prueba 4): «ok ya me gusto mucho solo las letras no».",
+  "artifact": "Anuncio completo v5 (11.9 s: del clic en el tag directo al CTA, musica continua)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "evidence": "Tiempos medidos con shared/editing/find_hits.py sobre el beat (archivo desde 0.546 s): clic F144 = kick 4.800 s; cuadricula F181 = kick 6.031 s; mutacion en rafagas sobre el redoble 6.14-6.69 s; barra de tags F229 = caja 7.645 s; clic en el tag F242 = kick 8.071 s; marca F260 = kick 8.681 s.",
+      "id": "beat-sync-measured-hits",
+      "status": "pass"
+    },
+    {
+      "evidence": "El cursor llega al archivo en F135 y queda inmovil 9 frames; en F144 se encoge a 0.74x con sonido de clic y aro, aguanta y suelta. Mismo patron en el tag (quieto F235-F241, clic F242) y en la pildora (quieto F320-F327, clic F328).",
+      "id": "cursor-click-decision",
+      "status": "pass"
+    },
+    {
+      "evidence": "Entre F147 y F202 el viaje usa motas con desenfoque de 2 px, estiramiento maximo 3.2x y opacidad media; el propietario no volvio a mencionar lluvia ni lineas.",
+      "id": "speed-lines-read-as-rain",
+      "status": "pass"
+    },
+    {
+      "evidence": "La lista mezcla .wav, .mp3, .flp y .als con sus iconos, incluidos «goati 3.als» y «trash beat omg.flp».",
+      "id": "file-type-variety",
+      "status": "pass"
+    },
+    {
+      "evidence": "Desde la prueba 2 cada entrega llevo copia con contador y el propietario corrigio por frame: «desde el fram 32 hasta 66», «cuando en 104 el mouse sube», «el mouse en F124 a 141».",
+      "id": "review-copy-frame-counter",
+      "status": "pass"
+    },
+    {
+      "evidence": "El cursor entra en F6, espera abajo durante las letras, visita dos archivos (llega en F103 y en F122) con la fila bajo el dedo resaltada en azul claro, y llega al protagonista en F135.",
+      "id": "cursor-searches-from-start",
+      "status": "pass"
+    },
+    {
+      "evidence": "Los iconos .flp y .als se funden al icono neutro de audio entre F176 y F180, antes de caer en la cuadricula (F181); ningun mosaico gris de la Gallery lleva logo de DAW.",
+      "id": "daw-logos-only-as-files",
+      "status": "pass"
+    },
+    {
+      "evidence": "«You have hundreds of beats» termina en 2.27 s y «but no idea which one's which» empieza en 2.50 s; la voz acaba en 4.57 s y el clic cae en 4.80 s. Para que cupiera se movio el inicio de la musica, no la voz.",
+      "id": "voice-phrase-spacing",
+      "status": "pass"
+    },
+    {
+      "evidence": "Scroll unico de F25 a F88. Desplazamientos del cursor: F87-F103, F111-F122 y F125-F135 (el primero arranca sobre el ultimo frame de la cola de inercia).",
+      "id": "cursor-and-scroll-never-together",
+      "status": "pass"
+    },
+    {
+      "evidence": "Los tres desplazamientos duran 16, 11 y 10 frames, con pausas de 8 y 3 frames entre ellos.",
+      "id": "cursor-natural-speed",
+      "status": "pass"
+    },
+    {
+      "evidence": "Palabras en negro pleno con halo claro (F25-F139) y en blanco pleno con sombra (F160-F180); sin opacidad parcial ni iconos.",
+      "id": "type-solid-not-transparent",
+      "status": "pass"
+    },
+    {
+      "evidence": "Vuelo F147-F181: foco en el plano del protagonista, tarjetas cercanas grandes con hasta 12 px de desenfoque, lejanas pequenas y atenuadas. Cierre F260-F357: portadas dispersas con desenfoque segun profundidad.",
+      "id": "floating-depth-of-field",
+      "status": "pass"
+    },
+    {
+      "evidence": "Scroll de 8150 px entre 0.84 y 2.94 s con curva de inercia: a mitad del tiempo ya recorrio el 89 % y el resto se disipa en ~1 s.",
+      "id": "scroll-inertia-curve",
+      "status": "pass"
+    },
+    {
+      "evidence": "HUNDREDS / OF / BEATS (F25, F44, F49), NO IDEA / WHICH / ONE'S / WHICH (F81, F107, F115, F123) y A BETTER / WAY. (F160, F170), todas de 158 px de cuerpo o mas. Las palabras de barra se detienen entre 0.16 y 0.76 s; los tres bloques quedan en pantalla hasta F71.",
+      "id": "type-words-not-sentences",
+      "status": "pass"
+    },
+    {
+      "evidence": "La galeria dura de F181 a F242 (2.0 s) con empuje de camara continuo hasta F224 y un evento cada pocos frames: mutaciones F184-F224, marca F218, barra de tags F229, cursor sobre el tag F235, clic F242.",
+      "id": "no-static-screen-over-two-seconds",
+      "status": "pass"
+    },
+    {
+      "evidence": "Mutacion entre 6.14 y 7.46 s (1.3 s): 36 tarjetas en cinco rafagas sobre el redoble y el resto al azar; cada portada crece desde un punto en 0.2 s y sus datos entran 0.09-0.14 s despues.",
+      "id": "cover-mutation-random-fast",
+      "status": "pass"
+    },
+    {
+      "evidence": "Barra de tags reconstruida desde TagNavigation.tsx y gallery.css de la app: etiquetas de texto sin pildora, «All» primero, peso 430 que pasa a 720 al activarse, desvanecido a la derecha y paleta real (#FF3B30, #FF9500, #FFCC00, #34C759, #007AFF, #AF52DE, #8E8E93).",
+      "id": "real-product-ui-components",
+      "status": "pass"
+    },
+    {
+      "evidence": "Dispersion F242-F260: los datos de cada tarjeta se ocultan en F246 y cada portada toma inclinacion, escala (0.68 a 1.30) y giro lento propios, sin simetria entre lados.",
+      "id": "scatter-covers-only-varied-angles",
+      "status": "pass"
+    },
+    {
+      "evidence": "El anuncio paso de 21.9 s a 11.9 s. La musica entra desde 0.546 s del archivo para que su kick caiga en el clic y corre continua; ninguna escena espera un golpe.",
+      "id": "pacing-video-leads-music",
+      "status": "pass"
+    },
+    {
+      "evidence": "Tres bloques (HUNDREDS x3, OF x8, BEATS x4) en negro, sin fondo ni seleccion, con el mismo margen y el mismo ancho, y la lista del Finder visible detras (F25-F78).",
+      "id": "type-never-covers-or-fakes-ui",
+      "status": "pass"
+    },
+    {
+      "evidence": "Alineacion forzada de las cuatro locuciones: HUNDREDS entra en F25 (voz F26), OF F44 (voz F46), BEATS F49 (voz F50), WHICH F107, ONE'S F115, WHICH F123, «for» F322 y «free» F328 con el toque a la pildora.",
+      "id": "word-timing-forced-alignment",
+      "status": "pass"
+    },
+    {
+      "evidence": "Clic en el tag F242, dispersion, zoom, marca F260 y pildora F266: 0.6 s del ultimo gesto al CTA; total 11.9 s.",
+      "id": "shortest-path-to-cta",
+      "status": "pass"
+    },
+    {
+      "acceptance_test": "Cursor en x=540 en reposo y al tocar, sin cubrir el texto del CTA.",
+      "evidence": "En el mismo mensaje de aprobacion el propietario pidio: «solo cambia el final para q el mouse no esté del lado derecho y esté centrada».",
+      "hypothesis": "El cursor esperaba abajo a la derecha y tocaba el borde derecho de la pildora para no tapar el texto.",
+      "id": "cta-cursor-centered",
+      "proposed_rule": "En el plano final el cursor se compone centrado. Si tapa texto se reacomoda el texto, no se desplaza el cursor a un lado.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 18:37.",
+  "human_approved": true,
+  "id": "add-finder-full-v5-approved",
+  "project": "add-finder",
+  "validates_proposals": [
+    "add-finder-test-v1--beat-sync-measured-hits",
+    "add-finder-test-v1--cursor-click-decision",
+    "add-finder-test-v1--speed-lines-read-as-rain",
+    "add-finder-test-v1--file-type-variety",
+    "add-finder-test-v1--review-copy-frame-counter",
+    "add-finder-test-v2--cursor-searches-from-start",
+    "add-finder-test-v2--daw-logos-only-as-files",
+    "add-finder-test-v2--voice-phrase-spacing",
+    "add-finder-test-v3--cursor-and-scroll-never-together",
+    "add-finder-test-v3--cursor-natural-speed",
+    "add-finder-test-v4--type-solid-not-transparent",
+    "add-finder-test-v4--floating-depth-of-field",
+    "add-finder-full-v1--scroll-inertia-curve",
+    "add-finder-full-v1--type-words-not-sentences",
+    "add-finder-full-v1--no-static-screen-over-two-seconds",
+    "add-finder-full-v1--cover-mutation-random-fast",
+    "add-finder-full-v1--real-product-ui-components",
+    "add-finder-full-v1--scatter-covers-only-varied-angles",
+    "add-finder-full-v1--pacing-video-leads-music",
+    "add-finder-full-v2--type-never-covers-or-fakes-ui",
+    "add-finder-full-v3--word-timing-forced-alignment",
+    "add-finder-full-v4--shortest-path-to-cta"
+  ]
+}

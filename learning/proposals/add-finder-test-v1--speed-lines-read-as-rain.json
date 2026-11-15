@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ningun frame del viaje muestra trazos largos y el propietario no menciona lluvia ni lineas.",
+  "account": "account-1",
+  "candidate_rule": "Para dar sensacion de viaje usar motas suaves y desenfocadas, con estiramiento maximo de ~3x y opacidad baja. La velocidad la comunican los objetos que viajan con la camara y la profundidad, no lineas.",
+  "cause_hypothesis": "Particulas blancas muy estiradas en vertical y con mucha opacidad dejan de leerse como velocidad y pasan a leerse como lluvia.",
+  "check_id": "speed-lines-read-as-rain",
+  "id": "add-finder-test-v1--speed-lines-read-as-rain",
+  "problem_evidence": "Autoevaluacion del agente al entregar la prueba: «las blancas del viaje pueden leerse como lluvia». Propietario: «de aceurdo».",
+  "source_case": "add-finder-test-v1",
+  "state": "proposed"
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "No se distingue un patron de barrido y toda la mutacion dura 1.3 s o menos.",
+  "account": "account-1",
+  "candidate_rule": "Cada tarjeta muta con su propio reloj, en orden aleatorio y en rafagas sobre los golpes: la portada crece desde un punto (~0.2 s) y sus datos entran ~0.1 s despues.",
+  "cause_hypothesis": "Revelar todo en ondas uniformes y en dos golpes globales (portadas, luego datos) se ve mecanico y lento.",
+  "check_id": "cover-mutation-random-fast",
+  "id": "add-finder-full-v1--cover-mutation-random-fast",
+  "problem_evidence": "Propietario en la prueba 1: «puedes hacer q se vallan agregando portadas a lo random pero me gustaria q al ponerse portadas q tengan animacion las portadas como q crecen». En el completo v1: «como mutan los beats a beats con portada y tags debe verse más rápido y random».",
+  "source_case": "add-finder-full-v1",
+  "state": "proposed"
+}

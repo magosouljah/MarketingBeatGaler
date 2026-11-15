@@ -1,0 +1,27 @@
+{
+  "account": "account-1",
+  "artifact": "Prueba 3 (10.3 s, 1.7 s de imagen antes del beat, entrada del Finder, cursor buscando)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "En la copia con contador no hay frames con scroll y desplazamiento de cursor simultaneos (se admite la cola de inercia casi detenida).",
+      "evidence": "Propietario: «cuando en 104 el mouse sube al mismo tiempo q el scrolll se me hace sentir como q la mano sube la pagina o nose creo q fue un accidente pero intenta q no sean los movimientos al mismo tiempo».",
+      "hypothesis": "Cursor y lista moviendose a la vez en la misma direccion se leen como si la mano arrastrara la pagina.",
+      "id": "cursor-and-scroll-never-together",
+      "proposed_rule": "El cursor nunca se desplaza mientras la lista hace scroll: se alternan. Durante un scroll el cursor queda quieto.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Ningun desplazamiento dura menos de 9 frames y el propietario no lo percibe apresurado.",
+      "evidence": "Propietario: «el mouse en F124 a 141 es demasiado rapido porfavor q se sienta mas natural». En ese tramo el cursor hacia tres saltos entre filas en 0.57 s.",
+      "hypothesis": "Tres desplazamientos encadenados en medio segundo son mas rapidos que una mano real.",
+      "id": "cursor-natural-speed",
+      "proposed_rule": "Un desplazamiento del cursor entre dos puntos dura 0.3 s o mas, con aceleracion y frenado suaves; maximo dos o tres desplazamientos por tramo de duda, con pausa entre ellos.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4, 2026-11-14, hora America/Mexico_City; feedback del propietario a las 03:19.",
+  "human_approved": false,
+  "id": "add-finder-test-v3",
+  "project": "add-finder"
+}

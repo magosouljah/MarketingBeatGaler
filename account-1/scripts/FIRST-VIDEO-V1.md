@@ -1,5 +1,7 @@
 # BeatGaler — First product video (working brief)
 
+> **Sustituido (2026-11-14).** Este brief de ~30 s con la órbita de portadas nunca se produjo. El primer anuncio real es [add-finder](../videos/add-finder/) (11.9 s); su concepto está en [BRIEF.md](../videos/add-finder/BRIEF.md). Este archivo se conserva porque `learning/cases/orbit-initial-rejection.json` lo cita como fuente.
+
 Status: concept and narration V3 approved as working baseline; visuals exploratory, **no final motion approved**. Target: vertical 9:16, cinematic/premium product advertisement, approximately 30–35 seconds pending recorded narration. English female narrator, deep cinematic tone with energetic moments. Work voice-first for timing, but approve one high-fidelity visual before full production.
 
 ## Narration — V3 (preserve unless user requests changes)

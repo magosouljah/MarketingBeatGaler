@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ningun frame del plano final muestra dos portadas atravesandose.",
+  "account": "account-1",
+  "candidate_rule": "La disposicion final de objetos 3D inclinados se resuelve antes de animar: dos objetos cuyos rangos de profundidad se tocan no pueden solaparse en pantalla. Limitar la inclinacion (~32 grados o menos) para que el rango de profundidad de cada plano sea corto.",
+  "cause_hypothesis": "Planos inclinados a profundidades cercanas que se solapan en pantalla se atraviesan (el navegador parte los planos en preserve-3d).",
+  "check_id": "floating-covers-no-intersection",
+  "id": "add-finder-final-v1--floating-covers-no-intersection",
+  "problem_evidence": "Propietario: «al final las portadas flotantes se clipean, en general me gusta como se ven solo q no se clipeen».",
+  "source_case": "add-finder-final-v1",
+  "state": "proposed"
+}

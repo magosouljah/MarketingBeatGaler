@@ -1,0 +1,12 @@
+{
+  "name": "beatgaler-add-finder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "npx --yes hyperframes@0.9.44 lint",
+    "preview": "npx --yes hyperframes@0.9.44 preview"
+  },
+  "dependencies": {
+    "gsap": "3.13.0"
+  }
+}

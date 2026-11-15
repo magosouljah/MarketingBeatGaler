@@ -1,0 +1,32 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-full-v5-approved",
+  "failed": [
+    "cta-cursor-centered"
+  ],
+  "human_approved": true,
+  "passed": [
+    "beat-sync-measured-hits",
+    "cursor-click-decision",
+    "speed-lines-read-as-rain",
+    "file-type-variety",
+    "review-copy-frame-counter",
+    "cursor-searches-from-start",
+    "daw-logos-only-as-files",
+    "voice-phrase-spacing",
+    "cursor-and-scroll-never-together",
+    "cursor-natural-speed",
+    "type-solid-not-transparent",
+    "floating-depth-of-field",
+    "scroll-inertia-curve",
+    "type-words-not-sentences",
+    "no-static-screen-over-two-seconds",
+    "cover-mutation-random-fast",
+    "real-product-ui-components",
+    "scatter-covers-only-varied-angles",
+    "pacing-video-leads-music",
+    "type-never-covers-or-fakes-ui",
+    "word-timing-forced-alignment",
+    "shortest-path-to-cta"
+  ]
+}
