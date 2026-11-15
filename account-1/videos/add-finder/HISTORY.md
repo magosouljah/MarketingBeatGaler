@@ -31,10 +31,10 @@ Cinco rondas de preguntas sobre el documento «Concepto creativo del primer anun
 | # | Hora | Duración | Qué cambió | Feedback | Caso |
 | --- | --- | --- | --- | --- | --- |
 | 10 | 18:58 | 11.9 s | Cursor centrado; versiones negra y blanca | Margen de Instagram e isla dinámica; las portadas «se clipean»; con la captura (19:24): «no agrandes la ventana de finder sino bájala»; «el borde se corta» | `add-finder-final-v1` |
-| 11 | — | 11.9 s | Finder como ventana flotante, zonas seguras medidas, portadas sin atravesarse | Sin aprobación explícita todavía. A las 23:50 pidió registrar lo aprendido. | `add-finder-final-v2` |
+| 11 | — | 11.9 s | Finder como ventana flotante, zonas seguras medidas, portadas sin atravesarse | A las 23:50 pidió registrar lo aprendido. El 15 a la 01:01 la calificó con 7.0 y a la 01:08 la cerró: «No hagas otra versión, es suficientemente buena» | `add-finder-final-v2`, `add-finder-scorecard-v1`, `add-finder-scorecard-v1-followup` |
 
 ## Qué versión es cuál
 
 - **Aprobada:** la 9 (v5).
-- **Última entregada:** la 11 (final v2), en negro y blanco. Es la que reproduce `tools/render.sh`.
+- **Última entregada y definitiva:** la 11 (final v2), en negro y blanco. Es la que reproduce `tools/render.sh`. No habrá otra versión.
 - Las versiones intermedias no se conservan como fuente: `project/index.html` es la final.

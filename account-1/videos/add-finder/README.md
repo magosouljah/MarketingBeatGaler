@@ -4,7 +4,7 @@ Anuncio vertical de BeatGaler para Instagram (cuenta 1). Un productor busca un b
 
 | | |
 | --- | --- |
-| **Estado** | Entregado el 2026-11-14. La v5 fue aprobada por el propietario («me encanta»). La última entrega (final v2, con la ventana flotante y los márgenes de Instagram) aún no tiene aprobación explícita. |
+| **Estado** | **Cerrado.** Entregado el 2026-11-14; la v5 fue aprobada («me encanta») y el 2026-11-15 el propietario cerró la final v2: «No hagas otra versión, es suficientemente buena». Calificación: 7.0 de 10. |
 | **Formato** | 1080×1920, 30 fps, 11.9 s (357 frames), solo orgánico, inglés |
 | **Versiones** | `negro`: beat + voz + efectos. `blanco`: mismo video sobre blanco, solo voz. |
 | **Herramienta** | [HyperFrames](../../../shared/hyperframes/README.md) 0.9.44 (HTML/CSS/JS), audio mezclado aparte con FFmpeg |

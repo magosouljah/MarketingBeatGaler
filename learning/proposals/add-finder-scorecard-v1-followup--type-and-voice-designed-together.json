@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En el siguiente video el propietario elige el tratamiento a partir de clips con voz y califica con 8 o mas tanto Texto como Montaje de audio.",
+  "account": "account-1",
+  "candidate_rule": "Texto y voz se diseñan y se revisan juntos: las opciones de tratamiento tipografico se enseñan al propietario como clips cortos (2 a 3 s) con la locucion sonando, nunca como imagen fija ni en silencio, y se elige una antes de animar el resto.",
+  "cause_hypothesis": "El texto se diseño como imagen y despues se sincronizo con la voz: cada palabra cae a 2 frames o menos de oirse, pero coincidir en el tiempo no basta para que letras y voz se sientan una sola cosa (como entra la palabra frente a como se pronuncia, cuanto texto hay en pantalla frente a lo que se oye, palabras repetidas que la voz dice una vez). Es una hipotesis del agente; faltan las referencias del propietario.",
+  "check_id": "type-and-voice-designed-together",
+  "id": "add-finder-scorecard-v1-followup--type-and-voice-designed-together",
+  "problem_evidence": "Montaje de audio: 6 de 10. Aclaracion del propietario: «El montaje del audio, no me refiero a que el montaje del audio esté mal, sino cómo queda con las letras al mismo tiempo».",
+  "source_case": "add-finder-scorecard-v1-followup",
+  "state": "proposed"
+}

@@ -1,0 +1,20 @@
+{
+  "account": "account-1",
+  "artifact": "Final v2 (11.9 s), aclaraciones del propietario a su calificacion",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado. Fuente reproducible: account-1/videos/add-finder/project/.",
+  "checks": [
+    {
+      "acceptance_test": "En el siguiente video el propietario elige el tratamiento a partir de clips con voz y califica con 8 o mas tanto Texto como Montaje de audio.",
+      "evidence": "Montaje de audio: 6 de 10. Aclaracion del propietario: «El montaje del audio, no me refiero a que el montaje del audio esté mal, sino cómo queda con las letras al mismo tiempo».",
+      "hypothesis": "El texto se diseño como imagen y despues se sincronizo con la voz: cada palabra cae a 2 frames o menos de oirse, pero coincidir en el tiempo no basta para que letras y voz se sientan una sola cosa (como entra la palabra frente a como se pronuncia, cuanto texto hay en pantalla frente a lo que se oye, palabras repetidas que la voz dice una vez). Es una hipotesis del agente; faltan las referencias del propietario.",
+      "id": "type-and-voice-designed-together",
+      "proposed_rule": "Texto y voz se diseñan y se revisan juntos: las opciones de tratamiento tipografico se enseñan al propietario como clips cortos (2 a 3 s) con la locucion sonando, nunca como imagen fija ni en silencio, y se elige una antes de animar el resto.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4; mensaje del propietario del 2026-11-15 a las 01:08 (America/Mexico_City).",
+  "human_approved": false,
+  "id": "add-finder-scorecard-v1-followup",
+  "note": "El propietario cerro el video: «No hagas otra versión, es suficientemente buena». No se produce una version nueva; lo aprendido se aplica al siguiente video. Sobre el texto: «Realmente siento que el texto se podría ver mejor. Luego mandaré referencias» (referencias pendientes). Este caso afina la propuesta add-finder-scorecard-v1--type-treatment-chosen-from-options: las opciones deben verse con la voz, no como imagen fija.",
+  "project": "add-finder"
+}

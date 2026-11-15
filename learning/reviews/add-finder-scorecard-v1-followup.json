@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "add-finder-scorecard-v1-followup",
+  "failed": [
+    "type-and-voice-designed-together"
+  ],
+  "human_approved": false,
+  "passed": []
+}

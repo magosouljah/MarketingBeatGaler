@@ -4,7 +4,7 @@ Un video por carpeta, con su fuente, su brief y lo aprendido.
 
 | Video | Estado | Qué es |
 | --- | --- | --- |
-| [add-finder](add-finder/) | Entregado 2026-11-14; v5 aprobada, final v2 pendiente de confirmar | Anuncio de 11.9 s: del caos del Finder a la Gallery y al CTA |
+| [add-finder](add-finder/) | Cerrado 2026-11-15; calificación 7.0 de 10 | Anuncio de 11.9 s: del caos del Finder a la Gallery y al CTA |
 | [orbit](orbit/) | Archivado; rechazado, nunca aprobado | Pruebas de una órbita 3D de portadas |
 
 ## Video nuevo

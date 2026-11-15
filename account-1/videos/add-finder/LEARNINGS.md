@@ -109,12 +109,15 @@ Qué hay detrás de los 6 (caso `add-finder-scorecard-v1`, tres propuestas nueva
 
 - **Ritmo:** el cierre con el CTA es largo (F260–F357, 3.2 s).
 - **Dispersión:** «están todas del mismo tamaño y no se sienten dinámicos».
-- **Texto:** no convence ningún grupo de letras; falta saber qué les molesta. Para el siguiente video: enseñar opciones de tipografía antes de animar.
-- **Montaje de audio:** sin detalle todavía.
+- **Texto:** no convence ningún grupo de letras: «realmente siento que el texto se podría ver mejor». Mandará referencias.
+- **Montaje de audio:** el 6 no es por la colocación del audio sino por «cómo queda con las letras al mismo tiempo». Texto y voz se diseñan juntos: para el siguiente video, enseñar 2 o 3 tratamientos de letras como clips cortos **con la voz sonando** y animar solo el elegido (caso `add-finder-scorecard-v1-followup`).
+
+**Video cerrado:** «No hagas otra versión, es suficientemente buena». Estas correcciones se aplican al siguiente video, no a este.
 
 ## 10. Abierto
 
-- Aprobación del propietario a la final v2 (y con ella promover las 3 propuestas ⏳).
+- El propietario cerró el video como «suficientemente buena» (2026-11-15). Falta que confirme si eso cuenta como aprobación para promover las 3 propuestas ⏳.
+- Referencias de texto que enviará el propietario.
 - Durante el medio segundo de dispersión las portadas aún pueden rozarse al pasar; en reposo no.
 - Mezcla definitiva.
 - `DIRECCION.md` sigue diciendo que la prioridad es la órbita; solo el propietario puede autorizar ese cambio.

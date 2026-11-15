@@ -6,7 +6,7 @@ Sistema de research y producción de videos verticales para **BeatGaler**. Docum
 
 | Video | Cuenta | Estado |
 | --- | --- | --- |
-| [add-finder](account-1/videos/add-finder/) | 1 | Entregado 2026-11-14 (11.9 s, negro y blanco). v5 aprobada; última entrega pendiente de confirmar. **[Todo lo aprendido](account-1/videos/add-finder/LEARNINGS.md)** |
+| [add-finder](account-1/videos/add-finder/) | 1 | Cerrado 2026-11-15 (11.9 s, negro y blanco). Calificación del propietario: 7.0 de 10. **[Todo lo aprendido](account-1/videos/add-finder/LEARNINGS.md)** |
 | [orbit](account-1/videos/orbit/) | 1 | Archivado, nunca aprobado |
 
 ## Mapa del repositorio
