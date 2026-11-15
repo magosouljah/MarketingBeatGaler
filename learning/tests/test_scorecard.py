@@ -25,15 +25,15 @@ class ScorecardTest(unittest.TestCase):
 
     def test_add_stores_only_what_the_owner_answered(self):
         def body(base):
-            scorecard.add('demo', 'account-1', 'v1', ['hook=8', 'pacing=5'], 'nota', 'Owner, chat', '2026-01-01')
+            scorecard.add('demo', 'account-1', 'v1', ['sync=8', 'pacing=5'], 'nota', 'Owner, chat', '2026-01-01')
             saved = json.loads((base / 'scores/demo.json').read_text(encoding='utf-8'))
-            self.assertEqual(saved['scores'], {'hook': 8, 'pacing': 5})
+            self.assertEqual(saved['scores'], {'sync': 8, 'pacing': 5})
             scorecard.show()
         self.run_in_temp(body)
 
     def test_rejects_unknown_aspect_out_of_range_and_missing_evidence(self):
         def body(base):
-            for pairs, evidence in ((['nope=5'], 'x'), (['hook=11'], 'x'), (['hook=0'], 'x'), (['hook=7'], '')):
+            for pairs, evidence in ((['nope=5'], 'x'), (['hook=5'], 'x'), (['sync=11'], 'x'), (['sync=0'], 'x'), (['sync=7'], '')):
                 with self.assertRaises(ValueError):
                     scorecard.add('demo', 'account-1', '', pairs, '', evidence, '')
         self.run_in_temp(body)

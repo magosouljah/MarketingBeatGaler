@@ -28,7 +28,7 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 
 ## Cuestionario por video
 
-Al cerrar cada video el propietario califica 15 aspectos del 1 al 10: [scorecard/README.md](scorecard/README.md). Sirve para comparar videos entre sí; no sustituye a los casos ni a la aprobación explícita.
+Al cerrar cada video el propietario califica del 1 al 10 quince aspectos de la ejecución del agente (solo lo que el agente controla): [scorecard/README.md](scorecard/README.md). Sirve para comparar videos entre sí; no sustituye a los casos ni a la aprobación explícita.
 
 ## Protección y límites
 

@@ -2,7 +2,7 @@
 """Cuestionario de calificación 1-10 que el propietario responde al cerrar cada video.
 
     python learning/scorecard/scorecard.py add add-finder --account account-1 --version "final v2" \
-        hook=8 pacing=7 sync=9 --note "el cierre se siente corto" --evidence "sesion <url>, 2026-11-15"
+        pacing=7 sync=9 motion=8 --note "el cierre se siente corto" --evidence "sesion <url>, 2026-11-15"
     python learning/scorecard/scorecard.py show
 
 Las calificaciones son SOLO del propietario: el agente las transcribe tal cual, nunca las
