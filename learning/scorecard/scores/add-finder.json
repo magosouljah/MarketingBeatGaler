@@ -1,0 +1,25 @@
+{
+  "video": "add-finder",
+  "account": "account-1",
+  "version": "final v2",
+  "date": "2026-11-15",
+  "questionnaire_version": 2,
+  "scores": {
+    "pacing": 6,
+    "sync": 7,
+    "motion": 7,
+    "transitions": 7,
+    "type": 6,
+    "visual_clarity": 7,
+    "polish": 7,
+    "product": 9,
+    "format": 8,
+    "audio_edit": 6,
+    "understanding": 7,
+    "self_qa": 7,
+    "judgment": 7,
+    "execution": 7
+  },
+  "note": "siento q cuando se dispersan los beats podría quedar mejor",
+  "evidence": "Propietario, 2026-11-15 01:01 (America/Mexico_City), sesion Claude https://claude.ai/code/session_015kcBBsCG9a1mA8keWZkft4. Eficiencia sin calificar."
+}
