@@ -21,3 +21,7 @@ __pycache__/
 /account-1/videos/add-finder/project/assets/beat.mp3
 /account-1/videos/add-finder/project/assets/gsap.min.js
 /account-*/videos/*/project/.hyperframes/
+
+# HyperFrames local studio/snapshot state
+.hyperframes/
+node_modules/

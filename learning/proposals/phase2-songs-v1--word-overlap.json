@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "No frame with two centre words in any rendered video; owner confirmation that the clean cut is wanted.",
+  "account": "account-1",
+  "candidate_rule": "problem: Two centre words share frames at a cut.\nimplementation: Derive each word's clip duration from the next cut (W2_OVERLAP = 0) and check frame by frame that exactly one word is visible.\nuse_when: Sequential centre words on hard cuts.\navoid_when: A deliberate cross-fade between words is part of the brief.",
+  "cause_hypothesis": "[implementation; unvalidated] The overlap is an authoring slip in v7 (w2 duration not updated when the cut moved), not a design choice; the reference cuts cleanly.",
+  "check_id": "word-overlap",
+  "id": "phase2-songs-v1--word-overlap",
+  "problem_evidence": "Inherited from approved v7: Free* lasts 0.87 s and Storage cuts in 0.83 s later, so both words are on screen for 1-2 frames (v7 frames 91-92; visible at 3.00 s in 05-c3-negro). Kept in all 8 to stay faithful to the approval; reported to the owner.",
+  "source_case": "phase2-songs-v1",
+  "state": "proposed"
+}

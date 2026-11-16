@@ -1,0 +1,11 @@
+{
+  "name": "beatgaler-choreography-lab-v1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.17 preview",
+    "check": "npx --yes hyperframes@0.9.17 check",
+    "render:a": "npx --yes hyperframes@0.9.17 render --variables '{\"variant\":\"a\"}' --quality draft -o ../evidence/renders/variant-a.mp4",
+    "render:all": "npx --yes hyperframes@0.9.17 render --batch rows.json --output ../evidence/renders/variant-{variant}.mp4 --batch-concurrency 1 --strict-variables --quality draft"
+  }
+}

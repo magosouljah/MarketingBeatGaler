@@ -1,0 +1,136 @@
+{
+ "phases": {
+  "fan-out": [
+   1.2,
+   1.6
+  ],
+  "wheel": [
+   1.6,
+   3.0
+  ],
+  "approach": [
+   3.0,
+   3.65
+  ],
+  "riffle": [
+   3.65,
+   4.35
+  ],
+  "clear": [
+   4.35,
+   6.0
+  ]
+ },
+ "reference": {
+  "energy": {
+   "fan-out": 0.241,
+   "wheel": 0.453,
+   "approach": 0.647,
+   "riffle": 1.0,
+   "clear": 0.062
+  },
+  "motion": {
+   "fan-out": {
+    "coverage": 0.0987,
+    "speed_med": 0.6762,
+    "affine_residual": 0.5547,
+    "speed_cv": 0.4187,
+    "coherence": 0.3847,
+    "curl": 0.5649,
+    "occlusion_proxy": 0.4892
+   },
+   "wheel": {
+    "coverage": 0.1707,
+    "speed_med": 0.6209,
+    "affine_residual": 0.4304,
+    "speed_cv": 0.4231,
+    "coherence": 0.143,
+    "curl": 5.7463,
+    "occlusion_proxy": 0.1337
+   },
+   "approach": {
+    "coverage": 0.1968,
+    "speed_med": 0.9391,
+    "affine_residual": 0.7812,
+    "speed_cv": 0.5864,
+    "coherence": 0.3226,
+    "curl": 3.6915,
+    "occlusion_proxy": 0.5837
+   },
+   "riffle": {
+    "coverage": 0.3233,
+    "speed_med": 0.8158,
+    "affine_residual": 0.7962,
+    "speed_cv": 0.8313,
+    "coherence": 0.4766,
+    "curl": 0.1395,
+    "occlusion_proxy": 0.7765
+   },
+   "clear": {
+    "coverage": 0.0616,
+    "speed_med": 0.0,
+    "affine_residual": 0.416,
+    "speed_cv": 0.1338,
+    "coherence": 0.5564,
+    "curl": -0.0065,
+    "occlusion_proxy": 0.0
+   }
+  }
+ },
+ "lab": {
+  "energy": {
+   "fan-out": 0.184,
+   "wheel": 0.299,
+   "approach": 0.424,
+   "riffle": 1.0,
+   "clear": 0.004
+  },
+  "motion": {
+   "fan-out": {
+    "coverage": 0.0962,
+    "speed_med": 0.7721,
+    "affine_residual": 0.4074,
+    "speed_cv": 0.5054,
+    "coherence": 0.6617,
+    "curl": -4.8059,
+    "occlusion_proxy": 0.4931
+   },
+   "wheel": {
+    "coverage": 0.1367,
+    "speed_med": 0.6289,
+    "affine_residual": 0.2886,
+    "speed_cv": 0.2908,
+    "coherence": 0.2664,
+    "curl": 5.3586,
+    "occlusion_proxy": 0.086
+   },
+   "approach": {
+    "coverage": 0.1663,
+    "speed_med": 0.8044,
+    "affine_residual": 0.438,
+    "speed_cv": 0.4273,
+    "coherence": 0.3098,
+    "curl": 4.2233,
+    "occlusion_proxy": 0.1487
+   },
+   "riffle": {
+    "coverage": 0.3492,
+    "speed_med": 0.936,
+    "affine_residual": 0.7645,
+    "speed_cv": 0.599,
+    "coherence": 0.3417,
+    "curl": -0.1842,
+    "occlusion_proxy": 0.784
+   },
+   "clear": {
+    "coverage": 0.0273,
+    "speed_med": 0.0,
+    "affine_residual": 0.2565,
+    "speed_cv": 0.8888,
+    "coherence": 0.2822,
+    "curl": 2.1427,
+    "occlusion_proxy": 0.8798
+   }
+  }
+ }
+}

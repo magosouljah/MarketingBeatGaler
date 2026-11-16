@@ -1,0 +1,261 @@
+{
+ "note": "Phase-matched medians. Image metrics, not 3D truth. Reference phases in original seconds.",
+ "reference_phases": {
+  "entrance": [
+   1.2,
+   1.6
+  ],
+  "orbit": [
+   1.6,
+   3.0
+  ],
+  "climax": [
+   3.0,
+   4.35
+  ],
+  "hold": [
+   4.35,
+   6.0
+  ]
+ },
+ "lab_phases": {
+  "entrance": [
+   0.0,
+   1.4
+  ],
+  "orbit": [
+   1.4,
+   3.3
+  ],
+  "climax": [
+   3.3,
+   4.9
+  ],
+  "hold": [
+   4.9,
+   6.0
+  ]
+ },
+ "reference": {
+  "motion": {
+   "entrance": {
+    "coverage": 0.0987,
+    "speed_med": 0.6799,
+    "affine_residual": 0.5546,
+    "speed_cv": 0.4215,
+    "coherence": 0.3798,
+    "curl": 0.5184,
+    "occlusion_proxy": 0.4885
+   },
+   "orbit": {
+    "coverage": 0.1709,
+    "speed_med": 0.6203,
+    "affine_residual": 0.4262,
+    "speed_cv": 0.4063,
+    "coherence": 0.143,
+    "curl": 5.7617,
+    "occlusion_proxy": 0.1365
+   },
+   "climax": {
+    "coverage": 0.2278,
+    "speed_med": 0.8739,
+    "affine_residual": 0.8025,
+    "speed_cv": 0.6908,
+    "coherence": 0.4026,
+    "curl": 0.8025,
+    "occlusion_proxy": 0.7381
+   },
+   "hold": {
+    "coverage": 0.0617,
+    "speed_med": 0.0,
+    "affine_residual": 0.4177,
+    "speed_cv": 0.1359,
+    "coherence": 0.531,
+    "curl": -0.0039,
+    "occlusion_proxy": 0.0
+   }
+  },
+  "energy": {
+   "mean_difference": {
+    "entrance": 0.0327,
+    "orbit": 0.0615,
+    "climax": 0.1124,
+    "hold": 0.0084
+   },
+   "relative_to_peak": {
+    "entrance": 0.291,
+    "orbit": 0.547,
+    "climax": 1.0,
+    "hold": 0.075
+   },
+   "peak_phase": "climax"
+  }
+ },
+ "variants": {
+  "a": {
+   "motion": {
+    "entrance": {
+     "coverage": 0.3076,
+     "speed_med": 0.3962,
+     "affine_residual": 0.7089,
+     "speed_cv": 0.3815,
+     "coherence": 0.6952,
+     "curl": 0.477,
+     "occlusion_proxy": 0.1707
+    },
+    "orbit": {
+     "coverage": 0.3424,
+     "speed_med": 0.2615,
+     "affine_residual": 0.7929,
+     "speed_cv": 0.3675,
+     "coherence": 0.4649,
+     "curl": 0.0658,
+     "occlusion_proxy": 0.0835
+    },
+    "climax": {
+     "coverage": 0.3598,
+     "speed_med": 0.5035,
+     "affine_residual": 0.8133,
+     "speed_cv": 0.3592,
+     "coherence": 0.2053,
+     "curl": 0.6497,
+     "occlusion_proxy": 0.1727
+    },
+    "hold": {
+     "coverage": 0.345,
+     "speed_med": 0.0901,
+     "affine_residual": 0.8496,
+     "speed_cv": 0.3755,
+     "coherence": 0.2973,
+     "curl": 0.2454,
+     "occlusion_proxy": 0.0165
+    }
+   },
+   "energy": {
+    "mean_difference": {
+     "entrance": 0.0658,
+     "orbit": 0.0519,
+     "climax": 0.0737,
+     "hold": 0.0221
+    },
+    "relative_to_peak": {
+     "entrance": 0.893,
+     "orbit": 0.704,
+     "climax": 1.0,
+     "hold": 0.3
+    },
+    "peak_phase": "climax"
+   }
+  },
+  "b": {
+   "motion": {
+    "entrance": {
+     "coverage": 0.2472,
+     "speed_med": 0.6912,
+     "affine_residual": 0.5784,
+     "speed_cv": 0.647,
+     "coherence": 0.7525,
+     "curl": 0.6371,
+     "occlusion_proxy": 0.4021
+    },
+    "orbit": {
+     "coverage": 0.295,
+     "speed_med": 0.2253,
+     "affine_residual": 0.6912,
+     "speed_cv": 0.6697,
+     "coherence": 0.2504,
+     "curl": -0.1376,
+     "occlusion_proxy": 0.0637
+    },
+    "climax": {
+     "coverage": 0.3469,
+     "speed_med": 0.3362,
+     "affine_residual": 0.769,
+     "speed_cv": 0.6785,
+     "coherence": 0.3259,
+     "curl": 0.67,
+     "occlusion_proxy": 0.1945
+    },
+    "hold": {
+     "coverage": 0.5322,
+     "speed_med": 0.0528,
+     "affine_residual": 0.8249,
+     "speed_cv": 0.8394,
+     "coherence": 0.261,
+     "curl": 0.3585,
+     "occlusion_proxy": 0.0399
+    }
+   },
+   "energy": {
+    "mean_difference": {
+     "entrance": 0.0714,
+     "orbit": 0.0449,
+     "climax": 0.0599,
+     "hold": 0.0171
+    },
+    "relative_to_peak": {
+     "entrance": 1.0,
+     "orbit": 0.629,
+     "climax": 0.839,
+     "hold": 0.239
+    },
+    "peak_phase": "entrance"
+   }
+  },
+  "c": {
+   "motion": {
+    "entrance": {
+     "coverage": 0.2641,
+     "speed_med": 0.5605,
+     "affine_residual": 0.6738,
+     "speed_cv": 0.5895,
+     "coherence": 0.4749,
+     "curl": 0.5376,
+     "occlusion_proxy": 0.4724
+    },
+    "orbit": {
+     "coverage": 0.2813,
+     "speed_med": 0.3079,
+     "affine_residual": 0.7451,
+     "speed_cv": 0.5799,
+     "coherence": 0.4521,
+     "curl": 0.3347,
+     "occlusion_proxy": 0.1296
+    },
+    "climax": {
+     "coverage": 0.4022,
+     "speed_med": 0.3747,
+     "affine_residual": 0.7678,
+     "speed_cv": 0.6627,
+     "coherence": 0.3568,
+     "curl": 0.6783,
+     "occlusion_proxy": 0.2184
+    },
+    "hold": {
+     "coverage": 0.5388,
+     "speed_med": 0.0227,
+     "affine_residual": 0.8673,
+     "speed_cv": 1.0042,
+     "coherence": 0.4084,
+     "curl": 0.0849,
+     "occlusion_proxy": 0.0177
+    }
+   },
+   "energy": {
+    "mean_difference": {
+     "entrance": 0.0879,
+     "orbit": 0.0569,
+     "climax": 0.0698,
+     "hold": 0.0209
+    },
+    "relative_to_peak": {
+     "entrance": 1.0,
+     "orbit": 0.647,
+     "climax": 0.794,
+     "hold": 0.238
+    },
+    "peak_phase": "entrance"
+   }
+  }
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "per_video": {
+  "01-c1-negro": {
+   "stack_occ_mean": 0.226,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.086,
+   "ring_occ_corr": 0.976,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.082,
+    0.172
+   ]
+  },
+  "02-c1-blanco": {
+   "stack_occ_mean": 0.179,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.246,
+   "ring_occ_corr": 0.943,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.078,
+    0.177
+   ]
+  },
+  "03-c2-negro": {
+   "stack_occ_mean": 0.238,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.099,
+   "ring_occ_corr": 0.94,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.153,
+    0.081
+   ]
+  },
+  "04-c2-blanco": {
+   "stack_occ_mean": 0.184,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.17,
+   "ring_occ_corr": 0.913,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.161,
+    0.077
+   ]
+  },
+  "05-c3-negro": {
+   "stack_occ_mean": 0.222,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.125,
+   "ring_occ_corr": 0.988,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.163,
+    0.08
+   ]
+  },
+  "06-c3-blanco": {
+   "stack_occ_mean": 0.207,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.16,
+   "ring_occ_corr": 0.946,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.173,
+    0.075
+   ]
+  },
+  "07-c4-negro": {
+   "stack_occ_mean": 0.211,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.105,
+   "ring_occ_corr": 0.958,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.081,
+    0.389
+   ]
+  },
+  "08-c4-blanco": {
+   "stack_occ_mean": 0.2,
+   "v7_stack_occ_mean": 0.236,
+   "stack_occ_maxdiff": 0.144,
+   "ring_occ_corr": 0.964,
+   "last_stack_frame": 149,
+   "v7_last_stack_frame": 149,
+   "endcard_motion_last_frames": [
+    0.077,
+    0.389
+   ]
+  }
+ },
+ "pairwise_mean_abs_diff_gray_frames_45_135": {
+  "01-c1-negro vs 03-c2-negro": 28.6,
+  "01-c1-negro vs 05-c3-negro": 27.9,
+  "01-c1-negro vs 07-c4-negro": 27.4,
+  "02-c1-blanco vs 04-c2-blanco": 23.0,
+  "02-c1-blanco vs 06-c3-blanco": 25.9,
+  "02-c1-blanco vs 08-c4-blanco": 25.7,
+  "03-c2-negro vs 05-c3-negro": 25.6,
+  "03-c2-negro vs 07-c4-negro": 26.0,
+  "04-c2-blanco vs 06-c3-blanco": 27.2,
+  "04-c2-blanco vs 08-c4-blanco": 28.8,
+  "05-c3-negro vs 07-c4-negro": 24.9,
+  "06-c3-blanco vs 08-c4-blanco": 26.9,
+  "01-c1-negro vs v7": 30.4,
+  "03-c2-negro vs v7": 27.2,
+  "05-c3-negro vs v7": 26.5,
+  "07-c4-negro vs v7": 26.4
+ }
+}

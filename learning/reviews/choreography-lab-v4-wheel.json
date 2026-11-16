@@ -1,0 +1,16 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v4-wheel",
+  "failed": [
+    "energy-arc",
+    "appear-spin"
+  ],
+  "human_approved": false,
+  "passed": [
+    "staggered-appearance",
+    "text-placement",
+    "cover-orientation",
+    "riffle-pose",
+    "sweep-flattening"
+  ]
+}

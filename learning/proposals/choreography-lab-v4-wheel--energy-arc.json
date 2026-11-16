@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Riffle coverage >= 0.27 and riffle is the energy peak (same-clock comparison); owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The climax stack is too small to be the energy peak.\nimplementation: Bring the lens closer to the rim run (without entering the rim) or enlarge pages for the climax until riffle coverage approaches the reference.\nuse_when: Rolodex climaxes.\navoid_when: When the stack must leave room for text.",
+  "cause_hypothesis": "[implementation; unvalidated] The stack is half the size of the reference stack, so the climax changes fewer pixels than the approach.",
+  "check_id": "energy-arc",
+  "id": "choreography-lab-v4-wheel--energy-arc",
+  "problem_evidence": "Relative mean difference appear/wheel/approach/riffle = 0.33/0.98/1.00/0.83 vs reference 0.24/0.45/0.65/1.00; riffle coverage 0.16 vs 0.32.",
+  "source_case": "choreography-lab-v4-wheel",
+  "state": "proposed"
+}

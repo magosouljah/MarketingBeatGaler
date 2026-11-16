@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Pipeline mean difference: climax >= 1.3x orbit and >= entrance; owner approves the build in continuous playback.",
+  "account": "account-1",
+  "candidate_rule": "problem: The most energetic moment arrives at the entrance, not at the climax.\nimplementation: Budget motion energy per phase: shorter deck travel and soft-start launches; put the fastest, closest, most overlapping motion in the climax.\nuse_when: Short (4-8 s) build-to-payoff cover choreographies.\navoid_when: The brief asks for an explosive opening hook.",
+  "cause_hypothesis": "[reference-interpretation + implementation; unvalidated] 24 covers launch from the deck within ~1 s on a full-speed ease (entrance centroid accel 152-220 px/frame^2) while the climax relies on decelerating landings.",
+  "check_id": "energy-arc",
+  "id": "choreography-lab-v1-abc--energy-arc",
+  "problem_evidence": "account-1/creative-assets/choreography-lab-v1/evidence/reference-comparison.json: relative mean frame difference entrance/orbit/climax/hold = B 1.00/0.63/0.84/0.24, C 1.00/0.65/0.79/0.24; reference 0.29/0.55/1.00/0.07.",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

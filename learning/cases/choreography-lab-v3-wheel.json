@@ -1,0 +1,47 @@
+{
+  "id": "choreography-lab-v3-wheel",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v2-wheel--fan-out-motion",
+  "owner_direction": "Owner in chat 2026-11-06: background #0C0C0C; copy 'Free*' / 'Unlimited' / 'Cloud', end line 'for beats and projects', fine print allowed; wrong: how covers appear, circle angle and centring, and the ~3 s sweep (in Apple it turns the opposite way and looks natural). Direction, not approval.",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v3.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v3.mp4",
+  "checks": [
+    {
+      "id": "fan-out-motion",
+      "status": "pass",
+      "evidence": "Fan-out 1.2-1.6 s curl +1.36 vs reference +0.56 (v2: -4.81), within the proposed ±1.5/s; energy 0.23 vs 0.24. Owner review pending."
+    },
+    {
+      "id": "ring-silhouette",
+      "status": "pass",
+      "evidence": "Mask IoU of the wheel silhouette vs the reference at 1.9/2.2/2.6 s (centre text box excluded): 0.485 (v2 iteration 1: 0.338), pose found by grid search over tilt, blade pitch, roll, position and scale."
+    },
+    {
+      "id": "sweep-direction",
+      "status": "pass",
+      "evidence": "Transition 3.0-3.72 s keeps the wheel axis and the clockwise spin; the wheel tips and pages lie back on their radial lines; lower row slides left as in the reference 3.33-3.73 s. v2 swung the axis sideways with a +1.5 rad counter-roll. Visual check only; owner review pending."
+    },
+    {
+      "id": "owner-copy-and-ground",
+      "status": "pass",
+      "evidence": "Ground #0C0C0C, copy Free*/Unlimited/Cloud, end line 'for beats and projects'; fine print is a placeholder ('*Terms and conditions apply.') pending real terms."
+    },
+    {
+      "id": "riffle-pose",
+      "status": "fail",
+      "evidence": "3.6-4.05 s: our pages form a curved band in the lower half; reference shows a centred stack of 3-4 large pages. Riffle occlusion proxy 0.63 vs 0.78 (v2 0.78).",
+      "hypothesis": "[implementation; unvalidated] The camera looks along a strongly curved part of the rim; the reference view is closer to a straight, near-tangent run of the rim with larger pages relative to the radius.",
+      "proposed_rule": "problem: The climax shows the wheel's curve instead of a page stack.\nimplementation: Raise page size relative to radius for the climax or place the lens on a near-tangent run of the rim so 3-4 pages fill the centre.\nuse_when: Rolodex climaxes that should read as a stack.\navoid_when: Shots meant to reveal the whole wheel.",
+      "acceptance_test": "3.7-4.05 s: 3-5 visible pages, stack centroid within 0.1 W/H of the reference, occlusion proxy >= 0.7; owner review."
+    },
+    {
+      "id": "approach-occlusion",
+      "status": "fail",
+      "evidence": "Approach 3.0-3.65 s occlusion proxy 0.17 vs 0.58.",
+      "hypothesis": "[implementation; unvalidated] Page spacing on the rim leaves gaps while the lower row grows; the reference's pages overlap as they enlarge.",
+      "proposed_rule": "problem: The approach lacks overlapping pages.\nimplementation: Increase page size or count on the wheel, or tighten spacing, and verify the ring silhouette IoU does not drop.\nuse_when: Approach beats into a card structure.\navoid_when: When spacing must stay readable.",
+      "acceptance_test": "Approach occlusion proxy >= 0.45 with ring IoU >= 0.45; owner review."
+    }
+  ]
+}

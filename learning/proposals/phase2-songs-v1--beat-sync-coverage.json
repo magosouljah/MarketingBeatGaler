@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "At least 14 of 16 cuts on a detected onset or beat with no cut moved more than 8 frames from v7; owner review of the contact sheets.",
+  "account": "account-1",
+  "candidate_rule": "problem: Some word cuts do not land on a hit when a song has no onset near the approved cut.\nimplementation: Snap to the strongest onset or tracked beat within +-0.25 s, keep >= 0.5 s between cuts, and show the owner a frame-numbered comparison against the approved timing before rendering.\nuse_when: Re-cutting an approved motion piece to new music.\navoid_when: The approved timing itself was the brief (exact copy of a reference).",
+  "cause_hypothesis": "[implementation; unvalidated] A +-0.18 s window around v7's cuts is too narrow for slow or sparse songs (corrido, 78 BPM trap); a beat-grid snap or a wider window with an owner-approved limit would put every word on a hit without visibly changing the choreography.",
+  "check_id": "beat-sync-coverage",
+  "id": "phase2-songs-v1--beat-sync-coverage",
+  "problem_evidence": "7 of 16 cuts found no onset above the threshold and kept v7's time: song 1 Storage; song 2 Unlimited; song 3 Unlimited, Free* and headline (the corrido is in its decay at 4.37 s; its final hits are 5.22/5.60 s, after the end card is up).",
+  "source_case": "phase2-songs-v1",
+  "state": "proposed"
+}

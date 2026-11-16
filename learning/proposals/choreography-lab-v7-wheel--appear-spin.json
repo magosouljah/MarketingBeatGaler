@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Appear curl within ±1.5 of the reference with appear IoU >= 0.36; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The reveal reads as spinning although the wheel is still.\nimplementation: Test pop-in variants (no growth, growth from the page centre along the radial, opacity only) and compare appear curl and frames 41-50.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
+  "cause_hypothesis": "[implementation; unvalidated] The screen rotation during the reveal comes from the pages' pop-in growth on a tilted ring.",
+  "check_id": "appear-spin",
+  "id": "choreography-lab-v7-wheel--appear-spin",
+  "problem_evidence": "With the wheel nearly still until 1.4 s, appear-phase curl is still 4.0 vs reference 0.56: the v6 hypothesis (spin during reveal) is refuted.",
+  "source_case": "choreography-lab-v7-wheel",
+  "state": "proposed"
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "3.7-4.05 s: 3-5 visible pages, stack centroid within 0.1 W/H of the reference, occlusion proxy >= 0.7; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The climax shows the wheel's curve instead of a page stack.\nimplementation: Raise page size relative to radius for the climax or place the lens on a near-tangent run of the rim so 3-4 pages fill the centre.\nuse_when: Rolodex climaxes that should read as a stack.\navoid_when: Shots meant to reveal the whole wheel.",
+  "cause_hypothesis": "[implementation; unvalidated] The camera looks along a strongly curved part of the rim; the reference view is closer to a straight, near-tangent run of the rim with larger pages relative to the radius.",
+  "check_id": "riffle-pose",
+  "id": "choreography-lab-v3-wheel--riffle-pose",
+  "problem_evidence": "3.6-4.05 s: our pages form a curved band in the lower half; reference shows a centred stack of 3-4 large pages. Riffle occlusion proxy 0.63 vs 0.78 (v2 0.78).",
+  "source_case": "choreography-lab-v3-wheel",
+  "state": "proposed"
+}

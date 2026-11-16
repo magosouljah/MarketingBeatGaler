@@ -1,0 +1,726 @@
+[
+ {
+  "id": "v7",
+  "song": null,
+  "theme": "negro",
+  "colors": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "muted": "rgba(255, 255, 255, 0.62)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.53,
+    0.67
+   ],
+   [
+    "#w2 .wt",
+    2.2,
+    0.87
+   ],
+   [
+    "#w3 .wt",
+    3.03,
+    0.62
+   ]
+  ],
+  "head": 4.37,
+  "endStart": 4.3,
+  "wordIn": {
+   "y": 26,
+   "rot": -3.5,
+   "from": 0.85,
+   "dur": 0.16
+  },
+  "wordLeft": 14,
+  "brandX": -40,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": 0.0,
+   "omegaScale": 1.0,
+   "dx": 0.0,
+   "dy": 0.0,
+   "scaleMul": 1.0
+  },
+  "covers": [
+   "cover-01.jpg",
+   "cover-02.jpg",
+   "cover-03.jpg",
+   "cover-04.jpg",
+   "cover-05.jpg",
+   "cover-06.jpg",
+   "cover-07.jpg",
+   "cover-08.jpg",
+   "cover-09.jpg",
+   "cover-10.jpg",
+   "cover-11.jpg",
+   "cover-12.jpg",
+   "cover-13.jpg",
+   "cover-14.jpg",
+   "cover-15.jpg",
+   "cover-16.jpg",
+   "cover-17.jpg",
+   "cover-18.jpg",
+   "cover-19.jpg",
+   "cover-20.jpg",
+   "cover-21.avif",
+   "cover-22.avif",
+   "cover-23.avif",
+   "cover-24.avif",
+   "cover-01.jpg",
+   "cover-02.jpg",
+   "cover-03.jpg",
+   "cover-04.jpg"
+  ],
+  "duration": 6.0
+ },
+ {
+  "id": "01-c1-negro",
+  "song": "APPLE MARKETING CANCION 1.wav",
+  "theme": "negro",
+  "colors": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "muted": "rgba(255, 255, 255, 0.62)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.5,
+    0.6
+   ],
+   [
+    "#w2 .wt",
+    2.1,
+    0.97
+   ],
+   [
+    "#w3 .wt",
+    3.03,
+    0.62
+   ]
+  ],
+  "head": 4.3667,
+  "endStart": 4.2967,
+  "wordIn": {
+   "y": 26,
+   "rot": -3.5,
+   "from": 0.85,
+   "dur": 0.16
+  },
+  "wordLeft": 14,
+  "brandX": -40,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": 0.12,
+   "omegaScale": 1.0,
+   "dx": 0.03,
+   "dy": 0.0,
+   "scaleMul": 1.0
+  },
+  "covers": [
+   "cover-14.jpg",
+   "cover-20.jpg",
+   "cover-21.avif",
+   "cover-04.jpg",
+   "cover-23.avif",
+   "cover-09.jpg",
+   "cover-01.jpg",
+   "cover-12.jpg",
+   "cover-05.jpg",
+   "cover-08.jpg",
+   "cover-02.jpg",
+   "cover-03.jpg",
+   "cover-13.jpg",
+   "cover-10.jpg",
+   "cover-11.jpg",
+   "cover-16.jpg",
+   "cover-06.jpg",
+   "cover-07.jpg",
+   "cover-19.jpg",
+   "cover-17.jpg",
+   "cover-22.avif",
+   "cover-24.avif",
+   "cover-18.jpg",
+   "cover-15.jpg",
+   "cover-17.jpg",
+   "cover-14.jpg",
+   "cover-06.jpg",
+   "cover-21.avif"
+  ],
+  "duration": 7.4667,
+  "fragment": [
+   0.0,
+   7.4375
+  ],
+  "lufs_fragment": -15.71
+ },
+ {
+  "id": "02-c1-blanco",
+  "song": "APPLE MARKETING CANCION 1.wav",
+  "theme": "blanco",
+  "colors": {
+   "ground": "#F3F1EC",
+   "ink": "#0C0C0C",
+   "muted": "rgba(12, 12, 12, 0.60)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.5,
+    0.6
+   ],
+   [
+    "#w2 .wt",
+    2.1,
+    0.97
+   ],
+   [
+    "#w3 .wt",
+    3.03,
+    0.62
+   ]
+  ],
+  "head": 4.3667,
+  "endStart": 4.2967,
+  "wordIn": {
+   "y": 22,
+   "rot": 3.0,
+   "from": 0.86,
+   "dur": 0.15
+  },
+  "wordLeft": 8,
+  "brandX": -34,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": -0.2,
+   "omegaScale": 1.02,
+   "dx": -0.04,
+   "dy": 0.02,
+   "scaleMul": 0.98
+  },
+  "covers": [
+   "cover-03.jpg",
+   "cover-24.avif",
+   "cover-07.jpg",
+   "cover-18.jpg",
+   "cover-02.jpg",
+   "cover-14.jpg",
+   "cover-06.jpg",
+   "cover-21.avif",
+   "cover-23.avif",
+   "cover-04.jpg",
+   "cover-10.jpg",
+   "cover-15.jpg",
+   "cover-11.jpg",
+   "cover-19.jpg",
+   "cover-08.jpg",
+   "cover-20.jpg",
+   "cover-01.jpg",
+   "cover-13.jpg",
+   "cover-05.jpg",
+   "cover-12.jpg",
+   "cover-17.jpg",
+   "cover-22.avif",
+   "cover-09.jpg",
+   "cover-16.jpg",
+   "cover-10.jpg",
+   "cover-06.jpg",
+   "cover-24.avif",
+   "cover-05.jpg"
+  ],
+  "duration": 7.4667,
+  "fragment": [
+   0.0,
+   7.4375
+  ],
+  "lufs_fragment": -15.71
+ },
+ {
+  "id": "03-c2-negro",
+  "song": "APPLE MARKETING CANCION 2 DEMBOW.wav",
+  "theme": "negro",
+  "colors": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "muted": "rgba(255, 255, 255, 0.62)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.53,
+    0.8033
+   ],
+   [
+    "#w2 .wt",
+    2.3333,
+    0.7734
+   ],
+   [
+    "#w3 .wt",
+    3.0667,
+    0.62
+   ]
+  ],
+  "head": 4.3667,
+  "endStart": 4.2967,
+  "wordIn": {
+   "y": 30,
+   "rot": -4.5,
+   "from": 0.84,
+   "dur": 0.17
+  },
+  "wordLeft": 18,
+  "brandX": -46,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": 0.3,
+   "omegaScale": 0.98,
+   "dx": 0.05,
+   "dy": -0.02,
+   "scaleMul": 1.02
+  },
+  "covers": [
+   "cover-13.jpg",
+   "cover-03.jpg",
+   "cover-05.jpg",
+   "cover-11.jpg",
+   "cover-20.jpg",
+   "cover-22.avif",
+   "cover-08.jpg",
+   "cover-02.jpg",
+   "cover-18.jpg",
+   "cover-17.jpg",
+   "cover-12.jpg",
+   "cover-01.jpg",
+   "cover-04.jpg",
+   "cover-15.jpg",
+   "cover-09.jpg",
+   "cover-24.avif",
+   "cover-19.jpg",
+   "cover-07.jpg",
+   "cover-16.jpg",
+   "cover-10.jpg",
+   "cover-21.avif",
+   "cover-23.avif",
+   "cover-14.jpg",
+   "cover-06.jpg",
+   "cover-10.jpg",
+   "cover-09.jpg",
+   "cover-03.jpg",
+   "cover-12.jpg"
+  ],
+  "duration": 6.7333,
+  "fragment": [
+   0.0,
+   6.7009
+  ],
+  "lufs_fragment": -13.75
+ },
+ {
+  "id": "04-c2-blanco",
+  "song": "APPLE MARKETING CANCION 2 DEMBOW.wav",
+  "theme": "blanco",
+  "colors": {
+   "ground": "#F3F1EC",
+   "ink": "#0C0C0C",
+   "muted": "rgba(12, 12, 12, 0.60)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.53,
+    0.8033
+   ],
+   [
+    "#w2 .wt",
+    2.3333,
+    0.7734
+   ],
+   [
+    "#w3 .wt",
+    3.0667,
+    0.62
+   ]
+  ],
+  "head": 4.3667,
+  "endStart": 4.2967,
+  "wordIn": {
+   "y": 20,
+   "rot": -2.5,
+   "from": 0.87,
+   "dur": 0.14
+  },
+  "wordLeft": 12,
+  "brandX": -36,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": -0.35,
+   "omegaScale": 1.03,
+   "dx": -0.02,
+   "dy": -0.03,
+   "scaleMul": 0.99
+  },
+  "covers": [
+   "cover-21.avif",
+   "cover-02.jpg",
+   "cover-11.jpg",
+   "cover-23.avif",
+   "cover-14.jpg",
+   "cover-13.jpg",
+   "cover-17.jpg",
+   "cover-07.jpg",
+   "cover-09.jpg",
+   "cover-16.jpg",
+   "cover-10.jpg",
+   "cover-19.jpg",
+   "cover-22.avif",
+   "cover-24.avif",
+   "cover-18.jpg",
+   "cover-03.jpg",
+   "cover-12.jpg",
+   "cover-04.jpg",
+   "cover-06.jpg",
+   "cover-15.jpg",
+   "cover-20.jpg",
+   "cover-01.jpg",
+   "cover-08.jpg",
+   "cover-05.jpg",
+   "cover-16.jpg",
+   "cover-24.avif",
+   "cover-17.jpg",
+   "cover-13.jpg"
+  ],
+  "duration": 6.7333,
+  "fragment": [
+   0.0,
+   6.7009
+  ],
+  "lufs_fragment": -13.75
+ },
+ {
+  "id": "05-c3-negro",
+  "song": "APPLE MARKETING CANCION 3 CORRIDO.wav",
+  "theme": "negro",
+  "colors": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "muted": "rgba(255, 255, 255, 0.62)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.53,
+    0.67
+   ],
+   [
+    "#w2 .wt",
+    2.2,
+    0.8067
+   ],
+   [
+    "#w3 .wt",
+    2.9667,
+    0.62
+   ]
+  ],
+  "head": 4.37,
+  "endStart": 4.3,
+  "wordIn": {
+   "y": 28,
+   "rot": 3.5,
+   "from": 0.85,
+   "dur": 0.18
+  },
+  "wordLeft": 10,
+  "brandX": -42,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": 0.45,
+   "omegaScale": 0.97,
+   "dx": -0.05,
+   "dy": 0.02,
+   "scaleMul": 1.01
+  },
+  "covers": [
+   "cover-19.jpg",
+   "cover-09.jpg",
+   "cover-10.jpg",
+   "cover-07.jpg",
+   "cover-23.avif",
+   "cover-06.jpg",
+   "cover-18.jpg",
+   "cover-17.jpg",
+   "cover-15.jpg",
+   "cover-11.jpg",
+   "cover-24.avif",
+   "cover-14.jpg",
+   "cover-03.jpg",
+   "cover-21.avif",
+   "cover-12.jpg",
+   "cover-08.jpg",
+   "cover-22.avif",
+   "cover-20.jpg",
+   "cover-02.jpg",
+   "cover-05.jpg",
+   "cover-13.jpg",
+   "cover-04.jpg",
+   "cover-16.jpg",
+   "cover-01.jpg",
+   "cover-07.jpg",
+   "cover-19.jpg",
+   "cover-03.jpg",
+   "cover-24.avif"
+  ],
+  "duration": 6.3333,
+  "fragment": [
+   0.0,
+   6.308
+  ],
+  "lufs_fragment": -15.4
+ },
+ {
+  "id": "06-c3-blanco",
+  "song": "APPLE MARKETING CANCION 3 CORRIDO.wav",
+  "theme": "blanco",
+  "colors": {
+   "ground": "#F3F1EC",
+   "ink": "#0C0C0C",
+   "muted": "rgba(12, 12, 12, 0.60)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.53,
+    0.67
+   ],
+   [
+    "#w2 .wt",
+    2.2,
+    0.8067
+   ],
+   [
+    "#w3 .wt",
+    2.9667,
+    0.62
+   ]
+  ],
+  "head": 4.37,
+  "endStart": 4.3,
+  "wordIn": {
+   "y": 24,
+   "rot": -3.0,
+   "from": 0.83,
+   "dur": 0.16
+  },
+  "wordLeft": 16,
+  "brandX": -38,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": -0.1,
+   "omegaScale": 1.01,
+   "dx": 0.02,
+   "dy": 0.03,
+   "scaleMul": 1.03
+  },
+  "covers": [
+   "cover-24.avif",
+   "cover-19.jpg",
+   "cover-11.jpg",
+   "cover-21.avif",
+   "cover-23.avif",
+   "cover-17.jpg",
+   "cover-22.avif",
+   "cover-12.jpg",
+   "cover-13.jpg",
+   "cover-20.jpg",
+   "cover-14.jpg",
+   "cover-18.jpg",
+   "cover-15.jpg",
+   "cover-09.jpg",
+   "cover-06.jpg",
+   "cover-04.jpg",
+   "cover-02.jpg",
+   "cover-01.jpg",
+   "cover-16.jpg",
+   "cover-08.jpg",
+   "cover-10.jpg",
+   "cover-05.jpg",
+   "cover-07.jpg",
+   "cover-03.jpg",
+   "cover-20.jpg",
+   "cover-22.avif",
+   "cover-06.jpg",
+   "cover-11.jpg"
+  ],
+  "duration": 6.3333,
+  "fragment": [
+   0.0,
+   6.308
+  ],
+  "lufs_fragment": -15.4
+ },
+ {
+  "id": "07-c4-negro",
+  "song": "APPLE MARKETING CANCION 4 gym bro.wav",
+  "theme": "negro",
+  "colors": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "muted": "rgba(255, 255, 255, 0.62)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.6,
+    0.5333
+   ],
+   [
+    "#w2 .wt",
+    2.1333,
+    0.84
+   ],
+   [
+    "#w3 .wt",
+    2.9333,
+    0.62
+   ]
+  ],
+  "head": 4.3,
+  "endStart": 4.23,
+  "wordIn": {
+   "y": 32,
+   "rot": -4.0,
+   "from": 0.86,
+   "dur": 0.15
+  },
+  "wordLeft": 20,
+  "brandX": -44,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": 0.22,
+   "omegaScale": 1.04,
+   "dx": 0.0,
+   "dy": -0.04,
+   "scaleMul": 0.97
+  },
+  "covers": [
+   "cover-05.jpg",
+   "cover-17.jpg",
+   "cover-15.jpg",
+   "cover-21.avif",
+   "cover-03.jpg",
+   "cover-07.jpg",
+   "cover-02.jpg",
+   "cover-22.avif",
+   "cover-23.avif",
+   "cover-04.jpg",
+   "cover-01.jpg",
+   "cover-18.jpg",
+   "cover-16.jpg",
+   "cover-12.jpg",
+   "cover-14.jpg",
+   "cover-20.jpg",
+   "cover-09.jpg",
+   "cover-10.jpg",
+   "cover-19.jpg",
+   "cover-24.avif",
+   "cover-06.jpg",
+   "cover-08.jpg",
+   "cover-11.jpg",
+   "cover-13.jpg",
+   "cover-21.avif",
+   "cover-19.jpg",
+   "cover-17.jpg",
+   "cover-12.jpg"
+  ],
+  "duration": 6.7,
+  "fragment": [
+   0.0,
+   6.692
+  ],
+  "lufs_fragment": -15.85
+ },
+ {
+  "id": "08-c4-blanco",
+  "song": "APPLE MARKETING CANCION 4 gym bro.wav",
+  "theme": "blanco",
+  "colors": {
+   "ground": "#F3F1EC",
+   "ink": "#0C0C0C",
+   "muted": "rgba(12, 12, 12, 0.60)"
+  },
+  "words": [
+   [
+    "#w1 .wt",
+    1.6,
+    0.5333
+   ],
+   [
+    "#w2 .wt",
+    2.1333,
+    0.84
+   ],
+   [
+    "#w3 .wt",
+    2.9333,
+    0.62
+   ]
+  ],
+  "head": 4.3,
+  "endStart": 4.23,
+  "wordIn": {
+   "y": 26,
+   "rot": 2.5,
+   "from": 0.84,
+   "dur": 0.17
+  },
+  "wordLeft": 6,
+  "brandX": -32,
+  "wheel": {
+   "until": 3.46,
+   "phaseDelta": -0.5,
+   "omegaScale": 0.99,
+   "dx": 0.04,
+   "dy": 0.01,
+   "scaleMul": 1.0
+  },
+  "covers": [
+   "cover-16.jpg",
+   "cover-06.jpg",
+   "cover-19.jpg",
+   "cover-24.avif",
+   "cover-14.jpg",
+   "cover-11.jpg",
+   "cover-18.jpg",
+   "cover-12.jpg",
+   "cover-15.jpg",
+   "cover-17.jpg",
+   "cover-02.jpg",
+   "cover-13.jpg",
+   "cover-22.avif",
+   "cover-07.jpg",
+   "cover-10.jpg",
+   "cover-03.jpg",
+   "cover-23.avif",
+   "cover-05.jpg",
+   "cover-20.jpg",
+   "cover-08.jpg",
+   "cover-09.jpg",
+   "cover-01.jpg",
+   "cover-04.jpg",
+   "cover-21.avif",
+   "cover-14.jpg",
+   "cover-18.jpg",
+   "cover-02.jpg",
+   "cover-24.avif"
+  ],
+  "duration": 6.7,
+  "fragment": [
+   0.0,
+   6.692
+  ],
+  "lufs_fragment": -15.85
+ }
+]

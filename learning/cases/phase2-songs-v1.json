@@ -1,0 +1,66 @@
+{
+  "id": "phase2-songs-v1",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "owner_direction": "Owner in chat 2026-11-07: base the approved wheel-v7 without changing its choreography; 4 songs (work/songs, WAV) x 2 versions = 8 videos; black version as v7 (#0C0C0C, white text); white version with light ground and black text, pill and fine print inverted (agent proposes the tone); every video unique so Instagram does not read them as spam, with light changes that do not break what was approved (cover order/selection, initial wheel angle, rhythm and position within +-5 %, slightly different word entrances), logged in a table; word cuts and end-card entrance on each song's hits; propose the strongest fragment and wait for approval; short fades, about -14 LUFS; 720x1280 or 1080x1920, MP4 H.264 + AAC; a contact sheet per video. Fragment approval (02:37): 'va pero estaria bien alargar todo el video hasta q finalize la cancion'.",
+  "source": "account-1/creative-assets/phase2-songs-v1/README.md; account-1/creative-assets/phase2-songs-v1/variants.json; account-1/creative-assets/phase2-songs-v1/evidence/audio-analysis.json; account-1/creative-assets/phase2-songs-v1/evidence/qa.json; account-1/creative-assets/phase2-songs-v1/evidence/qa-variation.json; account-1/creative-assets/phase2-songs-v1/evidence/contact-sheets/; MP4s local only: work/phase2-songs/beatgaler-0[1-8]-*.mp4",
+  "checks": [
+    {
+      "id": "v7-reproduction",
+      "status": "pass",
+      "evidence": "The unmodified v7 project re-rendered at 720x1280 is bit-identical to the approved beatgaler-orbita-v7.mp4 (PSNR inf). The variant pipeline with the v7 row (1080x1920, wheel.js patched only for pixelRatio and cover list, both defaulting to v7) downscaled to 720 px: per-frame PSNR min 31.7 dB, mean 37.2 dB against the approved file; the residual is text resampling. A first 1080 attempt showed 26.8 dB at frames 92-93 because v7's 0.04 s Free*/Storage overlap had not been reproduced; fixed (W2_OVERLAP)."
+    },
+    {
+      "id": "fragment-and-length",
+      "status": "pass",
+      "evidence": "All four WAVs (6.31-7.44 s) carry their drop at 1.30 s, where v7's reveal jumps from 3 to 12 pages (1.267-1.300 s): fragment from 0.000 s with no offset, approved by the owner, who asked the films to run until the song ends. Durations 7.47 / 6.73 / 6.33 / 6.70 s (song length rounded up to a frame); the extra time is end card, wheel choreography unchanged."
+    },
+    {
+      "id": "beat-sync",
+      "status": "pass",
+      "evidence": "Cuts snapped to the best onset (strength x exp(-(delta/0.1 s)^2), window +-0.18 s, +-0.15 s for the headline), on a video frame: song 1 1.500/2.100/3.030/4.367; song 2 1.530/2.333/3.067/4.367 (4.365 is the song's strongest onset, 15.3); song 3 1.530/2.200/2.967/4.370; song 4 1.600/2.133/2.933/4.300. 9 of 16 cuts land on a detected hit; the others keep v7's time (see beat-sync-coverage). Owner review pending."
+    },
+    {
+      "id": "beat-sync-coverage",
+      "status": "fail",
+      "evidence": "7 of 16 cuts found no onset above the threshold and kept v7's time: song 1 Storage; song 2 Unlimited; song 3 Unlimited, Free* and headline (the corrido is in its decay at 4.37 s; its final hits are 5.22/5.60 s, after the end card is up).",
+      "hypothesis": "[implementation; unvalidated] A +-0.18 s window around v7's cuts is too narrow for slow or sparse songs (corrido, 78 BPM trap); a beat-grid snap or a wider window with an owner-approved limit would put every word on a hit without visibly changing the choreography.",
+      "proposed_rule": "problem: Some word cuts do not land on a hit when a song has no onset near the approved cut.\nimplementation: Snap to the strongest onset or tracked beat within +-0.25 s, keep >= 0.5 s between cuts, and show the owner a frame-numbered comparison against the approved timing before rendering.\nuse_when: Re-cutting an approved motion piece to new music.\navoid_when: The approved timing itself was the brief (exact copy of a reference).",
+      "acceptance_test": "At least 14 of 16 cuts on a detected onset or beat with no cut moved more than 8 frames from v7; owner review of the contact sheets."
+    },
+    {
+      "id": "loudness",
+      "status": "pass",
+      "evidence": "Measured on the delivered MP4s with ffmpeg ebur128: integrated -14.0 LUFS in all 8; true peak -2.4 (song 1), -4.6 (2), -1.6 (3), -1.3 (4) dBTP. Fades 0.03 s in, 0.25 s out (cosine). alimiter at -1.6 dBFS, 4x oversampled, engaged only for songs 3 and 4."
+    },
+    {
+      "id": "variant-uniqueness",
+      "status": "pass",
+      "evidence": "Each video differs in cover order and repeated covers (seeded shuffle), initial wheel angle (-0.50..+0.45 rad), wheel speed before the stack (x0.97..x1.04), wheel position (+-0.05 world units on a radius of 2.0) and scale (x0.97..x1.03), word entrance (y 20-32 px, tilt -4.5..+3.5 deg, from 0.83-0.87, 0.14-0.18 s), word and brand x, and cut times per song (table in README.md). Mean grey-level difference between same-theme videos over frames 45-135: 23-29 / 255; against v7: 26-30. 01-c1-negro keeps v7's word entrance values; it differs through covers, angle, position and cut times."
+    },
+    {
+      "id": "stack-preserved",
+      "status": "pass",
+      "evidence": "Stack track values (t >= 3.46 s) untouched in all rows. contact-sheets/stack-frames-107-131-all.png: v7 and the 8 videos at 3.57/3.77/3.97/4.17/4.37 s all show a full, level, parallel rolodex stack that clears at the same time as v7. Ring occupancy over frames 46-103 correlates 0.91-0.99 with v7."
+    },
+    {
+      "id": "white-version",
+      "status": "pass",
+      "evidence": "Ground #F3F1EC (warm paper white), ink #0C0C0C, fine print #0C0C0C at 60 %, pill ink-on-ground inverted automatically through the v7 CSS variables. White-ground covers keep a visible edge against #F3F1EC (frames 119-128). Proposal by the agent; owner review pending."
+    },
+    {
+      "id": "text-always-moving",
+      "status": "pass",
+      "evidence": "End card moves keep v7's speeds and run to the last frame of the longer films (headline zoom to 1.02 + 0.015 per extra second, lower block 14 px and brand 3 % per 1.7 s). Mean per-pixel change in the text area over the last two frames: 0.08-0.39 in every video."
+    },
+    {
+      "id": "word-overlap",
+      "status": "fail",
+      "evidence": "Inherited from approved v7: Free* lasts 0.87 s and Storage cuts in 0.83 s later, so both words are on screen for 1-2 frames (v7 frames 91-92; visible at 3.00 s in 05-c3-negro). Kept in all 8 to stay faithful to the approval; reported to the owner.",
+      "hypothesis": "[implementation; unvalidated] The overlap is an authoring slip in v7 (w2 duration not updated when the cut moved), not a design choice; the reference cuts cleanly.",
+      "proposed_rule": "problem: Two centre words share frames at a cut.\nimplementation: Derive each word's clip duration from the next cut (W2_OVERLAP = 0) and check frame by frame that exactly one word is visible.\nuse_when: Sequential centre words on hard cuts.\navoid_when: A deliberate cross-fade between words is part of the brief.",
+      "acceptance_test": "No frame with two centre words in any rendered video; owner confirmation that the clean cut is wanted."
+    }
+  ]
+}

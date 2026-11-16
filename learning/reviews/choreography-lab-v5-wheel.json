@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v5-wheel",
+  "failed": [
+    "appear-spin",
+    "approach-occlusion"
+  ],
+  "human_approved": false,
+  "passed": [
+    "energy-arc",
+    "no-backs",
+    "ring-axis",
+    "no-lift-retire"
+  ]
+}

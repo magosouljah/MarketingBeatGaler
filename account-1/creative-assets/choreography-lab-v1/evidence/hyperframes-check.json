@@ -1,0 +1,303 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-hf-var-scope": "1",
+          "data-composition-id": "lab",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280",
+          "data-composition-variables": "[{\"id\":\"variant\",\"type\":\"string\",\"label\":\"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)\",\"default\":\"c\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:38959/lib/three.core.min.js",
+        "line": 5
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x3a84001e1600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-hf-var-scope": "1",
+          "data-composition-id": "lab",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280",
+          "data-composition-variables": "[{\"id\":\"variant\",\"type\":\"string\",\"label\":\"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)\",\"default\":\"c\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:38959/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x3a84001e1600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-hf-var-scope": "1",
+          "data-composition-id": "lab",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280",
+          "data-composition-variables": "[{\"id\":\"variant\",\"type\":\"string\",\"label\":\"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)\",\"default\":\"c\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:38959/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x3a84001e1600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-hf-var-scope": "1",
+          "data-composition-id": "lab",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280",
+          "data-composition-variables": "[{\"id\":\"variant\",\"type\":\"string\",\"label\":\"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)\",\"default\":\"c\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:38959/"
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "[.WebGL-0x3a84001e1600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-hf-var-scope": "1",
+          "data-composition-id": "lab",
+          "data-start": "0",
+          "data-duration": "6",
+          "data-fps": "30",
+          "data-width": "720",
+          "data-height": "1280",
+          "data-composition-variables": "[{\"id\":\"variant\",\"type\":\"string\",\"label\":\"Motion model (a = rigid orbit, b = independent + depth, c = independent + 3D camera)\",\"default\":\"c\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "time": 0.333,
+        "url": "http://127.0.0.1:38959/"
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "canvas_content_at_edge",
+        "severity": "warning",
+        "time": 1,
+        "selector": "#stage",
+        "message": "Canvas content touches the frame edge (left, right, top).",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "containerSelector": "#root",
+        "fixHint": "Keep drawn text inside the visible part of the canvas, or mark intentional full-bleed art with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 720,
+          "bottom": 1280,
+          "width": 720,
+          "height": 1280
+        },
+        "dataAttributes": {
+          "data-start": "0",
+          "data-duration": "6",
+          "data-track-index": "0",
+          "data-engine": "three.js r184"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 720,
+          "height": 1280
+        },
+        "firstSeen": 1,
+        "lastSeen": 4.333,
+        "occurrences": 6,
+        "heldMs": 3333,
+        "times": [
+          1,
+          1.667,
+          2.333,
+          3,
+          3.667,
+          4.333
+        ]
+      }
+    ],
+    "duration": 6,
+    "samples": [
+      0.333,
+      1,
+      1.667,
+      2.333,
+      3,
+      3.667,
+      4.333,
+      5,
+      5.667
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 1,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0.333,
+      1.667,
+      3,
+      4.333,
+      5.667
+    ],
+    "checked": 0,
+    "passed": 0
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 48
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "b338d2a2-5577-454a-99f7-1c9e345a0a83",
+    "revision": "2e6b8ff6-ad21-4a94-a88c-95dd323f6af5",
+    "report": "/home/claude/marketingbeatgaler/account-1/creative-assets/choreography-lab-v1/hyperframes/.hyperframes/artifacts/checks/b338d2a2-5577-454a-99f7-1c9e345a0a83.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.17",
+    "latestVersion": "0.9.18",
+    "updateAvailable": true,
+    "checkedAt": "2026-11-06T03:23:39.963Z"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Appear-phase curl within ±1.5 /s of the reference and appear IoU not below 0.36; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The wheel visibly spins while its pages are still appearing.\nimplementation: Hold the wheel angle (omega near 0) until the last page has appeared, then accelerate.\nuse_when: Staggered reveals of an ordered ring.\navoid_when: The brief wants a spinning build.",
+  "cause_hypothesis": "[implementation; unvalidated] The reference wheel barely turns until the ring is complete.",
+  "check_id": "appear-spin",
+  "id": "choreography-lab-v4-wheel--appear-spin",
+  "problem_evidence": "Appear-phase curl 3.71 vs reference 0.56 (v3 1.36): with pages already at final spacing, the wheel spin is visible while they appear.",
+  "source_case": "choreography-lab-v4-wheel",
+  "state": "proposed"
+}

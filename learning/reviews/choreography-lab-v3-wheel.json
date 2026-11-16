@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v3-wheel",
+  "failed": [
+    "riffle-pose",
+    "approach-occlusion"
+  ],
+  "human_approved": false,
+  "passed": [
+    "fan-out-motion",
+    "ring-silhouette",
+    "sweep-direction",
+    "owner-copy-and-ground"
+  ]
+}

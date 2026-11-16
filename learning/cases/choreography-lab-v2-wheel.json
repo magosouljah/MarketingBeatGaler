@@ -1,0 +1,55 @@
+{
+  "id": "choreography-lab-v2-wheel",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v1-abc--energy-arc",
+  "owner_direction": "Owner in chat 2026-11-05: aim for maximum closeness to the Apple reference; no grid; A (ordered, rigid) was the closest of V1. This is direction, not creative approval.",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison.json; reference Instagram encode SHA256 515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a (local, not committed)",
+  "checks": [
+    {
+      "id": "energy-arc",
+      "status": "pass",
+      "evidence": "account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison.json: relative mean difference fan-out/wheel/approach/riffle/clear = 0.18/0.30/0.42/1.00/0.00 vs reference 0.24/0.45/0.65/1.00/0.06 (same clock). Peak at the climax as in the reference. Technical only."
+    },
+    {
+      "id": "wheel-tempo",
+      "status": "pass",
+      "evidence": "Wheel phase 1.6-3.0 s: speed 0.63 vs 0.62 frame heights/s, curl 5.36 vs 5.75 /s (same direction)."
+    },
+    {
+      "id": "riffle-occlusion",
+      "status": "pass",
+      "evidence": "Riffle 3.65-4.35 s: occlusion proxy 0.78 vs 0.78, coverage 0.35 vs 0.32."
+    },
+    {
+      "id": "no-grid",
+      "status": "pass",
+      "evidence": "Owner feedback applied: no gallery grid; frame clears at 4.4-4.5 s like the reference."
+    },
+    {
+      "id": "fan-out-motion",
+      "status": "fail",
+      "evidence": "Fan-out 1.2-1.6 s: curl -4.81 vs reference +0.56; contact sheet shows our deck swinging while the reference row opens almost without turning.",
+      "hypothesis": "[implementation; unvalidated] Entrance rotation knots (roll/turn from 1.22 to 1.5 s) and the wheel already spinning at -1.2 rad/s add a screen rotation the reference does not have.",
+      "proposed_rule": "problem: The deck spins while it fans out.\nimplementation: Hold the wheel orientation and angle during the fan-out; open the spread only, then start the spin.\nuse_when: Fan-out entrances of ordered card rings.\navoid_when: A brief that asks for a spinning entrance.",
+      "acceptance_test": "Fan-out curl within ±1.5 /s of the reference and owner review of 1.2-1.6 s side by side."
+    },
+    {
+      "id": "approach-occlusion",
+      "status": "fail",
+      "evidence": "Approach 3.0-3.65 s: occlusion proxy 0.15 vs 0.58; frames around 3.5 s show near-edge-on pages while the wheel axis turns.",
+      "hypothesis": "[reference-interpretation; unvalidated] The reference keeps faces visible while bottom-right pages grow and overlap; our transition rotates the axis through an edge-on pose.",
+      "proposed_rule": "problem: Re-orienting a card wheel can pass through an edge-on pose and empty the frame.\nimplementation: Move the camera toward the face side of the rim first and turn the axis while faces stay visible; check every frame of the transition.\nuse_when: Transitions between two views of the same card structure.\navoid_when: A deliberate flip or wipe.",
+      "acceptance_test": "Approach occlusion proxy >= 0.45, no frame with coverage < 0.1 between 3.0 and 3.65 s, owner review."
+    },
+    {
+      "id": "riffle-pose",
+      "status": "fail",
+      "evidence": "Local side-by-side 3.7-4.1 s: our pages stand more upright and sit lower; reference pages lie back (seen from above) and centre around x 0.55.",
+      "hypothesis": "[implementation; unvalidated] Climax wheel tilt (x 0.5 rad) and position are a hand fit with too little elevation.",
+      "proposed_rule": "problem: Riffle pages read upright instead of lying back.\nimplementation: Raise the viewing elevation over the rim (more wheel tilt) and centre the passing point; compare page aspect (width/height) to the reference.\nuse_when: Rolodex-style climaxes.\navoid_when: Pages must face the viewer frontally.",
+      "acceptance_test": "Median on-screen page aspect in 3.7-4.1 s within 15 % of the reference, owner review."
+    }
+  ]
+}

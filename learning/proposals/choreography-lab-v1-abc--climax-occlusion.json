@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Occlusion proxy >= 0.45 and overlap pairs >= 20 while centroid acceleration stays <= 30 px/frame^2; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The climax lacks layered foreground occlusion.\nimplementation: Stage 3-5 large covers in near depth layers that overlap each other during the climax, with an original arrangement (not the reference riffle).\nuse_when: Climax beats meant to feel physical and close.\navoid_when: Moments where product UI or text must stay readable.",
+  "cause_hypothesis": "[reference-interpretation; unvalidated] Our heroes cross a forming grid one by one; the reference stacks several large foreshortened covers in close depth layers.",
+  "check_id": "climax-occlusion",
+  "id": "choreography-lab-v1-abc--climax-occlusion",
+  "problem_evidence": "Occlusion proxy in climax 0.17-0.22 vs reference 0.74; overlap pairs 18-19.5.",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

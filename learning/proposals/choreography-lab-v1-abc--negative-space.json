@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Orbit coverage 0.15-0.25 measured by shared.motion_metrics and owner review of collage risk.",
+  "account": "account-1",
+  "candidate_rule": "problem: Dense coverage reads as collage.\nimplementation: Keep orbit coverage near 0.15-0.25 by scale/visible count; reserve density for the climax.\nuse_when: Orbit phases of cover choreographies.\navoid_when: Final gallery/grid compositions that are meant to fill the frame.",
+  "cause_hypothesis": "[implementation; unvalidated] Card scale 0.95 and three strata fill the frame; dark ground hides it in stills but flow coverage confirms density.",
+  "check_id": "negative-space",
+  "id": "choreography-lab-v1-abc--negative-space",
+  "problem_evidence": "Frame coverage orbit 0.28-0.34 and climax 0.35-0.40 vs reference 0.17 / 0.23 (motion-field medians).",
+  "source_case": "choreography-lab-v1-abc",
+  "state": "proposed"
+}

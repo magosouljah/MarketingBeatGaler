@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Appear curl within ±1.5/s of the reference with appear IoU >= 0.37; owner review.",
+  "account": "account-1",
+  "candidate_rule": "problem: The ring spins visibly during the staggered reveal.\nimplementation: Hold the wheel angle until the reveal completes, then accelerate, and re-check frames 41-50 against v6.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
+  "cause_hypothesis": "[implementation; unvalidated] The wheel spins while pages are still appearing.",
+  "check_id": "appear-spin",
+  "id": "choreography-lab-v6-wheel--appear-spin",
+  "problem_evidence": "Appear-phase curl 3.96 vs reference 0.56.",
+  "source_case": "choreography-lab-v6-wheel",
+  "state": "proposed"
+}

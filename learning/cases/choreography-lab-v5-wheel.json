@@ -1,0 +1,47 @@
+{
+  "id": "choreography-lab-v5-wheel",
+  "account": "account-1",
+  "project": "first-ad",
+  "human_approved": false,
+  "validates_proposal": "choreography-lab-v4-wheel--energy-arc",
+  "owner_direction": "Owner in chat 2026-11-06 (frame numbers approximate): ~frame 99 reference ring angle 45-90 deg vs ours ~-45; frames 106-108 show the back of covers, never in Apple; from ~frame 120 the whole ring was lifted to compensate; pages should leave by themselves and not re-enter from below. Direction, not approval.",
+  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v5.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v5.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v5.json",
+  "checks": [
+    {
+      "id": "energy-arc",
+      "status": "pass",
+      "evidence": "Same-clock relative mean difference appear/wheel/approach/riffle = 0.14/0.51/0.76/1.00 vs reference 0.24/0.45/0.65/1.00; riffle coverage 0.31 vs 0.32."
+    },
+    {
+      "id": "no-backs",
+      "status": "pass",
+      "evidence": "Visible back-face area from exact geometry: 0 % over 31 sampled frames 1.3-4.3 s (v4: 60 %). Blade pitch 2.2 rad + single-sided pages culled exactly at edge-on."
+    },
+    {
+      "id": "ring-axis",
+      "status": "pass",
+      "evidence": "Silhouette major-axis angle at 3.3 s (frame ~99): -56.8 deg vs reference -53.6 (v4 +15.6); mean axis error 0.13 (v4 0.36)."
+    },
+    {
+      "id": "no-lift-retire",
+      "status": "pass",
+      "evidence": "Wheel position constant in y from 1.72 s; pages retired permanently once fully off frame after 3.55 s (precomputed, seek-safe); frame clear by ~4.5 s."
+    },
+    {
+      "id": "appear-spin",
+      "status": "fail",
+      "evidence": "Appear-phase curl 3.71 vs reference 0.56; appear IoU 0.32 (v4 0.36); pages read edge-on during the reveal.",
+      "hypothesis": "[implementation; unvalidated] The wheel already spins during the reveal and the new front-facing blade pitch turns early pages edge-on from the entrance viewpoint.",
+      "proposed_rule": "problem: The ring spins and shows slivers while it is still being revealed.\nimplementation: Hold the wheel angle until the reveal completes and fit the entrance tip/roll with the four-term pose score.\nuse_when: Staggered ring reveals.\navoid_when: A spinning build is wanted.",
+      "acceptance_test": "Appear curl within ±1.5/s of the reference and appear IoU >= 0.36 with 0 % visible backs; owner review."
+    },
+    {
+      "id": "approach-occlusion",
+      "status": "fail",
+      "evidence": "Approach 3.0-3.65 s occlusion proxy 0.34 vs reference 0.58.",
+      "hypothesis": "[implementation; unvalidated] Gaps between pages stay open while the ring turns toward the reference angle.",
+      "proposed_rule": "problem: Pages do not overlap enough during the approach.\nimplementation: Test more pages or larger pages on the wheel, re-fitting the ring pose with the four-term score.\nuse_when: Approach beats into a card ring.\navoid_when: Readability of individual covers matters more than density.",
+      "acceptance_test": "Approach occlusion proxy >= 0.45 with ring IoU >= 0.45 and 0 % backs; owner review."
+    }
+  ]
+}

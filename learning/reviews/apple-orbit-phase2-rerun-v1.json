@@ -1,0 +1,12 @@
+{
+  "account": "account-1",
+  "case_id": "apple-orbit-phase2-rerun-v1",
+  "failed": [
+    "source-identity"
+  ],
+  "human_approved": false,
+  "passed": [
+    "reference-integrity",
+    "temporal-correspondence"
+  ]
+}

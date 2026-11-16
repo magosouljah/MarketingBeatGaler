@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "choreography-lab-v1-iter1",
+  "failed": [
+    "gather-continuity"
+  ],
+  "human_approved": false,
+  "passed": []
+}

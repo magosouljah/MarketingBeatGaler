@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Owner confirms the origin of reference-runs/apple-music/source.MP4 or supplies the original 74301c7f... file; next reference rerun records hash check + alignment before any measurement.",
+  "account": "account-1",
+  "candidate_rule": "problem: A reference file can silently differ from the documented original.\nimplementation: Before analysis, compare SHA-256; if different, require a measured temporal-alignment test against stored derived data and record the offset; never mix frame indices between encodes.\nuse_when: Any reference re-supplied after its first documentation.\navoid_when: Byte-identical source.",
+  "cause_hypothesis": "[evaluation-process; unvalidated] The owner re-downloaded the same Instagram post at a higher resolution; the downloader dropped the first 3 frames.",
+  "check_id": "source-identity",
+  "id": "apple-orbit-phase2-rerun-v1--source-identity",
+  "problem_evidence": "Local file is not byte-identical to the documented original (SHA 885dc1c1... vs 74301c7f..., 720x1280/178 frames vs 512x910/181). Only measured correspondence supports using it.",
+  "source_case": "apple-orbit-phase2-rerun-v1",
+  "state": "proposed"
+}
