@@ -5,7 +5,7 @@
   "human_approved": false,
   "validates_proposal": "choreography-lab-v3-wheel--riffle-pose",
   "owner_direction": "Owner in chat 2026-11-06: covers must appear one after another (not all at once spreading from a centre); text sits right of the ring centre so it feels centred; covers flatten in the sweep; rotate all covers 180 deg so their top points to the centre; compare frame by frame. Direction, not approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v4.mp4",
+  "source": "account-1/videos/wheel/lab-v2/RESULTS.md; account-1/videos/wheel/lab-v2/evidence/frame-iou-v4.json; account-1/videos/wheel/lab-v2/evidence/reference-comparison-v4.json; account-1/videos/wheel/lab-v2/evidence/renders/wheel-v4.mp4",
   "checks": [
     {
       "id": "staggered-appearance",

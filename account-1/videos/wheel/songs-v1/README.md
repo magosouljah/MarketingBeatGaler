@@ -1,6 +1,6 @@
 # BeatGaler — phase2-songs-v1: 8 videos sobre wheel-v7 con 4 canciones
 
-**Estado:** entregado para revisión del propietario (2026-11-07). La base es `wheel-v7`, aprobado el 2026-11-06 ([LEARNINGS.md](../choreography-lab-v2/LEARNINGS.md)). Su coreografía no se cambió. Caso: `learning/cases/phase2-songs-v1.json`.
+**Estado:** entregado para revisión del propietario (2026-11-07). La base es `wheel-v7`, aprobado el 2026-11-06 ([LEARNINGS.md](../lab-v2/LEARNINGS.md)). Su coreografía no se cambió. Caso: `learning/cases/phase2-songs-v1.json`.
 
 ## Brief del propietario (chat, 2026-11-07)
 
@@ -63,10 +63,10 @@ Desde la raíz del repo, con los WAV en `work/songs/`:
 
 ```bash
 pip install numpy soundfile librosa pyloudnorm scipy pillow
-python account-1/creative-assets/phase2-songs-v1/tools/audio_cuts.py work/songs account-1/creative-assets/phase2-songs-v1/evidence/audio-analysis.json
-python account-1/creative-assets/phase2-songs-v1/tools/plan_variants.py
+python account-1/videos/wheel/songs-v1/tools/audio_cuts.py work/songs account-1/videos/wheel/songs-v1/evidence/audio-analysis.json
+python account-1/videos/wheel/songs-v1/tools/plan_variants.py
 # Linux: export HYPERFRAMES_BROWSER_PATH=/usr/bin/google-chrome
-python account-1/creative-assets/phase2-songs-v1/tools/build.py v7 01-c1-negro 02-c1-blanco 03-c2-negro 04-c2-blanco 05-c3-negro 06-c3-blanco 07-c4-negro 08-c4-blanco
+python account-1/videos/wheel/songs-v1/tools/build.py v7 01-c1-negro 02-c1-blanco 03-c2-negro 04-c2-blanco 05-c3-negro 06-c3-blanco 07-c4-negro 08-c4-blanco
 ```
 
 `build.py` arma cada proyecto HyperFrames en `work/phase2-songs/build/<id>/` con `lib/`, `assets/` y `src/wheel.js` de v7. A `wheel.js` le aplica dos parches que no cambian ninguna pose: `rig.pixelRatio` y `rig.covers`; ambos tienen v7 como valor por defecto y el script verifica que cada uno se aplique exactamente una vez. Después renderiza la secuencia PNG con `hyperframes@0.9.17`, prepara el audio, codifica a `work/phase2-songs/beatgaler-<id>.mp4` y escribe la contact sheet y el QA. Para editar un video en el preview: `cd work/phase2-songs/build/<id> && npx --yes hyperframes@0.9.17 preview`.

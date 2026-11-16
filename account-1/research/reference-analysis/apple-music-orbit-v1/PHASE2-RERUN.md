@@ -69,7 +69,7 @@ Campo de movimiento denso (`shared/motion_metrics`, OpenCV Farneback + ajuste af
 4. **Aceleración hacia un clímax** donde el primer plano se llena de portadas grandes que se ocultan entre sí.
 5. **Despeje rápido** a una composición quieta.
 
-El laboratorio [`choreography-lab-v1`](../../../creative-assets/choreography-lab-v1/README.md) aplica estos mecanismos a una coreografía original (hélice vertical → peel hacia el lente → galería BeatGaler), sin la corona alrededor de texto ni el riffle de la referencia.
+El laboratorio [`choreography-lab-v1`](../../../videos/wheel/lab-v1/README.md) aplica estos mecanismos a una coreografía original (hélice vertical → peel hacia el lente → galería BeatGaler), sin la corona alrededor de texto ni el riffle de la referencia.
 
 ## 5. Límites
 
@@ -80,4 +80,4 @@ El laboratorio [`choreography-lab-v1`](../../../creative-assets/choreography-lab
 
 ## 6. Actualización: archivo de Instagram (2026-11-05)
 
-El propietario pasó el MP4 descargado del post: SHA-256 `515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a`, 1 368 842 bytes, 720×1280, 180 fotogramas a 29,97 fps, 6,006 s. Tampoco es byte-idéntico al original documentado, pero es el más completo de los disponibles: desfase −1 fotograma (SSE 0,000155), picos en los mismos fotogramas originales 122/127/116. El `source.MP4` usado arriba es una **recodificación de este archivo** (PSNR mediano 45,7 dB con desfase de 2 fotogramas). Desde ahora es la referencia principal: `reference-runs/apple-music/instagram-original.mp4` (local, no versionado). Con él se reinterpretó la estructura como una rueda tipo rolodex: [Lab V2](../../../creative-assets/choreography-lab-v2/RESULTS.md).
+El propietario pasó el MP4 descargado del post: SHA-256 `515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a`, 1 368 842 bytes, 720×1280, 180 fotogramas a 29,97 fps, 6,006 s. Tampoco es byte-idéntico al original documentado, pero es el más completo de los disponibles: desfase −1 fotograma (SSE 0,000155), picos en los mismos fotogramas originales 122/127/116. El `source.MP4` usado arriba es una **recodificación de este archivo** (PSNR mediano 45,7 dB con desfase de 2 fotogramas). Desde ahora es la referencia principal: `reference-runs/apple-music/instagram-original.mp4` (local, no versionado). Con él se reinterpretó la estructura como una rueda tipo rolodex: [Lab V2](../../../videos/wheel/lab-v2/RESULTS.md).

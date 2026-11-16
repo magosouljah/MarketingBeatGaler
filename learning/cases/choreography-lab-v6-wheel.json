@@ -5,7 +5,7 @@
   "human_approved": false,
   "validates_proposal": "choreography-lab-v5-wheel--approach-occlusion",
   "owner_direction": "Owner in chat 2026-11-06 (frames approximate): frames 41-50 better in v4; replicate the centre-word animation; copy 'Unlimited' / 'Free*' / 'Storage'; frame ~94 angle change abrupt; frame ~94 covers flatter than Apple (v4 closer); frame ~116 covers more horizontal than Apple. Direction, not approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v6.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v6.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v6.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v6.mp4",
+  "source": "account-1/videos/wheel/lab-v2/RESULTS.md; account-1/videos/wheel/lab-v2/evidence/frame-iou-v6.json; account-1/videos/wheel/lab-v2/evidence/pose-metrics-v6.json; account-1/videos/wheel/lab-v2/evidence/reference-comparison-v6.json; account-1/videos/wheel/lab-v2/evidence/renders/wheel-v6.mp4",
   "checks": [
     {
       "id": "approach-occlusion",

@@ -7,7 +7,8 @@ Sistema de research y producción de videos verticales para **BeatGaler**. Docum
 | Video | Cuenta | Estado |
 | --- | --- | --- |
 | [add-finder](account-1/videos/add-finder/) | 1 | Cerrado 2026-11-15 (11.9 s, negro y blanco). Calificación del propietario: 7.0 de 10. **[Todo lo aprendido](account-1/videos/add-finder/LEARNINGS.md)** |
-| [orbit](account-1/videos/orbit/) | 1 | Archivado, nunca aprobado |
+| [wheel](account-1/videos/wheel/) | 1 | wheel-v7 aprobado 2026-11-06; 8 versiones con 4 canciones (negro y blanco) entregadas 2026-11-07, sin feedback. **[Todo lo aprendido](account-1/videos/wheel/LEARNINGS.md)** |
+| [orbit](account-1/videos/orbit/) | 1 | Archivado, nunca aprobado (la línea siguió en wheel) |
 
 ## Mapa del repositorio
 
@@ -64,8 +65,10 @@ The original 6.033s Apple Music cover-orbit video was recovered from the user's 
 
 [Motion Skills Library](skillpack/README.md): **57 skills catalogadas y fijadas por SHA** desde 7 repositorios de GitHub; **19 prioritarias para la primera prueba de motion design**. Instalador reproducible para Codex y Claude Code: `python skillpack/manager.py install --profile phase2 --agent both` desde el IDE local. Las fuentes externas se descargan en cada equipo y no están incluidas físicamente en el repositorio; `DIRECCION.md` continúa protegido.
 
-## Fase 2 — primer experimento 3D
+## Fase 2 — rueda de portadas
 
-[Choreography Lab V1](account-1/creative-assets/choreography-lab-v1/README.md): un proyecto HyperFrames editable con tres modelos de movimiento sobre portadas reales — **A** órbita rígida y cámara fija (control), **B** trayectorias individuales con profundidad, **C** B + cámara 3D animada — con renders, geometría exacta, medición contra la referencia y [resultados](account-1/creative-assets/choreography-lab-v1/RESULTS.md). **Sin aprobación creativa**; 8 propuestas nuevas sin validar en el Learning Engine.
+El laboratorio de coreografía 3D ([lab-v1](account-1/videos/wheel/lab-v1/README.md): A/B/C; [lab-v2](account-1/videos/wheel/lab-v2/README.md): la rueda tipo rolodex) terminó en **wheel-v7**, aprobado por el propietario el 2026-11-06. Después vinieron [songs-v1](account-1/videos/wheel/songs-v1/README.md): 8 videos con 4 canciones, en negro y en blanco. Todo vive en [account-1/videos/wheel/](account-1/videos/wheel/).
 
-**Lab V2 (tras la revisión del propietario):** [reconstrucción como rueda tipo rolodex](account-1/creative-assets/choreography-lab-v2/README.md), sin grid, en el mismo reloj que Apple. Arco de energía, velocidad de giro y oclusión del clímax ya coinciden en las mediciones; quedan tres diferencias abiertas ([resultados](account-1/creative-assets/choreography-lab-v2/RESULTS.md)).
+## Ramas
+
+Solo existe `main`; se trabaja directo ahí. El 2026-11-16 se unificaron todas las ramas anteriores con merges sin squash, de modo que los hashes que citan los casos siguen existiendo en la historia de `main`.

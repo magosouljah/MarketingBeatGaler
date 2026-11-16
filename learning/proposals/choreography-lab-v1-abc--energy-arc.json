@@ -5,7 +5,7 @@
   "cause_hypothesis": "[reference-interpretation + implementation; unvalidated] 24 covers launch from the deck within ~1 s on a full-speed ease (entrance centroid accel 152-220 px/frame^2) while the climax relies on decelerating landings.",
   "check_id": "energy-arc",
   "id": "choreography-lab-v1-abc--energy-arc",
-  "problem_evidence": "account-1/creative-assets/choreography-lab-v1/evidence/reference-comparison.json: relative mean frame difference entrance/orbit/climax/hold = B 1.00/0.63/0.84/0.24, C 1.00/0.65/0.79/0.24; reference 0.29/0.55/1.00/0.07.",
+  "problem_evidence": "account-1/videos/wheel/lab-v1/evidence/reference-comparison.json: relative mean frame difference entrance/orbit/climax/hold = B 1.00/0.63/0.84/0.24, C 1.00/0.65/0.79/0.24; reference 0.29/0.55/1.00/0.07.",
   "source_case": "choreography-lab-v1-abc",
   "state": "proposed"
 }

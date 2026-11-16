@@ -1,7 +1,7 @@
 # BeatGaler — Choreography Lab V1 (Fase 2, primer experimento 3D)
 
 **Estado:** experimento técnico completo · **sin aprobación creativa** · no es el anuncio.
-Resultados y evaluación: [RESULTS.md](RESULTS.md). Análisis de referencia: [PHASE2-RERUN.md](../../research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md).
+Resultados y evaluación: [RESULTS.md](RESULTS.md). Análisis de referencia: [PHASE2-RERUN.md](../../../research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md).
 
 Un solo proyecto HyperFrames editable con **tres modelos de movimiento** sobre la misma escena, las mismas 24 portadas reales y el mismo tempo, para aislar qué aporta cada decisión:
 
@@ -22,7 +22,7 @@ Común a las tres: 720×1280, 30 fps, 6,0 s, fondo `#07070a`, niebla lineal 7–
 ## Editar y previsualizar
 
 ```powershell
-cd account-1/creative-assets/choreography-lab-v1/hyperframes
+cd account-1/videos/wheel/lab-v1/hyperframes
 npx --yes hyperframes@0.9.17 preview          # Studio; cambia la variable "variant" a a | b | c
 npx --yes hyperframes@0.9.17 check --json
 ```
@@ -44,7 +44,7 @@ python tools/geometry_metrics.py geometry.json evidence/geometry-metrics.json
 # desde la raíz del repo: medición de imagen con el mismo método que la referencia
 python -m shared.motion_metrics.motion_field <render.mp4> <out.json>
 python -m shared.reference_analysis.pipeline analyze <render.mp4> reference-runs/lab-v1/variant-x --account account-1
-python account-1/creative-assets/choreography-lab-v1/tools/compare_reference.py <ref-motion.json> <ref-analysis.json> <evidence-dir> <out.json>
+python account-1/videos/wheel/lab-v1/tools/compare_reference.py <ref-motion.json> <ref-analysis.json> <evidence-dir> <out.json>
 ```
 
 Linux sin `chrome-headless-shell` descargable: `HYPERFRAMES_BROWSER_PATH=/usr/bin/google-chrome`. Render medido: ~26 s por variante (captura por screenshot, GPU software). **Determinismo comprobado:** dos renders independientes de A dieron el mismo SHA-256 (`2ed7629a…`).

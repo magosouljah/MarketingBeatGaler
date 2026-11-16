@@ -5,7 +5,7 @@
   "human_approved": false,
   "validates_proposal": "choreography-lab-v4-wheel--energy-arc",
   "owner_direction": "Owner in chat 2026-11-06 (frame numbers approximate): ~frame 99 reference ring angle 45-90 deg vs ours ~-45; frames 106-108 show the back of covers, never in Apple; from ~frame 120 the whole ring was lifted to compensate; pages should leave by themselves and not re-enter from below. Direction, not approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v5.json; account-1/creative-assets/choreography-lab-v2/evidence/pose-metrics-v4.json; account-1/creative-assets/choreography-lab-v2/evidence/frame-iou-v5.json; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v5.json",
+  "source": "account-1/videos/wheel/lab-v2/RESULTS.md; account-1/videos/wheel/lab-v2/evidence/pose-metrics-v5.json; account-1/videos/wheel/lab-v2/evidence/pose-metrics-v4.json; account-1/videos/wheel/lab-v2/evidence/frame-iou-v5.json; account-1/videos/wheel/lab-v2/evidence/reference-comparison-v5.json",
   "checks": [
     {
       "id": "energy-arc",

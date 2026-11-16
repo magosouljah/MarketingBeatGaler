@@ -29,4 +29,4 @@ Large displacements (> ~100 px/frame at 720×1280) exceed the flow's range and a
 
 Authored ROI seeds → `goodFeaturesToTrack` → pyramidal Lucas–Kanade with a forward-backward check. The point is the median of surviving features (a cluster estimate, not a card centre). A track stops at identity loss instead of bridging it. Per-seed `fb_max_px` and `min_survival` are recorded in the evidence string.
 
-First use: [Apple Music Phase 2 rerun](../../account-1/research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md) and [Choreography Lab V1](../../account-1/creative-assets/choreography-lab-v1/RESULTS.md).
+First use: [Apple Music Phase 2 rerun](../../account-1/research/reference-analysis/apple-music-orbit-v1/PHASE2-RERUN.md) and [Choreography Lab V1](../../account-1/videos/wheel/lab-v1/RESULTS.md).

@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '22'
       - name: Lab composition syntax and lint
-        working-directory: account-1/creative-assets/choreography-lab-v1/hyperframes
+        working-directory: account-1/videos/wheel/lab-v1/hyperframes
         env:
           HYPERFRAMES_SKIP_SKILLS: '1'
           DO_NOT_TRACK: '1'
@@ -30,7 +30,7 @@ jobs:
           node --check src/choreography.js
           npx --yes hyperframes@0.9.17 lint
       - name: Lab V2 composition syntax and lint
-        working-directory: account-1/creative-assets/choreography-lab-v2/hyperframes
+        working-directory: account-1/videos/wheel/lab-v2/hyperframes
         env:
           HYPERFRAMES_SKIP_SKILLS: '1'
           DO_NOT_TRACK: '1'

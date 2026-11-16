@@ -35,4 +35,4 @@ Four depth strata of square 3D cover meshes with actual card edges/backing, nonu
 3. Before proceeding to any more scenes, inspect a rendered MP4 using the **real covers**, compare sampled frames against the source Apple MP4 when provided, check camera path, true WebGL output, occlusion, edge artifacts, legibility and timing. Record user approval.
 4. No modifications to the BeatGaler application, production, `main` branch or narration.
 
-Sources: [HyperFrames GitHub](https://github.com/heygen-com/hyperframes), [HyperFrames CLI skill](https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-cli/SKILL.md), [Motion reference inventory](../../design-references/FIRST-VIDEO-REFERENCES.md).
+Sources: [HyperFrames GitHub](https://github.com/heygen-com/hyperframes), [HyperFrames CLI skill](https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-cli/SKILL.md), [Motion reference inventory](../../../design-references/FIRST-VIDEO-REFERENCES.md).

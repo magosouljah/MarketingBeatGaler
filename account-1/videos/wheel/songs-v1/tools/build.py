@@ -1,7 +1,7 @@
 """Build, render and finish the phase2-songs-v1 videos.
 
 From the repo root:
-    python account-1/creative-assets/phase2-songs-v1/tools/build.py ID [ID ...] \
+    python account-1/videos/wheel/songs-v1/tools/build.py ID [ID ...] \
         --songs work/songs --out work/phase2-songs [--no-audio]
 
 For each variants.json row: assembles a HyperFrames project in
@@ -27,7 +27,7 @@ import soundfile as sf
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).resolve().parent.parent
-V7 = HERE.parent / "choreography-lab-v2" / "hyperframes"
+V7 = HERE.parent / "lab-v2" / "hyperframes"
 FPS, DUR = 30, 6.0
 TARGET_LUFS, TP_LIMIT = -14.0, -1.0
 FADE_IN, FADE_OUT = 0.03, 0.25

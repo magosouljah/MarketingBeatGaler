@@ -1,6 +1,6 @@
 """Write variants.json: the 8 videos (4 songs x black/white) of phase2-songs-v1.
 
-    python account-1/creative-assets/phase2-songs-v1/tools/plan_variants.py
+    python account-1/videos/wheel/songs-v1/tools/plan_variants.py
 
 Inputs: evidence/audio-analysis.json (audio_cuts.py). Every value that makes a
 video unique is in VARIATION below, chosen by hand inside the owner's limits

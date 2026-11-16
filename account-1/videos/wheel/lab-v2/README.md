@@ -35,11 +35,11 @@ Todos los parámetros están en `RIG` (incluye `retireFrom`: desde cuándo se re
 - Comparativas con Apple **solo locales** (contienen fotogramas de Apple; no se versionan): `reference-runs/apple-music/ref-vs-wheel-v7-LOCAL-ONLY.mp4` (Apple | v7 | v6, con número de fotograma), `ref-vs-wheel-v7-LOCAL-ONLY-slow4x.mp4` (a 1/4 de velocidad) y las de v3 y v2.
 
 ```powershell
-cd account-1/creative-assets/choreography-lab-v2/hyperframes
+cd account-1/videos/wheel/lab-v2/hyperframes
 npx --yes hyperframes@0.9.17 preview
 npx --yes hyperframes@0.9.17 render --quality draft -o ../evidence/renders/wheel-v2.mp4
 # comparativa local fotograma a fotograma (necesita playwright + Chrome; no subir el resultado)
-python ../tools/compare_frames.py ../../../../reference-runs/apple-music/instagram-original.mp4 compare.jpg --at 1.3,1.6,2.2,2.9,3.5,3.8,4.1
+python ../tools/compare_frames.py ../../../../../reference-runs/apple-music/instagram-original.mp4 compare.jpg --at 1.3,1.6,2.2,2.9,3.5,3.8,4.1
 ```
 
 Three.js 0.184.0, GSAP 3.15.0 y Archivo Black (OFL, `assets/fonts/`) van incluidos: el render no usa red.

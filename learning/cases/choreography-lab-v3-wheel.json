@@ -5,7 +5,7 @@
   "human_approved": false,
   "validates_proposal": "choreography-lab-v2-wheel--fan-out-motion",
   "owner_direction": "Owner in chat 2026-11-06: background #0C0C0C; copy 'Free*' / 'Unlimited' / 'Cloud', end line 'for beats and projects', fine print allowed; wrong: how covers appear, circle angle and centring, and the ~3 s sweep (in Apple it turns the opposite way and looks natural). Direction, not approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison-v3.json; account-1/creative-assets/choreography-lab-v2/evidence/renders/wheel-v3.mp4",
+  "source": "account-1/videos/wheel/lab-v2/RESULTS.md; account-1/videos/wheel/lab-v2/evidence/reference-comparison-v3.json; account-1/videos/wheel/lab-v2/evidence/renders/wheel-v3.mp4",
   "checks": [
     {
       "id": "fan-out-motion",

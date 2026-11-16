@@ -15,3 +15,4 @@
 11. Toda prueba que se envía al propietario lleva copia con contador de frames (`shared/ffmpeg/review_copy.sh`) y se registra como caso en `learning/cases/` con su feedback textual.
 12. El repositorio es público: no versionar beats, voces, capturas ni renders del propietario sin que lo pida. Van en `inputs/` y `out/`, ignorados por Git.
 13. Al cerrar cada video, pedir al propietario el cuestionario 1-10 de `learning/scorecard/README.md` y registrarlo con `scorecard.py add`. Las notas son solo suyas: nunca rellenarlas ni estimarlas. Antes de un video nuevo, `scorecard.py show` y atacar primero lo peor calificado.
+14. Solo existe la rama `main`: trabajar y hacer commit directo en `main`, sin ramas ni PR, salvo que el propietario pida otra cosa. Si alguna vez hace falta una rama, se integra con merge (nunca squash) y se borra al terminar.

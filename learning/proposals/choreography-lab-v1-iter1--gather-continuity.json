@@ -5,7 +5,7 @@
   "cause_hypothesis": "[implementation; unvalidated] easeOutQuint starts at maximum slope; applied to a Bezier whose P0 is the live orbit pose it injects a velocity kick at departure.",
   "check_id": "gather-continuity",
   "id": "choreography-lab-v1-iter1--gather-continuity",
-  "problem_evidence": "account-1/creative-assets/choreography-lab-v1/evidence/iteration-1/geometry-metrics.json: B peel-gather window max centroid acceleration 72.2 px/frame^2 (C 75.0) at the moment non-hero covers leave the orbit.",
+  "problem_evidence": "account-1/videos/wheel/lab-v1/evidence/iteration-1/geometry-metrics.json: B peel-gather window max centroid acceleration 72.2 px/frame^2 (C 75.0) at the moment non-hero covers leave the orbit.",
   "source_case": "choreography-lab-v1-iter1",
   "state": "proposed"
 }

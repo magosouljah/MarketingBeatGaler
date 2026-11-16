@@ -5,12 +5,12 @@
   "human_approved": false,
   "validates_proposal": "choreography-lab-v1-abc--energy-arc",
   "owner_direction": "Owner in chat 2026-11-05: aim for maximum closeness to the Apple reference; no grid; A (ordered, rigid) was the closest of V1. This is direction, not creative approval.",
-  "source": "account-1/creative-assets/choreography-lab-v2/RESULTS.md; account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison.json; reference Instagram encode SHA256 515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a (local, not committed)",
+  "source": "account-1/videos/wheel/lab-v2/RESULTS.md; account-1/videos/wheel/lab-v2/evidence/reference-comparison.json; reference Instagram encode SHA256 515901fed702c4f9c1f08d2ac917158201eb7bd789a8174dfaab8797c82ab74a (local, not committed)",
   "checks": [
     {
       "id": "energy-arc",
       "status": "pass",
-      "evidence": "account-1/creative-assets/choreography-lab-v2/evidence/reference-comparison.json: relative mean difference fan-out/wheel/approach/riffle/clear = 0.18/0.30/0.42/1.00/0.00 vs reference 0.24/0.45/0.65/1.00/0.06 (same clock). Peak at the climax as in the reference. Technical only."
+      "evidence": "account-1/videos/wheel/lab-v2/evidence/reference-comparison.json: relative mean difference fan-out/wheel/approach/riffle/clear = 0.18/0.30/0.42/1.00/0.00 vs reference 0.24/0.45/0.65/1.00/0.06 (same clock). Peak at the climax as in the reference. Technical only."
     },
     {
       "id": "wheel-tempo",

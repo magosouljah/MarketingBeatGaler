@@ -2,8 +2,8 @@
 proposed cut times for the centre words and the end card of wheel-v7.
 
 Usage (from the repo root; WAVs stay in work/songs, never in Git):
-    python account-1/creative-assets/phase2-songs-v1/tools/audio_cuts.py work/songs \
-        account-1/creative-assets/phase2-songs-v1/evidence/audio-analysis.json
+    python account-1/videos/wheel/songs-v1/tools/audio_cuts.py work/songs \
+        account-1/videos/wheel/songs-v1/evidence/audio-analysis.json
 
 Needs: numpy, soundfile, librosa, pyloudnorm.
 
