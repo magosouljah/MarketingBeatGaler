@@ -36,6 +36,7 @@ Al cerrar cada video el propietario califica del 1 al 10 quince aspectos de la e
 - Todas las demás instrucciones, código, casos, reviews y skills pueden evolucionar normalmente, con commits y pruebas. No se inventan métricas ni aprobaciones.
 - `audit` comprueba formato, trazabilidad y la integridad del archivo rector; **no** verifica automáticamente la calidad artística del MP4.
 - Primer ciclo completo: [add-finder](../account-1/videos/add-finder/) (2026-11-14). 11 casos, 22 lecciones validadas por la aprobación de la v5 y 3 propuestas a la espera de que el propietario confirme la última entrega (`cta-cursor-centered`, `instagram-safe-zones-measured`, `floating-covers-no-intersection`). Para promoverlas: crear un caso nuevo con esa confirmación como `approval_evidence` y ejecutar `promote`.
+- [llama](../account-1/videos/llama/) (2026-11-12, registrado el 2026-11-16): video hecho fuera del repositorio y antes de add-finder. 5 casos, 3 propuestas sin aprobar (`live-insert-shortest-readable`, `speed-ramp-needs-frame-blending`, `partial-change-keeps-the-rest`) y ninguna lección: el propietario no aprobó de forma explícita ninguna versión final.
 - La órbita 3D de portadas quedó archivada sin aprobar; sus dos propuestas siguen abiertas. `DIRECCION.md` aún la nombra como prioridad: cambiarlo requiere autorización explícita del propietario.
 - HyperFrames es la elección según `FASE-0.md`; herramientas 3D complementarias requieren justificación, no sustitución silenciosa.
 

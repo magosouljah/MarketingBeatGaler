@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario ve el tramo acelerado en su telefono y no lo describe como trabado; el archivo no supera 8 Mbps; no hay cortes dentro de un mismo gesto.",
+  "account": "account-1",
+  "candidate_rule": "Al acelerar metraje se promedian los cuadros fuente que cubre cada cuadro de salida y no se corta dentro de un gesto. Las entregas para telefono van con tope de 8 Mbps.",
+  "cause_hypothesis": "Tres causas posibles, corregidas a la vez en la v3 y por tanto sin aislar: (a) acelerar un clip de 24 fps a ~2x eligiendo el cuadro mas cercano produce saltos irregulares; (b) un corte con zoom dentro del mismo gesto se lee como tiron; (c) 16 Mbps atoran el reproductor del telefono.",
+  "check_id": "speed-ramp-needs-frame-blending",
+  "id": "llama-final-v2--speed-ramp-needs-frame-blending",
+  "problem_evidence": "Propietario sobre la v2: «creo que está como trabado». No dijo en que parte.",
+  "source_case": "llama-final-v2",
+  "state": "proposed"
+}

@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "llama-final-v4",
+  "failed": [
+    "partial-change-keeps-the-rest"
+  ],
+  "human_approved": false,
+  "passed": []
+}

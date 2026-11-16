@@ -1,0 +1,20 @@
+{
+  "account": "account-1",
+  "artifact": "Final v4 (14.7 s): todos los archivos del escritorio convertidos a .flp y .als con los iconos del propietario",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final, v5): account-1/videos/llama/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Tras un cambio parcial, lo que el propietario pidio antes sigue presente en el video y no pide restaurar nada.",
+      "evidence": "Pedido (13:35), con dos capturas de iconos: «cambia los archivo en eso que algunos sean como una imagen y otros como la otra». El agente reemplazo los 104 archivos y elimino los .mp3 y .wav. Propietario sobre la v4: «no remplaces todos  deja unos mp3 y wav».",
+      "hypothesis": "El agente leyo «algunos… y otros» como un reparto de todo el conjunto entre los dos iconos nuevos, y descarto una variedad que el propietario habia pedido en el primer mensaje («que sean flip y mp3 y wav»).",
+      "id": "partial-change-keeps-the-rest",
+      "proposed_rule": "Un cambio pedido sobre una parte deja intacto lo demas: se cambia solo lo nombrado y se conserva lo que el propietario ya habia pedido. Si el alcance es ambiguo, se elige el cambio menor y se dice.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvN4b9eyLZs5jmXb9t, 2026-11-12, hora America/Mexico_City; feedback del propietario a las 13:40.",
+  "human_approved": false,
+  "id": "llama-final-v4",
+  "note": "Caso registrado el 2026-11-16, cuatro dias despues, a partir de la sesion completa. El video se hizo fuera del repositorio y antes de sus reglas de proceso; ninguna entrega llevo copia con contador de frames.",
+  "project": "llama"
+}

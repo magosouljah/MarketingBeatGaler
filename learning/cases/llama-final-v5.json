@@ -1,0 +1,32 @@
+{
+  "account": "account-1",
+  "artifact": "Final v5 (14.7 s, 15.6 MB) — ULTIMA ENTREGA: 104 archivos (50 .flp, 18 .als, 18 .mp3, 18 .wav)",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final, v5): account-1/videos/llama/project/.",
+  "checks": [
+    {
+      "evidence": "Verificacion del agente: la escena del chico va de F85 a F153 (2.3 s). Desde la v2 el propietario no volvio a pedir acortarla; no lo confirmo de forma explicita.",
+      "id": "live-insert-shortest-readable",
+      "status": "pass"
+    },
+    {
+      "evidence": "Verificacion del agente: desde la v3 el tramo acelerado promedia cuadros, no tiene cortes dentro del gesto y el archivo va a 8.5 Mbps. Tras la v3 el propietario no volvio a mencionar que se viera trabado; no lo confirmo de forma explicita y la causa no se aislo.",
+      "id": "speed-ramp-needs-frame-blending",
+      "status": "pass"
+    },
+    {
+      "evidence": "Verificacion del agente contando ICONS en project/desk.py: 50 .flp y 18 .als con los iconos del propietario, 18 .mp3 y 18 .wav con los iconos anteriores. El propietario no comento la v5.",
+      "id": "partial-change-keeps-the-rest",
+      "status": "pass"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvN4b9eyLZs5jmXb9t, 2026-11-12, hora America/Mexico_City; sin feedback sobre esta version; a las 13:51 el propietario pregunto como estaba hecho el video y el 2026-11-16 a las 00:13 pidio anotar lo aprendido en el repositorio.",
+  "human_approved": false,
+  "id": "llama-final-v5",
+  "note": "Caso registrado el 2026-11-16, cuatro dias despues, a partir de la sesion completa. El video se hizo fuera del repositorio y antes de sus reglas de proceso; ninguna entrega llevo copia con contador de frames. Pendiente: aprobacion explicita del propietario. Hasta entonces las tres reglas siguen siendo propuestas, no lecciones.",
+  "project": "llama",
+  "validates_proposals": [
+    "llama-final-v1--live-insert-shortest-readable",
+    "llama-final-v2--speed-ramp-needs-frame-blending",
+    "llama-final-v4--partial-change-keeps-the-rest"
+  ]
+}

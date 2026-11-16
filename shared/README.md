@@ -12,6 +12,8 @@ Recursos reutilizables para ambas cuentas; **no contiene** gusto creativo, hooks
 | [`tools/`](tools/crop_and_rename.py) | `crop_and_rename.py`: recorte cuadrado y numeración de portadas |
 | [`reference_analysis/`](reference_analysis/README.md) | Preparación de evidencia de video, reportes y cinemática 2D estimada. No hace visión semántica ni aprobación artística |
 | [`research/`](research/README.md) | Contrato de referencias y criterios para verificar outliers |
-| `rendering/`, `product-source-assets/` | Reservadas (`.gitkeep`); sin funcionalidad todavía |
+| [`rendering/`](rendering/README.md) | Render cuadro por cuadro en Python + OpenCV: estructura, planos 3D, transición de golpe, fuego procedural. Complemento de HyperFrames, no sustituto |
+| [`ai-video/`](ai-video/README.md) | Clips generados con Higgsfield: costos, el prompt que funcionó, cómo traerlos y montarlos |
+| `product-source-assets/` | Reservada (`.gitkeep`); sin funcionalidad todavía |
 
-Dependencias de las utilidades: Python 3.10+, FFmpeg, `numpy`, `librosa` (golpes), `pocketsphinx` (palabras), `Pillow` (guía de teléfono).
+Dependencias de las utilidades: Python 3.10+, FFmpeg, `numpy`, `librosa` (golpes), `pocketsphinx` (palabras), `Pillow` (guía de teléfono), `opencv-python` (render en Python).

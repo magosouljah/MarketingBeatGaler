@@ -1,0 +1,17 @@
+{
+  "account": "account-1",
+  "artifact": "Borrador (16.0 s): escritorio, silueta provisional en lugar del chico, fuego y 12 tomas de BeatGaler",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final, v5): account-1/videos/llama/project/.",
+  "checks": [
+    {
+      "evidence": "Cada corte despues del drop cae en un golpe medido en la grabacion (intervalos de 0.617 a 0.693 s, no una rejilla); los archivos entran en los pulsos del buildup. Propietario sobre el borrador: «perfecto ahora solo agrega al chico». No menciono la sincronia en concreto.",
+      "id": "beat-sync-measured-hits",
+      "status": "pass"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvN4b9eyLZs5jmXb9t, 2026-11-12, hora America/Mexico_City; feedback del propietario a las 13:11.",
+  "human_approved": false,
+  "id": "llama-draft-v1",
+  "note": "Caso registrado el 2026-11-16, cuatro dias despues, a partir de la sesion completa. El video se hizo fuera del repositorio y antes de sus reglas de proceso; ninguna entrega llevo copia con contador de frames. El «perfecto» fue al borrador sin el chico: no es aprobacion creativa de una version final.",
+  "project": "llama"
+}

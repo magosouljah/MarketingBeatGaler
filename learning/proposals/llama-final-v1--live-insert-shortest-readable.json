@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario ve el inserto y no pide acortarlo; ningun plano de accion real supera ~2.5 s sin un cambio de accion.",
+  "account": "account-1",
+  "candidate_rule": "Un inserto de accion real o de IA dura lo minimo para que se lean sus acciones. Si sobra, se quita una vuelta de musica (la unidad de recorte es el bucle) en vez de dejar el plano largo.",
+  "cause_hypothesis": "El clip de 6 s se comprimio solo a 3.6 s para llenar tres vueltas de buildup; un unico plano de accion real de mas de ~2 s frena un video cuyo resto corta cada 0.65 s.",
+  "check_id": "live-insert-shortest-readable",
+  "id": "llama-final-v1--live-insert-shortest-readable",
+  "problem_evidence": "Propietario sobre la v1: «has que la parte del chico dure un poco menos de tiempo ósea para que sea un poco más entretenido». La escena duraba 3.6 s (F85-F192) para tres acciones.",
+  "source_case": "llama-final-v1",
+  "state": "proposed"
+}

@@ -1,0 +1,11 @@
+{
+  "account": "account-1",
+  "case_id": "llama-final-v5",
+  "failed": [],
+  "human_approved": false,
+  "passed": [
+    "live-insert-shortest-readable",
+    "speed-ramp-needs-frame-blending",
+    "partial-change-keeps-the-rest"
+  ]
+}

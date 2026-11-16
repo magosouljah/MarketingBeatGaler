@@ -1,0 +1,20 @@
+{
+  "account": "account-1",
+  "artifact": "Final v2 (14.7 s): chico de 2.3 s, con corte con zoom a media frustracion; cuadro mas cercano al acelerar; archivo de 30 MB a ~16 Mbps",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final, v5): account-1/videos/llama/project/.",
+  "checks": [
+    {
+      "acceptance_test": "El propietario ve el tramo acelerado en su telefono y no lo describe como trabado; el archivo no supera 8 Mbps; no hay cortes dentro de un mismo gesto.",
+      "evidence": "Propietario sobre la v2: «creo que está como trabado». No dijo en que parte.",
+      "hypothesis": "Tres causas posibles, corregidas a la vez en la v3 y por tanto sin aislar: (a) acelerar un clip de 24 fps a ~2x eligiendo el cuadro mas cercano produce saltos irregulares; (b) un corte con zoom dentro del mismo gesto se lee como tiron; (c) 16 Mbps atoran el reproductor del telefono.",
+      "id": "speed-ramp-needs-frame-blending",
+      "proposed_rule": "Al acelerar metraje se promedian los cuadros fuente que cubre cada cuadro de salida y no se corta dentro de un gesto. Las entregas para telefono van con tope de 8 Mbps.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvN4b9eyLZs5jmXb9t, 2026-11-12, hora America/Mexico_City; feedback del propietario a las 13:25.",
+  "human_approved": false,
+  "id": "llama-final-v2",
+  "note": "Caso registrado el 2026-11-16, cuatro dias despues, a partir de la sesion completa. El video se hizo fuera del repositorio y antes de sus reglas de proceso; ninguna entrega llevo copia con contador de frames.",
+  "project": "llama"
+}
