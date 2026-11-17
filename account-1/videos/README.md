@@ -4,7 +4,7 @@ Un video por carpeta, con su fuente, su brief y lo aprendido.
 
 | Video | Estado | Qué es |
 | --- | --- | --- |
-| [fuck](fuck/) | Cerrado y aprobado el 2026-11-16; evaluación ponderada pendiente | Anuncio de 12.9 s: los logos de la competencia al bote de basura, la nube que absorbe los beats y explota en la Gallery, Share y avión de papel al CTA. Canvas 2D filmado con Chrome. [Todo lo aprendido](fuck/LEARNINGS.md) |
+| [fuck](fuck/) | Cerrado y aprobado el 2026-11-16; evaluación 50.0 de 100 | Anuncio de 12.9 s: los logos de la competencia al bote de basura, la nube que absorbe los beats y explota en la Gallery, Share y avión de papel al CTA. Canvas 2D filmado con Chrome. [Todo lo aprendido](fuck/LEARNINGS.md) |
 | [add-finder](add-finder/) | Cerrado 2026-11-15; calificación 7.0 de 10 | Anuncio de 11.9 s: del caos del Finder a la Gallery y al CTA |
 | [llama](llama/) | Entregado el 2026-11-12 (v5), sin cerrar ni calificar; documentado el 2026-11-16 | Plantilla del reel de fuego, 14.7 s: escritorio desordenado, chico frustrado (clip de IA), explosión en el drop y 12 tomas de BeatGaler. Python + OpenCV. [Todo lo aprendido](llama/LEARNINGS.md) |
 | [wheel](wheel/) | v7 aprobado el 2026-11-06; 8 versiones con canciones entregadas el 2026-11-07 | Rueda de portadas tipo rolodex (reconstrucción de Apple Music), 6 s, más cierre con oferta. [Todo lo aprendido](wheel/LEARNINGS.md) |

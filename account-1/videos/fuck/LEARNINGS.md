@@ -58,7 +58,11 @@ Las reglas son de la **cuenta 1**. Lo técnico (secciones 4 a 6) sirve para cual
 - **Decir lo que no se pudo comprobar.** El agente no escucha el audio: se dijo en cada entrega y el propietario revisó la mezcla.
 - El propietario manda referencias cuando algo no le gusta (fotos del bote, de la nube, la silueta). Pedirlas antes es más barato que acertar a ciegas.
 
-## 7. Lo que este video no cumple
+## 7. Evaluación del propietario
+
+**50.0 de 100.** Animación 3, Estética 2, Originalidad visual 1, Consistencia 3, B-roll 2, Realismo 4, Acabado profesional 3. Dio solo los números y pidió cerrar, así que no hay regla nueva: el número solo no dice qué cambiar. Lo que sí dice es por dónde empezar el siguiente video: **originalidad (1) y estética (2)** son lo peor y juntas pesan 35%. Que el video quedara aprobado («perfecto ok quedo bien») y aun así saque 50 significa que cumplir las correcciones no es lo mismo que tener personalidad visual: casi todo lo que se ve aquí (fichas, bote, nube, avión, cuadrícula) es la solución más literal del guion. Preguntar qué esperaba ver antes de empezar el próximo.
+
+## 8. Lo que este video no cumple
 
 - No se usaron `shared/editing/find_hits.py` ni `shared/transcription/align_words.py` (regla 10 de `AGENTS.md`): el drop se midió con un análisis propio y las palabras no se alinearon (ver punto 17).
 - No se pasó `shared/technical-qa/phone_guide.py`; el encuadre se comprobó contra los márgenes que dio el propietario.

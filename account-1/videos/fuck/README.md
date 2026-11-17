@@ -6,7 +6,7 @@ El propietario lo llama «guion fuck».
 
 | | |
 | --- | --- |
-| **Estado** | **Cerrado y aprobado el 2026-11-16** («perfecto ok quedo bien»). Siete entregas en una tarde. Evaluación ponderada: pendiente de que el propietario la responda. |
+| **Estado** | **Cerrado y aprobado el 2026-11-16** («perfecto ok quedo bien»). Siete entregas en una tarde. Evaluación ponderada: **50.0 de 100** (Animación 3, Estética 2, Originalidad 1, Consistencia 3, B-roll 2, Realismo 4, Acabado 3), sin comentarios por criterio. |
 | **Formato** | 1080×1920, 30 fps, 12.9 s (387 frames), solo orgánico, con voz y beat del propietario |
 | **Herramienta** | Un solo `index.html` con Canvas 2D y una función `render(t)`; Chrome (Playwright) lo filma cuadro por cuadro y FFmpeg une y mezcla. **No** usa HyperFrames (ver [por qué](LEARNINGS.md#5-técnica)). |
 | **Fuente** | [`project/index.html`](project/index.html): cámara por keyframes (`K`), una función por escena (`scene1`…`scene5`) y `renderT` para el retiming |

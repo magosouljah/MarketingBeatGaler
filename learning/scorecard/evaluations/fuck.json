@@ -1,0 +1,24 @@
+{
+  "video": "fuck",
+  "account": "account-1",
+  "evaluations": [
+    {
+      "version": "final",
+      "date": "2026-11-16",
+      "criteria_version": 3,
+      "scores": {
+        "animation": 3.0,
+        "aesthetics": 2.0,
+        "originality": 1.0,
+        "consistency": 3.0,
+        "broll": 2.0,
+        "realism": 4.0,
+        "finish": 3.0
+      },
+      "comments": {},
+      "note": "Sin comentarios por criterio: el propietario dio solo los numeros y pidio cerrar. Seis de siete criterios en 3 o menos sin explicacion; no se propone ninguna regla a partir del numero solo.",
+      "evidence": "Propietario, 2026-11-16 18:31 (America/Mexico_City), sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD: «3 2 1 3 2 4 3 CIERRA», en el orden de los siete criterios.",
+      "total": 50.0
+    }
+  ]
+}
