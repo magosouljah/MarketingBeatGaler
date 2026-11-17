@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario ve la entrega y no vuelve a describir los objetos como infantiles, de PowerPoint o feos.",
+  "account": "account-1",
+  "candidate_rule": "Un objeto protagonista no se dibuja como vector plano de relleno liso. Lleva volumen real: malla 3D sombreada por la normal, o foto recortada, con sombra desenfocada. Las estelas son difusas, no lineas punteadas.",
+  "cause_hypothesis": "El bote y el avion eran poligonos de relleno liso, sin volumen, luz ni sombra propia; junto a portadas reales y a la interfaz de la app se leian como clip art.",
+  "check_id": "props-not-flat-cartoon",
+  "id": "fuck-v1--props-not-flat-cartoon",
+  "problem_evidence": "Propietario, 17:00: «el bote de basura es muy feo, igual el avion no me gusta, esos estilos son muy animacion para nilños 2d powerpoint».",
+  "source_case": "fuck-v1",
+  "state": "proposed"
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario elige el tratamiento entre opciones antes de la primera entrega animada y ese objeto no cambia de estilo en las entregas siguientes.",
+  "account": "account-1",
+  "candidate_rule": "Antes de animar un objeto protagonista nuevo, mostrar al propietario dos o tres tratamientos sobre un frame real del video (foto, 3D, silueta plana) y animar solo el que elija.",
+  "cause_hypothesis": "Cada tratamiento se eligio a ciegas y el propietario solo pudo juzgarlo ya animado y entregado. La foto que el mismo propuso dejo de convencerle al verla puesta junto a la interfaz plana de la app. Es una hipotesis: no dijo por que cambio de idea.",
+  "check_id": "prop-treatment-chosen-from-options",
+  "id": "fuck-v3--prop-treatment-chosen-from-options",
+  "problem_evidence": "Propietario, 17:30, con una silueta plana blanca de referencia: «ok solo cambia la nube por algo así». Era el cuarto tratamiento de la nube: verde dibujada (v1), blanca con volumen (v2, tras «has otra nube tu desde 0 y q sea blanca»), su propia foto (v3, tras «puedes usar la nube tal cual») y silueta plana (v4).",
+  "source_case": "fuck-v3",
+  "state": "proposed"
+}

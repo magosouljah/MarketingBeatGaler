@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El objeto de la entrega es una foto recortada elegida por el propietario y este no pide cambiarlo.",
+  "account": "account-1",
+  "candidate_rule": "Un objeto del mundo real que remata un gag (bote de basura y similares) se resuelve con una foto recortada, no dibujado. Antes de dibujarlo, pedir al propietario la foto o referencia que tiene en mente.",
+  "cause_hypothesis": "Un objeto cotidiano dibujado, por bien sombreado que este, compite con la imagen mental exacta que el propietario tiene de ese objeto. Para un gag el reconocimiento instantaneo importa mas que el acabado, y eso lo da una foto.",
+  "check_id": "real-prop-uses-owner-photo",
+  "id": "fuck-v2--real-prop-uses-owner-photo",
+  "problem_evidence": "Propietario, 17:23, con cuatro fotos (una nube y tres botes): «puedes usar la nube tal cual y la foto del bot de basura con tapa pero me gustaría q tuviera basura adentro luego se tapa y se va bruscamente es lo único q cambiaría». El bote de la v2 era un cilindro de metal cepillado dibujado con gradientes, sin tapa.",
+  "source_case": "fuck-v2",
+  "state": "proposed"
+}

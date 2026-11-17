@@ -1,0 +1,16 @@
+{
+  "account": "account-1",
+  "case_id": "fuck-final-approved",
+  "failed": [],
+  "human_approved": true,
+  "passed": [
+    "text-inside-attention-margins",
+    "props-not-flat-cartoon",
+    "voice-word-gaps-even",
+    "voice-duck-gentle",
+    "burst-covers-tumble-in-3d",
+    "absorb-stream-single-direction",
+    "cursor-reuse-animated-hand",
+    "real-prop-uses-owner-photo"
+  ]
+}

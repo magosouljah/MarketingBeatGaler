@@ -1,0 +1,9 @@
+{
+  "account": "account-1",
+  "case_id": "fuck-v4",
+  "failed": [
+    "word-frames-asked-when-no-alignment"
+  ],
+  "human_approved": false,
+  "passed": []
+}

@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "El propietario escucha la mezcla y no menciona el sidechain ni el ducking.",
+  "account": "account-1",
+  "candidate_rule": "El ducking del beat bajo la voz es casi imperceptible: ratio 2 o menos, ataque de 50 ms o mas, liberacion de 400 ms o mas, y el beat alto. Si la voz no se entiende, se sube la voz antes que hundir el beat.",
+  "cause_hypothesis": "Con ratio alto y ataque corto el beat se hunde de golpe en cada silaba; en un beat con graves sostenidos ese bombeo se oye mas que la voz.",
+  "check_id": "voice-duck-gentle",
+  "id": "fuck-v1--voice-duck-gentle",
+  "problem_evidence": "Propietario, 17:00: «el sidechain de la voz y el beat no me gusta es muy brusco esta bien q suene mas el beat y menos ducking». La v1 usaba sidechaincompress con ratio 5, umbral 0.03, ataque 15 ms y liberacion 250 ms, con el beat a 0.5.",
+  "source_case": "fuck-v1",
+  "state": "proposed"
+}

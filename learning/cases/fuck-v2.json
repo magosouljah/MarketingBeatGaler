@@ -1,0 +1,50 @@
+{
+  "account": "account-1",
+  "artifact": "v2 (12.9 s) con copia con contador de frames",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final): account-1/videos/fuck/project/.",
+  "checks": [
+    {
+      "evidence": "Verificacion del agente en hoja de contactos de 24 frames con el recuadro dibujado: todo el texto dentro. El propietario no volvio a mencionar el texto ni los margenes.",
+      "id": "text-inside-attention-margins",
+      "status": "pass"
+    },
+    {
+      "evidence": "«upload» 4.45 s, «store» 6.15 s, «organize» 7.60 s: huecos de 1.70 y 1.45 s. El propietario no volvio a mencionarlo.",
+      "id": "voice-word-gaps-even",
+      "status": "pass"
+    },
+    {
+      "evidence": "Mezcla con ratio 1.6, umbral 0.1, ataque 60 ms, liberacion 500 ms y beat a 0.66. El propietario no volvio a mencionar el audio. El agente no puede escuchar la mezcla.",
+      "id": "voice-duck-gentle",
+      "status": "pass"
+    },
+    {
+      "evidence": "Portadas con giro propio en X e Y y oscurecimiento de canto. El propietario no volvio a mencionarlo.",
+      "id": "burst-covers-tumble-in-3d",
+      "status": "pass"
+    },
+    {
+      "evidence": "Los 52 archivos salen de la franja inferior (20% desde los lados bajos) y convergen en la base de la nube. El propietario no volvio a mencionarlo.",
+      "id": "absorb-stream-single-direction",
+      "status": "pass"
+    },
+    {
+      "evidence": "Mano de pixeles de add-finder al 70%, quieta 0.2 s antes de cada clic. El propietario no volvio a mencionar el cursor.",
+      "id": "cursor-reuse-animated-hand",
+      "status": "pass"
+    },
+    {
+      "acceptance_test": "El objeto de la entrega es una foto recortada elegida por el propietario y este no pide cambiarlo.",
+      "evidence": "Propietario, 17:23, con cuatro fotos (una nube y tres botes): «puedes usar la nube tal cual y la foto del bot de basura con tapa pero me gustaría q tuviera basura adentro luego se tapa y se va bruscamente es lo único q cambiaría». El bote de la v2 era un cilindro de metal cepillado dibujado con gradientes, sin tapa.",
+      "hypothesis": "Un objeto cotidiano dibujado, por bien sombreado que este, compite con la imagen mental exacta que el propietario tiene de ese objeto. Para un gag el reconocimiento instantaneo importa mas que el acabado, y eso lo da una foto.",
+      "id": "real-prop-uses-owner-photo",
+      "proposed_rule": "Un objeto del mundo real que remata un gag (bote de basura y similares) se resuelve con una foto recortada, no dibujado. Antes de dibujarlo, pedir al propietario la foto o referencia que tiene en mente.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD, 2026-11-16, hora America/Mexico_City; feedback a las 17:23 con cuatro fotos de referencia.",
+  "human_approved": false,
+  "id": "fuck-v2",
+  "note": "El avion 3D de la v2 no recibio comentarios. La nube blanca con volumen tampoco gusto: el propietario mando una foto para sustituirla (ver fuck-v3).",
+  "project": "fuck"
+}

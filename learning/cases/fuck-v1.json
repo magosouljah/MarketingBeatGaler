@@ -1,0 +1,68 @@
+{
+  "account": "account-1",
+  "artifact": "v1 (13.5 s) con copia con contador de frames",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final): account-1/videos/fuck/project/.",
+  "checks": [
+    {
+      "acceptance_test": "En una hoja de contactos con el recuadro de la zona de atencion dibujado, ningun texto de ningun frame toca ni cruza el recuadro.",
+      "evidence": "Propietario, 17:00: «el fuck llega a ser demasiado grande y puede salirse de la pantalla». Dio margenes de atencion: arriba 120 px, abajo 330, izquierda 120, derecha 120: «no significa q no puedan haber cosas ahi pero q talvez no se vean entonces cosas como el texto no pueden quedar ahi».",
+      "hypothesis": "El texto se dibujaba en coordenadas de mundo y con una salida que lo escalaba hasta 8x; cualquier zoom o paneo de la camara lo sacaba del cuadro. No habia una zona segura definida para este video.",
+      "id": "text-inside-attention-margins",
+      "proposed_rule": "Todo texto queda dentro de la zona de atencion (120 px arriba, 330 abajo, 120 a cada lado, en 1080x1920). Se dibuja fijo en pantalla, no en el mundo de la camara, encogido hasta caber en 760 px de ancho y con el rebote de entrada limitado a 1.1x.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario ve la entrega y no vuelve a describir los objetos como infantiles, de PowerPoint o feos.",
+      "evidence": "Propietario, 17:00: «el bote de basura es muy feo, igual el avion no me gusta, esos estilos son muy animacion para nilños 2d powerpoint».",
+      "hypothesis": "El bote y el avion eran poligonos de relleno liso, sin volumen, luz ni sombra propia; junto a portadas reales y a la interfaz de la app se leian como clip art.",
+      "id": "props-not-flat-cartoon",
+      "proposed_rule": "Un objeto protagonista no se dibuja como vector plano de relleno liso. Lleva volumen real: malla 3D sombreada por la normal, o foto recortada, con sombra desenfocada. Las estelas son difusas, no lineas punteadas.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "Medidos en la copia con contador, los huecos entre palabras consecutivas de la enumeracion difieren en 0.5 s o menos y el propietario no pide moverlas.",
+      "evidence": "Propietario, 17:00: «hay demasiado espacio entre upload y store, quiero q sea mas parecido al ti empo entre store y organize». En la v1 habia 3.45 s entre «upload» y «store» y 1.45 s entre «store» y «organize».",
+      "hypothesis": "Cada palabra se coloco al inicio de su escena y la escena de la nube duraba 3.5 s; el ritmo de la frase hablada quedo a merced de la duracion de las escenas.",
+      "id": "voice-word-gaps-even",
+      "proposed_rule": "Las palabras de una misma enumeracion («upload, store, organize») entran con huecos parecidos (diferencia de 0.5 s o menos). Si una escena es mas larga, se comprime la escena o la palabra entra mas tarde dentro de ella; no se estira ni acelera la voz.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "El propietario escucha la mezcla y no menciona el sidechain ni el ducking.",
+      "evidence": "Propietario, 17:00: «el sidechain de la voz y el beat no me gusta es muy brusco esta bien q suene mas el beat y menos ducking». La v1 usaba sidechaincompress con ratio 5, umbral 0.03, ataque 15 ms y liberacion 250 ms, con el beat a 0.5.",
+      "hypothesis": "Con ratio alto y ataque corto el beat se hunde de golpe en cada silaba; en un beat con graves sostenidos ese bombeo se oye mas que la voz.",
+      "id": "voice-duck-gentle",
+      "proposed_rule": "El ducking del beat bajo la voz es casi imperceptible: ratio 2 o menos, ataque de 50 ms o mas, liberacion de 400 ms o mas, y el beat alto. Si la voz no se entiende, se sube la voz antes que hundir el beat.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En un frame de la camara lenta se ven portadas con al menos tres inclinaciones claramente distintas y ninguna mayoria de frente.",
+      "evidence": "Propietario, 17:00: «frame 233 las portadas estan todas apuntando hacia enfrente, puede girarlas para q se vea mas 3d la explocion».",
+      "hypothesis": "Las portadas solo rotaban en el plano de la pantalla y cambiaban de tamano; sin inclinacion fuera del plano la profundidad dependia solo del desenfoque.",
+      "id": "burst-covers-tumble-in-3d",
+      "proposed_rule": "En una explosion o dispersion cada portada tiene inclinacion propia fuera del plano (giro en X y en Y), sigue girando despacio durante la camara lenta, se oscurece al ponerse de canto y se endereza al llegar a su lugar.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En un frame a mitad de la avalancha todos los objetos estan del mismo lado del que entro el primero y apuntan al mismo punto de entrada.",
+      "evidence": "Propietario, 17:00: «155 los archivos tienen q salir de abajo como el otro, salen de toda la area de abajo y ligeramente los lados pegados a abajo y se juntan la parte de abajo de la nube».",
+      "hypothesis": "El primer archivo subia hacia la nube pero la avalancha se genero en circulo alrededor de ella, desde todos los angulos; el segundo movimiento contradecia la direccion que el primero habia establecido.",
+      "id": "absorb-stream-single-direction",
+      "proposed_rule": "Cuando algo absorbe objetos, todos llegan desde la direccion que marco el primero: salen de toda la franja de ese lado (y un poco de los lados contiguos) y convergen en un mismo punto de entrada.",
+      "status": "fail"
+    },
+    {
+      "acceptance_test": "En la copia con contador el cursor no tiene recuadro, se encoge en cada clic y el propietario no lo corrige.",
+      "evidence": "Propietario, 17:00, con captura del cursor mostrando un recuadro negro: «te mande imagen de como se ve el mouse por alguna razon, la otra vez tu creaste un mouse animado, ese me gusta puede hacer algo parecido auqn un poco mas pequeño».",
+      "hypothesis": "Se dibujo public/beatgaler-custom-cursor.png tal cual: ese PNG tiene fondo negro opaco y no lleva animacion. La mano de pixeles animada de add-finder ya estaba aprobada y no se reutilizo.",
+      "id": "cursor-reuse-animated-hand",
+      "proposed_rule": "El cursor de los videos es la mano de pixeles animada de add-finder (reconstruida fila a fila, con estiramiento por velocidad, encogimiento al clic y aro), nunca el PNG de la app. El tamano se ajusta al encuadre.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD, 2026-11-16, hora America/Mexico_City; feedback a las 17:00 con nueve correcciones numeradas.",
+  "human_approved": false,
+  "id": "fuck-v1",
+  "note": "Primera entrega tras tres rondas de preguntas. La correccion 2 (invertir Dropbox y Untitled) fue un cambio de guion que el propietario asumio como error suyo; la 4 (otra nube, blanca) se registra en fuck-v3. Caso registrado al cerrar el video, no tras la entrega.",
+  "project": "fuck"
+}

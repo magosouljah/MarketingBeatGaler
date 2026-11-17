@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En un frame a mitad de la avalancha todos los objetos estan del mismo lado del que entro el primero y apuntan al mismo punto de entrada.",
+  "account": "account-1",
+  "candidate_rule": "Cuando algo absorbe objetos, todos llegan desde la direccion que marco el primero: salen de toda la franja de ese lado (y un poco de los lados contiguos) y convergen en un mismo punto de entrada.",
+  "cause_hypothesis": "El primer archivo subia hacia la nube pero la avalancha se genero en circulo alrededor de ella, desde todos los angulos; el segundo movimiento contradecia la direccion que el primero habia establecido.",
+  "check_id": "absorb-stream-single-direction",
+  "id": "fuck-v1--absorb-stream-single-direction",
+  "problem_evidence": "Propietario, 17:00: «155 los archivos tienen q salir de abajo como el otro, salen de toda la area de abajo y ligeramente los lados pegados a abajo y se juntan la parte de abajo de la nube».",
+  "source_case": "fuck-v1",
+  "state": "proposed"
+}

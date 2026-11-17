@@ -1,0 +1,20 @@
+{
+  "account": "account-1",
+  "artifact": "v4 (12.9 s) con copia con contador de frames, y final (1) limpia",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final): account-1/videos/fuck/project/.",
+  "checks": [
+    {
+      "acceptance_test": "Ninguna entrega posterior a la primera recibe una correccion del tipo «tal palabra deberia aparecer en el frame N».",
+      "evidence": "Propietario, 17:47, sobre la v4: «proper deberia aparecer en frame 283 y yq queda version final» (estaba en F293). 17:49, sobre la final (1): «ahora nada mas es mover el way despues de proper Y ya» (WAY seguia en F304).",
+      "hypothesis": "No se pudo ejecutar shared/transcription/align_words.py: el entorno bloqueo la descarga del modelo de transcripcion. La voz se corto por silencios y las entradas de «PROPER» y «WAY» se estimaron. El agente tampoco puede escuchar la mezcla. Lo aviso, pero entrego igual con tiempos estimados.",
+      "id": "word-frames-asked-when-no-alignment",
+      "proposed_rule": "Si no hay alineacion forzada disponible, no se estiman las entradas de las palabras: con la primera copia con contador se pide al propietario el frame en que suena cada palabra que lleva texto, y se colocan todas en esa misma ronda.",
+      "status": "fail"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD, 2026-11-16, hora America/Mexico_City; feedback a las 17:47 (v4) y a las 17:49 (final 1).",
+  "human_approved": false,
+  "id": "fuck-v4",
+  "note": "Complementa la leccion word-timing-forced-alignment de add-finder para cuando la herramienta no esta disponible. La nube plana de la v4 no recibio comentarios.",
+  "project": "fuck"
+}

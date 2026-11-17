@@ -1,0 +1,11 @@
+{
+  "account": "account-1",
+  "case_id": "fuck-v3",
+  "failed": [
+    "prop-treatment-chosen-from-options"
+  ],
+  "human_approved": false,
+  "passed": [
+    "real-prop-uses-owner-photo"
+  ]
+}

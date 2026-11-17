@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "Ninguna entrega posterior a la primera recibe una correccion del tipo «tal palabra deberia aparecer en el frame N».",
+  "account": "account-1",
+  "candidate_rule": "Si no hay alineacion forzada disponible, no se estiman las entradas de las palabras: con la primera copia con contador se pide al propietario el frame en que suena cada palabra que lleva texto, y se colocan todas en esa misma ronda.",
+  "cause_hypothesis": "No se pudo ejecutar shared/transcription/align_words.py: el entorno bloqueo la descarga del modelo de transcripcion. La voz se corto por silencios y las entradas de «PROPER» y «WAY» se estimaron. El agente tampoco puede escuchar la mezcla. Lo aviso, pero entrego igual con tiempos estimados.",
+  "check_id": "word-frames-asked-when-no-alignment",
+  "id": "fuck-v4--word-frames-asked-when-no-alignment",
+  "problem_evidence": "Propietario, 17:47, sobre la v4: «proper deberia aparecer en frame 283 y yq queda version final» (estaba en F293). 17:49, sobre la final (1): «ahora nada mas es mover el way despues de proper Y ya» (WAY seguia en F304).",
+  "source_case": "fuck-v4",
+  "state": "proposed"
+}

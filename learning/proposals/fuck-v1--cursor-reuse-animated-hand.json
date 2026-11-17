@@ -1,0 +1,11 @@
+{
+  "acceptance_test": "En la copia con contador el cursor no tiene recuadro, se encoge en cada clic y el propietario no lo corrige.",
+  "account": "account-1",
+  "candidate_rule": "El cursor de los videos es la mano de pixeles animada de add-finder (reconstruida fila a fila, con estiramiento por velocidad, encogimiento al clic y aro), nunca el PNG de la app. El tamano se ajusta al encuadre.",
+  "cause_hypothesis": "Se dibujo public/beatgaler-custom-cursor.png tal cual: ese PNG tiene fondo negro opaco y no lleva animacion. La mano de pixeles animada de add-finder ya estaba aprobada y no se reutilizo.",
+  "check_id": "cursor-reuse-animated-hand",
+  "id": "fuck-v1--cursor-reuse-animated-hand",
+  "problem_evidence": "Propietario, 17:00, con captura del cursor mostrando un recuadro negro: «te mande imagen de como se ve el mouse por alguna razon, la otra vez tu creaste un mouse animado, ese me gusta puede hacer algo parecido auqn un poco mas pequeño».",
+  "source_case": "fuck-v1",
+  "state": "proposed"
+}

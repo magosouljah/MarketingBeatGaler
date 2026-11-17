@@ -1,0 +1,15 @@
+{
+  "account": "account-1",
+  "case_id": "fuck-v1",
+  "failed": [
+    "text-inside-attention-margins",
+    "props-not-flat-cartoon",
+    "voice-word-gaps-even",
+    "voice-duck-gentle",
+    "burst-covers-tumble-in-3d",
+    "absorb-stream-single-direction",
+    "cursor-reuse-animated-hand"
+  ],
+  "human_approved": false,
+  "passed": []
+}

@@ -1,69 +1,65 @@
-# Cuestionario de calificación
+# Evaluación de videos
 
-Quince preguntas, del 1 al 10, que el **propietario** responde al cerrar cada video. Mide la ejecución del agente: en qué va bien, en qué falla y si mejora de un video al siguiente. Es el mismo cuestionario para todos los videos y ambas cuentas.
+Sistema para evaluar la **calidad técnica y artística del trabajo de la IA** en cada video. Lo responde el **propietario**. Es el mismo para todos los videos y ambas cuentas.
 
-## Escala
+No evalúa la estrategia de marketing, el guion, el gancho ni las ideas del creador: solo la ejecución.
 
-| | |
-| --- | --- |
-| 10 | No cambiaría nada |
-| 8 | Muy bien, detalles menores |
-| 6 | Pasa, pero algo me molesta |
-| 4 | Mal, hay que rehacerlo |
-| 1 | No sirve |
+## Criterios (versión 3)
 
-Si un aspecto no aplica (por ejemplo, un video sin voz), se deja sin responder.
+| Criterio | `id` | Peso | Qué mira |
+| --- | --- | ---: | --- |
+| Animación | `animation` | 20% | Fluidez, movimientos y transiciones |
+| Estética | `aesthetics` | 20% | Estilo visual, colores y composición |
+| Originalidad visual | `originality` | 15% | Creatividad y personalidad |
+| Consistencia | `consistency` | 15% | Coherencia visual entre escenas |
+| B-roll | `broll` | 10% | Calidad de las tomas de apoyo |
+| Realismo | `realism` | 10% | Naturalidad y ausencia de errores visuales |
+| Acabado profesional | `finish` | 10% | Nitidez, iluminación y detalles |
 
-## Qué se califica
+Los criterios, sus pesos y la escala viven en [`criteria.json`](criteria.json): para cambiarlos se edita ese archivo, no el código.
 
-**Solo lo que el agente controla y puede mejorar.** Lo que aporta el propietario (idea, gancho, guion, CTA, voz, música, portadas) no se califica: una nota ahí no le dice al agente qué cambiar.
+## Cómo se puntúa
 
-## Preguntas (versión 2)
+- Cada criterio recibe de **0 a 5**, con decimales (`4.5`).
+- Resultado final ponderado sobre **100**: `suma(peso × nota) ÷ suma(pesos que aplican) ÷ 5 × 100`.
+- Si un criterio **no aplica** (por ejemplo, un video sin tomas de apoyo) se marca `na`: queda fuera y su peso se reparte en proporción entre los demás. Con B-roll fuera, Animación pasa de 20% a 22.2%.
+- Cada criterio admite un comentario breve con el defecto y la mejora necesaria, más una nota general.
+- Hay que dar los siete criterios, cada uno con número o `na`; no se asume nada.
 
-**Ejecución del video**
-
-1. **Ritmo** — ¿Ninguna parte se siente lenta ni atropellada?
-2. **Sincronía** — ¿Imagen, música y voz caen juntas?
-3. **Movimiento** — ¿Las animaciones se sienten naturales y con intención?
-4. **Cámara y transiciones** — ¿Los cambios de escena fluyen, sin cortes raros?
-5. **Texto** — ¿Las letras se leen bien y se ven bien?
-6. **Claridad visual** — ¿Se entiende lo que pasa en pantalla a la primera?
-7. **Acabado premium** — ¿Se ve caro y no de plantilla?
-8. **Fidelidad al producto** — ¿Lo que sale se parece a BeatGaler de verdad?
-9. **Formato en teléfono** — ¿Se ve bien en tu teléfono dentro de Instagram, sin cortes ni cosas tapadas?
-10. **Montaje de audio** — ¿Efectos y entradas de voz y música están bien colocados? (no califica la voz ni el beat)
-
-**Trabajar con el agente**
-
-11. **Entendimiento** — ¿Capté lo que pedías sin que tuvieras que repetirlo?
-12. **Eficiencia** — ¿Llegamos al resultado en pocas vueltas?
-13. **Control de calidad** — ¿Te llegaron las versiones sin errores que yo debí ver antes?
-14. **Criterio propio** — ¿Mis decisiones y propuestas sumaron, sin preguntar de más ni inventar de más?
-
-**Global**
-
-15. **Ejecución global** — Con lo que me diste (idea, guion, voz, música), ¿qué tan bien lo ejecuté?
-
-Al final, un comentario libre opcional.
-
-La versión 1 nunca se usó: incluía gancho, claridad del mensaje, CTA, audio y «¿lo publicarías?», que dependen de lo que entrega el propietario. Esos `id` quedan retirados.
-
-## Reglas para el agente
-
-- Se pide **una vez por video**, sobre la última versión entregada. No en cada iteración.
-- Las calificaciones son solo del propietario. Se transcriben tal cual; nunca se rellenan, estiman ni redondean. Lo que no respondió queda vacío.
-- Cualquier aspecto en **6 o menos**: preguntar qué falló y registrarlo como caso en `learning/cases/` con su explicación textual. El número solo no es evidencia suficiente para una regla.
-- Una calificación alta **no** promueve propuestas: la promoción sigue necesitando aprobación explícita (ver [`../README.md`](../README.md)).
-- Antes de empezar un video nuevo, ejecutar `show` y atacar primero los aspectos con peor nota.
-- Toda pregunta nueva debe medir algo que el agente pueda cambiar.
-- Las preguntas pueden cambiar con permiso del propietario: subir `version` en `questions.json` y **no reutilizar ni renombrar** los `id`, para que el historial siga siendo comparable.
+| Nota | Significa |
+| ---: | --- |
+| 5 | No cambiaría nada |
+| 4 | Muy bien, detalles menores |
+| 3 | Pasa, pero algo molesta |
+| 2 | Mal, hay que rehacerlo |
+| 0 | No sirve |
 
 ## Comandos
 
 ```bash
-python learning/scorecard/scorecard.py add <video> --account account-1 --version "final v2" \
-    pacing=7 sync=9 motion=8 … --note "comentario" --evidence "sesión y fecha de la respuesta"
-python learning/scorecard/scorecard.py show
+python learning/scorecard/scorecard.py add <video> --account account-1 --version "final" \
+    animation=4.5 aesthetics=4 originality=3.5 consistency=4 broll=na realism=4 finish=4.5 \
+    --comment aesthetics="el bote dibujado se veía infantil" --comment finish="nube pixelada al inflarse" \
+    --note "comentario general" --evidence "sesión y fecha de la respuesta"
+
+python learning/scorecard/scorecard.py show            # última versión de cada video, lado a lado
+python learning/scorecard/scorecard.py show <video>    # detalle: notas, pesos efectivos, comentarios y total
+python learning/scorecard/scorecard.py compare <video> # todas las versiones de un video y cuánto cambió cada criterio
 ```
 
-Resultados en `scores/<video>.json`.
+Cada video guarda todas sus versiones evaluadas en `evaluations/<video>.json`. Volver a registrar la misma `--version` la reemplaza; una versión nueva se añade.
+
+## Reglas para el agente
+
+- Las calificaciones son solo del propietario. Se transcriben tal cual; nunca se rellenan, estiman ni redondean.
+- Se pide al cerrar el video, sobre la última versión entregada. Si el propietario quiere evaluar versiones intermedias, se registran con su `--version` para poder compararlas.
+- Cualquier criterio en **3 o menos**: preguntar qué falló y registrarlo como caso en `learning/cases/` con su explicación textual. El número solo no es evidencia suficiente para una regla.
+- Una calificación alta **no** promueve propuestas: la promoción sigue necesitando aprobación explícita (ver [`../README.md`](../README.md)).
+- Antes de empezar un video nuevo, ejecutar `show` y atacar primero los criterios con peor nota.
+- Los criterios pueden cambiar con permiso del propietario: subir `version` en `criteria.json` y **no reutilizar ni renombrar** los `id`, para que el historial siga siendo comparable.
+
+## Historial del sistema
+
+- **Versión 3 (2026-11-16, vigente):** siete criterios ponderados de 0 a 5 y total sobre 100, definidos por el propietario.
+- **Versión 2 (retirada):** cuestionario de quince preguntas del 1 al 10. Solo se usó con add-finder (promedio 7.0); su registro sigue en [`scores/add-finder.json`](scores/add-finder.json) y sus preguntas en [`questions.json`](questions.json). No es comparable con la versión 3 y no se convierte.
+- **Versión 1:** nunca se usó.

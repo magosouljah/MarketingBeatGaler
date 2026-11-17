@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "principle": "Evalúa solo la calidad técnica y artística de la ejecución de la IA. No evalúa la estrategia de marketing, el guion, el gancho ni las ideas del creador.",
+  "scale": {
+    "min": 0,
+    "max": 5,
+    "decimals": true,
+    "anchors": {
+      "5": "No cambiaría nada",
+      "4": "Muy bien, detalles menores",
+      "3": "Pasa, pero algo molesta",
+      "2": "Mal, hay que rehacerlo",
+      "0": "No sirve"
+    }
+  },
+  "low_threshold": 3,
+  "criteria": [
+    {"id": "animation", "label": "Animación", "weight": 20, "description": "Fluidez, movimientos y transiciones"},
+    {"id": "aesthetics", "label": "Estética", "weight": 20, "description": "Estilo visual, colores y composición"},
+    {"id": "originality", "label": "Originalidad visual", "weight": 15, "description": "Creatividad y personalidad"},
+    {"id": "consistency", "label": "Consistencia", "weight": 15, "description": "Coherencia visual entre escenas"},
+    {"id": "broll", "label": "B-roll", "weight": 10, "description": "Calidad de las tomas de apoyo"},
+    {"id": "realism", "label": "Realismo", "weight": 10, "description": "Naturalidad y ausencia de errores visuales"},
+    {"id": "finish", "label": "Acabado profesional", "weight": 10, "description": "Nitidez, iluminación y detalles"}
+  ]
+}

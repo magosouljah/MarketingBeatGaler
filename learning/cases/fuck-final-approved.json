@@ -1,0 +1,63 @@
+{
+  "account": "account-1",
+  "approval_evidence": "Propietario, 2026-11-16 18:09 (America/Mexico_City), sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD, sobre beatgaler_fuck_FINAL.mp4 (final 2): «perfecto ok quedo bien anota todo lo q aprendiste y cerramos».",
+  "artifact": "Final (2), 12.9 s, 387 frames, limpia",
+  "artifact_location": "MP4 entregado al propietario en esa sesion; no versionado en este repositorio. Fuente reproducible (estado final): account-1/videos/fuck/project/.",
+  "checks": [
+    {
+      "evidence": "Todo el texto (F**K, UPLOAD, STORE, ORGANIZE, PROPER, WAY y el CTA) se dibuja fijo en pantalla con ancho maximo de 760 px; verificado en hojas de contactos con el recuadro 120/330/120/120 dibujado.",
+      "id": "text-inside-attention-margins",
+      "status": "pass"
+    },
+    {
+      "evidence": "Avion como malla 3D de cuatro caras sombreadas con sombra y estela difusas; bote en foto. Desde la v2 el propietario no volvio a llamar infantil ni feo a ningun objeto.",
+      "id": "props-not-flat-cartoon",
+      "status": "pass"
+    },
+    {
+      "evidence": "«upload» F134, «store» F185, «organize» F228: huecos de 1.70 y 1.45 s (diferencia 0.25 s).",
+      "id": "voice-word-gaps-even",
+      "status": "pass"
+    },
+    {
+      "evidence": "Misma mezcla que la v2 (ratio 1.6, ataque 60 ms, liberacion 500 ms, beat a 0.66); sin comentarios sobre el audio desde entonces.",
+      "id": "voice-duck-gentle",
+      "status": "pass"
+    },
+    {
+      "evidence": "De F180 a F228 cada portada lleva giro propio en X e Y y se endereza al caer en la cuadricula.",
+      "id": "burst-covers-tumble-in-3d",
+      "status": "pass"
+    },
+    {
+      "evidence": "De F134 a F180 los archivos suben desde la franja inferior y convergen en la base de la nube.",
+      "id": "absorb-stream-single-direction",
+      "status": "pass"
+    },
+    {
+      "evidence": "Mano de pixeles al 70%: quieta antes del clic derecho (F272) y del clic en Share (F291), encogida a 0.74x en ambos.",
+      "id": "cursor-reuse-animated-hand",
+      "status": "pass"
+    },
+    {
+      "evidence": "El bote es la foto del propietario con papel dentro; tapa F87-F89, salida F92-F97. Sin cambios desde la v3.",
+      "id": "real-prop-uses-owner-photo",
+      "status": "pass"
+    }
+  ],
+  "feedback_source": "sesion Claude https://claude.ai/code/session_015kcBBvgw9cB8YaopAoPsVD, 2026-11-16, hora America/Mexico_City; aprobacion a las 18:09.",
+  "human_approved": true,
+  "id": "fuck-final-approved",
+  "note": "La aprobacion cubre la final completa. Quedan sin validar prop-treatment-chosen-from-options y word-frames-asked-when-no-alignment: ninguna entrega aprobada las puso a prueba. Reproduccion comprobada desde el repositorio: tools/render.sh da el mismo video cuadro por cuadro (PSNR infinito) y el mismo audio (MD5). Evaluacion ponderada pendiente de respuesta del propietario.",
+  "project": "fuck",
+  "validates_proposals": [
+    "fuck-v1--text-inside-attention-margins",
+    "fuck-v1--props-not-flat-cartoon",
+    "fuck-v1--voice-word-gaps-even",
+    "fuck-v1--voice-duck-gentle",
+    "fuck-v1--burst-covers-tumble-in-3d",
+    "fuck-v1--absorb-stream-single-direction",
+    "fuck-v1--cursor-reuse-animated-hand",
+    "fuck-v2--real-prop-uses-owner-photo"
+  ]
+}

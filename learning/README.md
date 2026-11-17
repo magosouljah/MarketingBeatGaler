@@ -26,9 +26,9 @@ python learning/engine.py promote orbit-initial-rejection--orbit-depth nombre-de
 5. Obtiene aprobación humana antes de afirmar calidad creativa profesional; entonces `promote` incorpora la nueva regla validada. Todo se versiona con Git.
 6. En los próximos trabajos, el agente debe leer las reglas en `learning/lessons/<cuenta>/`. Las reglas de la cuenta 1 NO contaminan la cuenta 2.
 
-## Cuestionario por video
+## Evaluación por video
 
-Al cerrar cada video el propietario califica del 1 al 10 quince aspectos de la ejecución del agente (solo lo que el agente controla): [scorecard/README.md](scorecard/README.md). Sirve para comparar videos entre sí; no sustituye a los casos ni a la aprobación explícita.
+Al cerrar cada video el propietario evalúa la calidad técnica y artística de la ejecución de la IA: siete criterios ponderados, de 0 a 5, con total sobre 100 ([scorecard/README.md](scorecard/README.md)). Guarda cada versión evaluada para comparar videos y versiones entre sí; no sustituye a los casos ni a la aprobación explícita.
 
 ## Protección y límites
 
@@ -37,6 +37,7 @@ Al cerrar cada video el propietario califica del 1 al 10 quince aspectos de la e
 - `audit` comprueba formato, trazabilidad y la integridad del archivo rector; **no** verifica automáticamente la calidad artística del MP4.
 - Primer ciclo completo: [add-finder](../account-1/videos/add-finder/) (2026-11-14). 11 casos, 22 lecciones validadas por la aprobación de la v5 y 3 propuestas a la espera de que el propietario confirme la última entrega (`cta-cursor-centered`, `instagram-safe-zones-measured`, `floating-covers-no-intersection`). Para promoverlas: crear un caso nuevo con esa confirmación como `approval_evidence` y ejecutar `promote`.
 - [llama](../account-1/videos/llama/) (2026-11-12, registrado el 2026-11-16): video hecho fuera del repositorio y antes de add-finder. 5 casos, 3 propuestas sin aprobar (`live-insert-shortest-readable`, `speed-ramp-needs-frame-blending`, `partial-change-keeps-the-rest`) y ninguna lección: el propietario no aprobó de forma explícita ninguna versión final.
+- [fuck](../account-1/videos/fuck/) (2026-11-16): 5 casos, 8 lecciones validadas por la aprobación de la final («perfecto ok quedo bien») y 2 propuestas abiertas que ninguna entrega aprobada puso a prueba (`prop-treatment-chosen-from-options`, `word-frames-asked-when-no-alignment`).
 - La órbita 3D de portadas quedó archivada sin aprobar; sus dos propuestas siguen abiertas. `DIRECCION.md` aún la nombra como prioridad: cambiarlo requiere autorización explícita del propietario.
 - HyperFrames es la elección según `FASE-0.md`; herramientas 3D complementarias requieren justificación, no sustitución silenciosa.
 
