@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Chequeos mecánicos de ideación V1.2; NO juzga calidad creativa."""
 import argparse
+import csv
 import json
 import re
 import sys
@@ -36,6 +37,8 @@ def comprobar(datos):
     if not 15 <= len(candidatos) <= 20:
         errores.append('Se requieren 15–20 situaciones iniciales, no guiones.')
     ids, situaciones, nucleos, territorios = set(), set(), set(), set()
+    with (ROOT / '1-investigacion' / 'evidencia.csv').open(encoding='utf-8', newline='') as fh:
+        evidencias = {row['id'] for row in csv.DictReader(fh)}
     for i, c in enumerate(candidatos, 1):
         if not isinstance(c, dict):
             errores.append(f'Candidato {i}: no es objeto.')
@@ -64,6 +67,10 @@ def comprobar(datos):
         if isinstance(apoyo, str) and not (apoyo == 'supuesto' or
                                             re.fullmatch(r'EV-\d{4}( EV-\d{4})*', apoyo)):
             errores.append(f'{prefijo}: apoyo debe ser EV-0000 o supuesto.')
+        elif isinstance(apoyo, str) and apoyo != 'supuesto':
+            for ev in apoyo.split():
+                if ev not in evidencias:
+                    errores.append(f'{prefijo}: evidencia inexistente {ev}.')
     if len(territorios - {''}) < 5:
         errores.append('Explorar al menos cinco territorios de vida diferentes.')
     finales = datos.get('finalistas')
