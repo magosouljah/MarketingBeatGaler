@@ -4,7 +4,7 @@
 
 ## Fuentes permitidas para esta fase
 
-Leer `AGENTS.md`, `DIRECCION.md` (solo lectura), `PLAN.md`, `FASE-0.md`, `pipeline/1-investigacion/EXPLORACION-V12.md`, el Mapa V3, evidencia pertinente del módulo 1 y el protocolo causal del módulo 2. **No leer** `pipeline/evaluacion/`, `pipeline/3-hipotesis-guiones/guiones/`, `guiones.csv`, los ejemplos históricos, rechazos o guiones anteriores. Los ejemplos reservados solo los usa un **revisor en otro contexto**, tras guardar el lote.
+Leer `AGENTS.md`, `DIRECCION.md` (solo lectura), `PLAN.md`, `FASE-0.md`, `pipeline/1-investigacion/EXPLORACION-V12.md`, el Mapa V3, del módulo 1 **priorizar los nuevos EV-0012–EV-0017** y sus fuentes; del módulo 2 leer **el protocolo causal, no los árboles históricos**. La evidencia histórica anterior puede contener slogans previos: no usarla como fuente creativa. **No leer** `pipeline/evaluacion/`, `pipeline/3-hipotesis-guiones/guiones/`, `guiones.csv`, los ejemplos históricos, rechazos o guiones anteriores. Los ejemplos reservados solo los usa un **revisor en otro contexto**, tras guardar el lote.
 
 ## Generación: orden obligatorio
 
