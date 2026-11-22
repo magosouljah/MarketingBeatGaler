@@ -1,0 +1,3 @@
+id,hipotesis,archivo,hook,aprobado_por_propietario
+PRUEBA-G-001,PRUEBA-H-001,guiones/PRUEBA-G-001.md,Hook de prueba A,no
+PRUEBA-G-002,PRUEBA-H-001,guiones/PRUEBA-G-002.md,Hook de prueba B,no

@@ -1,0 +1,53 @@
+# Pipeline V1 — seis módulos
+
+Convierte lo que sabemos del productor musical en videos, mide qué pasa y devuelve lo aprendido. Todo son archivos de texto y CSV unidos por identificadores; no hay base de datos ni servicios.
+
+```
+1 Investigación → 2 Razonamiento → 3 Hipótesis, selección y guiones → 4 Producción → 5 Medición → 6 Aprendizaje
+        ↑______________________________ preguntas nuevas ______________________________________|
+```
+
+| Módulo | Carpeta | Entra | Sale | Identificador |
+| --- | --- | --- | --- | --- |
+| 1. Investigación | [`1-investigacion/`](1-investigacion/) | Fuentes, testimonios, referencias, resultados propios | Evidencia etiquetada y cola de preguntas abiertas | `EV-0001`, `Q-001` |
+| 2. Razonamiento | [`2-razonamiento/`](2-razonamiento/) | Evidencia y preguntas | Un árbol de porqués por mecanismo | `M-001`, `N-001-01` |
+| 3. Hipótesis, selección y guiones | [`3-hipotesis-guiones/`](3-hipotesis-guiones/) | Árboles | Predicciones comprobables, guiones y experimentos de contraste | `H-001`, `G-001`, `X-001` |
+| 4. Producción | [`4-produccion/`](4-produccion/) | Guiones aprobados | Piezas listas para publicar | `P-0001` |
+| 5. Medición | [`5-medicion/`](5-medicion/) | Números leídos a mano de cada plataforma | Una fila por pieza, plataforma y lectura | usa `P-…` |
+| 6. Aprendizaje | [`6-aprendizaje/`](6-aprendizaje/) | Predicción y resultados | Informe de ocho preguntas; preguntas nuevas para el módulo 1 | `A-001` |
+
+La cadena completa de una pieza: `P → G → H → N → M → EV`. Con eso cualquier número se puede seguir hasta la evidencia que motivó el video.
+
+## Órdenes
+
+```bash
+python pipeline/pipeline.py comprobar        # todos los identificadores enlazan
+python pipeline/pipeline.py estado           # qué hay en cada módulo
+python pipeline/pipeline.py arbol M-001      # árbol de un mecanismo y cuántas hojas están ancladas
+python pipeline/pipeline.py aprender X-001   # parte numérica del informe; añade --escribir para guardar el borrador
+python -m unittest discover -s pipeline/pruebas -v
+```
+
+## Dos aprendizajes que no se mezclan
+
+- **Audiencia:** vive aquí, en `6-aprendizaje/`. Solo los datos de publicación cambian el estado de una hipótesis.
+- **Producción:** sigue en [`learning/`](../learning/) (casos, lecciones, evaluación de 7 criterios). Depende de la aprobación visual del propietario.
+
+Una pieza marcada como mal ejecutada en `4-produccion/piezas.csv` no cuenta ni a favor ni en contra de su hipótesis.
+
+## Estado de cada módulo (2026-11-21)
+
+| Módulo | Qué funciona | Qué falta |
+| --- | --- | --- |
+| 1 | 11 evidencias reales con su solidez; 7 preguntas abiertas | Fuentes modernas de atención; los 26 enlaces de referencia sin abrir; enlaces de las fuentes del Mapa |
+| 2 | Un árbol real (Autoexamen) con sus cinco ramas; 3 de 11 hojas ancladas | Regla de cuándo un árbol está listo para producir; más mecanismos |
+| 3 | Una hipótesis, dos guiones en borrador y un experimento de contraste | Aprobación del propietario; criterio escrito de selección entre muchos candidatos |
+| 4 | Registro de piezas enlazado a guion y experimento | La plantilla de arranques; ninguna pieza está producida |
+| 5 | Formato de registro manual y validación | Ninguna lectura real; integraciones |
+| 6 | Borrador numérico del informe, con avisos de comparaciones dudosas | Ningún informe real; la interpretación siempre se escribe a mano |
+
+El circuito completo está comprobado solo con los datos inventados de [`pruebas/circuito/`](pruebas/circuito/), marcados como `PRUEBA` en cada identificador y aislados de los datos reales.
+
+**Siguiente módulo que conviene mejorar: 1 y 2.** El árbol real tiene 27 % de hojas ancladas, y dos de sus supuestos solo se apoyan en un texto de 1912.
+
+`DIRECCION.md` no se ha modificado y sigue describiendo la dirección anterior.

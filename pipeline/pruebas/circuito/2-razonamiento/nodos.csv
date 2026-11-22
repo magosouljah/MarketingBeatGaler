@@ -1,0 +1,6 @@
+id,mecanismo,padre,rama,pregunta,respuesta,cierre,evidencia,pregunta_abierta
+PRUEBA-N-001-01,PRUEBA-M-001,,mecanismo,¿Por que?,Respuesta anclada de prueba.,dato,PRUEBA-EV-0001,
+PRUEBA-N-001-02,PRUEBA-M-001,,audiencia,¿Quien?,Supuesto de prueba.,supuesto,,PRUEBA-Q-001
+PRUEBA-N-001-03,PRUEBA-M-001,,fallo,¿Cuando falla?,Supuesto de prueba.,supuesto,,PRUEBA-Q-001
+PRUEBA-N-001-04,PRUEBA-M-001,,alternativas,¿Que mas?,No se sabe.,no_sabemos,,PRUEBA-Q-001
+PRUEBA-N-001-05,PRUEBA-M-001,,camino,¿Y BeatGaler?,Supuesto de prueba.,supuesto,,PRUEBA-Q-001

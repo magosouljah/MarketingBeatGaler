@@ -1,0 +1,5 @@
+id,guion,experimento,rol,cuerpo,estado,archivo,ejecucion
+PRUEBA-P-0001,PRUEBA-G-001,PRUEBA-X-001,prueba,cuerpo-a,publicada,,
+PRUEBA-P-0002,PRUEBA-G-002,PRUEBA-X-001,contraste,cuerpo-a,publicada,,
+PRUEBA-P-0003,PRUEBA-G-001,PRUEBA-X-001,prueba,cuerpo-b,publicada,,
+PRUEBA-P-0004,PRUEBA-G-002,PRUEBA-X-001,contraste,cuerpo-b,publicada,,mal ejecutada: texto cortado

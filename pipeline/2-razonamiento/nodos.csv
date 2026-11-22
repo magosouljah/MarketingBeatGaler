@@ -1,0 +1,15 @@
+id,mecanismo,padre,rama,pregunta,respuesta,cierre,evidencia,pregunta_abierta
+N-001-01,M-001,,mecanismo,¿Por que frenaria el scroll?,Porque plantea una pregunta que el espectador intenta contestar el mismo antes de decidir si sigue.,,,
+N-001-02,M-001,N-001-01,mecanismo,¿Por que intentar contestar retiene la atencion?,Una pregunta abierta sobre uno mismo funcionaria como acertijo. Solo lo respalda un texto de 1912.,supuesto,EV-0004,Q-001
+N-001-03,M-001,N-001-01,mecanismo,¿Hay algun caso observado de un arranque que apele al caos del propio catalogo?,Si: un anuncio de la competencia abre asi. No sabemos como rindio.,dato,EV-0006,
+N-001-04,M-001,,audiencia,¿Por que le hablaria a un productor y no a cualquiera?,«Beats» y un numero grande tocan algo propio del productor; el que no produce no tiene nada que nombrar.,supuesto,EV-0005,Q-005
+N-001-05,M-001,,audiencia,¿Por que lo sentiria un productor?,Porque no poder nombrar lo que ha hecho choca con querer saber que tiene.,,,
+N-001-06,M-001,N-001-05,audiencia,¿Hay alguien real que lo haya vivido?,El propietario: queria ver y escuchar todo en un solo lugar. Es un solo caso.,testimonio,EV-0001,
+N-001-07,M-001,N-001-05,audiencia,¿Cuantos productores lo viven?,No se sabe. El Mapa lo lista y admite que no conoce la frecuencia; BeatGaler no tiene usuarios a quienes preguntar.,no_sabemos,EV-0003 EV-0010,Q-002
+N-001-08,M-001,,fallo,¿Cuando produciria rechazo en vez de atencion?,Si se lee como reproche: el Mapa marca que lo inacabado y desordenado da culpa.,supuesto,EV-0009,Q-003
+N-001-09,M-001,,fallo,¿Para quien no funcionaria?,Para quien tiene pocos beats o ya los tiene ordenados: puede nombrar diez sin esfuerzo.,supuesto,,Q-002
+N-001-10,M-001,,alternativas,¿Que otra cosa explicaria un buen resultado?,"El numero concreto, el primer cuadro, el cuerpo, el horario o el grupo al que la plataforma lo reparte.",supuesto,,Q-006
+N-001-11,M-001,,alternativas,¿El unico resultado propio apoya este mecanismo?,"No se puede decir. El video de 332 vistas usaba un hook parecido, pero el propietario lo atribuye sobre todo a la calidad del video.",no_sabemos,EV-0007,Q-006
+N-001-12,M-001,,camino,¿Por que llevaria a querer BeatGaler?,Porque el cuerpo responde a la pregunta mostrando el catalogo con portadas y tags.,,,
+N-001-13,M-001,N-001-12,camino,¿El cuerpo paga la tension que abre el arranque?,Depende de donde se corte cada cuerpo existente; hoy todos traen su propio arranque.,supuesto,,Q-004
+N-001-14,M-001,N-001-12,camino,¿Ver el catalogo ordenado despierta deseo de usarlo?,Es lo que el propietario dice que le paso con su version local. Un solo caso.,testimonio,EV-0001 EV-0002,Q-007

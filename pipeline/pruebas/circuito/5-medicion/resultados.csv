@@ -1,0 +1,8 @@
+pieza,plataforma,fecha_publicacion,fecha_lectura,horas_desde_publicacion,vistas,retencion_3s_pct,skip_rate_pct,tiempo_medio_s,completo_pct,likes,comentarios,comentarios_galer,guardados,envios,visitas_perfil,fuente_dato,origen
+PRUEBA-P-0001,instagram,2026-01-01,2026-01-03,24,90,50,,3.0,,,,0,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0001,instagram,2026-01-01,2026-01-03,48,120,55,,4.0,,,,1,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0002,instagram,2026-01-01,2026-01-03,48,110,40,,3.5,,,,0,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0003,instagram,2026-01-01,2026-01-03,48,100,60,,4.5,,,,0,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0004,instagram,2026-01-01,2026-01-03,48,95,30,,2.0,,,,0,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0001,tiktok,2026-01-01,2026-01-03,48,500,45,,5.0,,,,2,,,,inventado para la prueba,PRUEBA
+PRUEBA-P-0002,tiktok,2026-01-01,2026-01-03,72,450,47,,5.5,,,,0,,,,inventado para la prueba,PRUEBA
