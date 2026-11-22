@@ -31,3 +31,7 @@ node_modules/
 
 # Pipeline: renders de arranques y piezas (no se versionan).
 /pipeline/4-produccion/arranque/out/
+
+# Borradores locales de ideacion; pueden contener material no aprobado.
+/inputs/
+/pipeline/ideacion-runs/
