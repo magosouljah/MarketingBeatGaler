@@ -23,6 +23,10 @@ La cola que mantiene viva la investigación. Toda hoja del árbol que termina en
 
 Investigar **sin escribir hooks ni decidir el guion**. Reunir observaciones que permitan al módulo 2 explicar una cadena causal: **persona → deseo/vulnerabilidad → situación → estímulo perceptible → posible reacción inmediata → atención sostenida → acción posterior**. No asumir que todos los productores comparten los mismos deseos o reaccionan igual.
 
+### Preguntas guía (no formulario obligatorio)
+
+Registrar solo lo que la fuente permita; la ausencia de métricas no bloquea ideas.
+
 ### Preguntas que debe alimentar la evidencia
 
 1. **Deseo y contexto:** ¿qué intenta conseguir, evitar o proteger el productor? ¿En qué circunstancias aparece ese deseo? ¿Quiénes difieren?
@@ -44,5 +48,7 @@ Investigar **sin escribir hooks ni decidir el guion**. Reunir observaciones que 
 ### Entrega hacia el módulo 2
 
 Para cada mecanismo investigado, entregar evidencia o preguntas abiertas sobre: **deseo específico, situación concreta, estímulo observable, reacción postulada, explicación alternativa, condiciones de fallo y resultados disponibles**. El módulo 2 interpreta estas piezas y pregunta «¿por qué?»; el módulo 1 no debe inventar el enlace causal.
+
+**Entrega mínima:** una observación o fuente con referencia, una situación/estímulo concreto si consta, y las preguntas abiertas. La interpretación causal corresponde al módulo 2.
 
 **Prioridades de investigación actuales:** fuentes modernas de atención y retención; observaciones reales de productores en situaciones concretas; resultados comparables de videos publicados; verificar las referencias aún no abiertas. No dar por respondidas Q-001–Q-007 ni revivir el hook rechazado «400 beats. Name ten.» por ser el único ejemplo histórico registrado.
