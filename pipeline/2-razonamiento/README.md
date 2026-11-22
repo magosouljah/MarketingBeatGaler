@@ -31,9 +31,9 @@ Una rama se detiene al llegar a una hoja, o cuando otro «¿por qué?» no cambi
 
 ## Protocolo causal para alimentar el módulo 3
 
-No empezar por una emoción etiquetada ni por un hook escrito. Para cada mecanismo, recorrer y cuestionar esta cadena:
+No empezar por una emoción etiquetada, un hook escrito ni un requisito de diversidad. Primero explicar **qué valor o consecuencia** tiene la situación para un productor concreto. Para cada mecanismo, recorrer y cuestionar esta cadena:
 
-**Productor específico ↔ deseos y conflictos ↔ situaciones ↔ estímulos perceptibles (palabra, imagen, resultado, pregunta, riesgo o demostración) ↔ reacción, utilidad o curiosidad hipotética ↔ desarrollo que cumple la promesa ↔ posible relación con BeatGaler.** No hay una sola ruta causal ni es obligatorio provocar una emoción intensa.
+**Productor específico ↔ deseos y conflictos ↔ situaciones ↔ estímulos perceptibles (palabra, imagen, resultado, pregunta, riesgo o demostración) ↔ reacción, utilidad o curiosidad hipotética ↔ desarrollo que cumple la promesa ↔ posible relación con BeatGaler.** No hay una sola ruta causal ni es obligatorio provocar una emoción intensa. **Si no sabemos por qué la consecuencia importa o qué respuesta puede suscitar el estímulo, todavía no hay idea lista para guion.**
 
 Preguntar **«¿por qué?»** en varias direcciones: por qué importa el deseo, por qué ocurre la situación, por qué ese estímulo importaría, qué otro resultado es posible y por qué cambiaría la atención. Además, «¿en quién no?», «¿qué explicación alternativa existe?» y «¿qué observación podría refutarlo?». No basta con decir «provoca miedo» o «aplica Atkinson»: identificar exactamente qué se perdería, por qué importa, qué expectativa se rompe y qué vería u oiría el espectador.
 
@@ -49,7 +49,7 @@ El video puede aportar valor por sí mismo, mencionar BeatGaler indirectamente, 
 
 ### Entrega mínima al módulo 3
 
-En una frase por elemento: **situación → estímulo → reacción/curiosidad hipotética → por qué → evidencia o supuesto → qué lo refutaría**. No exigir una emoción intensa: también sirven utilidad, humor, demostración o una pregunta interesante. Profundizar el árbol solo donde la incertidumbre cambie una decisión.
+En una frase por elemento: **deseo concreto → consecuencia relevante → situación → estímulo → reacción/curiosidad hipotética → por qué → evidencia o supuesto → qué lo refutaría**. No exigir una emoción intensa: también sirven utilidad, humor, demostración o una pregunta interesante. Profundizar el árbol solo donde la incertidumbre cambie una decisión.
 
 ### Criterio de salida al módulo 3
 
@@ -57,6 +57,6 @@ Un mecanismo está **listo para proponer candidatos** cuando declara la cadena c
 
 Mantener `mecanismos.csv`, `nodos.csv` y la trazabilidad actual sin migraciones ni cambios de identificadores. El árbol M-001 es histórico y no constituye un candidato activo de generación.
 
-## Divergencia antes de converger
+## Relevancia antes de converger
 
-No partir siempre del mismo mecanismo histórico. Recorrer varias ramas de un deseo y **varias raíces distintas** del mapa de productores. Contrastar puntos de vista (creador, colaborador, principiante, comprador), momentos (antes/durante/después), consecuencias (agradables o adversas) y medios (imagen, sonido, demostración, pregunta). Son ejes de exploración, no plantillas de hook. Entregar **múltiples situaciones distintas**, cada una con un porqué y un posible fallo, al módulo 3. Primero puede explorarse sin dar de alta un árbol completo para cada idea; **solo los mecanismos de las ideas seleccionadas** se formalizan en `mecanismos.csv` y `nodos.csv` con las cinco ramas, antes de registrar hipótesis.
+No partir del mecanismo histórico por inercia. Recorrer las ramas del deseo que sean pertinentes (sin cuota de raíces): comparar perspectivas, momentos, consecuencias y medios **solo cuando añada valor**. Descubrir rutas alternativas, pero descartar ideas triviales o vagas aunque sean nuevas. Enviar al módulo 3 solo las situaciones con una consecuencia identificada, un estímulo plausible, un porqué causal y su mayor objeción. Primero puede explorarse sin dar de alta un árbol completo para cada idea; **solo los mecanismos de las ideas seleccionadas** se formalizan en `mecanismos.csv` y `nodos.csv` con las cinco ramas, antes de registrar hipótesis.
