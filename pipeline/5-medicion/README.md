@@ -14,3 +14,5 @@ Reglas del registro manual:
 - Lo que la plataforma no muestre se deja vacío. Nunca se estima.
 - Instagram da `skip_rate_pct`; si no hay retención a 3 segundos, se anota solo ese.
 - `origen` siempre es `real` en este archivo. Los datos inventados viven únicamente en [`../pruebas/circuito/`](../pruebas/circuito/).
+
+- `visitas_web`: visitas atribuibles a BeatGaler desde la pieza, **solo si existe medición verificable** (por ejemplo enlace etiquetado y analítica). No inferirlas de visitas al perfil. Dejar vacío cuando no sea medible; no inventar atribución.
