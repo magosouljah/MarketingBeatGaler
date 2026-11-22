@@ -33,9 +33,9 @@ Una rama se detiene al llegar a una hoja, o cuando otro «¿por qué?» no cambi
 
 No empezar por una emoción etiquetada ni por un hook escrito. Para cada mecanismo, recorrer y cuestionar esta cadena:
 
-**Productor específico → deseo, temor o vulnerabilidad → situación concreta → estímulo perceptible (palabra, imagen, resultado, contradicción, riesgo) → reacción emocional inmediata hipotética → pregunta/tensión que mantiene la atención → desarrollo que responde → presencia opcional de BeatGaler.**
+**Productor específico ↔ deseos y conflictos ↔ situaciones ↔ estímulos perceptibles (palabra, imagen, resultado, pregunta, riesgo o demostración) ↔ reacción, utilidad o curiosidad hipotética ↔ desarrollo que cumple la promesa ↔ posible relación con BeatGaler.** No hay una sola ruta causal ni es obligatorio provocar una emoción intensa.
 
-En cada flecha preguntar **«¿por qué produciría ese efecto?»**, «¿en quién no?», «¿qué explicación alternativa existe?» y «¿qué observación podría refutarlo?». No basta con decir «provoca miedo» o «aplica Atkinson»: identificar exactamente qué se perdería, por qué importa, qué expectativa se rompe y qué vería u oiría el espectador.
+Preguntar **«¿por qué?»** en varias direcciones: por qué importa el deseo, por qué ocurre la situación, por qué ese estímulo importaría, qué otro resultado es posible y por qué cambiaría la atención. Además, «¿en quién no?», «¿qué explicación alternativa existe?» y «¿qué observación podría refutarlo?». No basta con decir «provoca miedo» o «aplica Atkinson»: identificar exactamente qué se perdería, por qué importa, qué expectativa se rompe y qué vería u oiría el espectador.
 
 **Diferenciar:**
 - **Provocar** una emoción con una amenaza, contradicción, sorpresa o recompensa concreta, frente a **describir** una emoción o pedir que recuerde una.
@@ -55,4 +55,8 @@ En una frase por elemento: **situación → estímulo → reacción/curiosidad h
 
 Un mecanismo está **listo para proponer candidatos** cuando declara la cadena causal, al menos una explicación alternativa, una condición de fallo, una pregunta refutable y la fuerza real de su evidencia. Las partes sin respaldo se etiquetan `supuesto`/`no_sabemos` y enlazan a preguntas abiertas conforme al esquema existente. Esto **no** equivale a estar validado ni a autorización para producir. El umbral cuantitativo de hojas ancladas sigue sin decidirse; no inventarlo.
 
-Mantener `mecanismos.csv`, `nodos.csv` y la trazabilidad actual sin migraciones ni cambios de identificadores. El árbol M-001 «Autoexamen» es histórico y no autoriza reutilizar el hook rechazado «400 beats. Name ten.».
+Mantener `mecanismos.csv`, `nodos.csv` y la trazabilidad actual sin migraciones ni cambios de identificadores. El árbol M-001 es histórico y no constituye un candidato activo de generación.
+
+## Divergencia antes de converger
+
+No partir siempre del mismo mecanismo histórico. Recorrer varias ramas de un deseo y **varias raíces distintas** del mapa de productores. Contrastar puntos de vista (creador, colaborador, principiante, comprador), momentos (antes/durante/después), consecuencias (agradables o adversas) y medios (imagen, sonido, demostración, pregunta). Son ejes de exploración, no plantillas de hook. Entregar **múltiples situaciones distintas**, cada una con un porqué y un posible fallo, al módulo 3.
