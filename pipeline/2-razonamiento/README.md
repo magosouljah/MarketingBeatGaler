@@ -47,14 +47,9 @@ En cada flecha preguntar **«¿por qué produciría ese efecto?»**, «¿en qui�
 
 El video puede aportar valor por sí mismo, mencionar BeatGaler indirectamente, mostrarlo como herramienta, o ser un anuncio completo. El árbol **no debe obligar** a introducir BeatGaler en el hook ni a presentarlo como solución de un problema que no resuelve. Explicitar el grado de presencia comercial propuesto, la transición creíble y cualquier capacidad V2 aún no disponible. Si la conexión es débil, marcarla como tal; una pieza de alcance sin promoción directa puede seguir siendo válida.
 
-### Pruebas de razonamiento con casos, sin sobreajuste
+### Entrega mínima al módulo 3
 
-- «Mañana podrías perder todos los beats que has hecho en tu vida»: situación de pérdida irreversible y concreta; posible miedo inmediato; BeatGaler se conecta con almacenamiento en la nube, sin prometer respaldo infalible.
-- «Tu peor beat podría ser el que más dinero te haga ganar»: contradice una expectativa sobre calidad y ventas; posible sorpresa y curiosidad; verificar que el cuerpo justifique la posibilidad.
-- «¿Conoces esa sensación cuando terminas un beat...?»: pide recordar orgullo, pero no demuestra que el estímulo provoque orgullo en el momento.
-- «Alguien podría hacerse famoso con tu beat y tú no recibir ni el crédito»: tensión potente, pero BeatGaler no garantiza atribución ni evita robos.
-
-Son **ejemplos de diagnóstico creativo**, no resultados de audiencia ni fórmulas obligatorias. Buscar mecanismos y situaciones nuevas; no limitarse a imitar estos ejemplos.
+En una frase por elemento: **situación → estímulo → reacción/curiosidad hipotética → por qué → evidencia o supuesto → qué lo refutaría**. No exigir una emoción intensa: también sirven utilidad, humor, demostración o una pregunta interesante. Profundizar el árbol solo donde la incertidumbre cambie una decisión.
 
 ### Criterio de salida al módulo 3
 
