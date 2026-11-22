@@ -48,6 +48,6 @@ Una pieza marcada como mal ejecutada en `4-produccion/piezas.csv` no cuenta ni a
 
 El circuito completo está comprobado solo con los datos inventados de [`pruebas/circuito/`](pruebas/circuito/), marcados como `PRUEBA` en cada identificador y aislados de los datos reales.
 
-**Siguiente módulo que conviene mejorar: 1 y 2.** El árbol real tiene 27 % de hojas ancladas, y dos de sus supuestos solo se apoyan en un texto de 1912.
+**Integración 2026-11-22:** módulos 1–3 simplificados; G-001/G-002, X-001 y P-0001/P-0002 descartados, preservados como historial. El flujo requiere ficha causal breve antes del guion, sin automatizar su calidad. La medición incorpora `visitas_web` opcional y el aprendizaje separa guion, ejecución y distribución. Faltan pruebas ejecutadas y datos reales de audiencia.
 
 `DIRECCION.md` no se ha modificado y sigue describiendo la dirección anterior.
