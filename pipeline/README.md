@@ -1,4 +1,4 @@
-# Pipeline V1.2 — seis módulos
+# Pipeline V1.3 — seis módulos
 
 Convierte lo que sabemos del productor musical en videos, mide qué pasa y devuelve lo aprendido. Todo son archivos de texto y CSV unidos por identificadores; no hay base de datos ni servicios.
 
@@ -24,18 +24,20 @@ La cadena completa de una pieza: `P → G → H → N → M → EV`. Con eso cua
 python pipeline/pipeline.py comprobar        # todos los identificadores enlazan
 python pipeline/pipeline.py estado           # qué hay en cada módulo
 python pipeline/pipeline.py arbol M-001      # árbol de un mecanismo y cuántas hojas están ancladas
-python pipeline/pipeline.py aprender X-001   # parte numérica del informe; añade --escribir para guardar el borrador
+python pipeline/pipeline.py aprender <X-activo>   # genera borrador solo de experimento no descartado
 python -m unittest discover -s pipeline/pruebas -v
-# Ideación V1.2: primero generar lote sin historial, después revisar en OTRO contexto
+# Ideación V1.3: primero explorar y profundizar SIN historial; revisión en OTRO contexto
 python pipeline/ideacion.py comprobar inputs/ideacion-01.json
 python pipeline/ideacion.py revisar inputs/ideacion-01.json
 ```
 
-## Generación creativa V1.2
+## Generación creativa V1.3
 
-El generador comienza en [EXPLORACION-V12](1-investigacion/EXPLORACION-V12.md), razona con [módulo 2](2-razonamiento/README.md) y sigue [GENERAR-V12](3-hipotesis-guiones/GENERAR-V12.md). Explora **15–20 situaciones antes de redactar hooks**, escoge tres de territorios diferentes y guarda un JSON local en `inputs/`. El validador solo comprueba formato/diversidad declarada. Un revisor **en otro contexto** consulta [REVISAR-V12](evaluacion/REVISAR-V12.md) y el historial reservado para detectar repeticiones conceptuales. Las tres ideas seleccionadas pasan entonces a guiones sin aprobación para producir. El historial y los gustos no se exponen durante la generación.
+El generador lee [EXPLORACION-V13](1-investigacion/EXPLORACION-V13.md), razona con el [módulo 2](2-razonamiento/README.md) y usa [GENERAR-V13](3-hipotesis-guiones/GENERAR-V13.md). Explora sin cuotas de cantidad o territorio y profundiza **solo** ideas con una consecuencia importante y una explicación de por qué el estímulo puede captar atención. Puede seleccionar **cero, uno, dos o tres** finalistas, incluso de un mismo territorio. Si ninguno merece desarrollarse, lo justifica y no escribe guiones.
 
-**No es un generador autónomo por código:** el trabajo creativo lo hace un agente de IA siguiendo la guía; `ideacion.py` no escribe guiones, no mide originalidad semántica y no garantiza retención. Tres pruebas sintéticas automatizadas comprueban el contrato; faltan tres corridas creativas realmente ciegas con revisión humana.
+Guardar un lote JSON en `inputs/`. `python pipeline/ideacion.py comprobar` valida estructura, evidencia y causalidad **declarada**, no calidad. Un revisor en otro contexto usa [REVISAR-V13](evaluacion/REVISAR-V13.md) y el historial reservado. Rechaza trivialidad o explicaciones superficiales antes de revisar diversidad. Solo las ideas sobrevivientes pasan a guiones sin aprobar.
+
+`ideacion.py` **no genera ideas ni asegura originalidad o rendimiento**: esas tareas requieren un agente y revisión humana. Las pruebas sintéticas comprueban el contrato técnico; falta validación creativa con productores y datos de publicación.
 
 ## Dos aprendizajes que no se mezclan
 
@@ -50,13 +52,13 @@ Una pieza marcada como mal ejecutada en `4-produccion/piezas.csv` no cuenta ni a
 | --- | --- | --- |
 | 1 | 17 evidencias documentadas con su solidez; 7 preguntas abiertas | Fuentes modernas de atención y validación de las ramas conceptuales del Mapa |
 | 2 | Un árbol real (Autoexamen) con sus cinco ramas; 3 de 11 hojas ancladas | Regla de cuándo un árbol está listo para producir; más mecanismos |
-| 3 | Una hipótesis y dos guiones históricos descartados | Primer lote de situaciones V1.2 y guiones nuevos |
+| 3 | Una hipótesis y dos guiones históricos descartados | Primer lote V1.3 con selección fundada y revisión independiente |
 | 4 | Registro de piezas y plantilla de arranques: los dos arranques del experimento X-001 ya se renderizan | Unirlos al cuerpo (falta el MP4 de add-finder y el segundo de corte); voz; más tipos de arranque |
 | 5 | Formato de registro manual y validación | Ninguna lectura real; integraciones |
 | 6 | Borrador numérico del informe, con avisos de comparaciones dudosas | Ningún informe real; la interpretación siempre se escribe a mano |
 
 El circuito completo está comprobado solo con los datos inventados de [`pruebas/circuito/`](pruebas/circuito/), marcados como `PRUEBA` en cada identificador y aislados de los datos reales.
 
-**Integración 2026-11-22:** módulos 1–3 simplificados; G-001/G-002, X-001 y P-0001/P-0002 descartados, preservados como historial. El flujo requiere ficha causal breve antes del guion, sin automatizar su calidad. La medición incorpora `visitas_web` opcional y el aprendizaje separa guion, ejecución y distribución. Faltan pruebas ejecutadas y datos reales de audiencia.
+**Integración V1.3 (2026-11-22):** módulos 1–3 simplificados; G-001/G-002, X-001 y P-0001/P-0002 descartados, preservados como historial. El flujo requiere relevancia y consecuencia concreta antes del guion, sin automatizar su calidad. La medición incorpora `visitas_web` opcional y el aprendizaje separa guion, ejecución y distribución. Faltan pruebas ejecutadas y datos reales de audiencia.
 
 `DIRECCION.md` no se ha modificado y sigue describiendo la dirección anterior.
