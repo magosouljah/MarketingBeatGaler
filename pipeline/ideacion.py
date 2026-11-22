@@ -55,9 +55,10 @@ def comprobar(datos):
         ident = c.get('id')
         if not isinstance(ident, str) or not re.fullmatch(r'I-\d{2,3}', ident):
             errores.append(f'{lugar}: id inválido (I-01, etc.).')
-        if ident in ids:
-            errores.append(f'{lugar}: id repetido.')
-        ids.add(ident)
+        if isinstance(ident, str):
+            if ident in ids:
+                errores.append(f'{lugar}: id repetido.')
+            ids.add(ident)
         for campo, registro in (('nucleo', nucleos), ('situacion', situaciones)):
             valor = c.get(campo)
             clave = normalizar(valor) if isinstance(valor, str) else ''
@@ -86,11 +87,14 @@ def comprobar(datos):
             if not texto_valido(p, campo):
                 errores.append(f'{lugar}: falta {campo}.')
         ident = p.get('id')
-        if ident in profundizados:
-            errores.append(f'{lugar}: id repetido.')
-        profundizados.add(ident)
-        if ident not in ids:
-            errores.append(f'{lugar}: candidato inexistente {ident}.')
+        if not isinstance(ident, str):
+            errores.append(f'{lugar}: id debe ser texto.')
+        else:
+            if ident in profundizados:
+                errores.append(f'{lugar}: id repetido.')
+            profundizados.add(ident)
+            if ident not in ids:
+                errores.append(f'{lugar}: candidato inexistente {ident}.')
         if p.get('presencia') not in PRESENCIAS:
             errores.append(f'{lugar}: presencia inválida.')
     finales = datos.get('finalistas')
@@ -102,6 +106,8 @@ def comprobar(datos):
     if any(not isinstance(x, str) for x in finales) or len(set(map(str, finales))) != len(finales):
         errores.append('finalistas contiene IDs repetidos o inválidos.')
     for ident in finales:
+        if not isinstance(ident, str):
+            continue
         if ident not in ids:
             errores.append(f'Finalista {ident}: no existe entre los candidatos.')
         if ident not in profundizados:
@@ -118,14 +124,16 @@ def revisar_historial(datos, reserva=RESERVA):
     for c in datos.get('candidatos', []):
         if not isinstance(c, dict):
             continue
-        texto = normalizar(c.get('nucleo', '') + ' ' + c.get('situacion', ''))
+        nucleo = c.get('nucleo') if isinstance(c.get('nucleo'), str) else ''
+        situacion = c.get('situacion') if isinstance(c.get('situacion'), str) else ''
+        texto = normalizar(nucleo + ' ' + situacion)
         for ref in hist:
             patron = normalizar(ref['nucleo'])
             if not patron or not texto:
                 continue
             tokens, termino = set(texto.split()), set(patron.split())
             cobertura = len(tokens & termino) / len(termino)
-            parecido = SequenceMatcher(None, normalizar(c.get('nucleo', '')), patron).ratio()
+            parecido = SequenceMatcher(None, normalizar(nucleo), patron).ratio()
             if parecido >= 0.77 or (len(termino) >= 4 and cobertura >= 0.85):
                 advertencias.append(
                     f"{c.get('id', '?')}: revisar posible repetición de {ref['id']} (no es prueba semántica).")
