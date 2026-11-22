@@ -125,6 +125,7 @@ def comprobar(raiz):
         existe('hipotesis', g['hipotesis'], f"guion {g['id']}")
         if not (raiz / M3 / g['archivo']).exists():
             err.append(f"guion {g['id']}: no existe el archivo {g['archivo']}")
+    descartados = {x['id'] for x in d['experimentos'] if x['estado'] == 'descartado'}
     for x in d['experimentos']:
         existe('hipotesis', x['hipotesis'], f"experimento {x['id']}")
     for p in d['piezas']:
@@ -133,9 +134,13 @@ def comprobar(raiz):
         existe('experimentos', p['experimento'], donde)
         if p['rol'] not in ROLES:
             err.append(f"{donde}: rol «{p['rol']}»")
+        if p['experimento'] in descartados and p['estado'] not in {'descartada', 'descartado'}:
+            err.append(f"{donde}: experimento descartado pero pieza activa")
     for i, r in enumerate(d['resultados'], start=2):
         donde = f'resultados.csv linea {i}'
         existe('piezas', r['pieza'], donde)
+        if r['pieza'] in {p['id'] for p in d['piezas'] if p['experimento'] in descartados} and not es_prueba:
+            err.append(f'{donde}: resultados asociados a experimento descartado')
         if r['plataforma'] not in PLATAFORMAS:
             err.append(f"{donde}: plataforma «{r['plataforma']}»")
         esperado = 'PRUEBA' if es_prueba else 'real'
@@ -143,7 +148,7 @@ def comprobar(raiz):
             err.append(f"{donde}: origen «{r['origen']}», aqui solo se admite «{esperado}»")
         if not r['fuente_dato'].strip():
             err.append(f'{donde}: falta de donde se leyo el dato')
-        for campo in NUMERICOS:
+        for campo in NUMERICOS + (['visitas_web'] if 'visitas_web' in r else []):
             if r[campo].strip():
                 try:
                     float(r[campo])
@@ -227,6 +232,8 @@ def aprender(raiz, experimento):
     x = next((x for x in d['experimentos'] if x['id'] == experimento), None)
     if not x:
         raise ValueError(f'No existe el experimento {experimento}')
+    if x['estado'] == 'descartado':
+        raise ValueError(f'Experimento {experimento} descartado; no generar informe nuevo')
     h = next(h for h in d['hipotesis'] if h['id'] == x['hipotesis'])
     m = next(m for m in d['mecanismos'] if m['id'] == h['mecanismo'])
     piezas = {p['id']: p for p in d['piezas'] if p['experimento'] == experimento}
