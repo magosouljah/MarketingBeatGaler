@@ -1,0 +1,41 @@
+{
+  "descripcion": "Reservado para el revisor posterior a la generacion. No es evidencia de rendimiento ni prompt de generacion.",
+  "situaciones": [
+    {
+      "id": "HIST-01",
+      "nucleo": "artista pide beats urgentes"
+    },
+    {
+      "id": "HIST-02",
+      "nucleo": "tu peor beat puede vender mas"
+    },
+    {
+      "id": "HIST-03",
+      "nucleo": "perder todos tus beats por falla del disco"
+    },
+    {
+      "id": "HIST-04",
+      "nucleo": "productores con peores beats ganan mas dinero"
+    },
+    {
+      "id": "HIST-05",
+      "nucleo": "dejar de organizar beats por nombre de archivo"
+    },
+    {
+      "id": "HIST-06",
+      "nucleo": "pedir recordar diez de cuatrocientos beats"
+    },
+    {
+      "id": "HIST-07",
+      "nucleo": "temor de nunca alcanzar potencial creativo"
+    },
+    {
+      "id": "HIST-08",
+      "nucleo": "otro productor termina mas beats por menos plugins"
+    },
+    {
+      "id": "HIST-09",
+      "nucleo": "robo de autoria de beat famoso"
+    }
+  ]
+}
