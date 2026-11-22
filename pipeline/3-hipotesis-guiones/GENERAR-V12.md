@@ -13,7 +13,7 @@ Leer `AGENTS.md`, `DIRECCION.md` (solo lectura), `PLAN.md`, `FASE-0.md`, `pipeli
 3. Para cada situación, preguntar «¿por qué?» en múltiples direcciones: deseo, vulnerabilidad, contexto, efecto posible del estímulo, objeciones y alternativas. Distinguir evidencia verificable de supuestos. Una idea puede interesar por utilidad, humor, demostración, expectativa o emoción: ninguna ruta es obligatoria.
 4. Escribir **solo el lote de situaciones**, todavía sin hooks redactados. Elegir tres finalistas de **territorios diferentes**, explicando por qué y cuál es la mayor incertidumbre.
 5. Guardar JSON local (por ejemplo `inputs/ideacion-01.json`) con el contrato siguiente y ejecutar `python pipeline/ideacion.py comprobar inputs/ideacion-01.json`. Corregir los problemas estructurales antes de continuar.
-6. **DETENERSE** y entregar el lote al revisor independiente. No abrir ni invocar `revisar` en este mismo contexto. Solo después de esa revisión, redactar tres guiones y marcar su estado **sin aprobación**. Ningún guion va a producción sin el dueño.
+6. **DETENERSE** y entregar el lote al revisor independiente. No abrir ni invocar `revisar` en este mismo contexto. Tras la revisión, formalizar los mecanismos nuevos en `mecanismos.csv` y `nodos.csv` (cinco ramas exigidas) antes de vincular `hipotesis.csv`, `guiones.csv` y los archivos de guion; ejecutar `pipeline/pipeline.py comprobar`. No reutilizar el mecanismo histórico por conveniencia. Redactar tres guiones con estado **sin aprobación**. Ningún guion va a producción sin el dueño.
 
 ## Contrato de un lote (JSON)
 
