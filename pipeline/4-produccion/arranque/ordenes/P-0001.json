@@ -1,0 +1,52 @@
+{
+ "pieza": "P-0001",
+ "guion": "G-001",
+ "nota": "prueba: con la pregunta",
+ "voz": null,
+ "arranque": {
+  "duracion": 3.0,
+  "elementos": [
+   {
+    "tipo": "texto",
+    "texto": "YOU'VE MADE",
+    "y": 560,
+    "size": 118,
+    "entra": 0.0
+   },
+   {
+    "tipo": "contador",
+    "desde": 0,
+    "hasta": 400,
+    "t0": 0.05,
+    "t1": 1.15,
+    "y": 820,
+    "size": 340,
+    "entra": 0.0,
+    "pulso": 1.5
+   },
+   {
+    "tipo": "texto",
+    "texto": "BEATS.",
+    "y": 1060,
+    "size": 150,
+    "entra": 0.1
+   },
+   {
+    "tipo": "texto",
+    "texto": "NAME TEN.",
+    "y": 1300,
+    "size": 168,
+    "entra": 1.5,
+    "dura": 0.2,
+    "golpe": true
+   },
+   {
+    "tipo": "campo",
+    "y": 1480,
+    "size": 132,
+    "entra": 1.8,
+    "dura": 0.25
+   }
+  ]
+ }
+}

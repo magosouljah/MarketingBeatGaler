@@ -42,7 +42,7 @@ Una pieza marcada como mal ejecutada en `4-produccion/piezas.csv` no cuenta ni a
 | 1 | 11 evidencias reales con su solidez; 7 preguntas abiertas | Fuentes modernas de atención; los 26 enlaces de referencia sin abrir; enlaces de las fuentes del Mapa |
 | 2 | Un árbol real (Autoexamen) con sus cinco ramas; 3 de 11 hojas ancladas | Regla de cuándo un árbol está listo para producir; más mecanismos |
 | 3 | Una hipótesis, dos guiones en borrador y un experimento de contraste | Aprobación del propietario; criterio escrito de selección entre muchos candidatos |
-| 4 | Registro de piezas enlazado a guion y experimento | La plantilla de arranques; ninguna pieza está producida |
+| 4 | Registro de piezas y plantilla de arranques: los dos arranques del experimento X-001 ya se renderizan | Unirlos al cuerpo (falta el MP4 de add-finder y el segundo de corte); voz; más tipos de arranque |
 | 5 | Formato de registro manual y validación | Ninguna lectura real; integraciones |
 | 6 | Borrador numérico del informe, con avisos de comparaciones dudosas | Ningún informe real; la interpretación siempre se escribe a mano |
 

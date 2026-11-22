@@ -1,0 +1,36 @@
+{
+ "pieza": "P-0002",
+ "guion": "G-002",
+ "nota": "contraste: mismo arranque sin «NAME TEN.» ni el campo",
+ "voz": null,
+ "arranque": {
+  "duracion": 3.0,
+  "elementos": [
+   {
+    "tipo": "texto",
+    "texto": "YOU'VE MADE",
+    "y": 560,
+    "size": 118,
+    "entra": 0.0
+   },
+   {
+    "tipo": "contador",
+    "desde": 0,
+    "hasta": 400,
+    "t0": 0.05,
+    "t1": 1.15,
+    "y": 820,
+    "size": 340,
+    "entra": 0.0,
+    "pulso": 1.5
+   },
+   {
+    "tipo": "texto",
+    "texto": "BEATS.",
+    "y": 1060,
+    "size": 150,
+    "entra": 0.1
+   }
+  ]
+ }
+}

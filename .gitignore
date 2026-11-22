@@ -28,3 +28,6 @@ node_modules/
 
 # fuck: assets que genera tools/prepare.py (logos de terceros, fotos del propietario, portadas).
 /account-1/videos/fuck/project/assets/
+
+# Pipeline: renders de arranques y piezas (no se versionan).
+/pipeline/4-produccion/arranque/out/

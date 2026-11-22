@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Plantilla de arranques: dibuja los primeros segundos de una pieza a partir de una orden JSON.
+// Todo sale de una funcion pura renderT(t): el mismo t da siempre la misma imagen.
+// Zona util (margenes de atencion del propietario): x 120-960, y 120-1590.
+const W = 1080, H = 1920, SAFE = { x0: 120, x1: 960, y0: 120, y1: 1590 };
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+const orden = new URLSearchParams(location.search).get('orden');
+let spec = null;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const outCubic = x => 1 - Math.pow(1 - clamp(x, 0, 1), 3);
+const outBack = x => { x = clamp(x, 0, 1); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const FONT = s => `900 ${s}px "Inter","Inter Display","Helvetica Neue","Liberation Sans",Arial,sans-serif`;
+
+function fit(texto, size) {            // nunca mas ancho que la zona util
+  g.font = FONT(size);
+  const w = g.measureText(texto).width, max = SAFE.x1 - SAFE.x0;
+  return w > max ? Math.floor(size * max / w) : size;
+}
+function palabra(texto, y, size, alpha, escala) {
+  size = fit(texto, size);
+  g.save();
+  g.translate(W / 2, y); g.scale(escala, escala);
+  g.font = FONT(size); g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.globalAlpha = alpha;
+  g.shadowColor = 'rgba(255,255,255,.28)'; g.shadowBlur = 46;      // halo: letra solida, nunca transparente
+  g.fillStyle = '#fff'; g.fillText(texto, 0, 0);
+  g.restore();
+}
+function renderT(t) {
+  g.fillStyle = '#060606'; g.fillRect(0, 0, W, H);
+  const grd = g.createRadialGradient(W / 2, 800, 60, W / 2, 800, 1100);
+  grd.addColorStop(0, '#1b1b1d'); grd.addColorStop(1, '#050505');
+  g.fillStyle = grd; g.fillRect(0, 0, W, H);
+  const D = spec.duracion, empuje = 1 + 0.055 * (t / D);             // la camara nunca se queda quieta
+  g.save(); g.translate(W / 2, 860); g.scale(empuje, empuje); g.translate(-W / 2, -860);
+  for (const e of spec.elementos) {
+    const u = (t - (e.entra || 0)) / (e.dura || 0.22);
+    if (u < 0) continue;
+    if (e.tipo === 'texto') {
+      const s = e.golpe ? 1.35 - 0.35 * outBack(u) : 0.92 + 0.08 * outCubic(u);
+      palabra(e.texto, e.y, e.size, e.golpe ? 1 : outCubic(u * 1.6), s);
+    } else if (e.tipo === 'contador') {
+      const k = outCubic((t - e.t0) / (e.t1 - e.t0));
+      const n = Math.round(e.desde + (e.hasta - e.desde) * k);
+      const pulso = e.pulso != null ? 0.06 * Math.exp(-Math.pow((t - e.pulso) / 0.09, 2)) : 0;
+      palabra(String(n), e.y, e.size, 1, 1 + pulso + 0.03 * (1 - k));
+    } else if (e.tipo === 'campo') {                                  // campo vacio con cursor parpadeando
+      const a = outCubic(u), w = 760, h = 132, x = (W - w) / 2, y = e.y - h / 2;
+      g.save(); g.globalAlpha = a;
+      g.fillStyle = '#141416'; g.strokeStyle = 'rgba(255,255,255,.55)'; g.lineWidth = 4;
+      g.beginPath(); g.roundRect(x, y, w, h, 30); g.fill(); g.stroke();
+      if (Math.floor((t - e.entra) / 0.3) % 2 === 0) { g.fillStyle = '#fff'; g.fillRect(x + 44, y + 30, 7, h - 60); }
+      g.restore();
+    }
+  }
+  g.restore();
+}
+window.renderT = renderT;
+window.ready = fetch(orden).then(r => r.json()).then(j => { spec = j.arranque; return document.fonts.ready; }).then(() => { renderT(0); return true; });
+</script>
+</body>
+</html>

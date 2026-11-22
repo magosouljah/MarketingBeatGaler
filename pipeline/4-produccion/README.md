@@ -18,4 +18,17 @@ Este módulo no duplica nada: usa lo que ya existe.
 
 `estado`: `planificada`, `producida`, `aprobada`, `publicada`, `descartada`. `ejecucion` se llena solo si algo quedó mal hecho; si empieza por «mal», la pieza queda fuera de las comparaciones del módulo 6.
 
-Falta la plantilla de arranques. Hasta que exista, cada pieza se produce a mano sobre un cuerpo.
+## Plantilla de arranques
+
+[`arranque/`](arranque/) produce los primeros segundos de una pieza a partir de una orden en JSON, sin escribir código nuevo por pieza.
+
+```bash
+python pipeline/4-produccion/arranque/producir.py P-0001                                   # solo el arranque
+python pipeline/4-produccion/arranque/producir.py P-0001 --cuerpo add-finder.mp4 --desde 4.8   # pieza completa
+```
+
+- `arranque/ordenes/<pieza>.json`: qué aparece y cuándo. Tres elementos disponibles: `texto`, `contador` y `campo`.
+- `arranque/out/` (no se versiona): el arranque, la pieza completa si se pasó `--cuerpo`, y la copia con contador de frames.
+- La plantilla rechaza cualquier elemento fuera de la zona útil (y de 120 a 1590) y ajusta el texto al ancho útil.
+- Hoy solo hace arranques de texto sobre fondo negro, sin voz. Para otro tipo de arranque hay que añadir un elemento a `index.html`.
+- Los cuerpos no están en el repositorio: el MP4 terminado lo aporta el propietario. `--desde` es el segundo donde aparece el producto.
