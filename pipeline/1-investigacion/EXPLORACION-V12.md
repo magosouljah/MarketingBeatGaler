@@ -16,4 +16,6 @@ Para cada situación, buscar:
 
 `evidencia.csv` registra afirmaciones verificadas **como contenido de la fuente**; incluso el Mapa V3 es un documento conceptual y sus ramas no equivalen a encuestas específicas de beatmakers. Fuentes modernas y resultados de videos publicados se incorporan solo después de consultarlos realmente. Si no hay dato, declarar `supuesto`; no frenar la exploración por falta de mediciones.
 
+Para generar sin contaminación de trabajos anteriores, usar inicialmente las evidencias nuevas **EV-0012–EV-0017** y sus fuentes. Otras evidencias ya registradas describen videos previos y deben quedar para el revisor o para análisis retrospectivos; no presentarlas como inspiración al generador.
+
 **Salida breve al módulo 2:** territorios/experiencias diversos, referencias `EV-…` o supuestos explícitos y preguntas que podrían cambiar las decisiones. Sin hooks, slogans ni guiones anteriores. **Nunca consultar el material reservado del revisor en esta fase.**
