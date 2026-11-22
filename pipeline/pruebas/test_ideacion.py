@@ -53,6 +53,11 @@ class Ideas(unittest.TestCase):
         self.assertTrue(any('apoyo' in e for e in ideacion.comprobar(datos)))
         self.assertTrue(any('por_que' in e for e in ideacion.comprobar(datos)))
 
+    def test_evidencia_referenciada_existe(self):
+        datos = lote('EV')
+        datos['candidatos'][0]['apoyo'] = 'EV-9999'
+        self.assertTrue(any('evidencia inexistente' in e for e in ideacion.comprobar(datos)))
+
     def test_revisor_detecta_repeticion_conocida(self):
         datos = lote('D')
         datos['candidatos'][0]['nucleo'] = 'artista pide beats urgentes'
