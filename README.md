@@ -30,6 +30,7 @@ skillpack/  skills/                             skills externas fijadas y skill 
 - **[DIRECCION.md](DIRECCION.md)** — archivo rector **protegido**: solo se modifica con autorización explícita del propietario.
 - [learning/README.md](learning/README.md) — comandos y ciclo reproducible de evaluación → propuesta → nueva prueba → regla validada.
 - [AGENTS.md](AGENTS.md) — instrucciones obligatorias para agentes de programación.
+- [research/product/FEATURES-V1-V2.md](research/product/FEATURES-V1-V2.md) — features de BeatGaler V1 y V2 y la regla de qué se puede mostrar en los videos.
 - [learning/cases/](learning/cases/) — evidencia de pruebas; [learning/proposals/](learning/proposals/) — ideas todavía no validadas; [learning/lessons/](learning/lessons/) — aprendizajes comprobados.
 
 Inicio rápido: `python learning/engine.py status`. El motor registra y valida mejoras con pruebas; **no crea ni evalúa MP4 automáticamente**. Hoy: 22 lecciones validadas en la cuenta 1, todas de add-finder.
