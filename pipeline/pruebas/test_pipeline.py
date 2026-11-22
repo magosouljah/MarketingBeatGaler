@@ -17,6 +17,32 @@ class Circuito(unittest.TestCase):
     def test_datos_reales_enlazan(self):
         self.assertEqual(pipeline.comprobar(pipeline.RAIZ), [])
 
+    def test_experimento_rechazado_no_se_produce(self):
+        self.assertTrue(any(x['id'] == 'X-001' and x['estado'] == 'descartado'
+                            for x in pipeline.leer(pipeline.RAIZ, pipeline.M3, 'experimentos.csv')))
+        self.assertTrue(all(p['estado'] == 'descartada'
+                            for p in pipeline.leer(pipeline.RAIZ, pipeline.M4, 'piezas.csv')
+                            if p['experimento'] == 'X-001'))
+        with self.assertRaisesRegex(ValueError, 'descartado'):
+            pipeline.aprender(pipeline.RAIZ, 'X-001')
+
+    def test_visitas_web_opcionales(self):
+        ruta = pipeline.RAIZ / pipeline.M5 / 'resultados.csv'
+        with ruta.open(encoding='utf-8', newline='') as fh:
+            self.assertIn('visitas_web', next(csv.reader(fh)))
+
+    def test_pieza_descartada_no_puede_activarse(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            copia = Path(tmp) / 'c'
+            shutil.copytree(CIRCUITO, copia)
+            exp = copia / pipeline.M3 / 'experimentos.csv'
+            filas = list(csv.reader(exp.open(encoding='utf-8')))
+            filas[1][-1] = 'descartado'
+            with exp.open('w', encoding='utf-8', newline='') as fh:
+                csv.writer(fh).writerows(filas)
+            self.assertTrue(any('experimento descartado pero pieza activa' in e
+                                for e in pipeline.comprobar(copia)))
+
     def test_datos_de_prueba_enlazan(self):
         self.assertEqual(pipeline.comprobar(CIRCUITO), [])
 
