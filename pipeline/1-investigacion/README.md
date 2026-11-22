@@ -51,4 +51,6 @@ Para cada mecanismo investigado, entregar evidencia o preguntas abiertas sobre: 
 
 **Entrega mínima:** una observación o fuente con referencia, una situación/estímulo concreto si consta, y las preguntas abiertas. La interpretación causal corresponde al módulo 2.
 
-**Prioridades de investigación actuales:** fuentes modernas de atención y retención; observaciones reales de productores en situaciones concretas; resultados comparables de videos publicados; verificar las referencias aún no abiertas. No dar por respondidas Q-001–Q-007 ni revivir el hook rechazado «400 beats. Name ten.» por ser el único ejemplo histórico registrado.
+**Prioridades de investigación actuales:** ampliar fuentes modernas de atención y retención, observar situaciones diversas de productores, contrastar resultados publicados y verificar referencias aún no abiertas. No dar por respondidas Q-001–Q-007.
+
+Para generar ideas nuevas, usar la [guía de exploración de fuentes](EXPLORACION-V12.md); **no** partir de videos, slogans ni guiones históricos. Las ramas del Mapa V3 son hipótesis conceptuales, no frecuencia observada ni causalidad comprobada.
