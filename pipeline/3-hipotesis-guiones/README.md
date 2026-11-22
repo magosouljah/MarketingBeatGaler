@@ -13,7 +13,7 @@
 2. Antes de escribir hooks, formular en cada candidato: situación, deseo, estímulo perceptible, por qué podría captar atención, cómo se paga la promesa y grado de presencia comercial de BeatGaler (`ninguna/discreta/indirecta/directa`). `apoyo` distingue evidencia `EV-…` de `supuesto`.
 3. Elegir tres finalistas de territorios distintos. Guardar un lote JSON y ejecutar `python pipeline/ideacion.py comprobar <lote.json>`. La comprobación **no certifica creatividad**.
 4. En otro contexto, el revisor lee historial y ejecuta `python pipeline/ideacion.py revisar <lote.json>`; identifica repeticiones conceptuales, promesas infundadas y conexiones forzadas **sin dar al generador las frases históricas**.
-5. Solo tras la selección redactar los tres guiones distintos y sus hipótesis. El propietario decide cuáles aprobar para producción; cualquier efecto sobre la audiencia se descubre después de publicar.
+5. Para las tres ideas que superen revisión, **crear o reutilizar mecanismos reales en el módulo 2** (cinco ramas obligatorias y nodos con evidencia o pregunta abierta); no asignar M-001 por conveniencia. Después registrar hipótesis `H-…` con nodos existentes, y redactar guiones distintos sin aprobación. El propietario decide cuáles aprobar para producción; cualquier efecto sobre la audiencia se descubre después de publicar.
 
 **No imponer:** emoción intensa, contradicción, fórmula de hook, mención de BeatGaler o publicidad directa. Curiosidad, demostración, enseñanza, placer y otras rutas son válidas si se argumenta su efecto. Las técnicas populares de retención son posibilidades, no verdades empíricas.
 
