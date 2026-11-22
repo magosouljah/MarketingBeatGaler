@@ -18,3 +18,7 @@ Tres niveles que no se confunden:
 3. **Explicación causal:** el mecanismo produjo la diferencia.
 
 Un buen resultado no convierte una hipótesis en regla, y pocas vistas no descartan un mecanismo. «Todavía no sabemos» es una respuesta válida.
+
+## Separar causas
+
+Evaluar por separado **idea/guion**, **ejecución audiovisual**, **distribución** y **resultado de audiencia**. Un video con bajo alcance no demuestra que el guion falló; un video bonito no demuestra que el mecanismo psicológico funcionó. Distinguir métricas de alcance/retención de visitas verificables a la web. No promover gustos creativos a evidencia de eficacia.
