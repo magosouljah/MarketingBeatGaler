@@ -51,6 +51,6 @@ Para cada mecanismo investigado, entregar evidencia o preguntas abiertas sobre: 
 
 **Entrega mínima:** una observación o fuente con referencia, una situación/estímulo concreto si consta, y las preguntas abiertas. La interpretación causal corresponde al módulo 2.
 
-**Prioridades de investigación actuales:** ampliar fuentes modernas de atención y retención, observar situaciones diversas de productores, contrastar resultados publicados y verificar referencias aún no abiertas. No dar por respondidas Q-001–Q-007.
+**Prioridades de investigación actuales:** descubrir qué consecuencias son importantes para productores específicos (económicas, creativas, sociales, prácticas o personales), ampliar fuentes modernas, contrastar resultados publicados y verificar referencias aún no abiertas. No investigar cinco territorios por obligación; tampoco convertir una situación trivial en guion por ser novedosa. No dar por respondidas Q-001–Q-007.
 
-Para generar ideas nuevas, usar la [guía de exploración de fuentes](EXPLORACION-V12.md); **no** partir de videos, slogans ni guiones históricos. Las ramas del Mapa V3 son hipótesis conceptuales, no frecuencia observada ni causalidad comprobada.
+Para generar ideas nuevas, usar la [guía de exploración de fuentes V1.3](EXPLORACION-V13.md); **no** partir de videos, slogans ni guiones históricos. Las ramas del Mapa V3 son hipótesis conceptuales, no frecuencia observada ni causalidad comprobada.
