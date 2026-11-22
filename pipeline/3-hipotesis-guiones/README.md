@@ -16,16 +16,15 @@
 
 La selección no empieza por escribir un hook ni por asignarle una emoción. Primero se formula una **situación concreta** que afecte un deseo, una vulnerabilidad o una aspiración del productor. Después se identifica qué estímulo del video podría **provocar** una reacción en el momento, no simplemente recordar una emoción pasada. Se comprueba el mecanismo causal y se buscan alternativas que lo refuten.
 
-### Ficha mínima de candidato
+### Ficha breve antes de redactar
 
-Antes de escribir un guion, responder:
-1. ¿Qué deseo, temor o vulnerabilidad específica del productor está en juego y por qué?
-2. ¿Qué hecho, contradicción, riesgo, resultado o pregunta concreta provoca una reacción inmediata? ¿Qué emoción y por qué?
-3. ¿Qué expectativa rompe o qué consecuencia vuelve tangible? No confundir mencionar una emoción con provocarla.
-4. ¿Qué pregunta mantiene la atención y qué respuesta o demostración la satisface durante el video? El desarrollo debe pagar la promesa del arranque.
-5. ¿Qué relación honesta tiene con BeatGaler (V1 o V2)? **La relación puede ser directa, indirecta o nula en parte del video**: desde contenido de valor con mención discreta hasta un anuncio dedicado. No exigir que el producto aparezca en el hook ni forzar una función como solución universal. Elegir explícitamente el grado de presencia comercial. No confundir capacidades previstas con disponibles en una publicación real.
-6. ¿Es realmente distinta la situación de las otras candidatas, más allá de cambiar palabras o emociones?
-7. ¿Qué objeción fuerte haría que la idea fallara o fuera engañosa?
+1. **Situación y audiencia:** ¿a quién le importa y por qué?
+2. **Estímulo:** ¿qué verá u oirá? ¿Qué reacción, utilidad o curiosidad podría producir y por qué? No exigir emoción intensa.
+3. **Promesa y desarrollo:** ¿qué tensión o valor entrega el cuerpo?
+4. **BeatGaler:** grado de presencia comercial (ninguna, discreta, indirecta, directa) y afirmaciones verificables; V2 no se presenta como disponible si aún no lo está.
+5. **Riesgo principal:** repetición, explicación alternativa, promesa engañosa o ejecución difícil.
+
+Profundizar solo cuando una incertidumbre afecte la decisión. Esta ficha es juicio editorial, no un test que el validador pueda declarar «bueno».
 
 ### Generación y descarte
 
