@@ -2,14 +2,21 @@
 
 Esta carpeta conserva las **cuatro piezas decididas para explorar hooks**.
 
-**Regla obligatoria:** [cada variable debe cumplirse realmente en el hook](REGLA.md), no solo mencionarse. Es documentación de diseño, **no** un generador implementado ni una fórmula de eficacia demostrada.
+**Regla obligatoria:** [leer primero REGLA.md y completar el proceso en orden](REGLA.md). Es documentación de diseño, **no** un generador implementado ni una fórmula de eficacia demostrada.
 
-1. [Espectador](espectador/README.md): experiencias, creencias, identidad, deseos, miedos y valores. Reutiliza las fuentes originales del repositorio.
-2. [Emoción](emocion/EMOCIONES.md): diez emociones/estados seleccionados para experimentar.
-3. [Valoración](valoracion/VALORACION.md): cuatro grupos del modelo de Klaus Scherer para comprender qué interpretación podría activar una emoción.
-4. [Expresión verbal](expresion-verbal/README.md): intención, estructura, recursos retóricos y tono; bibliotecas independientes, combinables, con posibles solapamientos.
+## Proceso obligatorio
 
-**Idea de trabajo:** conocer al espectador → seleccionar una emoción → explorar una valoración → elegir cómo expresarla. La conexión entre variables requiere razonamiento; elegirlas al azar no garantiza un hook bueno. No convertir las opciones en plantillas rígidas ni inventar resultados de audiencia.
+**0. Leer las reglas primero:** abrir íntegramente [REGLA.md](REGLA.md) y los catálogos antes de elegir variables.
+
+**Fórmula, en este orden:** `M → (V + E) → (C + X) → Hook`.
+
+1. **M — Emoción:** seleccionar una de las [10 emociones](emocion/EMOCIONES.md) que queremos provocar.
+2. **V + E — Valoración y espectador:** con los [4 grupos de Scherer](valoracion/VALORACION.md), buscar en el [Mapa del espectador](espectador/README.md) una experiencia, creencia, deseo, miedo, identidad o valor que, interpretado de esa manera, pueda suscitar **la emoción ya elegida**. No elegir V y E independientemente.
+3. **C + X — Concepto y expresión:** construir un concepto a partir de M, V y E; después escoger de [Expresión verbal](expresion-verbal/README.md) **intención → estructura → recurso retórico → tono** para expresarlo de la forma más potente. Cada elección debe aprovechar las anteriores, nunca forzarlas.
+
+**Expectativa:** se razona dentro del proceso, después de identificar la conexión psicológica y antes de redactar la frase. Es lo que el espectador querrá descubrir a continuación; **no es una variable de la fórmula**.
+
+**Objetivo prioritario:** lograr **la máxima intensidad posible de la emoción elegida y la expectativa más fuerte posible** para continuar viendo, en un hook verbal de ~3 segundos. Se permite exageración creativa, dramatización y provocación; no promesas imposibles ni afirmaciones falsas presentadas como hechos. La evaluación final conserva solo **Impacto y Naturalidad**.
 
 Las categorías de expresión son una **biblioteca práctica derivada de las tablas acordadas**, no una lista oficial exhaustiva. La curiosidad se mantiene como opción elegida aunque no sea una categoría independiente entre las 27 de Cowen y Keltner.
 
