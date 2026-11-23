@@ -5,7 +5,7 @@
 - [Recursos retóricos](RECURSOS-RETORICOS.md): operaciones sobre lenguaje/significado.
 - [Tonos](TONOS.md): actitud transmitida al hablar.
 
-En la **etapa C + X** las cuatro decisiones se toman **en orden**: intención → estructura → recurso retórico → tono. La estructura debe servir a la intención, el recurso a la estructura y el tono al conjunto. Las categorías **no son mutuamente excluyentes**; **estructuras y recursos retóricos se solapan** (por ejemplo, paradoja o dilema). No forzar una técnica si rompe la naturalidad o la expectativa, ni contar el solapamiento como diversidad real.
+En el **método B preferente**, la expresión X es **libre**. Estas cuatro bibliotecas son **opcionales**: no se exige seleccionar una intención, una estructura, un recurso retórico y un tono en cada hook. Si una técnica ayuda a expresar el concepto, puede usarse, pero debe observarse realmente en la frase; no añadirla solo para llenar una casilla. Las categorías **no son mutuamente excluyentes** y **estructuras y recursos se solapan** (por ejemplo, paradoja o dilema). No forzar técnicas si rompen la naturalidad o la expectativa ni contar el solapamiento como diversidad real.
 
 Los contenidos de [Estructuras](ESTRUCTURAS.md) y [Recursos retóricos](RECURSOS-RETORICOS.md) reproducen **las últimas dos tablas acordadas**, no versiones anteriores. Intenciones y tonos conservan las categorías del catálogo previo.
 

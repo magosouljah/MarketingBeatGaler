@@ -2,15 +2,15 @@
 
 ## Paso 0 — Lectura obligatoria ANTES de generar
 
-**Leer íntegramente este archivo y las bibliotecas de `formula-hooks/` antes de seleccionar ninguna variable o escribir un hook.** Respetar el proceso y sus dependencias. No inventar variables ni empezar usando instrucciones parciales recordadas.
+**Leer íntegramente este archivo, las bibliotecas de emoción, valoración y espectador, y el Mapa V3 antes de seleccionar ninguna variable o escribir un hook.** Las bibliotecas de expresión verbal son recursos opcionales y se consultan si mejoran el candidato; no convertirlas en requisitos. Respetar el proceso y sus dependencias.
 
 ## Fórmula y orden obligatorio
 
-`M → (V + E) → (C + X) → Hook`
+`M → (V + E) → (C + X libre) → Hook`
 
 1. **M — Emoción.** Elegir primero una de las 10 emociones/estados permitidos. Puede escogerse aleatoriamente, dejando constancia de la elección.
 2. **V + E — Valoración y espectador.** Elegir una dimensión/grupo de Scherer y un rasgo específico del Mapa V3 —experiencia, creencia, deseo, miedo, identidad o valor— **a partir de la emoción ya seleccionada**. Razonar por qué la interpretación del rasgo podría activar esa emoción. No sortear E y V independientemente si eso hace que la conexión resulte arbitraria.
-3. **C + X — Concepto y expresión.** Construir un concepto que materialice esa reacción; **dentro de esta misma etapa**, seleccionar sucesivamente intención, estructura, recurso retórico y tono, buscando la forma de comunicar el concepto que más intensifique la emoción y la expectativa. Cada elección respeta las anteriores. No exigir combinaciones lingüísticas arbitrarias que hagan artificial el resultado.
+3. **C + X libre — Concepto y expresión.** Construir un concepto que materialice esa reacción y redactar **sin selección retórica obligatoria**. Elegir libremente cómo decirlo para maximizar la emoción y la expectativa sin perder naturalidad. Si ayudan, utilizar intención, estructura, recurso retórico o tono tomados de sus bibliotecas, pero **no obligar a escoger los cuatro** ni justificar etiquetas que no aporten al texto.
 
 **Expectativa = razonamiento, no variable adicional.** Tras conectar M, V y E, definir qué acontecimiento, explicación, revelación o resultado importante podría esperar el espectador **después** de oír el hook. Utilizar esa expectativa para crear C + X sin revelarla por completo.
 
@@ -22,12 +22,12 @@
 
 1. **Expectativa antes del texto:** después de elegir M y conectar V + E, y **antes de redactar C + X**, formular internamente qué espera descubrir o ver el espectador **después** de los tres segundos y qué contenido del futuro video podría cumplirlo. No es parte de la fórmula. Si no hay continuación posible y significativa, volver a razonar V + E o descartar el candidato. No explicar ni resolver la expectativa dentro del hook.
 2. **Duración pronunciada:** escribir solo la frase de apertura, no un párrafo. Objetivo aproximado: **3 segundos de voz**. Estimar el tiempo en español contando las palabras y suponiendo inicialmente ~180 palabras/minuto (unas 3 palabras/segundo), ajustando si hay pausas, puntuación o palabras difíciles. Si se puede, verificar con una lectura o voz real; de otro modo marcar la cifra como **estimación**, no como medición exacta. Las 6–10 palabras son una orientación, no una cuota. Si las variables exigen una frase larga y no admiten una versión natural de ~3 s, descartar y registrar el motivo, no recortar hasta perder el sentido.
-3. **Selección ordenada, no sorteo independiente:** permitir decisiones inusuales cuando tengan una razón psicológica o expresiva. Tras seleccionar M, escoger V + E por su capacidad de suscitarla; construir C y seleccionar sucesivamente I, S, R y T para maximizar emoción y expectativa. Si una elección resulta imposible, artificial o demasiado larga, reconsiderar esa elección o descartar el candidato y registrar la causa. No crear listas negras por un solo fracaso.
-4. **Registro:** cada hook aceptado debe conservar las siete variables (incluida la dimensión de valoración), sus categorías y origen, texto del hook, **`expectativa`** concreta y **`duracion_estimada_segundos`** numérica. Mantener vacías las columnas de calificación humana. Registrar los intentos rechazados por separado con variables y causa. No atribuir a las estimaciones ni al juicio de la IA resultados de audiencia.
+3. **Selección ordenada, no sorteo independiente:** tras seleccionar M, escoger V + E por su capacidad de suscitarla; construir C y redactar X libremente. Se permiten recursos expresivos poco comunes cuando mejoran el hook, pero no es necesario elegir I, S, R y T. Si alguna decisión produce una frase artificial, demasiado larga o débil, reconsiderarla o descartar el candidato y registrar la causa. No crear listas negras por un solo fracaso.
+4. **Registro:** cada hook aceptado debe conservar **M, grupo y dimensión V, rasgo y fuente E, concepto C, expresión final**, **`expectativa`** concreta y **`duracion_estimada_segundos`** numérica. Registrar I/S/R/T únicamente si se utilizaron **realmente**; en otro caso dejarlos vacíos, no inventar recursos. Mantener vacías las calificaciones humanas. Registrar intentos rechazados y causas. No atribuir a estimaciones ni al juicio de la IA resultados de audiencia.
 
 La pregunta «¿qué espera descubrir?» guía la **generación previa**, no es un tercer criterio de evaluación. Los **únicos criterios finales** siguen siendo Impacto y Naturalidad.
 
-**Cada variable elegida para un hook debe cumplirse de verdad en el contenido, no solo mencionarse o imitarse superficialmente.**
+**Cada variable o técnica efectivamente elegida para un hook debe cumplirse de verdad en el contenido, no solo mencionarse o imitarse superficialmente.** No hay obligación de seleccionar una intención, estructura, recurso retórico y tono.
 
 En particular, la **intención comunicativa debe ejecutarse como una acción con significado**, no como una palabra o un estilo de redacción.
 
@@ -37,7 +37,7 @@ En particular, la **intención comunicativa debe ejecutarse como una acción con
 - Si el recurso es **isocolon**, debe haber miembros de estructura gramatical y longitud semejantes.
 - Si el tono es **intrigante**, la formulación debe producir una incertidumbre significativa, no limitarse a usar una palabra misteriosa.
 
-**Comprobación antes de aceptar el hook:** identificar en las palabras concretas dónde se realiza cada variable seleccionada. Si alguna no se cumple, reescribir o rechazar el candidato; no afirmar que cumplió la fórmula.
+**Comprobación antes de aceptar el hook:** identificar cómo la emoción, la valoración, el espectador y la expectativa sostienen la frase; si se eligió una técnica expresiva, verificar que está presente y ayuda. Si algo no se cumple, reescribir o rechazar el candidato; no inventar etiquetas para afirmar que cumplió la fórmula.
 
 **Ejemplo fallido (intención: disculparse):** «Perdón, pero ¿por qué no vendes beats?». Aquí «perdón» funciona como muletilla.
 
@@ -47,11 +47,15 @@ Esta regla se aplica a todas las variables de `formula-hooks/` y no implica que 
 
 ## Evaluación final: solo dos criterios
 
-**No prohibir combinaciones por adelantado porque parezcan raras.** Completar primero la fórmula **en orden**, eligiendo cada componente en función de los anteriores y sin forzarlos; después evaluar el hook mediante **solo dos criterios**:
+**No prohibir opciones por adelantado porque parezcan raras.** Completar primero la fórmula **en orden**, sin exigir I/S/R/T, y después evaluar el hook mediante **solo dos criterios**:
 
 1. **Impacto:** ¿el hook tiene potencial de despertar **la emoción elegida con la mayor intensidad posible** y abrir **una expectativa muy fuerte** de lo siguiente? Se evalúa el efecto hipotético, no se afirma rendimiento real.
-2. **Naturalidad:** ¿suena como algo que una persona diría, tiene sentido en el contexto y cumple **semánticamente** todas las variables seleccionadas sin muletillas ni artificios? La coherencia está incluida aquí; no crear un tercer criterio llamado «coherencia».
+2. **Naturalidad:** ¿suena como algo que una persona diría, tiene sentido en el contexto y cumple **semánticamente** los elementos y recursos que realmente se eligieron, sin muletillas ni artificios? La coherencia está incluida aquí; no crear un tercer criterio llamado «coherencia».
 
 **Ambos deben aprobar.** Si falla cualquiera, revisar las decisiones previas o descartar el hook e indicar por qué. No rescatar un candidato fallido solo porque sea gracioso, extraño o formalmente cumpla la lista; tampoco forzar una combinación imposible. Registrar intentos, decisiones descartadas y causas para detectar patrones. Un fallo aislado **no** convierte esa elección en prohibida.
 
 Ejemplo de fallo: **ira + académico + sarcasmo** puede producir una frase divertida, pero si no suscita ira ni interesa al espectador, **falla Impacto** aunque satisfaga el estilo. Las palabras «perdón» o «lo siento» sin una disculpa verdadera **fallan Naturalidad/cumplimiento semántico**.
+
+## Estado de la decisión
+
+**Método B aprobado como preferente experimental por el propietario el 2026-11-22.** La comparación ciega ([diagnóstico temporal final](temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md)) favoreció B en puntuaciones humanas, pero no confirmó su superioridad en retención real. Conservar la fórmula A y los experimentos anteriores solo como historial; **no reescribir datos ni declarar resultados no medidos**.
