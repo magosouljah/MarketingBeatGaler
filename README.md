@@ -72,6 +72,8 @@ The original 6.033s Apple Music cover-orbit video was recovered from the user's 
 
 El laboratorio de coreografía 3D ([lab-v1](account-1/videos/wheel/lab-v1/README.md): A/B/C; [lab-v2](account-1/videos/wheel/lab-v2/README.md): la rueda tipo rolodex) terminó en **wheel-v7**, aprobado por el propietario el 2026-11-06. Después vinieron [songs-v1](account-1/videos/wheel/songs-v1/README.md): 8 videos con 4 canciones, en negro y en blanco. Todo vive en [account-1/videos/wheel/](account-1/videos/wheel/).
 
-## Ramas
+## Regla obligatoria de ramas
 
-Solo existe `main`; se trabaja directo ahí. El 2026-11-16 se unificaron todas las ramas anteriores con merges sin squash, de modo que los hashes que citan los casos siguen existiendo en la historia de `main`.
+**PROHIBIDO CREAR RAMAS.** Todo el trabajo, incluidos experimentos y documentación, debe realizarse y publicarse directamente en `main`. No crear ramas temporales, de pruebas, de agentes ni pull requests. Antes de empezar, comprobar que la rama activa es `main`; si no lo es, detenerse y corregir el entorno sin crear otra rama.
+
+Las ramas antiguas aún pueden figurar en GitHub; su existencia **no autoriza** crear ni utilizar ramas nuevas. La consolidación histórica anterior se realizó con merges sin squash.
