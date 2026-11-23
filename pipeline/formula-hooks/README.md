@@ -1,6 +1,8 @@
 # Fórmula de hooks — bibliotecas de trabajo
 
-Esta carpeta conserva las **cuatro piezas decididas para explorar hooks**. Es documentación de diseño, **no** un generador implementado ni una fórmula de eficacia demostrada.
+Esta carpeta conserva las **cuatro piezas decididas para explorar hooks**.
+
+**Regla obligatoria:** [cada variable debe cumplirse realmente en el hook](REGLA.md), no solo mencionarse. Es documentación de diseño, **no** un generador implementado ni una fórmula de eficacia demostrada.
 
 1. [Espectador](espectador/README.md): experiencias, creencias, identidad, deseos, miedos y valores. Reutiliza las fuentes originales del repositorio.
 2. [Emoción](emocion/EMOCIONES.md): diez emociones/estados seleccionados para experimentar.
