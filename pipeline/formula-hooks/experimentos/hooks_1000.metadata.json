@@ -343,7 +343,11 @@
     "Las cláusulas de recurso, estructura y tono proceden de realizaciones programáticas reutilizables: algunas combinaciones podrían sonar forzadas o no cumplir plenamente la función retórica en contexto.",
     "La comprobación semántica de las 1.000 filas requiere revisión humana independiente; especialmente tono, intención pragmática, relevancia del rasgo e intensidad emocional.",
     "La detección de similitud usa una firma textual de tema-intención-estructura-recurso, no embeddings ni evaluación semántica humana.",
-    "Se selecciona libremente entre catálogos originales; la aceptación de opciones implementadas sesga la distribución final, no existe aprendizaje de calificaciones."
+    "Se selecciona libremente entre catálogos originales; la aceptación de opciones implementadas sesga la distribución final, no existe aprendizaje de calificaciones.",
+    "Los hooks contienen entre 43 y 89 palabras (mediana 63): muchos son demasiado largos para funcionar como apertura breve y necesitan edición.",
+    "No se guardó un generador autónomo ni checkpoints incrementales; la semilla y el log permiten auditar la selección aleatoria, pero no regenerar por sí solos el texto exacto.",
+    "La generación sigue patrones lingüísticos reutilizados; la diversidad de 558 rasgos del espectador no demuestra ausencia de repetición conceptual o una combinación semánticamente coherente.",
+    "El archivo está en una rama experimental, no en main y no fue promovido a producción."
   ],
   "sourceShas": {
     "README.md": "0b20304a9b9d77f2fbdd5bae351f5c53422f28ae",
@@ -379,6 +383,20 @@
     "emptyRatings": 1000,
     "knownCatalogValues": true,
     "bom": true,
-    "semanticHumanReview": "PENDIENTE"
-  }
+    "semanticHumanReview": "PENDIENTE — no aprobar automáticamente",
+    "rowsIndependentlyAudited": 1000,
+    "columns": 20,
+    "catalogueErrors": 0,
+    "missingDataErrors": 0,
+    "duplicateExactHooks": 0,
+    "sourceReferenceErrors": 0,
+    "randomDrawsReplayed": 3800,
+    "replayMismatches": 0,
+    "medianHookWords": 63,
+    "minimumHookWords": 43,
+    "p90HookWords": 71,
+    "maximumHookWords": 89
+  },
+  "status": "CORPUS EXPLORATORIO SIN APROBACIÓN SEMÁNTICA",
+  "discardLogPath": "pipeline/formula-hooks/experimentos/hooks_1000_descartes.csv"
 }
