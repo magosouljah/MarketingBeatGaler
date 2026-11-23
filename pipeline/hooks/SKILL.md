@@ -20,7 +20,7 @@ Crear hooks que interesen de verdad a un productor musical. **No hay fórmula ni
 - Usar cero, una o varias técnicas solo si hacen más fuerte la idea. La emoción puede emerger del concepto: **no hay que escogerla primero**.
 - Redactar como hablaría alguien de verdad. La duración ~3 s es una referencia práctica, **no una excusa para destruir sentido ni una regla fija**; adaptar al formato pedido.
 - Generar la cantidad solicitada (por defecto, cinco en nuestras rondas de exploración), variando **ideas y perspectivas reales**, no solo plantillas. No reciclar hooks favoritos ni disfrazar una frase previa.
-- Revisar internamente con [CRITERIO.md](CRITERIO.md): credibilidad, importancia, claridad del conflicto, naturalidad, expectativa y cumplimiento. Descartar y rehacer cuando haga falta. La autocrítica de la IA no es aprobación humana.
+- Revisar internamente con [CRITERIO.md](CRITERIO.md): credibilidad, importancia, claridad del conflicto, naturalidad, expectativa y cumplimiento. Antes de descartar, distinguir un concepto débil de una buena idea mal expresada. Explorar el potencial de los candidatos prometedores, reconstruir el ángulo o la frase y seleccionar por lo que comunican sin explicación. Descartar cuando no haya un núcleo valioso que rescatar. La autocrítica de la IA no es aprobación humana.
 
 ## Aprender de cada ronda
 Cuando el propietario critique, leer [APRENDIZAJE.md](APRENDIZAJE.md): identificar **qué cambiar en la forma de generar**, actualizar o fusionar principios/técnicas/criterio, justificarlo con evidencia y ponerlo a prueba en el siguiente lote. **No limitarse a añadir comentarios, tablas o prohibiciones.**
