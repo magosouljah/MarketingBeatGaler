@@ -10,6 +10,15 @@
 
 Solo entonces combinar las variables seleccionadas y redactar el hook. La evaluación posterior mediante Impacto y Naturalidad sigue vigente, pero **no sustituye la lectura y el diseño previo**.
 
+## Contrato obligatorio para nuevas pruebas
+
+1. **Expectativa antes del texto:** para cada intento, formular internamente qué espera descubrir o ver el espectador **después** de los tres segundos y qué contenido del futuro video podría cumplirlo. Si no hay una respuesta o continuación posible y significativa, descartar la combinación. No convertir la expectativa en explicación dentro del hook.
+2. **Duración pronunciada:** escribir solo la frase de apertura, no un párrafo. Objetivo aproximado: **3 segundos de voz**. Estimar el tiempo en español contando las palabras y suponiendo inicialmente ~180 palabras/minuto (unas 3 palabras/segundo), ajustando si hay pausas, puntuación o palabras difíciles. Si se puede, verificar con una lectura o voz real; de otro modo marcar la cifra como **estimación**, no como medición exacta. Las 6–10 palabras son una orientación, no una cuota. Si las variables exigen una frase larga y no admiten una versión natural de ~3 s, descartar y registrar el motivo, no recortar hasta perder el sentido.
+3. **Combinaciones aleatorias sin lista negra previa:** permitir combinaciones inusuales; probar si pueden cumplir naturalmente la intención, estructura, recurso, tono, emoción y expectativa. Si resultan semánticamente imposibles, forzadas o demasiado largas, descartarlas, conservar variables e indicar causa. No prohibir una combinación por un solo fallo.
+4. **Registro:** cada hook aceptado debe conservar las siete variables (incluida la dimensión de valoración), sus categorías y origen, texto del hook, **`expectativa`** concreta y **`duracion_estimada_segundos`** numérica. Mantener vacías las columnas de calificación humana. Registrar los intentos rechazados por separado con variables y causa. No atribuir a las estimaciones ni al juicio de la IA resultados de audiencia.
+
+La pregunta «¿qué espera descubrir?» guía la **generación previa**, no es un tercer criterio de evaluación. Los **únicos criterios finales** siguen siendo Impacto y Naturalidad.
+
 **Cada variable elegida para un hook debe cumplirse de verdad en el contenido, no solo mencionarse o imitarse superficialmente.**
 
 En particular, la **intención comunicativa debe ejecutarse como una acción con significado**, no como una palabra o un estilo de redacción.
