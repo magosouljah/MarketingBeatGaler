@@ -10,6 +10,11 @@ class LearningEngineTests(unittest.TestCase):
     def test_repository_audits(self):
         engine.audit()
 
+    def test_unified_content_account_supported(self):
+        self.assertIn('content', engine.ACCOUNTS)
+        self.assertIn('account-1', engine.ACCOUNTS)  # historical evidence remains valid
+        self.assertIn('account-2', engine.ACCOUNTS)
+
     def test_rejection_is_not_approved(self):
         case = engine.load_case('orbit-initial-rejection')
         self.assertFalse(case['human_approved'])

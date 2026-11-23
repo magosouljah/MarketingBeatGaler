@@ -1,7 +1,6 @@
-# Byte-identical evidence is required by its integrity manifest across checkouts.
-account-1/research/reference-analysis/** -text whitespace=cr-at-eol
-account-2/research/reference-analysis/** -text whitespace=cr-at-eol
+# Conservación exacta de evidencia con manifiestos SHA-256 a través de checkouts.
+content/research/reference-analysis/** -text whitespace=cr-at-eol
 shared/reference_analysis/** text eol=lf
 skills/reference-analysis/** text eol=lf
-# Owner-authorized maintenance on 2026-11-05: preserve canonical protected bytes.
+# Bytes canónicos del archivo protegido, aprobados previamente.
 DIRECCION.md text eol=lf

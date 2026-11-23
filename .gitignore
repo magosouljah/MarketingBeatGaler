@@ -10,24 +10,24 @@ __pycache__/
 !/.claude/skills/beatgaler-motion-hub/
 
 # Videos: material fuente privado, renders y assets que genera tools/prepare.py.
-/account-*/videos/*/inputs/*
-!/account-*/videos/*/inputs/README.md
-/account-*/videos/*/out/
-/account-*/videos/*/project/node_modules/
-/account-*/videos/*/project/package-lock.json
-/account-1/videos/add-finder/project/assets/covers/
-/account-1/videos/add-finder/project/assets/icons/
-/account-1/videos/add-finder/project/assets/vo/
-/account-1/videos/add-finder/project/assets/beat.mp3
-/account-1/videos/add-finder/project/assets/gsap.min.js
-/account-*/videos/*/project/.hyperframes/
+/content/videos/*/inputs/*
+!/content/videos/*/inputs/README.md
+/content/videos/*/out/
+/content/videos/*/project/node_modules/
+/content/videos/*/project/package-lock.json
+/content/videos/add-finder/project/assets/covers/
+/content/videos/add-finder/project/assets/icons/
+/content/videos/add-finder/project/assets/vo/
+/content/videos/add-finder/project/assets/beat.mp3
+/content/videos/add-finder/project/assets/gsap.min.js
+/content/videos/*/project/.hyperframes/
 
 # HyperFrames local studio/snapshot state
 .hyperframes/
 node_modules/
 
 # fuck: assets que genera tools/prepare.py (logos de terceros, fotos del propietario, portadas).
-/account-1/videos/fuck/project/assets/
+/content/videos/fuck/project/assets/
 
 # Pipeline: renders de arranques y piezas (no se versionan).
 /pipeline/4-produccion/arranque/out/

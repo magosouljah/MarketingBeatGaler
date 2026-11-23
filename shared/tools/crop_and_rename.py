@@ -1,7 +1,7 @@
 """Recorta al centro y renumera portadas (cover-001, cover-002, ...).
 
 Uso, desde la raiz del repo:  python shared/tools/crop_and_rename.py [carpeta]
-Por defecto trabaja sobre account-1/creative-assets/covers.
+Por defecto trabaja sobre content/assets/covers.
 
 OJO: renumera TODO el contenido de la carpeta. El video add-finder depende de la
 numeracion actual (cover-002 ... cover-061). No lo vuelvas a correr sobre ese set;
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 from PIL import Image
 
-folder = Path(sys.argv[1] if len(sys.argv) > 1 else "account-1/creative-assets/covers")
+folder = Path(sys.argv[1] if len(sys.argv) > 1 else "content/assets/covers")
 exts = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 
 files = sorted([p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in exts])

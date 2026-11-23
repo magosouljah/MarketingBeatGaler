@@ -49,7 +49,7 @@ No hay motivo para invocar todas las skills simultáneamente: elige la mínima c
 4. Una skill no equivale a una habilidad comprobada. El resultado creativo se valida viendo **video continuo y fotogramas**, no por promesas de «Apple-like» ni métricas exclusivamente numéricas.
 5. Cuenta 1 y Cuenta 2 no comparten gusto creativo; pueden compartir motor técnico.
 6. **No se debe copiar una coreografía ajena.** Analizamos referencias para diseñar una animación nueva de BeatGaler.
-   **Excepción del propietario (2026-11-05, chat):** para la órbita de portadas del primer anuncio, el objetivo es el máximo parecido con la referencia de Apple Music (ver `account-1/videos/wheel/lab-v2/README.md`). Se mantienen portadas, texto y marca de BeatGaler; nunca se usa logo, texto ni arte de Apple.
+   **Excepción del propietario (2026-11-05, chat):** para la órbita de portadas del primer anuncio, el objetivo es el máximo parecido con la referencia de Apple Music (ver `content/videos/wheel/lab-v2/README.md`). Se mantienen portadas, texto y marca de BeatGaler; nunca se usa logo, texto ni arte de Apple.
 7. Los repositorios y SHAs están congelados en [catalog.json](catalog.json). Actualizarlos requiere revisar cambios en un PR, no seguir automáticamente las ramas principales.
 8. Licencias: Barty-Bart declara MIT con licencias propias para audio/fuentes; HyperFrames Apache-2.0; Charlie y Blixvip MIT. En el repositorio `remotion-dev/skills` no apareció un LICENSE de raíz en esta revisión: el catálogo es para **instalación local**, no redistribución. Otros contenidos recopilados requieren comprobación individual de atribución.
 
@@ -57,4 +57,4 @@ No hay motivo para invocar todas las skills simultáneamente: elige la mínima c
 
 Ejecutar la skill propia `shared.reference_analysis` sobre el MP4 original de Apple Music (solo local, no se comitea); después **comparar una pequeña escena original de BeatGaler** con órbita rígida, objetos independientes y objetos + cámara. Para cada variante conservar proyecto editable, versiones de skills, frames, video, diagnóstico y feedback. No aprobar reglas visuales sin revisión humana.
 
-[Referencia real documentada](../account-1/research/reference-analysis/apple-music-orbit-v1/ANALYSIS.md) · [Plan del proyecto](../PLAN.md) · [Learning Engine](../learning/README.md)
+[Referencia real documentada](../content/research/reference-analysis/apple-music-orbit-v1/ANALYSIS.md) · [Plan del proyecto](../PLAN.md) · [Learning Engine](../learning/README.md)

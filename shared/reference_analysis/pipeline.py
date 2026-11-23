@@ -157,14 +157,14 @@ def derive_tracks(tracks, times):
     return output
 
 
-def analyze(source, output, account='account-1', max_seconds=60, max_frames=1800,
+def analyze(source, output, account='content', max_seconds=60, max_frames=1800,
             max_bytes=512 * 1024 * 1024, cut_threshold=0.22, annotations=None, tracks=None):
     source, output = Path(source).resolve(), Path(output).resolve()
     if not source.is_file():
         raise ValueError('Input must be an accessible local video file')
     if output.exists():
         raise ValueError('Output already exists; use a new run directory')
-    if account not in ('account-1', 'account-2') or not 0 < cut_threshold < 1:
+    if account not in ('content', 'account-1', 'account-2') or not 0 < cut_threshold < 1:
         raise ValueError('Invalid account or cut threshold')
     if source.stat().st_size > max_bytes:
         raise ValueError('Source exceeds byte budget')
@@ -278,7 +278,7 @@ def validate(folder):
                      'tracks', 'warnings', 'limitations'}
     if set(data) != expected_keys:
         raise ValueError('Analysis fields do not match V1 contract')
-    if data['schema_version'] != VERSION or data['account'] not in ('account-1', 'account-2') or data['sampling'] != 'all-presentation-frames':
+    if data['schema_version'] != VERSION or data['account'] not in ('content', 'account-1', 'account-2') or data['sampling'] != 'all-presentation-frames':
         raise ValueError('Invalid analysis version/account/sampling')
     rows = data['frames']
     times = timestamps(json.loads((folder / 'frame-probe.json').read_text(encoding='utf-8'))['frames'])
@@ -362,7 +362,7 @@ def main():
     sub = parser.add_subparsers(dest='command', required=True)
     a = sub.add_parser('analyze')
     a.add_argument('source'); a.add_argument('output')
-    a.add_argument('--account', choices=['account-1', 'account-2'], required=True)
+    a.add_argument('--account', choices=['content', 'account-1', 'account-2'], required=True)
     a.add_argument('--annotations')
     a.add_argument('--tracks')
     a.add_argument('--max-seconds', type=float, default=60)
@@ -371,7 +371,7 @@ def main():
     v = sub.add_parser('validate'); v.add_argument('output')
     r = sub.add_parser('register'); r.add_argument('output'); r.add_argument('case_id')
     f = sub.add_parser('failure'); f.add_argument('case_id'); f.add_argument('diagnostic')
-    f.add_argument('--account', choices=['account-1', 'account-2'], required=True)
+    f.add_argument('--account', choices=['content', 'account-1', 'account-2'], required=True)
     args = parser.parse_args()
     try:
         if args.command == 'analyze':

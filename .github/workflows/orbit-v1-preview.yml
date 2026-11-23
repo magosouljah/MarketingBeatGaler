@@ -4,7 +4,7 @@ on:
     branches:
       - marketing/first-video-3d-orbit-v1
     paths:
-      - 'account-1/videos/orbit/v1/**'
+      - 'content/videos/orbit/v1/**'
       - '.github/workflows/orbit-v1-preview.yml'
   workflow_dispatch:
 permissions:
@@ -26,14 +26,14 @@ jobs:
       - name: Render via approved HyperFrames first
         id: hyperframes
         continue-on-error: true
-        working-directory: account-1/videos/orbit/v1
+        working-directory: content/videos/orbit/v1
         run: |
           npx --yes hyperframes@latest lint
           npx --yes hyperframes@latest check --json
           npx --yes hyperframes@latest render --quality draft -o "$GITHUB_WORKSPACE/orbit-preview.mp4"
       - name: Fallback CPU diagnostic if HyperFrames did not produce a video
         if: always()
-        working-directory: account-1/videos/orbit/v1
+        working-directory: content/videos/orbit/v1
         run: |
           if test -s "$GITHUB_WORKSPACE/orbit-preview.mp4"; then
             echo 'Render source: HyperFrames'

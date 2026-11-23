@@ -20,7 +20,7 @@ Los tramos deben compartir tamaño, fps y ajustes del codificador.
 
 ## Mezcla de voz, música y efectos
 
-Receta real: [`account-1/videos/add-finder/tools/render.sh`](../../account-1/videos/add-finder/tools/render.sh).
+Receta real: [`content/videos/add-finder/tools/render.sh`](../../content/videos/add-finder/tools/render.sh).
 
 - Cada pista se coloca con `adelay=<ms>|<ms>`.
 - `amix=inputs=N:normalize=0`, y `alimiter=limit=0.95` al final. Con la normalización por defecto todo baja según el número de entradas.

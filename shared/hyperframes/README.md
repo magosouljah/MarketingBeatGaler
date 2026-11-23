@@ -1,6 +1,6 @@
 # HyperFrames — cómo lo usamos
 
-HyperFrames convierte una página HTML/CSS/JS en MP4, frame por frame. Versión fijada: **0.9.44**. Proyecto de ejemplo completo: [`account-1/videos/add-finder/project/`](../../account-1/videos/add-finder/project/).
+HyperFrames convierte una página HTML/CSS/JS en MP4, frame por frame. Versión fijada: **0.9.44**. Proyecto de ejemplo completo: [`content/videos/add-finder/project/`](../../content/videos/add-finder/project/).
 
 ## Comandos
 

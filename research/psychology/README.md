@@ -42,3 +42,7 @@
 - Este repositorio es público: evitar subir datos confidenciales o recursos personales.
 
 Próxima fase: inventariar con mayor detalle los materiales ya existentes en GitHub y decidir su organización sin borrar fuentes ni historia.
+
+## Organización actual
+
+El material creativo y las referencias de producción antes separados por cuenta se reúnen en [`content/`](../../content/README.md). Este directorio mantiene únicamente las **fuentes originales** y el análisis psicológico; no duplicar bibliotecas de hooks.

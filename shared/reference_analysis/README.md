@@ -4,7 +4,7 @@ Executable evidence preparation and agent-assisted technical study, not autonomo
 
 ```bash
 python -m shared.reference_analysis.demo reference-runs/demo-input
-python -m shared.reference_analysis.pipeline analyze reference-runs/demo-input/source.mkv reference-runs/demo-analysis --account account-1 --tracks reference-runs/demo-input/tracks.json
+python -m shared.reference_analysis.pipeline analyze reference-runs/demo-input/source.mkv reference-runs/demo-analysis --account content --tracks reference-runs/demo-input/tracks.json
 python -m shared.reference_analysis.pipeline validate reference-runs/demo-analysis
 python -m shared.reference_analysis.pipeline register reference-runs/demo-analysis demo-reference-test
 python learning/engine.py audit
@@ -16,7 +16,7 @@ Use new output folders and case IDs on subsequent iterations. `reference-runs/` 
 
 ## Input, limits and reproducibility
 
-`analyze LOCAL_FILE NEW_FOLDER --account account-1|account-2 [--annotations notes.json] [--tracks tracks.json] [--max-seconds 60] [--max-frames 1800] [--cut-threshold 0.22]`
+`analyze LOCAL_FILE NEW_FOLDER --account content [--annotations notes.json] [--tracks tracks.json] [--max-seconds 60] [--max-frames 1800] [--cut-threshold 0.22]`
 
 The pipeline hashes the source, probes streams and actual presentation timestamps, decodes every source frame into a 64×64 grayscale metric and a PNG at <=640px coded width. No FPS resampling or seek-per-image approximation. It rejects duplicate/nonmonotonic PTS and count mismatches. Variable frame intervals remain intact. PNG file number minus one is the source presentation frame index. First frame local time = 0; source PTS is preserved separately. Container duration and first-to-last-frame span are different quantities. Rotation is not applied; non-square pixel aspect and color tags remain in probe metadata for review. Thumbnail luma is not calibrated photometry or a color/material analysis.
 
@@ -58,13 +58,13 @@ Kinds: `observation`, `estimate`, `interpretation`, `hypothesis`. No authored `m
 For a failed experiment write a diagnostic and run:
 
 ```bash
-python -m shared.reference_analysis.pipeline failure reference-example-failure path/to/diagnostic.json --account account-1
+python -m shared.reference_analysis.pipeline failure reference-example-failure path/to/diagnostic.json --account content
 ```
 
 Required diagnostic strings: `check_id`, `evidence`, `cause_category`, `hypothesis`, `problem`, `implementation`, `use_when`, `avoid_when`, `acceptance_test`. Cause categories: `reference-interpretation`, `tool-choice`, `implementation`, `technical-knowledge`, `ambiguous-instructions`, `evaluation-process`. All causes remain hypotheses. The existing engine records evidence, creates a proposed rule with use/avoid conditions and acceptance test. Correction → new case → comparable evaluation; no automatic `promote`. Read `learning/README.md` for distinct verification and real creative approval gates. No changes to the engine's promotion logic.
 
 ## First case: Apple Music orbit
 
-Original pointer: https://www.instagram.com/p/DcBoH7XgD1V/ . No original MP4 exists in this checkout or the inspected tracked remote trees. Historical analysis in branch `marketing/orbit-reference-rebuild-v3`, file `account-1/creative-assets/ORBIT-APPLE-REFERENCE-ANALYSIS.md`, reports prior access, but this run has not verified that footage or its numbers. Historical reconstructions were rejected. No unique 3D trajectory or camera can be recovered from those descriptions.
+Original pointer: https://www.instagram.com/p/DcBoH7XgD1V/ . No original MP4 exists in this checkout or the inspected tracked remote trees. Historical analysis in branch `marketing/orbit-reference-rebuild-v3`, file `content/assets/ORBIT-APPLE-REFERENCE-ANALYSIS.md`, reports prior access, but this run has not verified that footage or its numbers. Historical reconstructions were rejected. No unique 3D trajectory or camera can be recovered from those descriptions.
 
 The synthetic test proves ingestion, source-frame coverage, known cut detection, hold warnings, optional 2D kinematics, report generation, integrity validation and Learning Engine integration. It does not test cinematic quality or orbit reconstruction. See [research](RESEARCH.md) for the next source-dependent experiment.

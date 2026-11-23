@@ -1,6 +1,6 @@
 # Clips generados con IA (Higgsfield)
 
-Notas del único clip generado hasta ahora: el chico de [llama](../../account-1/videos/llama/) (2026-11-12, Seedance 2.5 desde el conector de Higgsfield en claude.ai). Los datos de precios y límites son los de ese día y esa cuenta; pueden haber cambiado.
+Notas del único clip generado hasta ahora: el chico de [llama](../../content/videos/llama/) (2026-11-12, Seedance 2.5 desde el conector de Higgsfield en claude.ai). Los datos de precios y límites son los de ese día y esa cuenta; pueden haber cambiado.
 
 ## Antes de generar
 

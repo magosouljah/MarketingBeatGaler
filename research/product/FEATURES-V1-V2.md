@@ -7,7 +7,7 @@
 - Un video puede mostrar cualquier feature de **V1** o de **V2**, aunque la app publicada siga en V1.
 - **No se inventan features fuera de estas dos listas.**
 - Si un video necesita una feature que no está aquí, se le propone al propietario. Si él la agrega a V2, entra en esta lista y entonces se puede usar.
-- El «Share» del video [`fuck`](../../account-1/videos/fuck/) corresponde a los espacios compartidos de V2 (Quick Packs y Cowork). El menú de V1 no lo tiene.
+- El «Share» del video [`fuck`](../../content/videos/fuck/) corresponde a los espacios compartidos de V2 (Quick Packs y Cowork). El menú de V1 no lo tiene.
 
 ## Origen y límites
 

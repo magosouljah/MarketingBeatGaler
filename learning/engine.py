@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / 'learning'
-ACCOUNTS = {'account-1', 'account-2'}
+ACCOUNTS = {'content', 'account-1', 'account-2'}  # legacy IDs preserved in historical evidence
 SLUG = re.compile(r'^[a-z0-9][a-z0-9-]{1,79}$')
 
 
@@ -103,8 +103,8 @@ def promote(proposal_id, verified_case_id):
     validate_proposal(proposal)
     source = load_case(proposal['source_case'])
     verified = load_case(verified_case_id)
-    if verified['id'] == source['id'] or verified['account'] != proposal['account']:
-        fail('Verification must be a different case for the same account')
+    if verified['id'] == source['id'] or (verified['account'] != proposal['account'] and verified['account'] != 'content' and proposal['account'] != 'content'):
+        fail('Verification must be a different case for the same content scope')
     # One approved test can verify several proposals: `validates_proposals` (list) or the original `validates_proposal` (string).
     cited = verified.get('validates_proposals')
     if cited is None:
@@ -173,7 +173,7 @@ def status():
         if not (BASE / 'lessons' / str(item.get('account')) / f"{item.get('check_id')}.md").exists():
             pending += 1
     print(f'Cases: {cases} | Proposed (not validated): {pending} | Validated lessons: {lessons}')
-    print('Next: read learning/lessons/<account>/ before producing; log every new test as a case and request creative approval.')
+    print('Next: read historical and content learning/lessons/ before producing; new cases use account=content.')
 
 
 def main():

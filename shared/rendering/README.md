@@ -1,6 +1,6 @@
 # Render cuadro por cuadro en Python
 
-Notas para hacer un video con Python + OpenCV + Pillow + FFmpeg, sin navegador. Salieron de [llama](../../account-1/videos/llama/) (2026-11-12): 441 frames de 1080×1920 en 85 s con 2 CPU.
+Notas para hacer un video con Python + OpenCV + Pillow + FFmpeg, sin navegador. Salieron de [llama](../../content/videos/llama/) (2026-11-12): 441 frames de 1080×1920 en 85 s con 2 CPU.
 
 **No sustituye a HyperFrames**, que es la herramienta elegida en `FASE-0.md`. Sirve cuando el video necesita lo que el HTML hace mal: metraje real remapeado en el tiempo, efectos por píxel (fuego, ruido) o muchos planos 3D con textura. Para interfaz real de la app, tipografía y CSS, usar [HyperFrames](../hyperframes/README.md).
 

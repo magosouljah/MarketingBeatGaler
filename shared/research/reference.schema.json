@@ -19,9 +19,11 @@
     },
     "account_target": {
       "enum": [
+        "content",
         "account-1",
         "account-2"
-      ]
+      ],
+      "description": "Utilizar content en referencias nuevas; account-1/account-2 solo por compatibilidad de registros históricos."
     },
     "platform": {
       "enum": [

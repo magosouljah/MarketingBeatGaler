@@ -1,5 +1,7 @@
 # Plan — Sistema de videos para BitGaler
 
+> **Documento de planificación histórica.** La división entre cuentas que aparece a continuación fue reemplazada para el trabajo nuevo por `content/` único, aprobado 2026-11-22. Se conserva el texto original para trazabilidad; ver [content/README.md](content/README.md). `DIRECCION.md` sigue protegido.
+
 ## Objetivo
 
 Construir un sistema repetible para crear videos verticales de **30–60 segundos** para dos cuentas distintas, usando directamente el enfoque descrito en el video de Claude Code:
@@ -521,14 +523,14 @@ shared/
   rendering
   review-engine
 
-account-1/
+content/
   hooks
   formats
   design
   feedback
   assets
 
-account-2/
+content/
   hooks
   formats
   design

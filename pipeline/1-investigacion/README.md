@@ -4,7 +4,7 @@
 
 | | |
 | --- | --- |
-| Entra | Fuentes de [`research/`](../../research/), referencias de [`account-1/research/`](../../account-1/research/), testimonios del propietario, comentarios reales, resultados del módulo 5, preguntas del módulo 6 |
+| Entra | Fuentes de [`research/`](../../research/), referencias de [`content/research/`](../../content/research/), testimonios del propietario, comentarios reales, resultados del módulo 5, preguntas del módulo 6 |
 | Sale | `evidencia.csv` y `preguntas.csv` |
 
 ## `evidencia.csv`

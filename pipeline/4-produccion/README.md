@@ -11,7 +11,7 @@ Este módulo no duplica nada: usa lo que ya existe.
 
 | Qué | Dónde |
 | --- | --- |
-| Cuerpos | [`account-1/videos/`](../../account-1/videos/) |
+| Cuerpos | [`content/videos/`](../../content/videos/) |
 | Herramientas | [`shared/`](../../shared/) |
 | Lecciones visuales y evaluación | [`learning/`](../../learning/) |
 | Features que se pueden mostrar | [`research/product/FEATURES-V1-V2.md`](../../research/product/FEATURES-V1-V2.md) |

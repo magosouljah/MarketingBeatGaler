@@ -37,7 +37,7 @@ Los criterios, sus pesos y la escala viven en [`criteria.json`](criteria.json): 
 ## Comandos
 
 ```bash
-python learning/scorecard/scorecard.py add <video> --account account-1 --version "final" \
+python learning/scorecard/scorecard.py add <video> --account content --version "final" \
     animation=4.5 aesthetics=4 originality=3.5 consistency=4 broll=na realism=4 finish=4.5 \
     --comment aesthetics="el bote dibujado se veía infantil" --comment finish="nube pixelada al inflarse" \
     --note "comentario general" --evidence "sesión y fecha de la respuesta"
@@ -63,3 +63,5 @@ Cada video guarda todas sus versiones evaluadas en `evaluations/<video>.json`. V
 - **Versión 3 (2026-11-16, vigente):** siete criterios ponderados de 0 a 5 y total sobre 100, definidos por el propietario.
 - **Versión 2 (retirada):** cuestionario de quince preguntas del 1 al 10. Solo se usó con add-finder (promedio 7.0); su registro sigue en [`scores/add-finder.json`](scores/add-finder.json) y sus preguntas en [`questions.json`](questions.json). No es comparable con la versión 3 y no se convierte.
 - **Versión 1:** nunca se usó.
+
+**Unificación 2026-11-22:** las puntuaciones anteriores siguen asociadas a su etiqueta histórica; nuevos videos usan `--account content`, sin mezclar ni reescribir retroactivamente evaluaciones.

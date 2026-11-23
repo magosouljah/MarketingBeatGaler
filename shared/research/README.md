@@ -1,8 +1,8 @@
 # Research — contrato compartido
 
-`reference.schema.json` define cómo documentar **una referencia ya investigada**. Un enlace recibido sin análisis se registra primero en el `INBOX.md` de su cuenta.
+`reference.schema.json` define cómo documentar **una referencia ya investigada**. Un enlace recibido sin análisis se registra primero en `content/research/INBOX.md`.
 
-Campos esenciales: plataforma, URL, creador, visualizaciones, baseline habitual del creador (si verificable), ratio de outlier (si existe baseline), transcripción, frames, hook, formato, cuenta destino y fundamento de la clasificación.
+Campos esenciales: plataforma, URL, creador, visualizaciones, baseline habitual del creador (si verificable), ratio de outlier (si existe baseline), transcripción, frames, hook, formato, destino `content` y fundamento de la clasificación.
 
 El ratio solo se calcula cuando ambos datos existen: `video_views / creator_baseline_views`. Si no hay suficientes datos, dejar baseline/ratio como `null`, y `classification: "reference"`.
 

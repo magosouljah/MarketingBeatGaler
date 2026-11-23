@@ -1,5 +1,7 @@
 # Fase 0 — Especificación ejecutable del sistema de video
 
+> **Documento de planificación histórica.** La división entre cuentas que aparece a continuación fue reemplazada para el trabajo nuevo por `content/` único, aprobado 2026-11-22. Se conserva el texto original para trazabilidad; ver [content/README.md](content/README.md). `DIRECCION.md` sigue protegido.
+
 **Estado:** ✅ Gate de Fase 0 aprobado
 
 Esta fase existe para cerrar los huecos reales del video de referencia antes de construir. Las decisiones de abajo separan explícitamente lo que viene del video, lo que fue verificado externamente y lo que queda para medirse durante la implementación.
@@ -295,7 +297,7 @@ shared/
   technical QA
   product-source-assets/
 
-account-1/
+content/
   research/
   hooks/
   formats/
@@ -303,9 +305,9 @@ account-1/
   design-references/
   design-guidelines/
   feedback/
-  creative-assets/
+  assets/
 
-account-2/
+content/
   research/
   hooks/
   formats/
@@ -313,7 +315,7 @@ account-2/
   design-references/
   design-guidelines/
   feedback/
-  creative-assets/
+  assets/
 ```
 
 ### Cuenta 1 — BitGaler oficial

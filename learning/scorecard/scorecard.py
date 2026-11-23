@@ -5,7 +5,7 @@ Siete criterios ponderados (criteria.json), cada uno de 0 a 5 con decimales; el 
 se presenta sobre 100. Un criterio que no aplica se marca `na` y su peso se reparte en
 proporcion entre los demas. Cada video guarda todas sus versiones evaluadas.
 
-    python learning/scorecard/scorecard.py add fuck --account account-1 --version final \
+    python learning/scorecard/scorecard.py add fuck --account content --version final \
         animation=4.5 aesthetics=4 originality=3.5 consistency=4 broll=na realism=4 finish=4.5 \
         --comment aesthetics="el bote dibujado se veia infantil" --note "comentario general" \
         --evidence "Propietario, sesion <url>, 2026-11-16"
@@ -102,7 +102,7 @@ def add(video, account, version, pairs, comments, note, evidence, date):
              'comments': notes, 'note': note, 'evidence': evidence, 'total': total(scores, criteria)}
     path = video_file(video)
     record = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {'video': video, 'account': account, 'evaluations': []}
-    if record['account'] != account:
+    if record['account'] != account and not (account == 'content' and record['account'] in ('account-1', 'account-2')):
         raise ValueError(f"{video} pertenece a {record['account']}, no a {account}")
     record['evaluations'] = [e for e in record['evaluations'] if e['version'] != version] + [entry]
     path.parent.mkdir(exist_ok=True)

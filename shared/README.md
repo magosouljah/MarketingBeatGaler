@@ -1,6 +1,6 @@
 # Shared — motor técnico común
 
-Recursos reutilizables para ambas cuentas; **no contiene** gusto creativo, hooks, design guidelines ni feedback que puedan contaminar el perfil editorial de otra cuenta.
+Recursos técnicos para el **contenido único** de BeatGaler Marketing. La dirección creativa, los hooks y el feedback viven en `content/`, no aquí.
 
 | Carpeta | Qué hay |
 | --- | --- |
