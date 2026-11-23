@@ -1,3 +1,5 @@
+> **DOCUMENTO HISTÓRICO — MÉTODO B, 2026-11-22.** Desde 2026-11-23 la generación vigente de hooks se rige por [`pipeline/hooks/SKILL.md`](../hooks/SKILL.md), sin fórmula obligatoria. Las obligaciones de este documento se aplican **solo** cuando se pida explícitamente reproducir el antiguo método B o sus experimentos. Su texto original se conserva por trazabilidad.
+
 # Regla — cumplimiento real de cada variable
 
 ## Paso 0 — Lectura obligatoria ANTES de generar

@@ -31,6 +31,12 @@ python pipeline/ideacion.py comprobar inputs/ideacion-01.json
 python pipeline/ideacion.py revisar inputs/ideacion-01.json
 ```
 
+## Hooks — sistema de aprendizaje creativo (2026-11-23)
+
+Para ideas y frases iniciales de videos usar [`hooks/SKILL.md`](hooks/SKILL.md), con Mapa de Deseos, principios, técnicas y criterio. La vieja [`formula-hooks/`](formula-hooks/README.md) es ahora una **biblioteca/experimento histórico opcional**: no obliga a elegir emoción ni seguir `M → V + E → C + X`. La crítica del propietario actualiza la **forma activa de generar**, no solo un archivo de ejemplos. Ver [aprendizaje de hooks](hooks/APRENDIZAJE.md).
+
+Esto no sustituye los seis módulos de investigación a publicación ni convierte un juicio creativo en medición de audiencia.
+
 ## Generación creativa V1.3
 
 El generador lee [EXPLORACION-V13](1-investigacion/EXPLORACION-V13.md), razona con el [módulo 2](2-razonamiento/README.md) y usa [GENERAR-V13](3-hipotesis-guiones/GENERAR-V13.md). Explora sin cuotas de cantidad o territorio y profundiza **solo** ideas con una consecuencia importante y una explicación de por qué el estímulo puede captar atención. Puede seleccionar **cero, uno, dos o tres** finalistas, incluso de un mismo territorio. Si ninguno merece desarrollarse, lo justifica y no escribe guiones.

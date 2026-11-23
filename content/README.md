@@ -6,7 +6,7 @@
 
 - [videos/](videos/README.md): proyectos y videos, un directorio por pieza.
 - [research/](research/INBOX.md): referencias externas e investigaciones audiovisuales; las fuentes originales y metadatos se conservan.
-- [hooks/](hooks/HOOK_LIBRARY.md): patrones respaldados por evidencia. La fórmula experimental vive en [pipeline/formula-hooks/](../pipeline/formula-hooks/README.md).
+- [hooks/](hooks/HOOK_LIBRARY.md): patrones respaldados por evidencia. La generación activa y el aprendizaje creativo viven en [pipeline/hooks/](../pipeline/hooks/SKILL.md); las fórmulas anteriores son un laboratorio opcional en [pipeline/formula-hooks/](../pipeline/formula-hooks/README.md).
 - [formats/](formats/FORMAT_LIBRARY.md): formatos reutilizables documentados.
 - [scripts/](scripts/FIRST-VIDEO-V1.md): briefs y guiones históricos.
 - [assets/](assets/covers/): 60 portadas, recursos de voz y activos reutilizables.
@@ -18,7 +18,7 @@ Crear videos que aumenten el alcance entre productores musicales y las visitas a
 
 ## Cómo trabajar
 
-1. Revisar [pipeline/](../pipeline/README.md), investigación y fórmula de hooks pertinente.
+1. Revisar [pipeline/](../pipeline/README.md), investigación y [sistema de hooks libre](../pipeline/hooks/SKILL.md); consultar fórmulas anteriores solo si ayudan.
 2. Preparar una idea y un guion con expectativa que el video pueda cumplir.
 3. Crear un proyecto en [videos/](videos/README.md).
 4. Utilizar [shared/](../shared/README.md) para herramientas técnicas y [learning/](../learning/README.md) para feedback y lecciones.

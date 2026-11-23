@@ -1,23 +1,21 @@
-# Fórmula de hooks — bibliotecas de trabajo
+# Fórmula de hooks — laboratorio histórico y bibliotecas opcionales
 
-Esta carpeta conserva las **cuatro piezas decididas para explorar hooks**.
+**Sistema activo desde 2026-11-23:** [BeatGaler Hooks — SKILL](../hooks/SKILL.md). La generación actual es **libre de fórmulas obligatorias** y aprende modificando [principios](../hooks/PRINCIPIOS.md), [técnicas](../hooks/TECNICAS.md) y [criterio creativo](../hooks/CRITERIO.md).
 
-**Regla obligatoria:** [leer primero REGLA.md y completar el proceso en orden](REGLA.md). Es documentación de diseño, **no** un generador implementado ni una fórmula de eficacia demostrada.
+Esta carpeta **no se elimina**: conserva el diseño y evidencia del método B, catálogos y experimentos anteriores. No reescribir resultados ni atribuirles eficacia con espectadores.
 
-## Proceso obligatorio
+## Método B — solo para reproducir experimentos anteriores o si se solicita expresamente
 
-**0. Leer las reglas primero:** leer íntegramente [REGLA.md](REGLA.md), [Emociones](emocion/EMOCIONES.md), [Valoración](valoracion/VALORACION.md), [Espectador](espectador/README.md) y el Mapa V3 antes de generar. Las bibliotecas expresivas se consultan **solo si hace falta** para mejorar una redacción; no obligan a elegir técnicas.
+[REGLA.md](REGLA.md) documenta el antiguo contrato `M → (V + E) → (C + X libre) → Hook`, con emoción primero, valoración/espectador después, concepto y expresión libre. La expectativa se razonaba antes de redactar; intención, estructura, recurso y tono eran opcionales. Se evaluaban Impacto y Naturalidad, según juicio humano.
 
-**Método B, preferente provisional:** `M → (V + E) → (C + X libre) → Hook`. Es una configuración de trabajo basada en dos pruebas ciegas subjetivas, **no** eficacia validada con espectadores.
+El [diagnóstico de tres pasos](temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md) registró preferencia subjetiva por B frente a A (3,40/6 vs. 2,90/6 en 20 hooks por método); **no hubo medición de retención ni prueba causal de eficacia**. Esta decisión histórica no impone la fórmula al sistema nuevo.
 
-1. **M — Emoción:** seleccionar una de las [10 emociones](emocion/EMOCIONES.md) que queremos provocar.
-2. **V + E — Valoración y espectador:** con los [4 grupos de Scherer](valoracion/VALORACION.md), buscar en el [Mapa del espectador](espectador/README.md) una experiencia, creencia, deseo, miedo, identidad o valor que, interpretado de esa manera, pueda suscitar **la emoción ya elegida**. No elegir V y E independientemente.
-3. **C + X libre — Concepto y expresión:** construir un concepto a partir de M, V y E, y expresarlo **libremente**, buscando máxima emoción, expectativa y naturalidad. [Intención, estructura, recursos retóricos y tono](expresion-verbal/README.md) son **herramientas opcionales**: consultarlas solo si aportan valor al hook; no completar cuatro casillas obligatorias.
+## Herramientas que siguen siendo útiles
 
-**Expectativa:** se razona dentro del proceso, después de identificar la conexión psicológica y antes de redactar la frase. Es lo que el espectador querrá descubrir a continuación; **no es una variable de la fórmula**.
+- [Mapa de Deseos del productor V3](../../research/psychology/sources/MAPA-DE-DESEOS-DEL-PRODUCTOR-V3.md) — fuente canónica del espectador.
+- [Emociones](emocion/EMOCIONES.md): 10 opciones exploratorias, no selección obligatoria.
+- [Valoración](valoracion/VALORACION.md) y [espectador](espectador/README.md): posibles conexiones psicológicas.
+- [Expresión verbal](expresion-verbal/README.md): intenciones, estructuras, recursos retóricos, tonos, formatos y storytelling opcionales.
+- [Experimentos previos](experimentos/) y [diagnóstico](temporal-diagnostico-3-pasos/): evidencia histórica, no reglas activas.
 
-**Objetivo prioritario:** lograr **la máxima intensidad posible de la emoción elegida y la expectativa más fuerte posible** para continuar viendo, en un hook verbal de ~3 segundos. Se permite exageración creativa, dramatización y provocación; no promesas imposibles ni afirmaciones falsas presentadas como hechos. La evaluación final conserva solo **Impacto y Naturalidad**.
-
-Las categorías de expresión son una **biblioteca práctica derivada de las tablas acordadas**, no una lista oficial exhaustiva. La curiosidad se mantiene como opción elegida aunque no sea una categoría independiente entre las 27 de Cowen y Keltner.
-
-**Evidencia y límites:** [diagnóstico temporal de tres pasos](temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md): B obtuvo 3.40/6 de media frente a 2.90/6 de A en 20 hooks por método evaluados por el propietario; sin medición de retención real ni prueba causal. No se ha implementado un algoritmo generador, aprobado hooks para producción, cambiado el pipeline ni reemplazado fuentes. `DIRECCION.md` permanece fuera del alcance.
+**Importante:** la generación vigente está definida en `pipeline/hooks/SKILL.md`. Este directorio sigue existiendo para consulta y reproducción del método anterior.

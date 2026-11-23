@@ -1,3 +1,5 @@
+> **Sistema activo:** [`pipeline/hooks/SKILL.md`](../../hooks/SKILL.md). Estas bibliotecas son herramientas opcionales. Las referencias al método B en este archivo describen el experimento anterior, no una obligación para nuevos hooks.
+
 # Expresión verbal — cuatro bibliotecas combinables
 
 - [Intenciones](INTENCIONES.md): qué se quiere hacer al hablar.
@@ -17,4 +19,4 @@ Los contenidos de [Estructuras](ESTRUCTURAS.md) y [Recursos retóricos](RECURSOS
 - [Biblioteca de variables de presentación](BIBLIOTECA-VARIABLES-DE-PRESENTACION-V1.md): ejes para combinar situaciones y expectativas.
 - [Experimento de 100 formatos](../../../content/formats/EXPERIMENTO-100-FORMATOS-STORYTELLING-2026-11-23.md): candidatos sin calificar para revisión humana.
 
-**No son reglas de generación obligatorias**: no alteran el método B, la fórmula ni sus criterios finales. Son herramientas de exploración.
+**No son reglas de generación obligatorias.** Son herramientas de exploración para el nuevo sistema libre; el método B anterior se mantiene sin cambios como historial reproducible.
