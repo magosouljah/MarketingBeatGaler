@@ -22,4 +22,6 @@ Preguntar «¿por qué?» **en todas las direcciones** (importancia, causa, emoc
 No hay obligación de usar todas estas comprobaciones en cada candidato; son preguntas de rescate y selección. **El juicio de la IA propone; el del propietario decide.**
 
 ## Selección
+Antes de entregar, releer los candidatos como productor sin sus explicaciones: ¿la frase se entiende sola?, ¿la premisa describe una experiencia reconocible?, ¿queda algo valioso por descubrir?, ¿la variable musical realmente explica el resultado? Si falla, reconstruir o sustituir el candidato, no justificarlo con la expectativa. Esta revisión es juicio creativo, no puntuación ni fórmula de generación. Para identidad musical, considerar género, estilo, decisiones musicales y sonido antes de inferirla de BPM/key; estos últimos pueden aportar información pero no bastan. Para un puente comercial, verificar las funciones reales del producto y distinguirlas de propuestas futuras.
+
 Elegir las ideas con mayor capacidad razonable de interesar al espectador sin sacrificar credibilidad o naturalidad. Evitar duplicados semánticos aunque tengan estructuras distintas. Registrar la incertidumbre al juzgar. No convertir el gusto del propietario en datos de rendimiento con audiencia.
