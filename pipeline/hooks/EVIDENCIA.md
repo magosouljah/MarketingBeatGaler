@@ -24,6 +24,18 @@
 
 **Contraste técnico externo (no prueba de rendimiento):** [Sound on Sound, Phase Demystified](https://www.soundonsound.com/techniques/phase-demystified) describe cancelación en graves bajo ciertas condiciones, no que sumar dos 808 siempre reduzca volumen; [iZotope, Unmasking Your Mix](https://www.izotope.com/en/learn/unmasking-your-mix-with-neutron) y [How to Mix Rap Vocals](https://www.izotope.com/en/learn/how-to-mix-rap-vocals) describen enmascaramiento entre voz e instrumental, no incompatibilidad automática con igual BPM; [BeatStars, Can You Sell the Same Beat Twice?](https://help.beatstars.com/hc/en-us/articles/7797346243227-Can-You-Sell-the-Same-Beat-Twice) distingue licencias no exclusivas de exclusivas. Las causas psicológicas y preferencias se siguen tratando como hipótesis, y estos enlaces no prueban que un hook capte audiencia.
 
+## Segunda ronda de crítica — 2026-11-23
+
+| Caso | Feedback del propietario | Hipótesis de cambio, no validación con audiencia |
+| --- | --- | --- |
+| R2-H1 · Kick/808 | Tema muy repetido; no está mal y finalmente deja la frase como está. | La exactitud y utilidad no bastan para novedad. Buscar ángulos menos saturados sin prohibir temas conocidos. |
+| R2-H2 · «Harder where?» | La respuesta es obvia (kick y energía); la pregunta relevante sería «cómo». | Cuando el problema ya está identificado, la expectativa debe pasar del diagnóstico trivial a la solución concreta. |
+| R2-H3 · Vender cien veces | Lo acepta, pero señala que repetimos literalmente su sugerencia anterior. | Aprender el atractivo económico y la construcción afirmativa sin limitarse a parafrasear o copiar al propietario. |
+| R2-H4 · Eight-bar loop | No está mal, pero no es muy interesante; prefiere «así puedes transformar un eight-bar loop a un beat completo» frente a «watch this...». | Expresar directamente la transformación útil, sin prometer que ello vuelve interesante cualquier técnica común. |
+| R2-H5 · Acordes y sentimiento | Propone finalmente «la clave para crear el sentimiento no está en la melodía». | Un replanteamiento del supuesto central puede intrigar más que un A/B anunciado; no absolutizar que la melodía carezca de influencia emocional. |
+
+**Límite de inferencia:** son críticas a estos cinco conceptos y frases, no preferencias universales ni mediciones. El mecanismo armónico es plausible pero el sentimiento depende también de melodía, ritmo, timbre, interpretación y contexto.
+
 **Antecedentes independientes:** [experimento de 100 formatos y feedback](../../content/formats/FEEDBACK-EXPERIMENTO-100-2026-11-23.md); [método B y diagnóstico subjetivo](../formula-hooks/temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md). Conservarlos sin inventar notas ni aprobaciones.
 
 **Mantenimiento:** añadir una línea por *nuevo hallazgo relevante*, no por cada variante. Agrupar hallazgos repetidos, registrar revisiones o contradicciones; conservar historial mediante Git. **No cargar este archivo por defecto para generar**.
