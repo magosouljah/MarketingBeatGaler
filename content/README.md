@@ -27,3 +27,9 @@ Crear videos que aumenten el alcance entre productores musicales y las visitas a
 **Historial:** los proyectos anteriormente publicados en `account-1/videos/` ahora están en `content/videos/`. `account-2/` solo contenía plantillas sin hooks, referencias o videos. Los identificadores `account-1` / `account-2` dentro de casos, propuestas, evaluaciones y registros antiguos son **metadatos históricos**, no dos flujos de trabajo activos. No reescribirlos ni alterar métricas o aprobaciones.
 
 La evidencia de `content/research/reference-analysis/` debe conservar sus bytes y hashes originales.
+
+## Experimento de formatos (2026-11-23)
+
+- [100 formatos de storytelling pendientes de calificación](formats/EXPERIMENTO-100-FORMATOS-STORYTELLING-2026-11-23.md), generados mediante la [biblioteca de mecanismos narrativos](../pipeline/formula-hooks/expresion-verbal/STORYTELLING-MECANISMOS-PARA-FORMATOS.md).
+
+Estas propuestas no son formatos validados, piezas publicadas ni datos de audiencia.
