@@ -66,6 +66,10 @@ Hipótesis de expresión y relevancia, no eficacia medida. Consolidar en técnic
 
 Hipótesis de trabajo, no resultados de audiencia. Consolidar en P04, expresión alternativa y criterio de expectativa.
 
+## Sexta ronda de crítica — 2026-11-23
+
+El propietario considera bastante buenos los cinco hooks (melodía que suena cara, acceso a artistas sin placement, lugar imaginado, samples menos digitales, dirección armónica). En el segundo aún no ve clara la continuación; en el quinto sugiere «pulling you somewhere» como expresión alternativa, sin rechazar la original. Señal favorable para el criterio existente de prometer valor sin revelar toda la solución, no confirmación causal ni datos de audiencia. No introducir reglas nuevas por esta ronda. Solicita que el siguiente lote se relacione más fácilmente con BeatGaler; es una condición del lote, no una regla universal.
+
 **Antecedentes independientes:** [experimento de 100 formatos y feedback](../../content/formats/FEEDBACK-EXPERIMENTO-100-2026-11-23.md); [método B y diagnóstico subjetivo](../formula-hooks/temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md). Conservarlos sin inventar notas ni aprobaciones.
 
 **Mantenimiento:** añadir una línea por *nuevo hallazgo relevante*, no por cada variante. Agrupar hallazgos repetidos, registrar revisiones o contradicciones; conservar historial mediante Git. **No cargar este archivo por defecto para generar**.
