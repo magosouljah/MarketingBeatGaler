@@ -1,0 +1,31 @@
+﻿ID,Situacion_id,Metodo,Emocion,Hook,Impacto,Naturalidad,Total_6
+H001,S03,B,Ansiedad,Semanas sin abrir el DAW... y lo que pierdes no es lo que crees.,1,2,3
+H002,S03,A,Ansiedad,¿Cuántos beats subieron los demás desde que cerraste el DAW?,0,0,0
+H003,S01,B,Ira,"«Trato hecho», te dice. Y al pagar: «te doy la mitad».",2,2,4
+H004,S07,C,Anhelo intenso,Imagina que este fue tu último lunes sin vivir de tus beats.,1,2,3
+H005,S06,A,Nostalgia,"Madrugada, tus amigos, un beat. Y nadie hablaba de vender.",2,0,2
+H006,S10,A,Curiosidad,¿Sigues mejorando ese beat o ya lo estás arruinando?,2,2,4
+H007,S06,B,Nostalgia,"Tres de la mañana, tus amigos y un beat que nadie pensaba vender.",1,1,2
+H008,S06,C,Nostalgia,Encontré un beat de cuando lo hacíamos solo por reírnos.,2,0,2
+H009,S09,A,Interés,Empezó después que tú y ya tiene placements. ¿Por qué?,3,3,6
+H010,S08,A,Entusiasmo,¡Salió la canción con mi beat! Todavía no la escucho.,0,0,0
+H011,S08,B,Entusiasmo,Acaba de salir una canción con tu beat. Y todavía no le diste play.,1,0,1
+H012,S02,C,Miedo,Una IA hizo un beat en segundos. Y nadie notó la diferencia.,3,3,6
+H013,S09,B,Interés,Produce hace menos que tú y ya tiene placements. No es por los beats.,3,3,6
+H014,S05,C,Confusión,"Anoche esta mezcla sonaba perfecta. Hoy no toqué nada, y escucha.",2,0,2
+H015,S02,B,Miedo,Esto lo hizo una IA en segundos. ¿Tu artista notaría la diferencia?,3,3,6
+H016,S05,A,Confusión,Anoche sonaba perfecta. Hoy suena mal. No toqué nada.,2,2,4
+H017,S08,C,Entusiasmo,¡Acaba de salir una canción con mi beat y todavía no la escucho!,0,0,0
+H018,S07,B,Anhelo intenso,"Lunes, ocho de la mañana, y tu único trabajo es abrir el DAW.",1,0,1
+H019,S04,A,Sorpresa,Semanas en un beat. Y gustó más el de veinte minutos.,2,2,4
+H020,S05,B,Confusión,Anoche tu mezcla sonaba perfecta. Hoy no. Y no tocaste nada.,1,1,2
+H021,S01,C,Ira,Ya habíamos cerrado el precio. Mira lo que me escribió al pagar.,1,0,1
+H022,S10,B,Curiosidad,¿Tu beat está terminado o lo estás empeorando? Hay una forma de saberlo.,3,3,6
+H023,S10,C,Curiosidad,Llevo días retocando este beat. ¿Lo mejoré o lo arruiné?,0,0,0
+H024,S09,C,Interés,Produce hace menos tiempo que tú y ya tiene placements. Fíjate en esto.,2,2,4
+H025,S01,A,Ira,«Trato hecho»… y al pagar: «¿te sirve la mitad?»,3,1,4
+H026,S03,C,Ansiedad,"Semanas sin abrir el DAW, y hoy todos subieron beat menos tú.",1,1,2
+H027,S02,A,Miedo,"Si una IA hace tu beat, ¿para qué te quieren?",1,0,1
+H028,S04,C,Sorpresa,Veinte minutos. Eso tardé en el beat que todos me piden.,2,0,2
+H029,S04,B,Sorpresa,Veinte minutos le ganaron a tres semanas de trabajo. Y no fue suerte.,2,2,4
+H030,S07,A,Anhelo intenso,Imagina renunciar un lunes y abrir el DAW el martes.,3,2,5
