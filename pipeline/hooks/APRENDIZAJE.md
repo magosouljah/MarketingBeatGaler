@@ -2,6 +2,7 @@
 
 ## Ciclo tras cada ronda
 1. **Escuchar sin traducir a una nota inventada.** Conservar el sentido preciso de lo que el propietario considera bueno, malo, prometedor o mal dicho. Distinguir idea, situación, emoción, expresión y promesa de contenido.
+   Si el propietario pide predecir su evaluación, fijar las predicciones antes del feedback y comparar por separado concepto, ángulo y expresión; admitir coincidencias parciales y aceptar sus correcciones sin convertirlas en puntuaciones humanas.
 2. **Razonar la causa.** Preguntar por qué, contrastar explicaciones alternativas y reconocer cuándo falta información. Una reacción negativa no demuestra que una técnica entera sea mala.
 3. **Cambiar el sistema activo.** Identificar si el hallazgo modifica un **principio** (qué suele importar), una **técnica** (cómo construir), el **criterio** (cómo decidir) o ninguno todavía. Editar la instrucción aplicable: condición de uso, acción y límite. **Preferir mejorar o fusionar entradas existentes** antes que añadir una nueva. No añadir una prohibición por cada hook fallido.
 4. **Preparar una prueba discriminante.** En la próxima generación explorar una idea nueva que ponga a prueba la causa propuesta. Si la explicación es «la situación era improbable», probar otra situación creíble que conserve la misma tensión. No limitarse a reescribir el hook rechazado.
