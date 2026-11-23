@@ -46,6 +46,16 @@
 
 Hipótesis creativas, no resultados de audiencia. Cambios consolidados en P03, criterio de presentación y técnicas de contradicción/expresión.
 
+## Cuarta ronda de crítica — 2026-11-23
+
+- R4-H1: acepta restricción de tres notas; considera anticipar el beneficio creativo, con dudas sobre frase final.
+- R4-H2: prefiere recomendación enfática (have to) para abrir la duda de por qué importa estudiar canciones del artista.
+- R4-H3: rechaza pregunta cerrada sin expectativa; propone prometer capacidad de recrear sonidos mediante técnica. Limitar alcance a sonidos demostrables, no prometer cualquier synth.
+- R4-H4: buena idea; situar instrucción en beat block, sin exigir que proyecto fuera abandonado. Posibles continuaciones: autosampleo e inspiración.
+- R4-H5: bueno; sugiere mayor precisión al prometer orientación de precio, sin que exista necesariamente un precio universal exacto.
+
+Hipótesis de expresión y relevancia, no eficacia medida. Consolidar en técnicas y criterio; probar conceptos distintos, no copiar frases.
+
 **Antecedentes independientes:** [experimento de 100 formatos y feedback](../../content/formats/FEEDBACK-EXPERIMENTO-100-2026-11-23.md); [método B y diagnóstico subjetivo](../formula-hooks/temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md). Conservarlos sin inventar notas ni aprobaciones.
 
 **Mantenimiento:** añadir una línea por *nuevo hallazgo relevante*, no por cada variante. Agrupar hallazgos repetidos, registrar revisiones o contradicciones; conservar historial mediante Git. **No cargar este archivo por defecto para generar**.
