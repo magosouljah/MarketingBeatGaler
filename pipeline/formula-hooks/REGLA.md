@@ -17,3 +17,14 @@ En particular, la **intención comunicativa debe ejecutarse como una acción con
 **Ejemplo válido (intención: disculparse):** «Te dije que publicar más beats te conseguiría más clientes. Me equivoqué. Perdón por darte ese consejo sin entender a qué artistas estabas llegando».
 
 Esta regla se aplica a todas las variables de `formula-hooks/` y no implica que la combinación elegida sea necesariamente buena para captar atención.
+
+## Selección aleatoria y evaluación: solo dos criterios
+
+**No prohibir combinaciones por adelantado porque parezcan raras.** Primero seleccionar y producir un candidato sin forzar ni simular las variables. Evaluar el resultado mediante **solo dos criterios**:
+
+1. **Impacto:** ¿el hook tiene potencial de captar la atención del espectador y suscitar la emoción elegida? Se evalúa el efecto hipotético, no se afirma rendimiento real.
+2. **Naturalidad:** ¿suena como algo que una persona diría, tiene sentido en el contexto y cumple **semánticamente** todas las variables seleccionadas sin muletillas ni artificios? La coherencia está incluida aquí; no crear un tercer criterio llamado «coherencia».
+
+**Ambos deben aprobar.** Si falla cualquiera, descartar el hook e indicar por qué. No rescatar un candidato fallido solo porque sea gracioso, extraño o formalmente cumpla la lista; tampoco forzar una combinación imposible. Registrar intentos, combinaciones descartadas y causas para detectar patrones. Un fallo aislado **no** convierte esa combinación en prohibida; solo considerar restricciones tras observar fallos repetidos con evidencia suficiente.
+
+Ejemplo de fallo: **ira + académico + sarcasmo** puede producir una frase divertida, pero si no suscita ira ni interesa al espectador, **falla Impacto** aunque satisfaga el estilo. Las palabras «perdón» o «lo siento» sin una disculpa verdadera **fallan Naturalidad/cumplimiento semántico**.
