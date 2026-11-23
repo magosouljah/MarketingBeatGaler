@@ -56,6 +56,16 @@ Hipótesis creativas, no resultados de audiencia. Cambios consolidados en P03, c
 
 Hipótesis de expresión y relevancia, no eficacia medida. Consolidar en técnicas y criterio; probar conceptos distintos, no copiar frases.
 
+## Quinta ronda de crítica — 2026-11-23
+
+- R5-H1: aceptable pero no lo usaría; reconoce posible gusto personal. No generalizar rechazo al sampling vocal.
+- R5-H2: prefiere anticipar tres comprobaciones antes de vender licencia exclusiva; la cantidad debe corresponder al contenido.
+- R5-H3: restricción de no mover notas innecesaria; prefiere prometer drums con bounce, quizá varios trucos.
+- R5-H4: contraste con otro beat innecesario; propone abrir la imaginación con inspiración disponible en todas partes y una escena cinematográfica.
+- R5-H5: rechaza revelar mezcla en mono como hook porque entrega el truco completo. Separar promesa de solución, salvo que quede valor demostrable posterior.
+
+Hipótesis de trabajo, no resultados de audiencia. Consolidar en P04, expresión alternativa y criterio de expectativa.
+
 **Antecedentes independientes:** [experimento de 100 formatos y feedback](../../content/formats/FEEDBACK-EXPERIMENTO-100-2026-11-23.md); [método B y diagnóstico subjetivo](../formula-hooks/temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md). Conservarlos sin inventar notas ni aprobaciones.
 
 **Mantenimiento:** añadir una línea por *nuevo hallazgo relevante*, no por cada variante. Agrupar hallazgos repetidos, registrar revisiones o contradicciones; conservar historial mediante Git. **No cargar este archivo por defecto para generar**.
