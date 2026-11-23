@@ -36,6 +36,16 @@
 
 **Límite de inferencia:** son críticas a estos cinco conceptos y frases, no preferencias universales ni mediciones. El mecanismo armónico es plausible pero el sentimiento depende también de melodía, ritmo, timbre, interpretación y contexto.
 
+## Tercera ronda de crítica — 2026-11-23
+
+- R3-H1: concepto de presentación antes de reproducir muy bueno para el propietario tras leer la expectativa; frase confusa, no despierta imaginación. Probar escenas concretas sin explicación posterior.
+- R3-H2: técnica aceptable; prefiere instrucción directa de construir ritmo/drums antes de melodía. Distinguir ritmo melódico de drums según demostración.
+- R3-H3: objeta que sumar voz reduzca necesariamente el tamaño sonoro; reconoce competencia con vocales. No confundir tamaño y espacio.
+- R3-H4: rechaza la comparación obvia de millón de streams con millón de dólares; propone ingresos menores de lo esperado, con dudas sobre enfoque negativo. No asumir expectativa económica sin evidencia; negatividad no prohibida.
+- R3-H5: rechaza llamar catchy al silencio. Distinguir recurso de contraste del elemento memorable; no forzar paradojas.
+
+Hipótesis creativas, no resultados de audiencia. Cambios consolidados en P03, criterio de presentación y técnicas de contradicción/expresión.
+
 **Antecedentes independientes:** [experimento de 100 formatos y feedback](../../content/formats/FEEDBACK-EXPERIMENTO-100-2026-11-23.md); [método B y diagnóstico subjetivo](../formula-hooks/temporal-diagnostico-3-pasos/03-DIAGNOSTICO-FINAL.md). Conservarlos sin inventar notas ni aprobaciones.
 
 **Mantenimiento:** añadir una línea por *nuevo hallazgo relevante*, no por cada variante. Agrupar hallazgos repetidos, registrar revisiones o contradicciones; conservar historial mediante Git. **No cargar este archivo por defecto para generar**.
