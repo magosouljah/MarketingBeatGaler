@@ -1,5 +1,15 @@
 # Regla — cumplimiento real de cada variable
 
+## Lectura obligatoria ANTES de generar
+
+**Antes de seleccionar variables o escribir el primer hook, el agente debe leer íntegramente este archivo (`REGLA.md`) y las bibliotecas de espectador, emoción, valoración y expresión verbal de `formula-hooks/`.** No iniciar generación con reglas recordadas de conversaciones o fragmentos.
+
+**El objetivo es un hook verbal para los primeros ~3 segundos de un video, no un párrafo, explicación o mini-guion.** La duración se verifica según cómo se pronuncia: usar aproximadamente 6–10 palabras en español como orientación, no como límite ciego. Evitar introducciones, justificaciones y respuestas anticipadas.
+
+**Antes de redactar cada candidato, definir qué expectativa concreta se va a abrir en ese espectador y qué información, resultado o explicación quedará pendiente para el video.** La expectativa debe importar al espectador y ser posible de satisfacer en el desarrollo; no crear una pregunta vacía ni inventar una promesa imposible. La definición es planificación interna del candidato, **no una frase que se agrega al hook**.
+
+Solo entonces combinar las variables seleccionadas y redactar el hook. La evaluación posterior mediante Impacto y Naturalidad sigue vigente, pero **no sustituye la lectura y el diseño previo**.
+
 **Cada variable elegida para un hook debe cumplirse de verdad en el contenido, no solo mencionarse o imitarse superficialmente.**
 
 En particular, la **intención comunicativa debe ejecutarse como una acción con significado**, no como una palabra o un estilo de redacción.
