@@ -37,6 +37,10 @@ Para ideas y frases iniciales de videos usar [`hooks/SKILL.md`](hooks/SKILL.md),
 
 Esto no sustituye los seis módulos de investigación a publicación ni convierte un juicio creativo en medición de audiencia.
 
+## Guiones — biblioteca creativa experimental (V0)
+
+Para desarrollar guiones con ideas y enseñanzas del propietario, consultar [`scripts/SKILL.md`](scripts/SKILL.md), sus principios, técnicas y criterio. El [aprendizaje de guiones](scripts/APRENDIZAJE.md) modifica el conocimiento activo tras feedback humano. Complementa el módulo 3 y no reemplaza sus registros, aprobaciones ni medición. Las variantes de una misma idea son una posibilidad de exploración, no una cuota ni calendario aprobados.
+
 ## Generación creativa V1.3
 
 El generador lee [EXPLORACION-V13](1-investigacion/EXPLORACION-V13.md), razona con el [módulo 2](2-razonamiento/README.md) y usa [GENERAR-V13](3-hipotesis-guiones/GENERAR-V13.md). Explora sin cuotas de cantidad o territorio y profundiza **solo** ideas con una consecuencia importante y una explicación de por qué el estímulo puede captar atención. Puede seleccionar **cero, uno, dos o tres** finalistas, incluso de un mismo territorio. Si ninguno merece desarrollarse, lo justifica y no escribe guiones.
