@@ -5,6 +5,7 @@ No son una secuencia ni una plantilla. Seleccionar, combinar o descartar según 
 | Técnica | Operación creativa |
 | --- | --- |
 | Progresión por consecuencias | Partir del conflicto y descubrir qué perdería o ganaría el productor; avanzar a una consecuencia nueva, no a una reformulación. |
+| Evidencia real como desarrollo | Si la enseñanza es prevenir una pérdida u otro riesgo, buscar casos concretos y reconocibles que demuestren que sucede. La evidencia puede sustituir la dramatización hipotética y dar valor informativo. Verificar nombres, cifras y causas por separado; no atribuir negligencia ni causas compartidas sin pruebas. No convertir el recurso en obligación. |
 | Escena imaginada | Hacer sentir una oportunidad, problema o descubrimiento plausible mediante una situación breve y concreta. Si el hook ya la establece, no repetirla. |
 | Cambio de perspectiva | Explorar qué otra emoción o consecuencia emerge del mismo contenido: oportunidad, competencia, pérdida, tranquilidad, dominio. No imponer una emoción inicial. |
 | Experiencia propia | Usar lo que el propietario realmente hace, sabe o ha vivido para demostrar utilidad sin dar sermones. No inventar anécdotas, ingresos ni resultados. |
