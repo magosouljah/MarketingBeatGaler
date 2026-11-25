@@ -62,6 +62,12 @@ El propietario eleva el guion 11 a «muy bueno», junto a 1 y 13. Texto aprobado
 
 Variante propuesta por la IA, pendiente de aprobación: cambiar el hook a «If your hard drive died right now, how much music would you lose?» y la segunda frase a «How many years of work are sitting on that one hard drive?». El resto permanece intacto. La propuesta intenta ampliar la escala de pérdida, pero podría repetir demasiado la pregunta inicial. No sustituir el original sin aprobación. Los tres guiones muy buenos del concepto son 1, 11 y 13; no implica autorización de producción ni publicación.
 
+## Recuperar valor de beats antiguos — primera ronda
+
+Guion 1 (rescatar melodías de beats con mezcla o drums deficientes): «bastante bueno». Guion 2 (redescubrir música propia por género y mood): el propietario cuestiona por qué tendría ganas de hacerlo; redescubrir por sí solo no le interesa. Guion 3 (combinar creatividad pasada y habilidades actuales): mejor que el segundo pero deja demasiado a la imaginación; prefiere decir exactamente qué hacer. Aprendizaje operativo: distinguir actividad/función de resultado deseado y, en contenido práctico, concretar la acción. No exigir tutorial en todos los guiones.
+
+Nuevos candidatos sin evaluación: 4 (reutilizar una melodía antigua como sample propio), 5 (conservar melodía, sustituir drums y aplicar habilidades actuales), 6 (retomar un proyecto incompleto ante beat block). No atribuir a BeatGaler edición ni almacenamiento de proyectos DAW sin comprobar capacidades. 
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
