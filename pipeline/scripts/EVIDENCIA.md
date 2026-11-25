@@ -123,5 +123,41 @@ El propietario devuelve dos combinaciones con el tercer hook y declara que ya qu
 
 Pendiente: comprobar las combinaciones A/B/C, verificar datos y elegir piezas a producir. No afirmar que las 27 ya están revisadas. Cambio documental; tests no ejecutados.
 
+## Correcciones del propietario durante la rotación — 2026-11-25
+
+El propietario devuelve estas tres combinaciones corregidas. Conservar literalmente sus versiones, separadas de los cuerpos originales:
+
+**A — Missing your first major placement / guion de oportunidad**
+
+> Imagine missing your first major placement because you couldn't find the right beat in time.
+>
+> That's why u should have packs ready or atleast organize ur beats by genre and mood.
+>
+> I don't know when the next opportunity is coming, but I know I'll be ready.
+
+**B — Disappear in seconds / guion de recursos reemplazables**
+
+> You've spent years making music that could disappear in seconds.
+>
+> You can buy a new computer, reinstall your plugins and download your drum kits again.
+>
+> But your beats are lost for ever.
+>
+> Keep a copy of your music in the cloud.
+
+**C — Melody pack / guion de rescatar melodías**
+
+> Before buying another melody pack, listen to some of your old beats.
+>
+> Your mixing might have sucked, your drums might have been terrible, but some of those melodies were actually fire.
+>
+> Next time you're stuck on a melody, pull one from an old project.
+>
+> You might already have the inspiration you're looking for.
+
+Estado provisional de la revisión de compatibilidad: 20 combinaciones sin ajuste señalado en la primera revisión + 3 corregidas por el propietario = 23 revisadas, no necesariamente aprobadas individualmente para producción. Quedan 4 ajustes señalados: A, hook de perder el placement con cuerpo de tener el beat adecuado y tiempo para encontrarlo; A, hook de no tener nada listo con cuerpo de imaginar tener el beat perfecto; C, hook de melody pack con cuerpo de reemplazar drums y mejorar mezcla; C, hook de escuchar beats antiguos con cuerpo que repite la instrucción de revisar beats antiguos. Mantener los cuerpos iguales cuando sea posible; documentar las diferencias si se modifica algo además del hook, porque no se aislaría solo el hook en una comparación.
+
+Precisiones pendientes: «forever» y «at least» son las grafías habituales; «lost forever» solo es una consecuencia segura si no hay copia recuperable ni recuperación posible. No sustituir silenciosamente el texto del propietario. Continúa pendiente verificar la afirmación de artistas de perder años de música overnight, y no atribuir una misma causa a todos. Cambios exclusivamente documentales, sin tests ni autorización de producción.
+
 ## Estado
 Sistema documental V0. No se estudiaron libros adicionales en esta operación. No existen datos de rendimiento de estos guiones. Audit y tests locales pendientes: git ls-remote no pudo resolver github.com en el entorno de ejecución. No se modifica DIRECCION.md, hooks ni producción.
