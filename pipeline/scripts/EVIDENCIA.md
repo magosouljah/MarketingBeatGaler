@@ -18,6 +18,12 @@ Versión reescrita por el propietario, no producción aprobada:
 
 Se retira la mención verbal del producto. Mostrar BeatGaler mientras se habla de organizar es una propuesta de la IA, no una instrucción visual definitiva del propietario. Hipótesis operativas: progresión en lugar de repetición; consecuencia concreta, experiencia propia, integración visual útil. Evaluar de nuevo en otros guiones.
 
+## Proteger años de trabajo — primera ronda
+
+El propietario eligió el miedo a perder cientos de beats por fallo del equipo. Hook propuesto: «If your hard drive died right now, how many beats would you lose?». Guion 1 (computadora, plugins y kits reemplazables frente a beats creados durante años): «muy bueno»; pide cambiar download por recuperar, propuesta idiomática de IA: get back. Guion 2 (imaginar no escuchar nunca más el beat favorito): «trash», sin causa explícita; no generalizar el rechazo a todas las escenas emocionales. Guion 3 (melodías, ideas, beats no enviados, horas de trabajo, tiempo de respaldo frente al de creación): «decent lo mantenemos». No elevarlo a muy bueno ni aprobación de producción.
+
+Hipótesis: hacer tangible el valor irreemplazable del trabajo mediante contraste con recursos reemplazables puede ser más interesante que pedir imaginar la pérdida sin otra aportación. Probar otros enfoques, sin declarar una causa confirmada. No prometer recuperación ni protección absoluta.
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
