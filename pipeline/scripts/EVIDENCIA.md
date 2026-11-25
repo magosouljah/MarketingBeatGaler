@@ -48,6 +48,20 @@ Fuentes para el guion 13: Kendrick Lamar declaró en entrevista de 2017 que alre
 
 La aprobación respalda la dirección de casos reales en este concepto; no demuestra rendimiento de audiencia. Antes de producir, volver a verificar las fuentes, distinguir fallo, inundación y robo y conservar la precisión del texto. El respaldo en nube es una copia adicional, no una garantía absoluta.
 
+### Aprobación del tercer guion muy bueno
+
+El propietario eleva el guion 11 a «muy bueno», junto a 1 y 13. Texto aprobado creativamente:
+
+> If your hard drive died right now, how many beats would you lose?
+>
+> Think about how many hours of work are sitting in that one folder.
+>
+> Every time you finish a beat, your catalog becomes a little more valuable.
+>
+> Protect it.
+
+Variante propuesta por la IA, pendiente de aprobación: cambiar el hook a «If your hard drive died right now, how much music would you lose?» y la segunda frase a «How many years of work are sitting on that one hard drive?». El resto permanece intacto. La propuesta intenta ampliar la escala de pérdida, pero podría repetir demasiado la pregunta inicial. No sustituir el original sin aprobación. Los tres guiones muy buenos del concepto son 1, 11 y 13; no implica autorización de producción ni publicación.
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
