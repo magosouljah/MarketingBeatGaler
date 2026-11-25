@@ -1,5 +1,7 @@
 # Selección de libros por disciplina
 
+> **Actualización de accesos (2026-11-25):** consultar [ACCESOS-2026-11-25.md](ACCESOS-2026-11-25.md) para el inventario ampliado de 123 títulos, las copias candidatas, resúmenes, muestras, errores de acceso y la cola prioritaria para guiones. La selección original se conserva; localizar un enlace no equivale a adquirir o leer el libro.
+
 **Fecha:** 2026-11-24. **Estado:** selección para adquirir. **Ningún libro de esta lista ha sido leído todavía**; el estudio a fondo empieza cuando el propietario aporte los textos. La investigación anterior (mapas, fichas y principios) se conserva intacta en las carpetas hermanas.
 
 ## Cómo se eligió
