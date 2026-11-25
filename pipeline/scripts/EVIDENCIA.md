@@ -1,0 +1,28 @@
+# Evidencia inicial de guiones — 2026-11-25
+
+## Placements: primer ejercicio de desarrollo
+
+Contenido del propietario: un artista pide beats por una historia de Instagram; responder rápido puede ayudar a aprovechar la oportunidad. Preparar packs y organizar beats por género y sensación, sin imponer una taxonomía. El propietario escucha la música del artista y utiliza su catálogo para encontrar material adecuado. La conexión con BeatGaler debe ser útil y natural. No está demostrado que ser el primero garantice escucha, uso o placement.
+
+El primer guion de la IA desarrollaba la urgencia con demasiada explicación; el propietario propuso otro hook y un cuerpo más compacto. De tres variantes posteriores, rechazó la primera, consideró buena la segunda (ya tienes el beat correcto pero ¿cuánto tardas en encontrarlo?) y la tercera (otros productores ya envían). En esta última pidió eliminar la frase «That's not the time to start organizing your files» y cambiar el cierre a packs listos y catálogo bien organizado. La explicación de que esa frase redundaba con la urgencia es una hipótesis de la IA, no una razón explícitamente confirmada.
+
+Versión reescrita por el propietario, no producción aprobada:
+
+> If an artist needs beats ASAP, would you be the first to send yours?
+>
+> Imagine having the perfect beat for them and not finding it fast enough.
+>
+> That’s why I organize my beats by genre and mood.
+>
+> I don’t know when the next opportunity is coming, but I know I’ll be ready.
+
+Se retira la mención verbal del producto. Mostrar BeatGaler mientras se habla de organizar es una propuesta de la IA, no una instrucción visual definitiva del propietario. Hipótesis operativas: progresión en lugar de repetición; consecuencia concreta, experiencia propia, integración visual útil. Evaluar de nuevo en otros guiones.
+
+## Posible exploración de producción — NO DECIDIDA
+
+El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
+
+Posibilidades a evaluar: mismo concepto, diferente hook o desarrollo; mantener una base visual y reutilizar tomas, diseño y animación donde encajen. Si el objetivo es comparar hooks, mantener el cuerpo y la edición lo más similares posible; si se comparan guiones completos, registrar los cambios y no atribuir resultados a una frase aislada. Evitar publicar variantes demasiado parecidas sin considerar audiencia, plataforma y fatiga. No asumir aprobación ni producir/publicar sin el flujo existente.
+
+## Estado
+Sistema documental V0. No se estudiaron libros adicionales en esta operación. No existen datos de rendimiento de estos guiones. Audit y tests locales pendientes: git ls-remote no pudo resolver github.com en el entorno de ejecución. No se modifica DIRECCION.md, hooks ni producción.
