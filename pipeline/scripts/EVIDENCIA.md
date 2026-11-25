@@ -36,7 +36,17 @@ Del guion 8, el propietario rescata específicamente «Every time you finish a b
 
 Guion 11: bueno. Guion 12: «ass»; el propietario valora que se intenten variaciones incluso cambiando el hook. Propone «If your hard drive died right now, how much music would you lose?» seguido de ejemplos reales de artistas que perdieron música. Propone cierres «If you love your music, protect it», «If you care about your music, protect it» y evitar arrepentirse de no guardar beats en la nube. Aporta una dirección creativa, no confirma todavía un guion final. Hallazgo operativo: buscar evidencia concreta que demuestre el riesgo, no depender siempre de imaginar el problema. Se incorpora como técnica opcional. La preferencia por casos reales en este concepto no valida universalmente su rendimiento.
 
-Fuentes para el guion 13: Kendrick Lamar declaró en entrevista de 2017 que alrededor de 500 canciones quedaron inaccesibles por discos dañados ([ABC triple j](https://www.abc.net.au/triplej/news/kendrick-lamar-has-thousands-of-unreleased-songs/8681878), [Pedestrian](https://www.pedestrian.tv/music/kendrick-claims-100s-of-unreleased-tracks-are-trapped-on-broken-hard-drives)); RZA perdió unos 300 beats en una inundación ([AV Club](https://www.avclub.com/in-the-mid-90s-the-wu-tang-clan-dispersed-to-achieve-1798279166)); Mike WiLL Made-It relató el robo de su disco principal y respaldo ([The Breakfast Club, marzo de 2026](https://thebreakfastclub.iheart.com/content/2026-03-23-mike-will-made-it-reflects-on-starting-over-after-losing-his-hard-drives/)). No afirmar pérdida permanente de Kendrick ni atribuir los tres casos a fallo físico o ausencia de respaldo. No se confirmó la combinación de Lil Wayne, Kanye y Drake con la causa sugerida. El guion 13 queda pendiente de evaluación. El respaldo en nube es una copia adicional, no una garantía absoluta.
+Fuentes para el guion 13: Kendrick Lamar declaró en entrevista de 2017 que alrededor de 500 canciones quedaron inaccesibles por discos dañados ([ABC triple j](https://www.abc.net.au/triplej/news/kendrick-lamar-has-thousands-of-unreleased-songs/8681878), [Pedestrian](https://www.pedestrian.tv/music/kendrick-claims-100s-of-unreleased-tracks-are-trapped-on-broken-hard-drives)); RZA perdió unos 300 beats en una inundación ([AV Club](https://www.avclub.com/in-the-mid-90s-the-wu-tang-clan-dispersed-to-achieve-1798279166)); Mike WiLL Made-It relató el robo de su disco principal y respaldo ([The Breakfast Club, marzo de 2026](https://thebreakfastclub.iheart.com/content/2026-03-23-mike-will-made-it-reflects-on-starting-over-after-losing-his-hard-drives/)). No afirmar pérdida permanente de Kendrick ni atribuir los tres casos a fallo físico o ausencia de respaldo. No se confirmó la combinación de Lil Wayne, Kanye y Drake con la causa sugerida. El propietario aprobó creativamente el guion 13: «guárdalo es bueeenoooo». Conservar el texto exacto como guion aprobado creativamente (no autorización de producción/publicación):
+
+> If your hard drive died right now, how much music would you lose?
+>
+> Kendrick Lamar lost access to around 500 songs. RZA lost hundreds of beats. Mike WiLL Made-It had both of his hard drives stolen.
+>
+> Don't put years of your work in the hands of a hard drive.
+>
+> If you love your music, protect it.
+
+La aprobación respalda la dirección de casos reales en este concepto; no demuestra rendimiento de audiencia. Antes de producir, volver a verificar las fuentes, distinguir fallo, inundación y robo y conservar la precisión del texto. El respaldo en nube es una copia adicional, no una garantía absoluta.
 
 ## Posible exploración de producción — NO DECIDIDA
 
