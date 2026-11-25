@@ -1,6 +1,8 @@
 # Biblioteca de conocimiento — MarketingBeatGaler
 
-**Creada:** 2026-11-24. **Estado:** primera ronda (mapa completo de áreas + primeras lecturas directas). **No contiene guiones ni fórmulas.**
+**Creada:** 2026-11-24. **Estado:** primera ronda (mapa completo de áreas + primeras lecturas directas) y selección de libros para adquirir. **No contiene guiones ni fórmulas.**
+
+> **Prioridad vigente (2026-11-24, decisión del propietario):** antes de seguir leyendo y extrayendo principios, construir la biblioteca. El propietario conseguirá los libros de [`libros/`](libros/README.md) y después se estudiarán a fondo. Las fichas y principios existentes se conservan.
 
 Sirve para dos cosas: tener **algo extraordinario que decir** a un productor musical (Biblioteca B) y saber **cómo decirlo** (Biblioteca A). Es materia prima para el módulo 1 del [pipeline](../../pipeline/README.md); no sustituye al Mapa de Deseos, al sistema de hooks ni a ninguna decisión de producto.
 
@@ -13,6 +15,7 @@ Sirve para dos cosas: tener **algo extraordinario que decir** a un productor mus
 | 3. Conocimiento sintetizado | [`conocimiento/`](conocimiento/) | Un archivo por principio: mecanismo, condiciones, cuándo falla, qué lo contradice, fuentes | Agente principal |
 | 4. Conexiones | [`CONEXIONES.md`](CONEXIONES.md) | Cómo se tocan las disciplinas: mismo mecanismo con otro nombre, tensiones, cadenas | Agente principal |
 | 5. Pendientes | [`PENDIENTES.md`](PENDIENTES.md) | Lecturas priorizadas, vacíos, preguntas abiertas y lo que se necesita del propietario | Agente principal |
+| 6. Selección de libros | [`libros/`](libros/README.md) | Qué libros conseguir, por disciplina: 62 imprescindibles en tres tandas de compra, complementarios y descartados con motivo. **Ninguno leído todavía** | Agentes secundarios + decisión del agente principal |
 | Índice | [`INDICE.csv`](INDICE.csv) | Una fila por ficha y por principio, para buscar sin abrir todo | — |
 
 Las fuentes originales que ya estaban en el repo siguen en [`../psychology/sources/`](../psychology/sources/) (Atkinson ×2 y el Mapa de Deseos V3). No se duplicaron: las fichas y principios las enlazan.

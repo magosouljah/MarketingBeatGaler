@@ -2,6 +2,8 @@
 
 **Estado al 2026-11-24.** Esta biblioteca tiene el mapa de las ocho áreas y 21 fichas. Es una primera ronda: hay más localizado que leído.
 
+> **Cambio de prioridad (2026-11-24).** El propietario decidió seleccionar primero los mejores libros, sin importar el acceso, y aportarlos él. La selección está en [`libros/`](libros/README.md), con sus propias comprobaciones pendientes por disciplina. Las lecturas de las secciones 2 y 5 de este archivo quedan **en espera** hasta que lleguen los textos; siguen siendo válidas las de dominio público ya descargadas. El punto 1.1 («libros que tengas») queda resuelto por esa decisión.
+
 ## 0. Balance honesto de esta ronda
 
 | | Cantidad | Nota |
