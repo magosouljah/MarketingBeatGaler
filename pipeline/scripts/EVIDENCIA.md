@@ -159,5 +159,51 @@ Estado provisional de la revisión de compatibilidad: 20 combinaciones sin ajust
 
 Precisiones pendientes: «forever» y «at least» son las grafías habituales; «lost forever» solo es una consecuencia segura si no hay copia recuperable ni recuperación posible. No sustituir silenciosamente el texto del propietario. Continúa pendiente verificar la afirmación de artistas de perder años de música overnight, y no atribuir una misma causa a todos. Cambios exclusivamente documentales, sin tests ni autorización de producción.
 
+## Últimas cuatro combinaciones revisadas por el propietario
+
+Se reciben las cuatro versiones siguientes. Conservar sus textos exactos; no reemplazar por correcciones idiomáticas sin avisar. Las dos primeras sustituyen la integración verbal de BeatGaler por la recomendación de preparar packs u organizar por género y mood.
+
+**A — Missing placement / cuerpo 1**
+
+> Imagine missing your first major placement because you couldn't find the right beat in time.
+>
+> The last thing you wanna do is go through hundreds of files one by one.
+>
+> That's why u should have packs ready or atleast organize ur beats by genre and mood.
+>
+> When an opportunity comes, I'm ready.
+
+**A — Nothing ready / cuerpo 3**
+
+> Imagine an artist asking you for beats and having nothing ready to send.
+>
+> You might already have exactly what they're looking for somewhere in your catalog.
+>
+> That's why u should have packs ready or atleast organize ur beats by genre and mood.
+>
+> I don't know when the next opportunity is coming, but I know I'll be ready.
+
+**C — Melody pack / cuerpo 5**
+
+> Before buying another melody pack, listen to some of your old beats.
+>
+> Find one with a melody you'd still use today.
+>
+> Keep the melody, replace the drums and mix it with everything you've learned since then.
+>
+> Watch yourself turn one of your worst beats into one of your best.
+
+**C — Go listen / cuerpo 1**
+
+> Go listen to the beats you were making two years ago.
+>
+> Your mixing might have sucked, your drums might have been terrible, but some of those melodies were actually fire.
+>
+> Next time you're stuck on a melody, pull one from an old project.
+>
+> Watch yourself turn one of your worst beats into one of your best.
+
+Estado: las cuatro combinaciones pendientes de la revisión anterior tienen ahora una versión devuelta por el propietario. Las 27 combinaciones se pueden ensamblar a partir de las bases y excepciones; falta consolidarlas en un entregable completo, no afirmar que ya existen 27 archivos o piezas producidas. Pendiente verificar el hook factual sobre artistas y considerar que el cierre de C promete transformar un beat antiguo cuando el cuerpo propone extraer una melodía para otro proyecto; no cambiarlo unilateralmente. Aprendizaje: conservar alternativas de acción útiles cuando el propietario las pide y evaluar si la primera persona y la recomendación directa conviven naturalmente. No generalizar una preferencia de cierre a todos los guiones. Si el cuerpo cambia entre variantes, registrar que no es una comparación aislada del hook. Cambios documentales, sin tests ejecutados ni autorización de publicación.
+
 ## Estado
 Sistema documental V0. No se estudiaron libros adicionales en esta operación. No existen datos de rendimiento de estos guiones. Audit y tests locales pendientes: git ls-remote no pudo resolver github.com en el entorno de ejecución. No se modifica DIRECCION.md, hooks ni producción.
