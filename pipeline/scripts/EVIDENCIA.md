@@ -113,5 +113,15 @@ Se revisaron todas las rondas de los tres conceptos descritos arriba. El propiet
 
 Siguiente prueba: al desarrollar un concepto nuevo, cargar los documentos activos antes de generar, explorar varios mecanismos sin copiar los guiones favoritos y comparar con la evaluación humana. Los hallazgos siguen siendo preferencias creativas e hipótesis; no existe validación de audiencia. No se alteran textos aprobados ni el plan de producción.
 
+## Rotación de hooks y cierre del concepto B
+
+El propietario quiere tres conceptos, cada uno con tres cuerpos y tres hooks, para explorar hasta nueve combinaciones por concepto (27 en total). No todas las combinaciones tienen que funcionar: revisar continuidad, expectativa y compatibilidad. No equivale a autorización de producir/publicar las 27 ni a calendario aprobado.
+
+B: hooks seleccionados: «If your hard drive died right now, how much music would you lose?», «You've spent years making music that could disappear in seconds.» y la edición del propietario «Some of the biggest artists have lost years of music overnight. Don't make the same mistake.» Verificar la afirmación exacta de años de música perdidos de un día a otro y no atribuir negligencia a los artistas sin fundamento.
+
+El propietario devuelve dos combinaciones con el tercer hook y declara que ya quedaron. Preservar literalmente sus cierres nuevos: en el guion 13, «If you love your music, protect it on the cloud.»; en el guion 11, «Protect it on the cloud.» Los demás párrafos de ambas combinaciones permanecen como en los guiones originales. Se propone «in the cloud» por naturalidad idiomática, sin sustituir su edición sin autorización. Mantener originales y variantes. Aprendizaje provisional: el propietario aquí prefiere explicitar la acción de almacenar en nube en el cierre; no generalizar a todos los guiones ni forzar CTA.
+
+Pendiente: comprobar las combinaciones A/B/C, verificar datos y elegir piezas a producir. No afirmar que las 27 ya están revisadas. Cambio documental; tests no ejecutados.
+
 ## Estado
 Sistema documental V0. No se estudiaron libros adicionales en esta operación. No existen datos de rendimiento de estos guiones. Audit y tests locales pendientes: git ls-remote no pudo resolver github.com en el entorno de ejecución. No se modifica DIRECCION.md, hooks ni producción.
