@@ -68,6 +68,30 @@ Guion 1 (rescatar melodías de beats con mezcla o drums deficientes): «bastante
 
 Nuevos candidatos sin evaluación: 4 (reutilizar una melodía antigua como sample propio), 5 (conservar melodía, sustituir drums y aplicar habilidades actuales), 6 (retomar un proyecto incompleto ante beat block). No atribuir a BeatGaler edición ni almacenamiento de proyectos DAW sin comprobar capacidades. 
 
+### Segunda ronda: versiones seleccionadas por el propietario
+
+El propietario devuelve el guion 4 intacto y el 5 con un cambio en el cierre. Conservar ambos textos; no asignarles una calificación que no expresó ni inferir una evaluación del 6.
+
+**Guion 4**
+
+> Before buying another melody pack, listen to some of your old beats.
+>
+> Find a melody you still like, export it, throw it into a new project and make a completely different beat with it.
+>
+> You've probably made hundreds of your own samples without even realizing it.
+
+**Guion 5 — edición del propietario**
+
+> Go listen to the beats you were making two years ago.
+>
+> Find one with a good melody but terrible drums.
+>
+> Keep the melody, replace the drums and mix it with everything you've learned since then.
+>
+> Watch yourself turn one of your worst beats into one of your best.
+
+Cambio explícito: «You might turn» → «Watch yourself turn». Hipótesis para probar: un cierre que hace anticipar el resultado de la acción puede tener más fuerza que una posibilidad formulada pasivamente; no convertirlo en promesa garantizada ni regla de eliminar todos los matices. Ambos guiones proponen acciones específicas y un resultado que el productor puede valorar. No confundir almacenamiento de beats con capacidad de editar o recuperar stems desde BeatGaler.
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
