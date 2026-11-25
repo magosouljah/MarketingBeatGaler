@@ -12,6 +12,11 @@
 - [assets/](assets/covers/): 60 portadas, recursos de voz y activos reutilizables.
 - `design-references/`, `design-guidelines/`, `feedback/`: materiales y espacio de diseño.
 
+## Lote creativo actual
+
+- [Lote 01 — 27 guiones](scripts/LOTE-01-27-GUIONES.md): tres conceptos, nueve cuerpos invariables y nueve hooks, combinados en 27 variantes. Guardados en texto; pendientes de guion gráfico, comprobaciones factuales señaladas y selección para producción.
+- [Guion gráfico](../pipeline/storyboard/SKILL.md): sistema creativo activo para traducir los guiones a decisiones de voz, imagen, sonido y estructura. No constituye un proyecto renderizado.
+
 ## Objetivo común
 
 Crear videos que aumenten el alcance entre productores musicales y las visitas a BeatGaler. Se permite valor educativo, demos de producto, entretenimiento y promoción dentro del **mismo sistema**; decidir la mezcla por el concepto de cada video, no por una cuenta.
