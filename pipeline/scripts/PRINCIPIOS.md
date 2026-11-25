@@ -4,6 +4,7 @@ Derivados del primer ejercicio con el propietario. No son leyes universales, res
 
 | Principio | Qué cambia al escribir | Límite |
 | --- | --- | --- |
+| Deseo y aplicación concreta | No tratar una actividad o función como beneficio por sí sola: identificar qué resultado desea el productor y por qué realizar esa actividad lo acerca a él. Cuando se ofrece una técnica práctica, mostrar qué hacer concretamente, no dejar todo el valor a la imaginación. | No imponer instrucciones paso a paso a guiones informativos o emocionales cuando no las necesitan. |
 | Valor antes que relleno | Construir a partir de una enseñanza concreta, relevante y sustentada. No incorporar información solo por relacionarse con el tema. | La exploración puede descubrir valor adicional si se verifica y se acuerda antes de afirmarlo. |
 | Progresión del interés | Cada intervención debe cambiar algo que el espectador entiende, siente, anticipa o puede hacer. Evitar repetir la premisa con palabras distintas o explicitar una consecuencia ya evidente. | Una repetición puede servir para énfasis, ritmo o comprensión si cumple una función real. No exigir novedad literal en cada frase. |
 | Problema vivido, no explicado de más | Hacer que una situación evoque una consecuencia significativa y comprensible. Si el espectador ya siente la urgencia, continuar hacia otra dimensión del conflicto. | No inventar certeza de ventas, placements, conductas ajenas o experiencias del narrador. |
