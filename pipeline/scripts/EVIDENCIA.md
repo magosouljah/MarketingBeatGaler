@@ -24,6 +24,10 @@ El propietario eligió el miedo a perder cientos de beats por fallo del equipo. 
 
 Hipótesis: hacer tangible el valor irreemplazable del trabajo mediante contraste con recursos reemplazables puede ser más interesante que pedir imaginar la pérdida sin otra aportación. Probar otros enfoques, sin declarar una causa confirmada. No prometer recuperación ni protección absoluta.
 
+### Segunda ronda
+
+Guion 4 (respaldo como hábito, archivos creados desde el último respaldo): «ass». Guion 5 (trayectoria del productor, cuanto más crea más pierde): «malo», pero el propietario rescata explícitamente el cierre «Your entire catalog shouldn’t depend on a single hard drive.» Separar valor de una frase de calidad del guion completo. No hay causa explícita del rechazo. Hipótesis de IA: un consejo de hábitos o una afirmación emocional genérica pueden aportar menos que un contraste concreto; probar otras perspectivas sin prohibir esos recursos. Los guiones 6 y 7 son candidatos aún sin evaluación.
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
