@@ -98,5 +98,20 @@ El propietario plantea reutilizar un video casi igual para distintas variantes b
 
 Posibilidades a evaluar: mismo concepto, diferente hook o desarrollo; mantener una base visual y reutilizar tomas, diseño y animación donde encajen. Si el objetivo es comparar hooks, mantener el cuerpo y la edición lo más similares posible; si se comparan guiones completos, registrar los cambios y no atribuir resultados a una frase aislada. Evitar publicar variantes demasiado parecidas sin considerar audiencia, plataforma y fatiga. No asumir aprobación ni producir/publicar sin el flujo existente.
 
+## Consolidación del conocimiento activo — 2026-11-25
+
+Se revisaron todas las rondas de los tres conceptos descritos arriba. El propietario pidió explícitamente que las enseñanzas pasen a la generación, no solo a este registro.
+
+| Procedencia | Hallazgo reutilizable | Aplicación activa |
+| --- | --- | --- |
+| Placements: versión inicial, variantes 1–3 y reescritura del propietario | Progresión sin repetición, conflicto específico, competencia, experiencia propia, eliminar frase sobrante, producto sin mención verbal obligatoria | PRINCIPIOS: progresión, problema concreto, utilidad auténtica; TECNICAS: progresión por consecuencias, eliminación, experiencia, integración visual |
+| Protección: 1 muy bueno; 6 rechazado; 2, 4, 5 y 10 rechazados; 7 intermedio; 3 decente, 9 bueno | El contraste puede comunicar valor irreemplazable, pero repetirlo no asegura interés. Consejos genéricos o dramatización no bastan por sí solos. Causa de cada rechazo no confirmada. Expresión precisa de recuperar. | PRINCIPIOS: valor, voz humana; TECNICAS: contraste, escena imaginada, cambio de perspectiva; CRITERIO: consecuencia significativa y lenguaje |
+| Protección: frases rescatadas de 5 y 8; 11 muy bueno | Separar frase y guion; perspectiva de valor acumulado y cierre breve | PRINCIPIOS: valor acumulado, exploración y rescate; TECNICAS: valor acumulado, cierre y rescate |
+| Protección: 12 rechazado pero exploración elogiada; 13 muy bueno | Variar mecanismos y hooks cuando esté permitido; casos reales que aportan información y demuestran riesgo | TECNICAS: variantes, evidencia real; CRITERIO: cambio real, fundamento |
+| Beats antiguos: 1 bastante bueno; objeciones explícitas a 2 y 3; 4 y 5 devueltos por el propietario | Deseo antes que función, acciones concretas, requisitos reales, anticipación del resultado en el cierre editado | PRINCIPIOS: deseo, aplicación, cierre; TECNICAS: beneficio convertido en acción, cierre que anticipa; CRITERIO: resultado y ejecución concreta |
+| Petición de consolidación | Cada ronda debe modificar el conocimiento activo cuando haya hallazgo reutilizable, o justificar que ya está cubierto o la causa es incierta | APRENDIZAJE y SKILL: revisión, escritura, aplicación y prueba |
+
+Siguiente prueba: al desarrollar un concepto nuevo, cargar los documentos activos antes de generar, explorar varios mecanismos sin copiar los guiones favoritos y comparar con la evaluación humana. Los hallazgos siguen siendo preferencias creativas e hipótesis; no existe validación de audiencia. No se alteran textos aprobados ni el plan de producción.
+
 ## Estado
 Sistema documental V0. No se estudiaron libros adicionales en esta operación. No existen datos de rendimiento de estos guiones. Audit y tests locales pendientes: git ls-remote no pudo resolver github.com en el entorno de ejecución. No se modifica DIRECCION.md, hooks ni producción.
