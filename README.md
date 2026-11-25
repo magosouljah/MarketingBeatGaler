@@ -7,7 +7,7 @@
 | Carpeta | Responsabilidad |
 |---|---|
 | [content/](content/README.md) | **Todos los videos, hooks, guiones, referencias y recursos creativos**, sin dividir por cuentas |
-| [research/](research/psychology/README.md) | Fuentes originales, psicología, producto y Mapa de Deseos V3 |
+| [research/](research/psychology/README.md) | Fuentes originales, psicología, producto y Mapa de Deseos V3. Desde 2026-11-24 incluye la [biblioteca de conocimiento](research/biblioteca/README.md): mapa bibliográfico, fichas de fuentes leídas y principios sintetizados (comunicación y sabiduría para productores) |
 | [pipeline/](pipeline/README.md) | Seis módulos de investigación a aprendizaje; [BeatGaler Hooks](pipeline/hooks/SKILL.md) es la skill creativa activa; [Formula Hooks](pipeline/formula-hooks/README.md) queda como laboratorio histórico |
 | [learning/](learning/README.md) | Evaluaciones, casos, propuestas y lecciones de ejecución de producción |
 | [shared/](shared/README.md) | Utilidades de edición, HyperFrames, FFmpeg, análisis de referencias y render |

@@ -1,0 +1,39 @@
+id,tipo,titulo,autor,anio,biblioteca,area,respaldo,acceso,archivo,palabras_clave
+F-001,ficha,Talks to Teachers on Psychology (caps. X-XI),William James,1899,A,atencion,TEXTO-HISTORICO,DIRECTA,fichas/F-001-james-interes-atencion.md,interes prestado; atencion voluntaria; variedad en la unidad; lo viejo en lo nuevo
+F-002,ficha,Poetica,Aristoteles,s. IV a. C.,A,storytelling,FILOSOFICO,DIRECTA,fichas/F-002-aristoteles-poetica.md,trama; peripecia; reconocimiento; causalidad; unidad; metafora
+F-003,ficha,Retorica,Aristoteles,s. IV a. C.,A,persuasion y retorica,FILOSOFICO,DIRECTA,fichas/F-003-aristoteles-retorica.md,ethos; credibilidad; aprender rapido; metafora; poner ante los ojos; sospecha; atencion
+F-004,ficha,The Photoplay: A Psychological Study,Hugo Munsterberg,1916,A,atencion e imagen,TEXTO-HISTORICO,DIRECTA,fichas/F-004-munsterberg-photoplay.md,primer plano; foco; montaje; sugestion; corte; atencion involuntaria
+F-005,ficha,The Philosophy of Composition,Edgar Allan Poe,1846,A,diseno del efecto,OFICIO,DIRECTA,fichas/F-005-poe-filosofia-composicion.md,efecto; desenlace primero; brevedad; estribillo; climax; originalidad
+F-006,ficha,Stories Are to Entertain: A Structural-Affect Theory of Stories,Brewer y Lichtenstein,1982,A,progresion de informacion,TEORIA-ACADEMICA,EXTRACCION,fichas/F-006-brewer-lichtenstein-afecto-estructural.md,sorpresa; suspense; curiosidad; orden del discurso; resolucion
+F-007,ficha,The Psychology of Curiosity (via Shin y Kim 2019),Loewenstein; Shin y Kim,1994; 2019,A,curiosidad,TEORIA-ACADEMICA,RESUMEN+EXTRACCION,fichas/F-007-loewenstein-brecha-informacion.md,brecha de informacion; curiosidad; interes; U invertida; conocimiento previo
+F-008,ficha,Que es el arte,Leon Tolstoi,1897,B,filosofia del arte,FILOSOFICO,DIRECTA,fichas/F-008-tolstoi-que-es-el-arte.md,contagio; sinceridad; individualidad; claridad; resistencia
+F-009,ficha,La creacion matematica (Science and Method),Henri Poincare,1908,B,creatividad,TEXTO-HISTORICO,DIRECTA,fichas/F-009-poincare-creacion-matematica.md,incubacion; iluminacion; verificacion; gusto; inconsciente; elegir
+F-010,ficha,Ion,Platon,s. IV a. C.,B,inspiracion,FILOSOFICO,DIRECTA,fichas/F-010-platon-ion.md,inspiracion; cadena de imanes; Tinico; posesion
+F-011,ficha,Self-Reliance,Ralph Waldo Emerson,1841,B,originalidad,FILOSOFICO,DIRECTA,fichas/F-011-emerson-confianza-en-si.md,originalidad; confianza; pensamientos rechazados; imitacion
+F-012,ficha,Biographia Literaria (cap. XIII),Samuel Taylor Coleridge,1817,B,imaginacion,FILOSOFICO,DIRECTA,fichas/F-012-coleridge-imaginacion.md,imaginacion primaria y secundaria; fantasia; recrear; sampling
+F-013,ficha,De lo espiritual en el arte,Wassily Kandinsky,1911,B,filosofia del arte,FILOSOFICO,DIRECTA,fichas/F-013-kandinsky-necesidad-interior.md,necesidad interior; personalidad; estilo; arte puro; epoca
+F-014,ficha,El Kybalion,Tres Iniciados (atribuido a W. W. Atkinson),1908,B,hermetismo,ESOTERICO,DIRECTA,fichas/F-014-kybalion.md,polaridad; ritmo; vibracion; atencion; voluntad; neutralizacion
+F-015,ficha,Zhuangzi: el cocinero del principe Hui,Zhuangzi (trad. Giles 1889),s. IV-III a. C.,B,maestria,FILOSOFICO,DIRECTA,fichas/F-015-zhuangzi-cocinero-ding.md,maestria; wu wei; junturas; sin esfuerzo; etapas
+F-016,ficha,"Syncopation, Body-Movement and Pleasure in Groove Music",Witek et al.,2014,B,ritmo,EMPIRICO-DISPUTADO,EXTRACCION,fichas/F-016-witek-sincopa-groove.md,sincopa; groove; U invertida; bateria; prediccion; placer
+F-017,ficha,Making Music: 74 Creative Strategies,Dennis DeSantis,2015,B,produccion musical,OFICIO,EXTRACCION,fichas/F-017-desantis-making-music.md,restricciones; arreglo sustractivo; catalogo de atributos; bloqueo; influencias
+F-018,ficha,The Creative Act: A Way of Being,Rick Rubin,2023,B,creatividad,OFICIO,RESUMEN,fichas/F-018-rubin-creative-act.md,NO LEIDO; indice; 78 areas; resena
+F-019,ficha,What Makes Popular Culture Popular? Optimal Differentiation in Music,Askin y Mauskapf,2017,B,originalidad con datos,EMPIRICO-SOLIDO,EXTRACCION,fichas/F-019-askin-mauskapf-diferenciacion-optima.md,Billboard; tipicidad; U invertida; diferenciacion optima
+F-020,ficha,Inequality and Unpredictability in an Artificial Cultural Market,"Salganik, Dodds y Watts",2006,B,industria y carrera,EMPIRICO-SOLIDO,EXTRACCION,fichas/F-020-salganik-musiclab.md,exito impredecible; influencia social; desigualdad; ocho mundos
+F-021,ficha,Ingresos musicales,U.S. Copyright Office,2022,B,regalias,FUENTE-OFICIAL,EXTRACCION,fichas/F-021-copyright-office-ingresos-musicales.md,obra musical; grabacion; MLC; SoundExchange; carta de direccion; productor
+K-01,principio,El interes se presta,,,A,atencion,TEXTO-HISTORICO,,conocimiento/K-01-interes-prestado.md,relevancia; puente; yo; asociacion
+K-02,principio,La atencion sostenida exige que el objeto cambie,,,A,atencion,TEXTO-HISTORICO,,conocimiento/K-02-atencion-que-cambia.md,retencion; variedad en la unidad; pulsos; medio del video
+K-03,principio,La curiosidad es saber que te falta algo concreto,,,A,curiosidad,TEORIA-ACADEMICA,,conocimiento/K-03-brecha-de-informacion.md,brecha; pregunta; promesa; pago; conocimiento previo
+K-04,principio,El orden de la informacion decide la emocion,,,A,storytelling,TEORIA-ACADEMICA,,conocimiento/K-04-orden-de-la-informacion.md,sorpresa; curiosidad; suspense; revelar; retener
+K-05,principio,"Por causa de, no despues de",,,A,storytelling,FILOSOFICO,,conocimiento/K-05-sorpresa-con-causa.md,causalidad; giro; reinterpretacion; encadenado
+K-06,principio,Gusta lo que hace aprender algo rapido,,,A,educacion y valor,FILOSOFICO,,conocimiento/K-06-placer-de-aprender-rapido.md,metafora; fluidez; valor percibido; aprendizaje real; advertencia
+K-07,principio,Poner ante los ojos,,,A,lenguaje e imagen,FILOSOFICO,,conocimiento/K-07-poner-ante-los-ojos.md,concreto; movimiento; un foco; viveza; verbo
+K-08,principio,Se disena desde el final,,,A,estructura,OFICIO,,conocimiento/K-08-empezar-por-el-efecto.md,efecto; pico; duracion; unidad de impresion
+K-09,principio,Lo que huele a trampa se rechaza,,,A,persuasion,FILOSOFICO,,conocimiento/K-09-trampa-y-sinceridad.md,integracion comercial; sospecha; sinceridad; credibilidad; buena voluntad
+K-10,principio,El punto medio,,,A+B,puente,EMPIRICO-DISPUTADO,,conocimiento/K-10-punto-medio.md,U invertida; novedad; prediccion; sincopa; tipicidad
+K-11,principio,"Trabajo, incubacion y gusto",,,B,creatividad,TEXTO-HISTORICO,,conocimiento/K-11-trabajo-incubacion-gusto.md,inspiracion; bloqueo; descanso; criterio; verificar
+K-12,principio,Originalidad: no descartar lo propio y fundir lo ajeno,,,B,originalidad,FILOSOFICO,,conocimiento/K-12-originalidad.md,identidad sonora; influencias; copia; sampling; catalogo de atributos
+K-13,principio,Restricciones arbitrarias,,,B,proceso,OFICIO,,conocimiento/K-13-restricciones.md,paralisis; opciones; empezar; limites
+K-14,principio,Seguir las junturas,,,B,maestria,FILOSOFICO,,conocimiento/K-14-seguir-las-junturas.md,quitar; percepcion experta; mezcla; arreglo sustractivo
+K-15,principio,Polaridad y ritmo (ensenanza hermetica),,,B,hermetismo,ESOTERICO,,conocimiento/K-15-polaridad-y-ritmo.md,polos; oscilacion; atencion; estados; no es ciencia
+K-16,principio,Una cancion son dos obras,,,B,regalias,FUENTE-OFICIAL,,conocimiento/K-16-dos-derechos.md,composicion; master; MLC; SoundExchange; contrato; EE. UU.
+K-17,principio,La calidad pone suelo y techo,,,B,carrera,EMPIRICO-SOLIDO,,conocimiento/K-17-exito-impredecible.md,exito; azar social; metricas; volumen; ventana temprana

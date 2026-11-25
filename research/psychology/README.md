@@ -41,6 +41,8 @@
 - El objetivo nuevo se documenta aquí, **sin asumir que reemplaza automáticamente la dirección protegida del repositorio**.
 - Este repositorio es público: evitar subir datos confidenciales o recursos personales.
 
+**Biblioteca de conocimiento (2026-11-24):** la investigación bibliográfica amplia —atención, storytelling, persuasión, creatividad, tradiciones esotéricas, música y negocio— vive en [`../biblioteca/`](../biblioteca/README.md). Esta carpeta conserva las fuentes aportadas por el propietario; la biblioteca las enlaza sin duplicarlas.
+
 Próxima fase: inventariar con mayor detalle los materiales ya existentes en GitHub y decidir su organización sin borrar fuentes ni historia.
 
 ## Organización actual
