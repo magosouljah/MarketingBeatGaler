@@ -26,7 +26,7 @@ Hipótesis: hacer tangible el valor irreemplazable del trabajo mediante contrast
 
 ### Segunda ronda
 
-Guion 4 (respaldo como hábito, archivos creados desde el último respaldo): «ass». Guion 5 (trayectoria del productor, cuanto más crea más pierde): «malo», pero el propietario rescata explícitamente el cierre «Your entire catalog shouldn’t depend on a single hard drive.» Separar valor de una frase de calidad del guion completo. No hay causa explícita del rechazo. Hipótesis de IA: un consejo de hábitos o una afirmación emocional genérica pueden aportar menos que un contraste concreto; probar otras perspectivas sin prohibir esos recursos. Los guiones 6 y 7 son candidatos aún sin evaluación.
+Guion 4 (respaldo como hábito, archivos creados desde el último respaldo): «ass». Guion 5 (trayectoria del productor, cuanto más crea más pierde): «malo», pero el propietario rescata explícitamente el cierre «Your entire catalog shouldn’t depend on a single hard drive.» Separar valor de una frase de calidad del guion completo. No hay causa explícita del rechazo. Hipótesis de IA: un consejo de hábitos o una afirmación emocional genérica pueden aportar menos que un contraste concreto; probar otras perspectivas sin prohibir esos recursos. Guion 6 (reemplazar disco frente a volver a crear 500 beats): «ass». Guion 7 (posible valor comercial actual de beats antiguos): «maso». El contraste por sí solo no asegura calidad: una versión aceptada de una técnica no valida sus variantes. No conocemos todavía la causa exacta de estos juicios. Explorar ángulos realmente distintos antes de volver a aplicar el mismo contraste.
 
 ## Posible exploración de producción — NO DECIDIDA
 
