@@ -28,6 +28,10 @@ Hipótesis: hacer tangible el valor irreemplazable del trabajo mediante contrast
 
 Guion 4 (respaldo como hábito, archivos creados desde el último respaldo): «ass». Guion 5 (trayectoria del productor, cuanto más crea más pierde): «malo», pero el propietario rescata explícitamente el cierre «Your entire catalog shouldn’t depend on a single hard drive.» Separar valor de una frase de calidad del guion completo. No hay causa explícita del rechazo. Hipótesis de IA: un consejo de hábitos o una afirmación emocional genérica pueden aportar menos que un contraste concreto; probar otras perspectivas sin prohibir esos recursos. Guion 6 (reemplazar disco frente a volver a crear 500 beats): «ass». Guion 7 (posible valor comercial actual de beats antiguos): «maso». El contraste por sí solo no asegura calidad: una versión aceptada de una técnica no valida sus variantes. No conocemos todavía la causa exacta de estos juicios. Explorar ángulos realmente distintos antes de volver a aplicar el mismo contraste.
 
+### Tercera ronda
+
+Del guion 8, el propietario rescata específicamente «Every time you finish a beat, your catalog becomes a little more valuable. Protect it.»; no aprueba el resto. Guion 9 (copia online y acceso desde otras computadoras): bueno, pero no muy bueno. Guion 10 (imposibilidad de recrear exactamente patrones, acordes y melodías): «el peor». No hay explicación causal explícita. Hipótesis: presentar el catálogo como valor que se acumula y cerrar con una acción breve puede aportar más que dramatizar la pérdida; comprobar sin convertir ese cierre en plantilla. Se proponen guiones 11 y 12, el segundo con hook distinto, pendientes de evaluación.
+
 ## Posible exploración de producción — NO DECIDIDA
 
 El propietario plantea reutilizar un video casi igual para distintas variantes buenas de un concepto, aumentando la producción sin necesitar una idea nueva para cada pieza. Mencionó como ejemplo 9 conceptos y unos 21 videos; no aprobó cantidades, frecuencia, calendario ni método experimental. No reemplaza los planes previos.
