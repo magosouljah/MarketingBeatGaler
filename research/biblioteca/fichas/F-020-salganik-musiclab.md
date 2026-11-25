@@ -22,7 +22,7 @@ Dos experimentos: en el primero las canciones aparecen en una cuadrícula desord
 
 **Resultados.**
 - **Desigualdad:** los ocho mundos con influencia social fueron más desiguales que el independiente, y más aún en el segundo experimento (diferencias significativas, p < 0,01). A más señal social, más se concentra el éxito.
-- **Impredecibilidad:** los resultados variaron más entre mundos con influencia social que entre subgrupos al azar de la condición independiente. La misma canción triunfa en un mundo y no en otro.
+- **Impredecibilidad:** los resultados variaron más entre mundos con influencia social que entre subgrupos al azar de la condición independiente. El resultado de una misma canción cambia de un mundo a otro.
 - **Calidad y éxito:** tomando como «calidad» la cuota de la canción en el mundo independiente, la relación con el éxito es positiva en promedio. Las mejores rara vez acabaron muy mal y las peores rara vez muy bien; pero, en palabras de los autores, casi cualquier otro resultado es posible.
 - Las mejores canciones fueron las más impredecibles en cuota de mercado; las intermedias, las más impredecibles en posición.
 
@@ -37,7 +37,7 @@ Dos experimentos: en el primero las canciones aparecen en una cuadrícula desord
 
 ## Aplicaciones posibles para productores (hipótesis nuestras)
 
-- Contenido con un experimento contable en diez segundos: «pusieron las mismas 48 canciones en 8 mundos separados; en cada uno ganó una distinta».
+- Contenido con un experimento contable en diez segundos: «pusieron las mismas 48 canciones en 8 mundos separados y el resultado cambió de uno a otro». Antes de afirmar que en cada mundo ganó una canción distinta hay que comprobarlo en las figuras, que no pudimos leer.
 - Alivio y exigencia a la vez: no es excusa (las peores casi nunca ganaron), pero quita peso al veredicto de un solo lanzamiento.
 
 ## Límites, contradicciones y respaldo
