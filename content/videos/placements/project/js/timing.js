@@ -23,6 +23,6 @@ const S={ // cuerpo
   FIN:B, TAKE:8.85+M, LAND:10.45+M, TAG1:12.86+M, TAG2:13.65+M,
   SEL0:14.06+M, SEL1:14.66+M, SEL2:15.05+M, SEL3:15.45+M, PACK:15.85+M, COPY:16.45+M, BACK:16.85+M,
   PASTE:17.22+M, SENDL:17.74+M, DOTS2:18.20+M, FIRE:19.26+M, ACC:20.46+M };
-/* CTA: entra tras el acento final (808 de 20.86); FREE termina sobre la caja de 23.65 */
-const C={ T:21.00, VO:21.15, COMMENT:21.15, GALER:21.61, TO:22.61, FOR:22.98, END:23.65 };
-const DUR=24.10;
+/* CTA: entra en F611 (20.37 s); GALER cae sobre el 808 de 20.86 */
+const C={ T:20.37, VO:20.45, COMMENT:20.45, GALER:20.91, TO:21.91, FOR:22.28, END:22.39 };
+const DUR=23.40;

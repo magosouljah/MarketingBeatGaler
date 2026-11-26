@@ -1,6 +1,6 @@
 # placements — A-C1-H1
 
-Video vertical 1080×1920, 24.10 s, 30 fps. Guion `A-C1-H1` de [`content/scripts/LOTE-01-27-GUIONES.md`](../../scripts/LOTE-01-27-GUIONES.md).
+Video vertical 1080×1920, 23.40 s, 30 fps. Guion `A-C1-H1` de [`content/scripts/LOTE-01-27-GUIONES.md`](../../scripts/LOTE-01-27-GUIONES.md).
 Un artista pide beats en una Story; el productor responde, filtra su Gallery por `rnb` + `dark`, arma un Quick Pack, copia el link y lo manda. El artista contesta «FIRE 🔥». Conversación ficticia e ilustrativa.
 
 **Estado:** versión final entregada el 2026-11-25, pendiente de y de evaluación del propietario.

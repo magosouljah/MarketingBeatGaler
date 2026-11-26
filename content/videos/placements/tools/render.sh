@@ -3,7 +3,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")/.." && pwd)"; OUT="$HERE/out"; REPO="$(cd "$HERE/../../.." && pwd)"; NAME="placements-A-C1-H1"
 export HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_UPDATE_CHECK=1
-HF="npx --yes hyperframes@0.9.44"; END=24.10; mkdir -p "$OUT"
+HF="npx --yes hyperframes@0.9.44"; END=23.40; mkdir -p "$OUT"
 [ -f "$HERE/project/assets/gsap.min.js" ] || bash "$HERE/tools/prepare.sh"
 cd "$HERE/project"; $HF lint
 $HF render --fps 30 -o "$OUT/video.tmp.mp4" --quiet; mv "$OUT/video.tmp.mp4" "$OUT/video.mp4"
