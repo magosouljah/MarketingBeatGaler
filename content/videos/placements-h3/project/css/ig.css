@@ -1,0 +1,67 @@
+#igcam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; transform-style: preserve-3d; will-change: transform; }
+#phone { position: absolute; left: 110px; top: 130px; width: 860px; height: 1470px; border-radius: 62px; overflow: hidden; background: #000;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.10), 0 60px 140px rgba(0,0,0,.7), 0 0 220px rgba(140,70,255,.14); }
+#phone svg { display: block; }
+/* ---------- DM ---------- */
+#dm { position: absolute; inset: 0; background: #000; color: #f5f5f5; }
+#dm-head { position: absolute; left: 0; top: 0; width: 100%; height: 124px; background: #000; border-bottom: 1.5px solid #1c1c1c; z-index: 3; }
+#dm-head .back { position: absolute; left: 22px; top: 40px; width: 44px; height: 44px; }
+#dm-head .av { position: absolute; left: 84px; top: 28px; }
+#dm-head .nm { position: absolute; left: 168px; top: 28px; font: 700 31px/1.2 var(--font); letter-spacing: -.01em; }
+#dm-head .st { position: absolute; left: 168px; top: 68px; font: 400 23px/1.2 var(--font); color: #a8a8a8; }
+#dm-head .ic { position: absolute; top: 38px; width: 48px; height: 48px; }
+#dm-thread { position: absolute; left: 0; top: 0; width: 100%; height: 100%; will-change: transform; }
+.dm-ts { position: absolute; left: 0; width: 100%; text-align: center; font: 500 21px/1 var(--font); color: #8e8e8e; }
+.dm-cap { position: absolute; right: 26px; font: 400 22px/1 var(--font); color: #a8a8a8; }
+#dm-thumb { position: absolute; left: 686px; top: 250px; width: 150px; height: 256px; border-radius: 24px; overflow: hidden; background: #111; opacity: 0; }
+.bub { position: absolute; height: 80px; padding: 0 30px; border-radius: 40px; font: 400 34px/80px var(--font); letter-spacing: -.012em; white-space: nowrap; will-change: transform; }
+.bub.me { right: 24px; color: #fff; background: linear-gradient(160deg,#8a3cf4 0%,#5b55f6 55%,#3b7bf6 100%); transform-origin: 100% 100%; }
+.bub.them { left: 88px; color: #f5f5f5; background: #262626; transform-origin: 0 100%; }
+.bub b { font-weight: 700; }
+.dm-av { position: absolute; left: 24px; }
+#dm-dots { position: absolute; left: 88px; width: 126px; height: 80px; border-radius: 40px; background: #262626; transform-origin: 0 100%; opacity: 0; }
+#dm-dots i { position: absolute; top: 31px; width: 18px; height: 18px; border-radius: 50%; background: #9a9a9a; }
+#dm-in { position: absolute; left: 20px; top: 1340px; width: 820px; height: 96px; border-radius: 48px; background: #262626; z-index: 3; }
+#dm-in .cam { position: absolute; left: 10px; top: 10px; width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(160deg,#8a3cf4,#3b7bf6); }
+#dm-in .cam svg { position: absolute; left: 17px; top: 17px; width: 42px; height: 42px; }
+#dm-in .ph { position: absolute; left: 108px; top: 0; font: 400 32px/96px var(--font); color: #a8a8a8; }
+#dm-in .ic { position: absolute; top: 26px; width: 44px; height: 44px; }
+#dm-in .txt { position: absolute; left: 108px; top: 0; font: 400 30px/96px var(--font); color: #7fb0ff; white-space: nowrap; opacity: 0; }
+#dm-in .send { position: absolute; right: 30px; top: 0; font: 700 32px/96px var(--font); color: #5b8cff; opacity: 0; }
+/* tarjeta del pack en el chat */
+#dm-link { position: absolute; right: 24px; width: 520px; border-radius: 36px; overflow: hidden; background: #262626; transform-origin: 100% 100%; opacity: 0; }
+#dm-link .art { position: relative; height: 250px; background: #0d0d0d; overflow: hidden; }
+#dm-link .art img { position: absolute; top: 34px; width: 182px; height: 182px; border-radius: 14px; object-fit: cover; box-shadow: 0 14px 34px rgba(0,0,0,.6); }
+#dm-link .inf { padding: 20px 28px 24px; }
+#dm-link .t1 { font: 700 31px/1.2 var(--font); color: #f5f5f5; letter-spacing: -.01em; }
+#dm-link .t2 { margin-top: 6px; font: 400 24px/1.2 var(--font); color: #a8a8a8; }
+#dm-link .url { margin-top: 12px; font: 500 24px/1.2 var(--font); color: #7fb0ff; }
+#dm-seen { position: absolute; right: 30px; font: 400 21px/1 var(--font); color: #8e8e8e; opacity: 0; }
+/* ---------- Story ---------- */
+#story { position: absolute; left: 0; top: 0; width: 860px; height: 1470px; transform-origin: 0 0; overflow: hidden; background: #0b0612; will-change: transform; }
+#st-bg { position: absolute; inset: -30px; background: url("../assets/ig/story.jpg") center/cover; will-change: transform; }
+#st-bg i { position: absolute; border-radius: 50%; filter: blur(70px); }
+#st-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 62%, rgba(0,0,0,.62) 100%); }
+#st-ui { position: absolute; inset: 0; }
+#st-bar { position: absolute; left: 22px; top: 26px; width: 816px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.35); overflow: hidden; }
+#st-bar i { position: absolute; left: 0; top: 0; height: 100%; width: 100%; background: #fff; transform-origin: 0 50%; }
+#st-ui .av { position: absolute; left: 24px; top: 54px; }
+#st-ui .nm { position: absolute; left: 106px; top: 68px; font: 600 28px/1.2 var(--font); color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+#st-ui .nm span { font-weight: 400; color: rgba(255,255,255,.72); margin-left: 12px; }
+#st-ui .ic { position: absolute; top: 62px; width: 46px; height: 46px; }
+#st-stick { position: absolute; left: 0; top: 400px; width: 860px; text-align: center; transform-origin: 50% 50%; }
+#st-stick span { display: inline-block; padding: 14px 34px 18px; border-radius: 22px; background: #fff; color: #0c0c0c; font: 700 84px/1.08 var(--font); letter-spacing: -.035em; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
+#st-reply { position: absolute; left: 24px; top: 1346px; width: 640px; height: 96px; border-radius: 48px; border: 2.5px solid rgba(255,255,255,.72); }
+#st-reply .ph { position: absolute; left: 36px; top: 0; font: 400 32px/91px var(--font); color: #fff; }
+#st-reply .txt { position: absolute; left: 36px; top: 0; font: 400 34px/91px var(--font); color: #fff; white-space: nowrap; }
+#st-reply .car { display: inline-block; width: 3px; height: 42px; margin-left: 3px; vertical-align: -8px; background: #6aa0ff; }
+#st-ui .heart { position: absolute; left: 694px; top: 1368px; width: 54px; height: 54px; }
+#st-ui .plane { position: absolute; left: 772px; top: 1368px; width: 54px; height: 54px; }
+#st-send { position: absolute; left: 684px; top: 1346px; width: 152px; height: 96px; border-radius: 48px; background: #fff; color: #0c0c0c; font: 700 32px/96px var(--font); text-align: center; opacity: 0; }
+.avatar { width: 68px; height: 68px; border-radius: 50%; padding: 4px; background: conic-gradient(from 210deg,#f9ce34,#ee2a7b,#6228d7,#f9ce34); }
+.avatar.plain { padding: 0; background: none; }
+.avatar i { display: block; width: 100%; height: 100%; border-radius: 50%; border: 3px solid #000; overflow: hidden; position: relative;
+  background: #fff url("../assets/ig/avatar.jpg") center/cover; }
+.avatar.plain i { border: none; }
+
+#b-fire { height: 96px; border-radius: 48px; padding: 0 36px; font-size: 42px; line-height: 96px; }

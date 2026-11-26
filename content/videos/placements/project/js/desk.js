@@ -93,10 +93,10 @@ const DESK=(function(){
   function camAt(t){
     const k=(a)=>kf(t,a);
     const fx=k([[0,540],[F.ZOOM,540],[F.ZOOM+.45,360,E.ioC],[T.TAKE-.3,360],[T.TAKE,540,E.ioC],[99,540]]);
-    const fy=k([[0,1030],[F.ZOOM,1030],[F.ZOOM+.45,756,E.ioC],[T.TAKE-.3,756],[T.TAKE,1030,E.ioC],[T.TAKE+.5,1000,E.outC],[T.LAND,960,E.ioC],[11.0+M,960],[12.2+M,330,E.ioC],[T.TAG2+.05,330],[T.TAG2+.36,700,E.ioC],[T.PACK,700],[T.PACK+.3,865,E.ioC],[99,865]]);
-    let s=k([[0,1.0],[F.S2a,1.07,E.lin],[F.S2a+.3,.84,E.outC],[F.ZOOM,.87,E.lin],[F.ZOOM+.45,1.42,E.ioC],[T.TAKE-.3,1.46,E.lin],[T.TAKE,1.0,E.ioC],[T.TAKE+.5,.8,E.outC],[T.LAND,.86,E.ioC],[11.0+M,.88,E.lin],[12.2+M,1.06,E.ioC],[T.TAG2+.05,1.07,E.lin],[T.TAG2+.36,1.06,E.ioC],[T.PACK,1.08,E.lin],[T.PACK+.3,1.1,E.ioC],[T.BACK,1.13,E.lin],[99,1.13]]);
+    const fy=k([[0,1030],[F.ZOOM,1030],[F.ZOOM+.45,756,E.ioC],[T.TAKE-.3,756],[T.TAKE,1030,E.ioC],[T.TAKE+.5,1000,E.outC],[T.LAND,960,E.ioC],[T.LAND+.15,960],[T.TAG1-.66,330,E.ioC],[T.TAG2+.05,330],[T.TAG2+.36,700,E.ioC],[T.PACK,700],[T.PACK+.3,865,E.ioC],[99,865]]);
+    let s=k([[0,1.0],[F.S2a,1.07,E.lin],[F.S2a+.3,.84,E.outC],[F.ZOOM,.87,E.lin],[F.ZOOM+.45,1.42,E.ioC],[T.TAKE-.3,1.46,E.lin],[T.TAKE,1.0,E.ioC],[T.TAKE+.5,.8,E.outC],[T.LAND,.86,E.ioC],[T.LAND+.15,.88,E.lin],[T.TAG1-.66,1.06,E.ioC],[T.TAG2+.05,1.07,E.lin],[T.TAG2+.36,1.06,E.ioC],[T.PACK,1.08,E.lin],[T.PACK+.3,1.1,E.ioC],[T.BACK,1.13,E.lin],[99,1.13]]);
     const sx=k([[0,540],[F.ZOOM,540],[F.ZOOM+.45,480,E.ioC],[T.TAKE-.3,480],[T.TAKE,540,E.ioC],[99,540]]);
-    let sy=k([[0,1030],[F.ZOOM,1010],[F.ZOOM+.45,640,E.ioC],[T.TAKE-.3,640],[T.TAKE,1030,E.ioC],[T.TAKE+.5,980,E.outC],[T.LAND,1010,E.ioC],[11.0+M,1010],[12.2+M,560,E.ioC],[T.TAG2+.05,560],[T.TAG2+.36,860,E.ioC],[T.PACK,860],[T.PACK+.3,900,E.ioC],[99,900]]);
+    let sy=k([[0,1030],[F.ZOOM,1010],[F.ZOOM+.45,640,E.ioC],[T.TAKE-.3,640],[T.TAKE,1030,E.ioC],[T.TAKE+.5,980,E.outC],[T.LAND,1010,E.ioC],[T.LAND+.15,1010],[T.TAG1-.66,560,E.ioC],[T.TAG2+.05,560],[T.TAG2+.36,860,E.ioC],[T.PACK,860],[T.PACK+.3,900,E.ioC],[99,900]]);
     const rx=k([[0,0],[T.TAKE,0],[T.TAKE+.55,13,E.outC],[T.LAND,0,E.ioC],[99,0]]);
     const rz=k([[0,0],[T.TAKE,0],[T.TAKE+.45,-5,E.outC],[T.LAND-.4,2,E.ioS],[T.LAND,0,E.ioS],[99,0]]);
     s*=1+pulse(t,T.LAND,.022,10,24)+pulse(t,T.TAG1,.012,12,24)+pulse(t,T.TAG2,.012,12,24)+pulse(t,T.PACK,.014,12,24)+pulse(t,T.COPY,.014,12,24)+pulse(t,W.HUNDREDS,.012,12,24);
@@ -120,9 +120,9 @@ const DESK=(function(){
     P.push([W.ONE1-.34,W.ONE1-.02,z1.x,z1.y],[W.BY-.26,W.BY+.0,z2.x,z2.y],[W.ONE2+.08,W.ONE2+.36,z3.x,z3.y],[T.TAKE-.14,T.TAKE+.2,1180,1500]);
     // Gallery
     const g1=at(T.TAG1,tagX.rnb,338), g2=at(T.TAG2,tagX.dark,338), g3=at(T.SEL0,866,474), c1=at(T.SEL1,230,610), c2=at(T.SEL2,570,610), c3=at(T.SEL3,910,610), pb=at(T.PACK,812,1076), cb=at(T.COPY,540,1206);
-    P.push([12.02+M,12.03+M,1180,g1.y+260],[12.06+M,12.52+M,g1.x,g1.y+6],[T.TAG1+.18,T.TAG2-.26,g2.x,g2.y+6],[T.TAG2+.1,T.SEL0-.14,g3.x,g3.y+6],[T.SEL0+.14,T.SEL1-.2,c1.x,c1.y],[T.SEL1+.1,T.SEL2-.1,c2.x,c2.y],[T.SEL2+.1,T.SEL3-.1,c3.x,c3.y],[T.SEL3+.08,T.PACK-.12,pb.x,pb.y+6],[T.PACK+.14,T.COPY-.16,cb.x,cb.y+6],[T.COPY+.2,T.BACK,cb.x+420,cb.y+500]);
+    P.push([T.TAG1-.84,T.TAG1-.83,1180,g1.y+260],[T.TAG1-.80,T.TAG1-.34,g1.x,g1.y+6],[T.TAG1+.18,T.TAG2-.26,g2.x,g2.y+6],[T.TAG2+.1,T.SEL0-.14,g3.x,g3.y+6],[T.SEL0+.14,T.SEL1-.2,c1.x,c1.y],[T.SEL1+.1,T.SEL2-.1,c2.x,c2.y],[T.SEL2+.1,T.SEL3-.1,c3.x,c3.y],[T.SEL3+.08,T.PACK-.12,pb.x,pb.y+6],[T.PACK+.14,T.COPY-.16,cb.x,cb.y+6],[T.COPY+.2,T.BACK,cb.x+420,cb.y+500]);
     C.push(T.TAG1,T.TAG2,T.SEL0,T.SEL1,T.SEL2,T.SEL3,T.PACK,T.COPY);
-    CURSOR.path=P; CURSOR.clicks=C; CURSOR.vis=[[F.IN+.05,T.TAKE+.2],[12.03+M,T.BACK]];
+    CURSOR.path=P; CURSOR.clicks=C; CURSOR.vis=[[F.IN+.05,T.TAKE+.2],[T.TAG1-.83,T.BACK]];
   }
   buildCursor();
   const SELT=[T.SEL1,T.SEL2,T.SEL3];

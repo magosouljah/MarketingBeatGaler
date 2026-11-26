@@ -1,0 +1,47 @@
+{
+ "ID": "A-C1-H3",
+ "GLOW": [
+  22,
+  98,
+  150
+ ],
+ "HOOK": {
+  "DUR": 5.14,
+  "VO": 0.8,
+  "TYPE0": 0.4,
+  "TYPE1": 0.95,
+  "SEND": 1.05,
+  "MORPH": 1.4,
+  "DOTS": 1.22,
+  "MSG": 2.52,
+  "PULL": 3.02,
+  "WHIP": 4.84,
+  "SLOT": null,
+  "STACK": [
+   [
+    "NOTHING",
+    3.55
+   ],
+   [
+    "READY",
+    3.98
+   ],
+   [
+    "TO SEND",
+    4.21
+   ]
+  ],
+  "STACKFIT": 600,
+  "STACKY": 900
+ },
+ "AUDIO": {
+  "beat": "beat.wav",
+  "hook": "hook.wav",
+  "hookTrim": 4.1,
+  "hookGain": 2.0
+ },
+ "GRID": {
+  "beat": 0.41675,
+  "phase": 1.916
+ }
+}

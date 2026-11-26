@@ -1,0 +1,80 @@
+#dcam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; transform-style: preserve-3d; will-change: transform; }
+/* ---------- Finder (reutilizado de add-finder) ---------- */
+.fwin { position: absolute; left: 80px; top: 270px; width: 920px; height: 1520px; background: #f5f5f6; border-radius: 30px; overflow: hidden; color: #1d1d1f;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.22), 0 0 260px rgba(255,255,255,.14), 0 80px 160px rgba(0,0,0,.6); will-change: transform; }
+.fwin .f-title { position: absolute; left: 0; top: 0; width: 100%; height: 110px; background: linear-gradient(#ededee,#e2e2e4); border-bottom: 2px solid #cfcfd2; }
+.fwin .f-dots { position: absolute; left: 34px; top: 42px; display: flex; gap: 16px; }
+.fwin .f-dots i { width: 26px; height: 26px; border-radius: 50%; display: block; }
+.fwin .f-name { position: absolute; left: 0; width: 100%; top: 33px; text-align: center; font: 600 34px/1.3 var(--font); color: #3a3a3c; letter-spacing: -.01em; }
+.fwin .f-cols { position: absolute; left: 0; top: 110px; width: 100%; height: 56px; background: #fafafa; border-bottom: 2px solid #dedee0; font: 500 23px/56px var(--font); color: #7b7b80; }
+.fwin .f-cols span { position: absolute; top: 0; }
+.fwin .f-list { position: absolute; left: 0; top: 166px; width: 100%; height: 1284px; overflow: hidden; }
+.fwin .f-rows { position: absolute; left: 0; top: 0; width: 100%; will-change: transform; }
+.row { position: absolute; left: 0; width: 100%; height: 64px; font: 400 27px/64px var(--font); white-space: nowrap; }
+.row .bg { position: absolute; left: 14px; right: 14px; top: 3px; bottom: 3px; border-radius: 12px; background: #2f7bf6; opacity: 0; }
+.row.alt::before { content: ""; position: absolute; left: 14px; right: 14px; top: 0; bottom: 0; border-radius: 12px; background: #ececee; }
+.row .ico { position: absolute; left: 34px; top: 11px; width: 42px; height: 42px; border-radius: 9px; background: linear-gradient(#8e8e93,#6f6f75); }
+.row .ico::after { content: ""; position: absolute; left: 9px; top: 12px; width: 4px; height: 18px; border-radius: 2px; background: #fff;
+  box-shadow: 7px -5px 0 0 #fff, 7px 5px 0 0 #fff, 14px 2px 0 0 #fff, 14px -2px 0 0 #fff, 21px -6px 0 0 #fff, 21px 6px 0 0 #fff; opacity: .92; }
+.row .ico.mp3 { background: linear-gradient(#7d93b8,#566d94); }
+.row .ico.prj { background: linear-gradient(#f0a04a,#d9742a); }
+.row .ico.prj2 { background: linear-gradient(#4c4c52,#2b2b30); }
+.row .txt { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.row .n { position: absolute; left: 92px; color: #1d1d1f; }
+.row .d { position: absolute; left: 520px; color: #86868b; font-size: 24px; }
+.row .s { position: absolute; left: 770px; color: #86868b; font-size: 24px; }
+.fwin .f-foot { position: absolute; left: 0; bottom: 0; width: 100%; height: 70px; background: #ececee; border-top: 2px solid #d6d6d9; font: 500 23px/70px var(--font); color: #7b7b80; text-align: center; }
+.fwin .f-thumb { position: absolute; right: 10px; top: 0; width: 9px; height: 30px; border-radius: 5px; background: rgba(0,0,0,.34); }
+.fwin.ghost .f-list { background: repeating-linear-gradient(#f5f5f6 0 64px, #ececee 64px 128px); }
+.fwin.ghost .f-list::after { content: ""; position: absolute; left: 34px; top: -2000px; width: 620px; height: 6000px;
+  background: repeating-linear-gradient(transparent 0 23px, #c9c9cf 23px 41px, transparent 41px 64px); -webkit-mask-image: linear-gradient(90deg,#000 0 42px,transparent 42px 58px,#000 58px 330px,transparent 330px 480px,#000 480px 620px); }
+/* ---------- BeatCard real (metricas de la app x1.9) ---------- */
+.ent { position: absolute; left: -152px; top: -152px; width: 304px; height: 454px; opacity: 0; color: #e5e5e5; will-change: transform; }
+.tile { position: absolute; left: 0; top: 0; width: 304px; height: 304px; border-radius: 14px; overflow: hidden; background: linear-gradient(150deg,#343437 0%,#1d1d1f 70%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.10), 0 0 0 1.5px rgba(255,255,255,.08), 0 30px 72px rgba(0,0,0,.5); }
+.tile .lite { position: absolute; inset: 0; background: linear-gradient(150deg,#fdfdfe 0%,#d7d7dd 78%); }
+.tile .glyph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 13px; color: #66666d; }
+.tile .glyph b { display: block; width: 13px; border-radius: 7px; background: currentColor; }
+.tile img.cov { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; }
+.tile .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+.tile .sheen { position: absolute; top: -20%; left: 0; width: 46%; height: 140%; opacity: 0; background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.34) 50%, rgba(255,255,255,0) 100%); }
+.ent .ring { position: absolute; left: -7px; top: -7px; width: 318px; height: 318px; border-radius: 20px; border: 5px solid #fff; opacity: 0; }
+.ent .chk { position: absolute; left: 14px; top: 14px; width: 58px; height: 58px; border-radius: 50%; background: rgba(0,0,0,.45); border: 3px solid rgba(255,255,255,.9); opacity: 0; }
+.ent .chk svg { position: absolute; inset: 6px; opacity: 0; }
+.ent .chk.on { background: #fff; }
+.meta { position: absolute; left: 0; top: 304px; width: 304px; height: 150px; padding-top: 13px; }
+.meta .title { height: 42px; display: flex; align-items: center; font: 600 25px/1.2 var(--font); color: #e6e6e6; white-space: nowrap; overflow: hidden; opacity: 0; }
+.meta .title span { flex: 1; overflow: hidden; text-overflow: ellipsis; }
+.meta .title i { font: 400 34px/1 var(--font); color: #b2b2b2; letter-spacing: 1px; font-style: normal; transform: translateY(-8px); }
+.meta .detail { height: 36px; display: flex; align-items: center; justify-content: space-between; }
+.meta .stars { font-size: 21px; letter-spacing: -2px; white-space: nowrap; }
+.meta .stars s { text-decoration: none; color: #454545; display: inline-block; }
+.meta .bk { font: 400 20px/1 var(--font); color: #818181; letter-spacing: -.3px; white-space: nowrap; opacity: 0; }
+.meta .tags { height: 47px; display: flex; align-items: center; gap: 6px; }
+.meta .tag { height: 38px; padding: 0 9px; display: inline-flex; align-items: center; border-radius: 999px; font: 400 21px/1 var(--font); border: 2px solid; opacity: 0; transform-origin: 0 50%; }
+/* ---------- Gallery: barra de tags real, botones flotantes, seleccion ---------- */
+#tagbar { position: absolute; left: 58px; top: 300px; width: 1010px; height: 64px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, black 0%, black calc(100% - 92px), transparent 100%); }
+#tagtrack { display: flex; align-items: center; gap: 15px; width: max-content; height: 64px; white-space: nowrap; }
+.tg { flex: none; display: inline-block; text-align: center; padding: 0 4px; font: 400 51px/1.15 var(--font); letter-spacing: -.042em; color: #828282; opacity: 0; }
+#gbtns { position: absolute; left: 0; top: 0; }
+.gb { position: absolute; top: 432px; height: 76px; border-radius: 38px; background: rgba(28,28,28,.82); box-shadow: 0 0 0 1.5px rgba(255,255,255,.14), 0 10px 30px rgba(0,0,0,.45); opacity: 0; }
+.gb svg { position: absolute; left: 20px; top: 20px; width: 36px; height: 36px; }
+.gb.sel { font: 600 27px/76px var(--font); color: #f2f2f2; text-align: center; letter-spacing: -.01em; }
+#selbar { position: absolute; left: 120px; top: 1010px; width: 840px; height: 124px; border-radius: 62px; background: rgba(24,24,24,.96); box-shadow: 0 0 0 1.5px rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.6); opacity: 0; }
+#selbar .cnt { position: absolute; left: 46px; top: 0; font: 600 34px/124px var(--font); color: #f2f2f2; letter-spacing: -.01em; }
+#selbar .cnt span { color: #8b8b8b; font-weight: 400; margin-left: 10px; }
+#selbar .btn { position: absolute; right: 16px; top: 16px; height: 92px; padding: 0 40px; border-radius: 46px; background: #f5f5f5; color: #0c0c0c; font: 600 32px/92px var(--font); letter-spacing: -.01em; transform-origin: 50% 50%; }
+#gdim { position: absolute; left: -2000px; top: -2000px; width: 5080px; height: 5920px; background: #000; opacity: 0; }
+#sheet { position: absolute; left: 120px; top: 440px; width: 840px; height: 850px; border-radius: 52px; background: #171717; box-shadow: 0 0 0 1.5px rgba(255,255,255,.12), 0 60px 140px rgba(0,0,0,.75); opacity: 0; transform-origin: 50% 60%; }
+#sheet .lab { position: absolute; left: 0; top: 388px; width: 100%; text-align: center; font: 500 24px/1 var(--font); color: #8b8b8b; letter-spacing: .08em; text-transform: uppercase; }
+#sheet .ttl { position: absolute; left: 0; top: 428px; width: 100%; text-align: center; font: 700 62px/1.1 var(--font); color: #f5f5f5; letter-spacing: -.035em; }
+#sheet .sub { position: absolute; left: 0; top: 508px; width: 100%; text-align: center; font: 400 29px/1.2 var(--font); color: #9a9a9a; }
+#sheet .field { position: absolute; left: 44px; top: 590px; width: 752px; height: 100px; border-radius: 26px; background: #0e0e0e; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.1); font: 500 31px/100px var(--font); color: #d8d8d8; padding-left: 34px; white-space: nowrap; }
+#sheet .field b { color: #7fb0ff; font-weight: 500; }
+#sheet .copy { position: absolute; left: 44px; top: 712px; width: 752px; height: 100px; border-radius: 50px; background: #f5f5f5; color: #0c0c0c; font: 600 34px/100px var(--font); text-align: center; letter-spacing: -.01em; }
+.fly { position: absolute; left: -110px; top: -110px; width: 220px; height: 220px; border-radius: 16px; overflow: hidden; opacity: 0; box-shadow: 0 0 0 1.5px rgba(255,255,255,.1), 0 26px 60px rgba(0,0,0,.6); }
+.fly img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#chip { position: absolute; left: 0; top: 0; height: 96px; padding: 0 40px; border-radius: 48px; background: linear-gradient(160deg,#8a3cf4 0%,#5b55f6 55%,#3b7bf6 100%); color: #fff; font: 600 34px/96px var(--font); white-space: nowrap; opacity: 0; box-shadow: 0 24px 60px rgba(60,80,255,.45); transform-origin: 50% 50%; }
+.tile img.ficon { position: absolute; left: 20%; top: 20%; width: 60%; height: 60%; object-fit: contain; display: block; }
+.row img.ico2 { position: absolute; left: 32px; top: 9px; width: 46px; height: 46px; object-fit: contain; background: none; border-radius: 0; }
+.row .ico2::after { display: none; }

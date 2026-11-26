@@ -1,0 +1,51 @@
+{
+ "ID": "A-C1-H2",
+ "GLOW": [
+  150,
+  36,
+  62
+ ],
+ "HOOK": {
+  "DUR": 5.5,
+  "VO": 0.75,
+  "TYPE0": 0.4,
+  "TYPE1": 0.95,
+  "SEND": 1.05,
+  "MORPH": 1.4,
+  "DOTS": 1.22,
+  "MSG": 2.52,
+  "PULL": 3.45,
+  "WHIP": 5.2,
+  "SLOT": {
+   "text": "PLACEMENT",
+   "t": 2.53,
+   "fit": 840
+  },
+  "STACK": [
+   [
+    "RIGHT",
+    4.15
+   ],
+   [
+    "BEAT",
+    4.42
+   ],
+   [
+    "IN TIME",
+    4.69
+   ]
+  ],
+  "STACKFIT": 560,
+  "STACKY": 900
+ },
+ "AUDIO": {
+  "beat": "beat.wav",
+  "hook": "hook.wav",
+  "hookTrim": 4.5,
+  "hookGain": 2.0
+ },
+ "GRID": {
+  "beat": 0.4917,
+  "phase": 2.006
+ }
+}

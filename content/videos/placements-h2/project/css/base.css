@@ -1,0 +1,25 @@
+@font-face { font-family: "BG Display"; src: url("../assets/fonts/InterDisplay-Black.otf") format("opentype"); font-weight: 900; }
+@font-face { font-family: "BG UI"; src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "BG UI"; src: url("../assets/fonts/inter-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "BG UI"; src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "BG UI"; src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+:root { --font: "BG UI", "Inter", sans-serif; --disp: "BG Display", "BG UI", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #070707; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--font); -webkit-font-smoothing: antialiased; }
+.clip { position: absolute; inset: 0; }
+#stage { overflow: hidden; background: #070707; }
+#bgglow { position: absolute; inset: -200px; }
+#sIG, #sDesk, #kt { position: absolute; inset: 0; }
+#sIG { perspective: 1800px; perspective-origin: 50% 45%; }
+#sDesk { perspective: 1600px; perspective-origin: 50% 50%; }
+#kt { pointer-events: none; }
+#vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 64% at 50% 46%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+#grain { position: absolute; inset: 0; pointer-events: none; opacity: .06; background: url("../assets/grain.png"); mix-blend-mode: overlay; }
+#tap { position: absolute; left: -60px; top: -60px; width: 120px; height: 120px; border-radius: 50%; opacity: 0; }
+#cursor { position: absolute; left: 0; top: 0; width: 0; height: 0; opacity: 0; }
+#cursor svg { position: absolute; left: -58px; top: -7px; width: 109px; height: 150px; overflow: visible; filter: drop-shadow(0 10px 10px rgba(0,0,0,.35)); }
+/* tipografia cinetica: palabras sueltas, solidas, con sombra */
+.kw { position: absolute; left: 0; top: 0; white-space: nowrap; font: 900 100px/.86 var(--disp); letter-spacing: -.045em; color: #fff; opacity: 0; transform-origin: 50% 50%; will-change: transform;
+  text-shadow: 0 14px 50px rgba(0,0,0,.75), 0 4px 10px rgba(0,0,0,.5); }
+.kw.ink { color: #111113; text-shadow: 0 0 22px rgba(245,245,246,.95), 0 0 6px rgba(245,245,246,.9), 0 10px 26px rgba(0,0,0,.16); }

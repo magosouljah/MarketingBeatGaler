@@ -47,3 +47,8 @@ Nada de esto es lección validada: son decisiones de producción y feedback text
 - Pidió la versión final tras la v2. Pendiente: evaluación con el scorecard y caso en `learning/cases/`.
 - Corrección: el primer recorte del icono `.flp` cortaba el círculo por abajo (recorte por porcentaje). Ahora se corta en el hueco blanco entre icono y nombre, y los dos iconos van a 46 px en la fila.
 - CTA añadido a petición del propietario (el brief original no lo llevaba): «Comment GALER to try it for free», 20.37–23.4 s (desde F611, a petición del propietario), con su voz `inputs/cta.mp3`. GALER cae sobre el 808 de 20.86; bloque compacto, sin huecos entre líneas. Módulo aparte: `project/js/cta.js`.
+
+## Variantes y sonido (2026-11-25, noche)
+- El proyecto pasó a leer todo de `project/js/variant.js`; se comprobó contra el render aprobado (diferencia media < 1.5/255 en siete frames: compresión y grano).
+- Whooshes nuevos sintetizados (`tools/make_sfx.py`): ruido con banda que barre, estéreo, sin corte en seco. Sustituyen a los heredados de add-finder. Efectos bajados: clic de 1.0 a 0.40; whoosh a 0.42 sobre un archivo 3 dB más bajo. Voz y beat sin cambios. Pendiente de que el propietario los escuche.
+- Las locuciones de H2 y H3 llegaron otra vez con los nombres cruzados (`A-H2.wav` trae el texto de H3 y `A-H3.wav` el de H2); se usaron por contenido.

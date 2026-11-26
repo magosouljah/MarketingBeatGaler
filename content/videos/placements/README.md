@@ -16,7 +16,7 @@ bash content/videos/placements/tools/render.sh    # out/placements-A-C1-H1.mp4 y
 
 | Archivo | Qué contiene |
 | --- | --- |
-| `project/js/timing.js` | **Todos los tiempos**, anclados a 808/cajas medidos y a palabras alineadas. `HOOK` es el módulo intercambiable. |
+| `project/js/timing.js` | Deriva todos los tiempos de `variant.js`. |
 | `project/js/lib.js` | Curvas, `kf()`, `pulse()`, PRNG. |
 | `project/js/type.js` | Tipografía cinética reutilizable (`KW`, `slam`). |
 | `project/js/cursor.js` | Cursor-personaje de add-finder convertido en componente con guion de movimientos y clics. |
@@ -24,8 +24,11 @@ bash content/videos/placements/tools/render.sh    # out/placements-A-C1-H1.mp4 y
 | `project/js/desk.js` | Finder → Gallery → tags → selección → Quick Pack → link (escenas 2 y 3). |
 | `project/js/ig-close.js` | Escena 4: pegar link, enviar, respuesta. |
 | `project/js/cta.js` | Cierre con el CTA. |
-| `tools/mix.sh` | Mezcla: voz arriba, beat presente, sin ducking. |
+| `project/js/variant.js` | **Lo único que cambia entre variantes**: hook, tiempos, color, audio. Lo escribe `tools/sync.py`. |
+| `tools/sync.py` | Recalcula `variant.js` para otro hook u otro beat (mide golpes y ajusta las acciones). |
+| `tools/mix.py` | Mezcla: voz arriba, beat presente, sin ducking, efectos discretos. |
+| `tools/make_sfx.py` | Sintetiza los whooshes. |
 
-## Cambiar el hook sin tocar el cuerpo
+## Variantes
 
-El cuerpo usa tiempos relativos a `B = HOOK.DUR`. Para H2/H3: reemplazar el objeto `HOOK` (y la escena 1 en `ig.js` si cambia la imagen), la voz `hook.wav` y su `adelay` en `mix.sh`. Si `HOOK.DUR` cambia, los golpes del cuerpo dejan de caer sobre los mismos 808: mover el inicio de la música en `mix.sh` la misma diferencia (en múltiplos de 0.4 s) o volver a medir.
+[`placements-h2`](../placements-h2/) y [`placements-h3`](../placements-h3/) son copias independientes de este proyecto: mismo cuerpo, otro hook, otra foto de Story, otro beat y otro color de fondo. Para una variante nueva: copiar la carpeta, poner los archivos en `inputs/`, escribir `variant.def.json` (tiempos del hook contra la alineación de palabras) y correr `python tools/sync.py`.

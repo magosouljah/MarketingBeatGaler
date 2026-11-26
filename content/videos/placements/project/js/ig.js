@@ -51,7 +51,7 @@ const IG=(function(){
         <div class="heart">${ic.heart}</div><div class="plane">${ic.plane}</div><div id="st-send">Send</div></div>
     </div>
   </div></div>`;
-  const cam=$("igcam"), phone=$("phone"), story=$("story"), stui=$("st-ui"), stbar=$("st-bar").firstChild, stick=$("st-stick"), stbg=$("st-bg");
+  const cam=$("igcam"), phone=$("phone"); phone.style.boxShadow=`0 0 0 2px rgba(255,255,255,.10), 0 60px 140px rgba(0,0,0,.7), 0 0 220px rgba(${V.GLOW.map(v=>Math.min(255,Math.round(v*1.45))).join(",")},.14)`; const  story=$("story"), stui=$("st-ui"), stbar=$("st-bar").firstChild, stick=$("st-stick"), stbg=$("st-bg");
   const rph=root.querySelector("#st-reply .ph"), rtxt=root.querySelector("#st-reply .txt"), stsend=$("st-send"), heart=root.querySelector(".heart"), plane=root.querySelector(".plane"), reply=$("st-reply");
   const head=$("dm-head"), inp=$("dm-in"), thread=$("dm-thread"), ts=$("dm-ts"), cap=$("dm-cap"), bme=$("b-me"), bthem=$("b-them"), athem=$("a-them"), dots=$("dm-dots"), dotI=[...dots.children];
   const link=$("dm-link"), seen=$("dm-seen"), bfire=$("b-fire"), athem2=$("a-them2"), inPh=inp.querySelector(".ph"), inTxt=inp.querySelector(".txt"), inSend=inp.querySelector(".send"), inMic=$("in-mic"), inImg=$("in-img");
@@ -64,7 +64,7 @@ const IG=(function(){
   const dot2I=[...dots2.children];
 
   // tipografia
-  const ASAP=[KW("ASAP",800)], F1=KW("FIRST",560), FIRST=[F1,KW("TO",600,{like:F1}),KW("SEND",600,{like:F1}),KW("YOURS",600,{like:F1})];
+  const H0=HOOK, ASAP=H0.SLOT?[KW(H0.SLOT.text,H0.SLOT.fit||800)]:[], LONG=H0.STACK.reduce((a,b)=>b[0].length>a[0].length?b:a), F1=KW(LONG[0],H0.STACKFIT||560), FIRST=H0.STACK.map(w=>w===LONG?F1:KW(w[0],600,{like:F1}));
   const OPP=KW("OPPORTUNITY",840), IM=KW("I’M",330), READY=KW("READY",840);
   const fe0=$("vb0fe");
 
@@ -77,13 +77,13 @@ const IG=(function(){
     const fx=kf(t,[[0,540],[H.SEND,540],[H.SEND+.4,430,E.ioC],[H.MSG-.02,400,E.lin],[H.MSG+.22,450,E.outC],[9,450]]);
     const fy=kf(t,[[0,865],[.24,865],[.8,1260,E.ioC],[H.SEND,1275,E.lin],[H.SEND+.4,812,E.ioC],[H.MSG,812],[H.MSG+.22,800,E.outC],[9,800]]);
     // tras enviar: directo a los tres puntitos y empuje lento mientras escribe (expectativa); al llegar el mensaje abre para leerlo
-    let s=kf(t,[[0,1.09],[.24,1,E.outC],[.8,1.24,E.ioC],[H.SEND,1.27,E.lin],[H.SEND+.4,1.45,E.ioC],[H.MSG-.02,1.78,E.inQ],[H.MSG+.22,1.6,E.outC],[H.PULL,1.68,E.lin],[H.FIRST,.52,E.ioC],[H.WHIP,.47,E.lin],[9,.47]]);
-    const sx=kf(t,[[0,540],[H.SEND,540],[H.SEND+.4,540,E.ioC],[H.MSG-.02,540],[H.MSG+.22,540,E.outC],[H.PULL,540],[H.FIRST,420,E.ioC],[H.WHIP,396,E.lin],[9,396]]);
-    let sy=kf(t,[[0,865],[.24,865],[.8,1010,E.ioC],[H.SEND,1004,E.lin],[H.SEND+.4,800,E.ioC],[H.MSG-.02,800],[H.MSG+.22,760,E.outC],[H.PULL,748,E.lin],[H.FIRST,430,E.ioC],[H.WHIP,404,E.lin],[9,404]]);
-    const ry=kf(t,[[0,0],[H.PULL,0],[H.FIRST,22,E.ioC],[H.WHIP,27,E.lin],[9,27]]), rx=kf(t,[[0,0],[H.PULL,0],[H.FIRST,8,E.ioC],[9,8]]), rz=kf(t,[[0,0],[H.PULL,0],[H.FIRST,-6,E.ioC],[H.WHIP,-7.5,E.lin],[9,-7.5]]);
-    s*=1+pulse(t,.46,.018,12,24)+pulse(t,H.SEND,-.02,12,24)+pulse(t,1.66,.012,12,24)+pulse(t,H.MSG,.022,11,24);
+    let s=kf(t,[[0,1.09],[.24,1,E.outC],[.8,1.24,E.ioC],[H.SEND,1.27,E.lin],[H.SEND+.4,1.45,E.ioC],[H.MSG-.02,1.78,E.inQ],[H.MSG+.22,1.6,E.outC],[H.PULL,1.68,E.lin],[H.STACK[0][1],.52,E.ioC],[H.WHIP,.47,E.lin],[9,.47]]);
+    const sx=kf(t,[[0,540],[H.SEND,540],[H.SEND+.4,540,E.ioC],[H.MSG-.02,540],[H.MSG+.22,540,E.outC],[H.PULL,540],[H.STACK[0][1],420,E.ioC],[H.WHIP,396,E.lin],[9,396]]);
+    let sy=kf(t,[[0,865],[.24,865],[.8,1010,E.ioC],[H.SEND,1004,E.lin],[H.SEND+.4,800,E.ioC],[H.MSG-.02,800],[H.MSG+.22,760,E.outC],[H.PULL,748,E.lin],[H.STACK[0][1],430,E.ioC],[H.WHIP,404,E.lin],[9,404]]);
+    const ry=kf(t,[[0,0],[H.PULL,0],[H.STACK[0][1],22,E.ioC],[H.WHIP,27,E.lin],[9,27]]), rx=kf(t,[[0,0],[H.PULL,0],[H.STACK[0][1],8,E.ioC],[9,8]]), rz=kf(t,[[0,0],[H.PULL,0],[H.STACK[0][1],-6,E.ioC],[H.WHIP,-7.5,E.lin],[9,-7.5]]);
+    s*=1+H.K.reduce((a,k)=>a+pulse(t,k,.014,12,24),0)+pulse(t,H.SEND,-.02,12,24)+pulse(t,H.MSG,.022,11,24);
     const wu=E.inC(seg(t,H.WHIP,H.WHIP+.26)); sy-=wu*2300;
-    return {fx,fy,s,sx,sy,ry,rx,rz,blur:2.5*seg(t,H.PULL+.2,H.FIRST)+wu*10,o:1};
+    return {fx,fy,s,sx,sy,ry,rx,rz,blur:2.5*seg(t,H.PULL+.2,H.STACK[0][1])+wu*10,o:1};
   }
   function common(t){ // estado del hilo comun a las dos escenas
     stbg.style.transform=`scale(${(1.02+Math.min(t,6)*.012).toFixed(4)}) translate(${(Math.sin(t*.8)*6).toFixed(1)}px,${(-Math.min(t,6)*5).toFixed(1)}px)`;
@@ -92,7 +92,7 @@ const IG=(function(){
     const c=cam1(t); setCam(c); common(t);
     // Story
     stbar.style.transform=`scaleX(${(.31+t/7).toFixed(4)})`;
-    const sp=E.outB(seg(t,0,.26)); stick.style.transform=`rotate(-3deg) scale(${(.72+.28*sp+pulse(t,.46,.03,12,26)).toFixed(4)})`;
+    const sp=E.outB(seg(t,0,.26)); stick.style.transform=`rotate(-3deg) scale(${(.72+.28*sp+pulse(t,H.K[0],.03,12,26)).toFixed(4)})`;
     const n=Math.round(TYPED.length*seg(t,H.TYPE0,H.TYPE1)), typing=t>=H.TYPE0-.12;
     rph.style.opacity=typing?0:1;
     const caret=(t<H.TYPE1)||Math.floor(t*3)%2===0;
@@ -116,7 +116,7 @@ const IG=(function(){
     bme.style.transform=`translate(${(dx*(1-u)).toFixed(2)}px,${(dy*(1-u)).toFixed(2)}px) scale(${(1+pulse(t,H.MORPH,.05,14,26)).toFixed(4)})`;
     bme.style.background=u<.35?"rgba(255,255,255,0)":""; 
     const da=seg(t,H.DOTS,H.DOTS+.12)*(1-seg(t,H.MSG-.03,H.MSG));
-    dots.style.opacity=da>0?1:0; dots.style.transform=`scale(${(da<=0?.4:(.4+.6*E.outB(Math.min(1,da)))*(1+pulse(t,1.66,.08,10,22))).toFixed(3)})`;
+    dots.style.opacity=da>0?1:0; dots.style.transform=`scale(${(da<=0?.4:(.4+.6*E.outB(Math.min(1,da)))*(1+H.K.reduce((a,k)=>a+pulse(t,k,.08,10,22),0))).toFixed(3)})`;
     dotI.forEach((d,k)=>{d.style.transform=`translateY(${(-7*Math.max(0,Math.sin((t-H.DOTS)*16-k*.9))).toFixed(1)}px)`;});
     athem.style.opacity=seg(t,H.DOTS,H.DOTS+.1).toFixed(3);
     const ma=seg(t,H.MSG,H.MSG+.2); bthem.style.opacity=t>=H.MSG?1:0; bthem.style.transform=`scale(${(ma<=0?.5:.5+.5*E.outB(ma)).toFixed(4)})`;
@@ -125,14 +125,15 @@ const IG=(function(){
     const tp=toScreen(c,760,1394), tu=seg(t,H.SEND,H.SEND+.3), tap=$("tap");
     if(t>=H.SEND-.1&&tu<1){ tap.style.opacity=(t<H.SEND?.5*seg(t,H.SEND-.1,H.SEND):.5*(1-tu)).toFixed(3); tap.style.background="rgba(255,255,255,.55)"; tap.style.border="none";
       tap.style.transform=`translate(${tp.x.toFixed(1)}px,${tp.y.toFixed(1)}px) scale(${(t<H.SEND?.5:.5+1.3*E.outC(tu)).toFixed(3)})`; } else if(t<H.DUR) tap.style.opacity=0;
-    // ASAP sale del propio mensaje: nace sobre la palabra del globo y crece hasta llenar el ancho
-    { const w=ASAP[0], bb=bthem.querySelector("b"), p0=toScreen(c,88+bb.offsetLeft+bb.offsetWidth/2,644+40), s0=bb.offsetHeight*c.s/w.h*.8;
-      const g=seg(t,H.ASAP,H.ASAP+.24), q=g<=0?0:E.outB(g), out=E.inC(seg(t,H.PULL-.02,H.PULL+.22));
-      w.put(lerp(p0.x,540,q)+out*-200,lerp(p0.y,1150,q)+out*1300,{o:(t>=H.ASAP&&out<1)?1:0,s:lerp(s0,1,q)*(1+(t-H.ASAP)*.035),r:lerp(-10,-3,q),b:(1-seg(g,0,.7))*6+out*14});
-      bb.style.display="inline-block"; bb.style.transform=`scale(${(1+pulse(t,H.ASAP,.25,10,22)).toFixed(4)})`; }
-    // FIRST / TO / SEND: una palabra por golpe de voz, apiladas abajo a la izquierda; salen hacia arriba como transicion
-    const tin=[H.FIRST,H.TO,H.SENDW,H.YOURS], wu2=E.inC(seg(t,H.WHIP,H.WHIP+.3));
-    FIRST.forEach((w,k)=>{ const sl=slam(t,tin[k],.12); w.put(120+w.w/2,850+k*w.h*1.03-wu2*2600*(1+.1*k)-(t-H.FIRST)*10,{o:sl.o,s:sl.s,by:wu2>0?60*wu2+10:sl.b}); });
+    // palabra del hueco bajo el mensaje: o nace del propio globo (fromMsg) o entra de golpe cuando se pronuncia
+    { const bb=bthem.querySelector("b"); bb.style.display="inline-block"; bb.style.transform=`scale(${(1+pulse(t,H.MSG+.01,.25,10,22)).toFixed(4)})`;
+      if(H.SLOT){ const w=ASAP[0], T0=H.SLOT.t, out=E.inC(seg(t,H.PULL-.02,H.PULL+.22));
+        if(H.SLOT.fromMsg){ const p0=toScreen(c,88+bb.offsetLeft+bb.offsetWidth/2,644+40), s0=bb.offsetHeight*c.s/w.h*.8, g=seg(t,T0,T0+.24), q=g<=0?0:E.outB(g);
+          w.put(lerp(p0.x,540,q)+out*-200,lerp(p0.y,1150,q)+out*1300,{o:(t>=T0&&out<1)?1:0,s:lerp(s0,1,q)*(1+(t-T0)*.035),r:lerp(-10,-3,q),b:(1-seg(g,0,.7))*6+out*14}); }
+        else { const sl=slam(t,T0,.13); w.put(540+out*-200,1150+out*1300,{o:sl.o*(out<1?1:0),s:sl.s*(1+(t-T0)*.03),r:-3,by:sl.b,b:out*14}); } } }
+    // pila de palabras del hook: una por golpe de voz, abajo a la izquierda; salen hacia arriba como transicion
+    const wu2=E.inC(seg(t,H.WHIP,H.WHIP+.3)), SY=H.STACKY||850;
+    FIRST.forEach((w,k)=>{ const sl=slam(t,H.STACK[k][1],.12); w.put(120+w.w/2,SY+k*w.h*1.03-wu2*2600*(1+.1*k)-(t-H.STACK[0][1])*10,{o:sl.o,s:sl.s,by:wu2>0?60*wu2+10:sl.b}); });
     OPP.put(0,0,{o:0}); IM.put(0,0,{o:0}); READY.put(0,0,{o:0});
   }
   function frame(t){
