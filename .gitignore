@@ -35,3 +35,10 @@ node_modules/
 # Borradores locales de ideacion; pueden contener material no aprobado.
 /inputs/
 /pipeline/ideacion-runs/
+
+# placements: assets que genera tools/prepare.sh (portadas, fotos del propietario, gsap, fuente y grano compartidos).
+/content/videos/placements/project/assets/covers/
+/content/videos/placements/project/assets/ig/
+/content/videos/placements/project/assets/gsap.min.js
+/content/videos/placements/project/assets/grain.png
+/content/videos/placements/project/assets/fonts/InterDisplay-Black.otf
