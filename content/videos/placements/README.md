@@ -1,6 +1,6 @@
 # placements — A-C1-H1
 
-Video vertical 1080×1920, 21.16 s, 30 fps. Guion `A-C1-H1` de [`content/scripts/LOTE-01-27-GUIONES.md`](../../scripts/LOTE-01-27-GUIONES.md).
+Video vertical 1080×1920, 24.10 s, 30 fps. Guion `A-C1-H1` de [`content/scripts/LOTE-01-27-GUIONES.md`](../../scripts/LOTE-01-27-GUIONES.md).
 Un artista pide beats en una Story; el productor responde, filtra su Gallery por `rnb` + `dark`, arma un Quick Pack, copia el link y lo manda. El artista contesta «FIRE 🔥». Conversación ficticia e ilustrativa.
 
 **Estado:** versión final entregada el 2026-11-25, pendiente de y de evaluación del propietario.
@@ -23,6 +23,7 @@ bash content/videos/placements/tools/render.sh    # out/placements-A-C1-H1.mp4 y
 | `project/js/ig.js` | Chat (Story + DM) y escena 1. |
 | `project/js/desk.js` | Finder → Gallery → tags → selección → Quick Pack → link (escenas 2 y 3). |
 | `project/js/ig-close.js` | Escena 4: pegar link, enviar, respuesta. |
+| `project/js/cta.js` | Cierre con el CTA. |
 | `tools/mix.sh` | Mezcla: voz arriba, beat presente, sin ducking. |
 
 ## Cambiar el hook sin tocar el cuerpo

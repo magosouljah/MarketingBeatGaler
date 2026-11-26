@@ -7,3 +7,5 @@
 | `body.wav` | Voz del cuerpo C1, las tres frases restantes (llegó nombrado `untitled_A-H1.wav`). |
 | `story.jpg` | Foto para la Story del artista (aportada por el propietario). |
 | `avatar.jpg` | Foto de perfil del artista ficticio (aportada por el propietario). |
+| `cta.mp3` | Voz del CTA: «Comment GALER to try it for free». |
+| `flp.png`, `als.png` | Capturas originales de los iconos (los PNG recortados ya están en `project/assets/icons/`). |

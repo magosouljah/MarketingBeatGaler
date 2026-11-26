@@ -14,6 +14,7 @@ IG.s4=function(t){
   // mini zoom final hacia el FIRE: el globo queda como punto fijo y crece
   { const zf=.08*E.ioC(seg(t,T.FIRE+.15,T.ACC))+.06*E.outC(seg(t,T.ACC,T.ACC+.25)), py=130+IG.FIRETOP+SH+48, Px=c.sx+(280-c.fx)*c.s, Py=c.sy+(py-c.fy)*c.s;
     c.s*=1+zf; c.sx=Px-zf*420-(280-c.fx)*c.s; c.sy=Py+zf*120-(py-c.fy)*c.s; }
+  { const ex=E.inC(seg(t,C.T,C.T+.26)); c.sy-=ex*2500; c.blur=Math.max(c.blur,ex*10); }
   IG.setCam(c);
   // el link llega volando desde la Gallery y cae en el campo de texto
   const chip=DESK.chip, q=E.ioC(seg(t,T.BACK,T.PASTE)), tgt=IG.toScreen(c,108+190,1388), w=chip.offsetWidth;
@@ -40,6 +41,6 @@ IG.s4=function(t){
   // tipografia
   [...K.ASAP,...K.FIRST].forEach(w=>w.put(0,0,{o:0}));
   { const sl=slam(t,W.OPP,.13), out=E.inC(seg(t,T.SENDL-.14,T.SENDL+.04)); K.OPP.put(540,860-out*900-(t-W.OPP)*20,{o:sl.o*(out<1?1:0),s:sl.s,by:out>0?40:sl.b}); }
-  { const sl=slam(t,W.IM,.12); K.IM.put(120+K.IM.w/2,300,{o:sl.o,s:sl.s,by:sl.b}); }
-  { const sl=slam(t,W.READY2,.13); K.READY.put(540,300+K.IM.h*.5+K.READY.h*.56,{o:sl.o,s:sl.s*(1+pulse(t,T.ACC,.03,10,22)),by:sl.b}); }
+  { const sl=slam(t,W.IM,.12); const ex=E.inC(seg(t,C.T-.02,C.T+.22)); K.IM.put(120+K.IM.w/2,300-ex*1400,{o:sl.o*(ex<1?1:0),s:sl.s,by:ex>0?50:sl.b}); }
+  { const sl=slam(t,W.READY2,.13); const ex=E.inC(seg(t,C.T,C.T+.24)); K.READY.put(540,300+K.IM.h*.5+K.READY.h*.56-ex*1400,{o:sl.o*(ex<1?1:0),s:sl.s*(1+pulse(t,T.ACC,.03,10,22)),by:ex>0?50:sl.b}); }
 };

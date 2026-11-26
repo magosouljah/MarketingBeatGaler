@@ -46,3 +46,4 @@ Nada de esto es lección validada: son decisiones de producción y feedback text
 - El propietario mandó las capturas de los iconos `.flp` y `.als` y pidió versionarlas: están en `project/assets/icons/` como PNG con transparencia. Aparecen en las filas del Finder y en el vuelo; al caer en la Gallery las tapa la portada.
 - Pidió la versión final tras la v2. Pendiente: evaluación con el scorecard y caso en `learning/cases/`.
 - Corrección: el primer recorte del icono `.flp` cortaba el círculo por abajo (recorte por porcentaje). Ahora se corta en el hueco blanco entre icono y nombre, y los dos iconos van a 46 px en la fila.
+- CTA añadido a petición del propietario (el brief original no lo llevaba): «Comment GALER to try it for free», 21.0–24.1 s, con su voz `inputs/cta.mp3`. Entra tras el 808 de 20.86 y FREE termina sobre la caja de 23.65. Módulo aparte: `project/js/cta.js`.
