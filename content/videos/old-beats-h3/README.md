@@ -6,7 +6,7 @@ Todo lo que distingue a esta versión está en [`project/js/variant.js`](project
 
 | Qué | Aquí |
 | --- | --- |
-| Fondo | Gris |
+| Fondo | Blanco, el mismo del original (la primera versión era gris; el propietario pidió blanco) |
 | Beat recuperado | **2024** (el hook dice dos años, no tres): bosque queda junto a la marca de 2024 |
 | Intro | Plano abierto de la línea del tiempo (regla a escala más corta); una flecha manuscrita «2 years back» salta de hoy a 2024 y la cámara se lanza en picado hasta el beat |
 | Tipografía del hook | GO LISTEN bajo la regla en el plano abierto; TWO / YEARS / AGO sobre la portada |

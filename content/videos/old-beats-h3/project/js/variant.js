@@ -2,10 +2,10 @@
    Todo lo que distingue a esta version vive aqui; el resto de modulos es comun a las variantes.
    Intro: plano abierto de la linea del tiempo; una flecha manuscrita salta dos anos hacia atras desde hoy y la camara se lanza
    en picado hasta el beat de 2024 (dos anos, no tres), que queda junto a la marca de 2024. Escala de la regla mas corta para que los dos anos quepan en cuadro.
-   Fondo gris, Gallery con bosque en la columna derecha (menu hacia la izquierda), clip rapido y seco, subtitulos en caja, cierre grande. */
+   Fondo blanco (el del original), Gallery con bosque en la columna derecha (menu hacia la izquierda), clip rapido y seco, subtitulos en caja, cierre grande. */
 const V = {
   id: "H3", hook: { vo: "C-H3.wav", dur: 2.38 },
-  theme: { ground: "#B7B6B1", ink: "#0C0C0C", note: "#B8140A", label: "#2b2b2b", stem: "rgba(12,12,12,.26)" },
+  theme: { ground: "#F3F1EC", ink: "#0C0C0C", note: "#E3261B", label: "#3a3a3a", stem: "rgba(12,12,12,.2)" },
   YS: 1700, seed: 5150, target: { year: 2024, off: .3, cover: "034" },
   time: { OLD: 4.10, OLD0: 7.65, NEW0: 5.70, LANEX: 712, BACK: 2.35, GAL: 2.80, RCLICK: 3.10, OPEN: 3.45, SPLASH: 3.52, NOTE1: 3.57, NOTE2: 3.77 },
   gallery: { col: 2, row: 1, menuDx: -378,
