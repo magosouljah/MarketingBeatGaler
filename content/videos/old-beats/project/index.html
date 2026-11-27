@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BeatGaler · old-beats · C-C1-H1 (animatic)</title>
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div id="stage">
+  <!-- 1. linea del tiempo (mundo con camara) + Gallery dentro del mismo mundo -->
+  <div id="tl"><div id="tlw">
+    <svg id="ruler" width="10" height="10"><path id="rpath" fill="none" stroke="#0C0C0C" stroke-linecap="round" stroke-linejoin="round"/></svg><div id="ticks"></div><div id="years"></div><div id="notes"></div><div id="files"></div>
+    <div id="tya"><span>THREE</span><span>YEARS</span><span>AGO</span></div>
+    <div id="gal"><div id="galbg"></div><div id="tagbar"><div id="tagtrack"></div></div><div id="gbtns"></div><div id="gents"></div></div>
+  </div></div>
+  <!-- 2-4. lienzo con las dos ventanas de FL Studio (grabaciones reales) -->
+  <div id="fl"><div id="flbg"></div><div id="flw">
+    <div class="hn" id="hnOld">bosque.flp · 2023</div><div class="hn" id="hnNew">bosque pero jerk.flp · 2026</div>
+    <div class="win" id="wOld"><img id="imgOld" alt=""></div>
+    <div class="win" id="wNew"><img id="imgNew" alt=""><img id="lane" src="assets/lane.png" alt=""><div id="dropfx"></div></div>
+    <div id="grabfx"></div>
+    <div id="clip"><img src="assets/clip.png" alt=""></div>
+  </div></div>
+  <!-- 5. rueda de portadas reutilizada de content/videos/wheel/lab-v2 (720x1280 a escala 1.5) -->
+  <div id="frame">
+    <div class="word" id="cw"><span class="wt" id="cwt"></span></div>
+    <div id="endcard"><span id="end-brand">BeatGaler</span><span id="end-l1">Comment</span><span id="end-l2"><b>GALER</b></span><span id="end-sub">to store all your<br>beat history online.</span></div>
+  </div>
+  <div id="fly"></div>
+  <canvas id="wheel" width="1080" height="1920"></canvas>
+  <div id="sub"><span id="subt"></span></div>
+  <div id="dim"></div>
+  <div id="menu"><div class="mi" id="mi0">Open project</div><div class="mi">Download files</div><div class="mi">Edit</div><div class="mi red">Move to trash</div></div>
+  <div id="splash"><img src="assets/icons/flp.png" alt=""><div class="st">FL STUDIO</div><div class="ss">Opening bosque.flp</div><div class="bar"><i id="sbar"></i></div></div>
+  <div id="tap"></div>
+  <div id="cursor"><svg viewBox="0 0 16 22" shape-rendering="crispEdges"></svg></div>
+  <svg width="0" height="0" style="position:absolute"><filter id="mb" x="-20%" y="-5%" width="140%" height="110%"><feGaussianBlur id="mbfe" stdDeviation="0 0"/></filter></svg>
+</div>
+<script src="js/lib.js"></script>
+<script src="assets/clip.js"></script>
+<script src="js/timing.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/fl.js"></script>
+<script src="js/cta.js"></script>
+<script src="js/fly.js"></script>
+<script src="js/subs.js"></script>
+<script src="js/cursor.js"></script>
+<script type="module">
+  import { createWheel, RIG, buildRig } from "./js/wheel.js";
+  // Las portadas de la regla forman la rueda. La mas reciente es la LIDER: la rueda esta quieta hasta que ella llega, arranca
+  // con la velocidad (baja) que ella trae y desde ahi acelera; cada una de las siguientes ocupa el hueco de DETRAS (en el
+  // sentido del giro) cuando ese hueco pasa por el punto por donde entro la lider. El resto de la coreografia v7 queda igual.
+  const rig = { ...RIG, omega: [[1.22, [-1.6]], [1.5, [-3.6]], [1.85, [-7.6]], [2.2, [-8.2]], [2.38, [-4.8]], ...RIG.omega.filter(k => k[0] >= 2.45)] };
+  const R = buildRig(rig), N = rig.cards, STEP = 2 * Math.PI / N;
+  const urls = TL.wheelItems.map(f => `assets/gcovers/cover-${f.cov}.jpg`), handoff = new Array(N).fill(9);
+  const lab = createWheel(document.getElementById("wheel"), rig, { covers: urls, handoff });
+  // lider = la pagina que en el arranque se ve mas de frente (mayor area en pantalla, dentro de cuadro)
+  const s0 = lab.sample(T.WHEEL0); let LEAD = 0, best = -1;
+  s0.cards.forEach((c, k) => { const P = c.corners.map(([x, y]) => [(x + 1) * 540, (1 - y) * 960]); let ar = 0; for (let i = 0; i < 4; i++) { const A = P[i], B = P[(i + 1) % 4]; ar += A[0] * B[1] - B[0] * A[1]; }
+    const inside = c.corners.every(([x, y, z]) => z < 1 && Math.abs(x) < .8 && Math.abs(y) < .8); if (inside && Math.abs(ar) > best) { best = Math.abs(ar); LEAD = k; } });
+  const order = Array.from({ length: N }, (_, j) => ((LEAD - j) % N + N) % N);     // k decreciente = detras de la lider
+  const wtAt = [T.WHEEL0]; { let j = 1; const a0 = R.angle(T.WHEEL0); for (let t = T.WHEEL0; j < N && t < 5; t += 1 / 1200) while (j < N && a0 - R.angle(t) >= j * STEP) wtAt[j++] = t; while (j < N) wtAt[j++] = 5; }
+  order.forEach((k, j) => { lab.pages[k].cover = urls[j]; handoff[k] = wtAt[j]; });   // las texturas se asignan al terminar de cargar
+  TL.setFly(wtAt.map(w => T.WH + (w - T.WHEEL0))); lab.order = order;
+  FLY.init(lab);
+  const fonts = ['900 100px "BG Display"','700 80px "Caveat"','400 60px "Archivo Black"','400 30px "Archivo"','600 30px "Archivo"','400 30px "BG UI"','500 30px "BG UI"','600 30px "BG UI"','700 30px "BG UI"'];
+  window.ready = Promise.all([lab.ready, FL.ready, ...fonts.map(f => document.fonts.load(f)), ...[...document.images].map(i => i.decode().catch(() => 0))]).then(() => renderT(0));
+  // funcion pura: todo el cuadro sale de t. Devuelve una promesa porque los frames de FL se decodifican antes de capturar.
+  window.renderT = async function (t) {
+    TL.frame(t); CTA.frame(t); CUR.frame(t); SUBS.frame(t);
+    await FL.frame(t);
+    FLY.frame(t, lab);
+    lab.render(clamp(T.WHEEL0 + (t - T.WH), 0, 6));
+    return true;
+  };
+</script>
+</body>
+</html>

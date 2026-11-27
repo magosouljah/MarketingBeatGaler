@@ -42,3 +42,6 @@ node_modules/
 /content/videos/placements*/project/assets/gsap.min.js
 /content/videos/placements*/project/assets/grain.png
 /content/videos/placements*/project/assets/fonts/InterDisplay-Black.otf
+
+# old-beats: assets que genera tools/prepare.sh (frames de las grabaciones del propietario, recortes, portadas, fuentes).
+/content/videos/old-beats/project/assets/

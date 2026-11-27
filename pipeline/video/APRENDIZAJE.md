@@ -29,4 +29,4 @@ La aprobación visual del propietario no es dato de audiencia; eso sigue en `6-a
 | «Que la portada lo inicie y no que el círculo la cache» | Propuesta de tener la rueda girando antes | Quién pone en marcha §2 |
 | «La primera se queda quieta 720–726» | Vuelta en U de la curva (1.2 px/frame en F718) | Nada se detiene §1: medir px por frame |
 
-Aprobado por el propietario: el cierre de la versión `v8-final` («muy bien»). El video completo con ese cierre está pendiente de regenerar.
+Aprobado por el propietario: el cierre de la versión `v8-final` («muy bien»). El video completo con ese cierre se entregó el 2026-11-26; el código está en [content/videos/old-beats](../../content/videos/old-beats/README.md).
