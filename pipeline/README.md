@@ -45,6 +45,10 @@ Para desarrollar guiones con ideas y enseñanzas del propietario, consultar [`sc
 
 Después de hooks y scripts, usar [`storyboard/SKILL.md`](storyboard/SKILL.md) para decidir estructura audiovisual, acción en pantalla, locución, montaje, sonido y transiciones. Su conocimiento activo evoluciona con feedback mediante [`storyboard/APRENDIZAJE.md`](storyboard/APRENDIZAJE.md), sin fórmula obligatoria. El guion gráfico se entrega antes de producción; el Learning Engine sigue validando ejecución. El [lote 01 de 27 guiones](../content/scripts/LOTE-01-27-GUIONES.md) tiene nueve cuerpos invariables, tres aperturas por cuerpo. Diferenciar el efecto del texto del hook del tratamiento audiovisual completo.
 
+## Video — cuarto sistema creativo (V0)
+
+Después del guion gráfico, usar [`video/SKILL.md`](video/SKILL.md) al animar: [técnicas](video/TECNICAS.md) para que el movimiento sea continuo (relevos con la misma velocidad, líder y cola, capas, transformar en vez de sustituir) y su [aprendizaje](video/APRENDIZAJE.md) con la crítica frame a frame del propietario. No sustituye el Learning Engine ni mide audiencia.
+
 ## Generación creativa V1.3
 
 El generador lee [EXPLORACION-V13](1-investigacion/EXPLORACION-V13.md), razona con el [módulo 2](2-razonamiento/README.md) y usa [GENERAR-V13](3-hipotesis-guiones/GENERAR-V13.md). Explora sin cuotas de cantidad o territorio y profundiza **solo** ideas con una consecuencia importante y una explicación de por qué el estímulo puede captar atención. Puede seleccionar **cero, uno, dos o tres** finalistas, incluso de un mismo territorio. Si ninguno merece desarrollarse, lo justifica y no escribe guiones.
