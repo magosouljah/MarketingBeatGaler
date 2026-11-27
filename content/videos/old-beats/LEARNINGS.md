@@ -21,4 +21,4 @@ Versión final entregada el 2026-11-26 (C-C1-H1). Sin evaluación del propietari
 ## Pendiente
 
 - Evaluación del propietario (`learning/scorecard`) y caso en `learning/cases/`.
-- Variantes C-C1-H2 y C-C1-H3.
+- Variantes C-C1-H2 y C-C1-H3: entregadas el 2026-11-27 como [old-beats-h2](../old-beats-h2/) y [old-beats-h3](../old-beats-h3/), sin feedback todavía. Para hacerlas se parametrizó una copia del proyecto por `variant.js` (tema, escala de la regla, notas, cámara de la intro, tipografía, posición de bosque en la Gallery, fragmentos de FL, física del arrastre, subtítulos y cierre). En las variantes solo se usan portadas de la biblioteca sin personajes, marcas ni personas reconocibles.

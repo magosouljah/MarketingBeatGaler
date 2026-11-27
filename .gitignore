@@ -45,3 +45,5 @@ node_modules/
 
 # old-beats: assets que genera tools/prepare.sh (frames de las grabaciones del propietario, recortes, portadas, fuentes).
 /content/videos/old-beats/project/assets/
+/content/videos/old-beats-h2/project/assets/
+/content/videos/old-beats-h3/project/assets/
